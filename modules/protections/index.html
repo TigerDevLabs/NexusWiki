@@ -521,6 +521,28 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1100,6 +1122,314 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../holograms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Holograms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RNG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enchantments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enchantments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ME Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web & GDPR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1472,7 +1802,11 @@
 
 
 <h1 id="protections-module">Protections Module<a class="headerlink" href="#protections-module" title="Permanent link">&para;</a></h1>
-<p>The Protections module provides <strong>player-owned region claiming</strong>, configurable protection flags, and a <strong>1v1 duel system</strong>.</p>
+<p>The Protections module provides <strong>WorldGuard-style cuboid region claiming</strong>, 28 configurable protection flags, and a <strong>1v1 duel system</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">This is not Towny</p>
+<p><code>nexusslime-protections</code> is a cuboid region system similar to <strong>WorldGuard or GriefPrevention</strong> — players define a 3D area and set flags on it. It has <strong>no cities, nations, taxes, or diplomacy</strong>. If you want Towny-style chunk-based territory with clan governance, see the <a href="../clans/">Clans module</a> instead.</p>
+</div>
 <hr />
 <h2 id="region-claiming">Region Claiming<a class="headerlink" href="#region-claiming" title="Permanent link">&para;</a></h2>
 <p>Players select two corners of a cuboid region with the selection wand, then claim it as their protected area. Non-members cannot build, break, or interact within the region by default.</p>
@@ -1556,7 +1890,7 @@
 </table>
 <hr />
 <h2 id="region-flags">Region Flags<a class="headerlink" href="#region-flags" title="Permanent link">&para;</a></h2>
-<p>Flags control what is and isn't allowed within a region.</p>
+<p>Flags control what is and isn't allowed within a region. Regions have two types: <strong>PLAYER</strong> (priority 0, created by players) and <strong>ADMIN</strong> (priority 100, created by staff — always overrides player regions).</p>
 <table>
 <thead>
 <tr>
@@ -1577,7 +1911,7 @@
 <td><code>build</code></td>
 <td><code>true</code> / <code>false</code></td>
 <td><code>false</code></td>
-<td>Allow non-members to build</td>
+<td>Allow non-members to build/break blocks</td>
 </tr>
 <tr>
 <td><code>interact</code></td>
@@ -1589,7 +1923,19 @@
 <td><code>mob-spawning</code></td>
 <td><code>true</code> / <code>false</code></td>
 <td><code>true</code></td>
-<td>Allow mobs to spawn</td>
+<td>Allow hostile mobs to spawn</td>
+</tr>
+<tr>
+<td><code>animal-spawning</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>Allow passive animals to spawn</td>
+</tr>
+<tr>
+<td><code>monster-attack</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>Allow mobs to attack players</td>
 </tr>
 <tr>
 <td><code>explosions</code></td>
@@ -1602,6 +1948,42 @@
 <td><code>true</code> / <code>false</code></td>
 <td><code>false</code></td>
 <td>Allow fire spread</td>
+</tr>
+<tr>
+<td><code>fly</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Allow flight inside the region</td>
+</tr>
+<tr>
+<td><code>keep-inventory</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Keep inventory on death inside the region</td>
+</tr>
+<tr>
+<td><code>keep-exp</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Keep experience on death</td>
+</tr>
+<tr>
+<td><code>entry</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>Allow non-members to enter the region</td>
+</tr>
+<tr>
+<td><code>deny-sleep</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Prevent players from sleeping in beds</td>
+</tr>
+<tr>
+<td><code>smart-door</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Doors auto-close after a short delay</td>
 </tr>
 <tr>
 <td><code>greeting</code></td>
