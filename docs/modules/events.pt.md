@@ -57,6 +57,17 @@ Cada jogador tem uma **sequência de sobrevivência à Lua de Sangue** armazenad
 
 Quando a sequência atinge um **múltiplo de 7** (7, 14, 21, 28...), o jogador recebe um **Convite de Sacrifício** na próxima vez que dormir.
 
+### Escalonamento de Dificuldade por Sequência
+
+Sequências maiores tornam cada Lua de Sangue mais difícil — mais níveis de mob, mais spawns e eventos de mini-chefe adicionais.
+
+| Faixa de Sequência | Bônus de Nível | Bônus de Taxa de Spawn | Multiplicador Elite | Eventos Extras |
+| --- | --- | --- | --- | --- |
+| 1–6 | Base | Base | Base | — |
+| 7–13 | +4 | +500% | ×3 | — |
+| 14–20 | +7 | +700% | ×5 | Spawn de chefe no meio do evento |
+| 21+ | +10 | +900% | Ilimitado | Mini-chefes a cada 5 min |
+
 ---
 
 ## Arco do Sacrifício
@@ -69,7 +80,7 @@ Uma GUI de 3 linhas com duas opções:
 
 | Slot | Item | Ação |
 | --- | --- | --- |
-| 11 | Lã Verde — **Aceitar** | Teleportar para a arena, julgamento de sobrevivência de 90 segundos |
+| 11 | Lã Verde — **Aceitar** | Teleportar para a arena, desafio contra o Chefe Isekai |
 | 15 | Lã Vermelha — **Recusar** | Resetar sequência, sem outra penalidade |
 
 Fechar a GUI sem clicar conta como **Recusa**.
@@ -77,16 +88,31 @@ Fechar a GUI sem clicar conta como **Recusa**.
 ### Julgamento na Arena
 
 1. O jogador é teleportado para a arena configurada (ou permanece na localização atual se não configurada)
-2. **5 mobs de arena** aparecem: Zumbi, Esqueleto, Esqueleto Wither, Blaze, Aranha das Cavernas
-3. Uma **contagem regressiva de 90 segundos** começa com avisos em 30s, 10s e 5s
+2. Um **Chefe Isekai** aleatório é invocado — selecionado do pool elegível para a sequência do jogador
+3. Uma **contagem regressiva de 180 segundos** começa com avisos em 60s, 30s, 10s e 5s
 
 ### Resultados
 
 | Resultado | Consequência |
 | --- | --- |
-| **Sobreviver** | Recompensa concedida (padrão: 3 Blocos de Diamante), transmissão para o servidor, sequência resetada |
+| **Sobreviver** | Recompensa concedida por tier, transmissão para o servidor, sequência resetada |
 | **Morrer** | Sequência resetada para 0 |
 | **Sair/desconectar** | Sessão encerrada, tratada como falha |
+
+### Tiers de Recompensa do Sacrifício
+
+As recompensas escalam de acordo com quantos Sacrifícios você completou (a cada 7 marcos de sequência).
+
+| Marco de Sequência | Recompensas |
+| --- | --- |
+| **7** | Item MMO Tier 1 + **+5 HP Máx** permanente |
+| **14** | Item MMO Tier 2 + **+10 HP Máx** permanente + **1 ponto de atributo** |
+| **21** | Item MMO Tier 3 + **+2 pontos de atributo** permanentes + efeito cosmético |
+| **28** | Item MMO Tier 4 + **+3 pontos de atributo** + título + ovo de chefe |
+| **35+** | Pontos de atributo multiplicadores + cosmético anime exclusivo por marco |
+
+!!! warning "Sequência Resetada Após o Sacrifício"
+    Completar um Sacrifício — ganhar ou perder — reseta sua sequência para 0. Sua **melhor sequência** é registrada separadamente e nunca reseta.
 
 ### Configuração (`events/config.yml`)
 
@@ -101,6 +127,141 @@ sacrifice:
 
 !!! tip "Configurando a Arena"
     Construa uma arena PvE dedicada e defina suas coordenadas em `sacrifice.arena`. Deixe `world` em branco para lutar no lugar — útil para testes.
+
+---
+
+## Codex de Chefes Isekai
+
+Quando um Sacrifício é aceito, um **Chefe Isekai** aleatório é invocado na arena. O pool disponível depende da sequência atual do jogador. Cada chefe tem múltiplas fases, mecânicas únicas e uma drop única.
+
+As definições de chefe ficam em `events/isekai_bosses/*.yml`. HP e dano escalam com a sequência:
+
+```
+statFinal = statBase × (1 + (sequência - 7) × 0,2)
+```
+
+### Pool de Chefes
+
+| Chefe | Sequência Mín. | Entidade Base | Peso de Spawn |
+| --- | --- | --- | --- |
+| Rimuru Tempest | 7 | Slime Gigante | 10 |
+| Kazuma Satou | 7 | Bruxa | 9 |
+| Subaru Natsuki | 7 | Zumbi | 8 |
+| Ainz Ooal Gown | 14 | Esqueleto Wither | 7 |
+| Itadori Yuji | 14 | Piglin Bruto | 6 |
+| Kirito | 14 | Zumbi | 6 |
+| Gojo Satoru | 21 | Phantom | 5 |
+| Levi Ackermann | 21 | Vindicator | 4 |
+
+---
+
+=== "Rimuru Tempest"
+
+    **Sequência Mín.:** 7 · **Entidade Base:** Slime Gigante
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Aura Predatória (absorve projéteis), Divisão de Slime (mini-slimes em 80%/70%) |
+    | 2 | 60% → 25% | Tempestade de Aço (12 flechas em 360°), Dreno Predatório (cura ao acertar) — troca para Guardian |
+    | 3 | 25% → 0% | Colapso do Vazio (puxão em AoE de 8 blocos, 3 dmg/tick), Regeneração Infinita (2 HP/2 ticks) — imune a recuo |
+
+    **Drop:** Fragmento de núcleo de slime · Aura brilho azul cosmética
+
+=== "Kazuma Satou"
+
+    **Sequência Mín.:** 7 · **Entidade Base:** Bruxa
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Roubo (remove item aleatório do hotbar a cada 12s), Gatilho Sortudo (15% crit × 5 dano) |
+    | 2 | 60% → 25% | Toque Drenante (drena níveis de XP), Comando de Grupo (2 "Aqua" + 1 "Darkness"), Explosão de Megumin (única na transição) |
+    | 3 | 25% → 0% | Gatilho Sortudo sobe para 35% com reflexo de dano; Roubo Final; Chamada de Aqua (restauração de HP única) |
+
+    **Drop:** Cartão de aventureiro · Itens roubados devolvidos em dobro
+
+=== "Subaru Natsuki"
+
+    **Sequência Mín.:** 7 · **Entidade Base:** Zumbi
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | Slam no Chão, Chamado Desesperado (invoca "Rem" em 60%) |
+    | **Retorno pela Morte** | Ao chegar a 0 HP (uma vez) | Reseta para 100% HP, HP do jogador restaurado, título: `⟳ RETURN BY DEATH` |
+    | Pós-RBD | 100% → 0% | Fator da Bruxa (Wither I + Fome II a cada 20s), Último Ato (abaixo de 25%: +velocidade, +dano) |
+
+    !!! danger "Retorno pela Morte"
+        Subaru não pode ser morto na primeira vez. A mecânica dispara exatamente **uma vez por luta**.
+
+    **Drop:** Moeda de prata cosmética · Aura "Cheiro da Bruxa"
+
+=== "Ainz Ooal Gown"
+
+    **Sequência Mín.:** 14 · **Entidade Base:** Esqueleto Wither
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 70% | Convocar Guardiões do Andar (3 zumbis a cada 30s), Explosão Negativa (crânio de wither → Wither II + Fraqueza) |
+    | 2 | 70% → 30% | Garra da Morte (10 de dano verdadeiro atrasado 4s), Sabedoria Sombria (15s de imunidade ao tipo de dano repetido) |
+    | 3 | 30% → 0% | Toque de Ainz (parado por 3s = morte instantânea), Devorador de Almas (cura 5 HP por entidade morta) |
+
+    !!! warning "Não pode ser morto abaixo de 1 HP enquanto entidades convocadas estiverem vivas."
+
+    **Drop:** Coroa Morta-Viva cosmética · Fragmento de título `§8Overlord`
+
+=== "Itadori Yuji"
+
+    **Sequência Mín.:** 14 · **Entidade Base:** Piglin Bruto
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | Punho Divergente (8% proc Flash Negro = 10× dano), Investida (combo de 3 golpes telegrafado) |
+    | 2 — **Sukuna Desperta** | 50% → 0% | Desmantelar (3 projéteis em V + sangramento), Golpe Amplo (AoE corpo a corpo de 5 blocos), Santuário Malevolente (abaixo de 20%: 20 cortes em 3s), Flash Negro sobe para 15% |
+
+    **Drop:** Cristal de energia amaldiçoada · Título `§4Amaldiçoado` · Cosmético de tatuagem
+
+=== "Kirito"
+
+    **Sequência Mín.:** 14 · **Entidade Base:** Zumbi
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 40% | Vorpal Skill (carga de 5 golpes em linha reta), Bloqueio (20% de negar hit recebido) |
+    | 2 — **Lâminas Duplas** | 40% → 0% | VELOCIDADE III permanente, Starburst Stream (16 golpes consecutivos em 4s — quebre com 8+ dano em um hit), Golpe Final (abaixo de 15%: carga crit garantida) |
+
+    **Drop:** Cosmético de élitra casaco preto · Título `§7Solo Player` · Set de espadas duplas CMD
+
+=== "Gojo Satoru"
+
+    **Sequência Mín.:** 21 · **Entidade Base:** Phantom
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Infinidade (70% dos ataques causam 1 dano), Mudança de Fase (invisível a cada 8s por 4s) |
+    | 2 | 60% → 25% | Puxão Azul (puxa o jogador), Vazio Roxo (feixe AoE em linha reta — 1s de aviso, 15 dano + Levitação) |
+    | 3 — **Expansão de Domínio** | 25% → 0% | Escuridão a cada 2s, Confusão em bursts, Golpe de Domínio (+50%), Infinidade TOTALMENTE ativa |
+
+    !!! tip "Habilidades de mago e dano de fogo ignoram a Infinidade."
+
+    **Drop:** Cosmético de venda · Título `§b∞ Limitless`
+
+=== "Levi Ackermann"
+
+    **Sequência Mín.:** 21 · **Entidade Base:** Vindicator
+
+    | Fase | Faixa de HP | Habilidades Principais |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | Carga ODM (teleporta para parede → arremessa para o jogador), Corte Limpo (ignora 50% da defesa), Manobra Vertical (VELOCIDADE IV em círculos por 3s) |
+    | 2 | 50% → 0% | Parede a Parede (4 cargas encadeadas com tempo de telegrafamento decrescente), Forma Matador de Titã (abaixo de 25%: postura de 5s — um golpe para 0,5 coração, contorno branco telegrafado) |
+
+    !!! danger "Não pode ser atordoado, empurrado ou desacelerado — jamais."
+
+    **Drop:** Cosmético de élitra ODM · Título `§8Survey Corps` · Espada mata-titã CMD
+
+---
+
+### Pool de Chefes Futuros (Sequência 28+)
+
+Chefes planejados para lançamentos futuros: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dragneel, Sung Jin-Woo, Giorno Giovanna.
 
 ---
 

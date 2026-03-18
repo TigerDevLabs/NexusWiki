@@ -88,8 +88,8 @@ Closing the GUI without clicking counts as **Decline**.
 ### Arena Trial
 
 1. The player is teleported to the configured arena (or stays in their current location if unconfigured)
-2. **5 arena mobs** spawn: Zombie, Skeleton, Wither Skeleton, Blaze, Cave Spider
-3. A **90-second countdown** begins with warnings at 30s, 10s, and 5s
+2. A random **Isekai Boss** is summoned — selected from the pool eligible for the player's streak
+3. A **180-second countdown** begins with warnings at 60s, 30s, 10s, and 5s
 
 ### Outcomes
 
