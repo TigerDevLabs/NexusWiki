@@ -119,6 +119,59 @@ stacker:
 
 ---
 
+## Mobs com Nível
+
+Todo mob hostil que aparece no mundo recebe automaticamente um **nível** que escala de acordo com o perigo do ambiente. Mobs de nível mais alto causam mais dano, têm mais vida e concedem mais XP.
+
+### Tabela de Rolagem de Nível
+
+Os níveis são rolados no spawn com base na altura Y, dimensão e bioma. Os bônus se acumulam.
+
+| Condição | Faixa / Bônus |
+| --- | --- |
+| Y > 64 (superfície) | Nv. 1–4 |
+| Y ≤ 64 | Nv. 3–6 |
+| Y ≤ 30 | Nv. 5–8 |
+| Y ≤ 0 (subterrâneo profundo) | Nv. 8–12 |
+| Dimensão Nether | +3 ao resultado |
+| The End | +4 ao resultado |
+| Bioma Deep Dark | +5 ao resultado |
+| Lua de Sangue ativa | +2 a todos os resultados |
+
+Todos os resultados são limitados ao intervalo `[1, max-level]` da configuração.
+
+### Formato do Nome
+
+| Situação | Nome exibido |
+| --- | --- |
+| Empilhado + com nível | `3x [Nv.5] Zumbi` |
+| Único + com nível | `[Nv.5] Zumbi` |
+| Nível 1 (qualquer pilha) | `3x Zumbi` *(sem tag de nível)* |
+
+### Fórmulas de Atributo
+
+| Atributo | Fórmula |
+| --- | --- |
+| **Dano** | `danoBase × (1 + (nível-1) × multiplicadorDanoPorNível) × contadorPilha` |
+| **XP** | `xpBase × contadorPilha × (1 + (nível-1) × multiplicadorXPPorNível)` |
+| **Vida** | Escalada por `multiplicadorVidaPorNível` por nível acima de 1 |
+
+### Configuração (`security/antilag.yml`)
+
+```yaml
+leveled-mobs:
+  enabled: true
+  max-level: 20
+  xp-multiplier-per-level: 0.20      # +20% XP por nível acima de 1
+  damage-multiplier-per-level: 0.15  # +15% dano por nível acima de 1
+  health-multiplier-per-level: 0.10  # +10% vida por nível acima de 1
+```
+
+!!! note "Integração com Lua de Sangue"
+    Quando a **Lua de Sangue** está ativa (veja o [módulo Events](events.md)), todas as rolagens de nível recebem um bônus de **+2**, tornando os mobs de superfície significativamente mais perigosos à noite.
+
+---
+
 ## PlaceholderAPI
 
 | Placeholder | Descrição |

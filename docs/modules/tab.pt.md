@@ -72,7 +72,7 @@ scoreboard:
     - "&7Dinheiro: &a$%nexusslime_money%"
     - "&7Clã: &b%nexusslime_clan_name%"
     - ""
-    - "&eplay.nexusslime.net"
+    - "&enexusprism.blazebr.com"
     - ""
 
 motd:

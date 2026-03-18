@@ -112,3 +112,16 @@ For the best experience, create dedicated flat or atmospheric worlds for dreams 
 
 !!! tip
     Leave `world` empty to use the main overworld. Players will be teleported to the configured XYZ coordinates in the default world.
+
+---
+
+## Sacrifice Arc Integration
+
+When the **Events** module is loaded, the **Sacrifice Arc** can suppress the normal dream cutscene entirely.
+
+If a player's Blood Moon survival streak has reached a multiple of 7 (7, 14, 21, 28...) and they enter a bed, the Sacrifice Arc intercepts the sleep event **before** any dream or nightmare is chosen. The player is shown a choice GUI instead of entering the cutscene.
+
+!!! info
+    This behaviour is controlled by `DreamsManager.SACRIFICE_HOOK` — a hook set by the Events module at load time and cleared on shutdown. If the Events module is disabled, dreams work exactly as described above with no changes.
+
+See the [Events module](events.md) for full details on the Sacrifice Arc.

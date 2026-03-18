@@ -118,6 +118,59 @@ stacker:
 
 ---
 
+## Mobs con Nivel
+
+Cada mob hostil que aparece en el mundo recibe automáticamente un **nivel** que escala según el peligro del entorno. Los mobs de mayor nivel hacen más daño, tienen más vida y dan más XP.
+
+### Tabla de Tirada de Nivel
+
+Los niveles se tiran al aparecer basándose en la altura Y, dimensión y bioma. Los bonificadores se acumulan.
+
+| Condición | Rango / Bonificador |
+| --- | --- |
+| Y > 64 (superficie) | Nv. 1–4 |
+| Y ≤ 64 | Nv. 3–6 |
+| Y ≤ 30 | Nv. 5–8 |
+| Y ≤ 0 (subterráneo profundo) | Nv. 8–12 |
+| Dimensión Nether | +3 al resultado |
+| The End | +4 al resultado |
+| Bioma Deep Dark | +5 al resultado |
+| Luna de Sangre activa | +2 a todos los resultados |
+
+Todos los resultados se limitan al rango `[1, max-level]` de la configuración.
+
+### Formato del Nombre
+
+| Situación | Nombre mostrado |
+| --- | --- |
+| Apilado + con nivel | `3x [Nv.5] Zombie` |
+| Individual + con nivel | `[Nv.5] Zombie` |
+| Nivel 1 (cualquier pila) | `3x Zombie` *(sin etiqueta de nivel)* |
+
+### Fórmulas de Estadísticas
+
+| Estadística | Fórmula |
+| --- | --- |
+| **Daño** | `dañoBase × (1 + (nivel-1) × multiplicadorDañoPorNivel) × contadorPila` |
+| **XP** | `xpBase × contadorPila × (1 + (nivel-1) × multiplicadorXPPorNivel)` |
+| **Vida** | Escalada por `multiplicadorVidaPorNivel` por nivel sobre 1 |
+
+### Configuración (`security/antilag.yml`)
+
+```yaml
+leveled-mobs:
+  enabled: true
+  max-level: 20
+  xp-multiplier-per-level: 0.20      # +20% XP por nivel sobre 1
+  damage-multiplier-per-level: 0.15  # +15% daño por nivel sobre 1
+  health-multiplier-per-level: 0.10  # +10% vida por nivel sobre 1
+```
+
+!!! note "Integración con Luna de Sangre"
+    Cuando la **Luna de Sangre** está activa (ver el [módulo Events](events.md)), todas las tiradas de nivel reciben un bonificador de **+2**, haciendo a los mobs de superficie significativamente más peligrosos de noche.
+
+---
+
 ## PlaceholderAPI
 
 | Placeholder | Descripción |

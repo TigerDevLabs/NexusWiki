@@ -65,6 +65,8 @@ plugins:
             Crystal Defense: Crystal Defense
             Votifier: Votifier
             Dreams: Sonhos
+            Events: Events
+            MMO: MMO
             Protections: Proteções
             Custom Mobs: Mobs Personalizados
             Infinity Crafting: Crafting Infinito
@@ -102,6 +104,8 @@ plugins:
             Crystal Defense: Crystal Defense
             Votifier: Votifier
             Dreams: Sueños
+            Events: Events
+            MMO: MMO
             Protections: Protecciones
             Custom Mobs: Mobs Personalizados
             Infinity Crafting: Crafteo Infinito
@@ -161,6 +165,8 @@ nav:
       - Crystal Defense: modules/crystal-defense.md
       - Votifier: modules/votifier.md
       - Dreams: modules/dreams.md
+      - Events: modules/events.md
+      - MMO: modules/mmo.md
       - Protections: modules/protections.md
       - Custom Mobs: modules/custom-mobs.md
       - Infinity Crafting: modules/infinity-crafting.md

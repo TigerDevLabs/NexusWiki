@@ -112,3 +112,16 @@ Para a melhor experiência, crie mundos planos ou atmosféricos dedicados para s
 
 !!! tip
     Deixe `world` vazio para usar o mundo principal. Os jogadores serão teleportados para as coordenadas XYZ configuradas no mundo padrão.
+
+---
+
+## Integração com o Arco do Sacrifício
+
+Quando o módulo **Events** está ativo, o **Arco do Sacrifício** pode suprimir completamente a cutscene normal de sonho.
+
+Se a sequência de sobrevivência à Lua de Sangue de um jogador atingir um múltiplo de 7 (7, 14, 21, 28...) e o jogador entrar em uma cama, o Arco do Sacrifício intercepta o evento de dormir **antes** de qualquer sonho ou pesadelo ser sorteado. Em vez disso, é exibida uma GUI de escolha.
+
+!!! info
+    Este comportamento é controlado pelo `DreamsManager.SACRIFICE_HOOK` — um hook definido pelo módulo Events no carregamento e removido no desligamento. Se o módulo Events estiver desativado, os sonhos funcionam exatamente como descrito acima, sem alterações.
+
+Veja o [módulo Events](events.md) para mais detalhes sobre o Arco do Sacrifício.

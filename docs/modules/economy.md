@@ -99,3 +99,138 @@ prices:
 | `%nexusslime_credits%` | Player's credit balance |
 
 See the full [PlaceholderAPI reference](../reference/placeholders.md).
+
+---
+
+## Jobs
+
+Players choose a job and earn money and XP by performing related in-game activities.
+
+### Available Jobs
+
+| Job | Primary Activities |
+| --- | --- |
+| **Miner** | Breaking ores and stone |
+| **Hunter** | Killing hostile mobs |
+| **Farmer** | Breaking crops |
+| **Fisher** | Catching fish |
+| **Smith** | Smelting ingots, crafting tools/armor |
+| **Enchanter** | Enchanting items |
+| **Alchemist** | Brewing potions |
+| **Lumberjack** | Chopping logs |
+
+Players can only hold **one job at a time**. Job configurations are YAML files under `economy/jobs/`.
+
+### Pay & XP Formulas
+
+| Value | Formula |
+| --- | --- |
+| **Pay per action** | `base × (1 + level × payScalePerLevel)` |
+| **XP to next level** | `baseXpToLevel × 2^((level-1)/10)` *(doubles every 10 levels)* |
+
+### Commands
+
+| Command | Description | Permission |
+| --- | --- | --- |
+| `/job` | Open Job Browser GUI | `nexusslime.economy.job.use` |
+| `/job join <id>` | Join a job | `nexusslime.economy.job.use` |
+| `/job leave` | Leave current job | `nexusslime.economy.job.use` |
+| `/job info [id]` | View job stats | `nexusslime.economy.job.use` |
+| `/job top` | Job leaderboard | `nexusslime.economy.job.use` |
+
+!!! note "Blood Moon Bonus"
+    During a Blood Moon, the **Hunter** job's kill-pay is multiplied (default ×1.5). See the [Events module](events.md).
+
+---
+
+## Chest Shops
+
+Players can create in-world shops by placing a sign on (or adjacent to) a chest.
+
+### Creating a Shop
+
+1. Place a chest
+2. Place a sign on the front face, top face, or an adjacent block
+3. Write `[Shop]` on the **first line**
+4. Write `BUY <price>` on line 2 (optional)
+5. Write `SELL <price>` on line 3 (optional)
+
+The plugin auto-detects the chest below or wall-adjacent to the sign. Stock level is shown automatically on line 4.
+
+### Sign Format
+
+```
+[Shop]
+BUY 50
+SELL 25
+[12 in stock]
+```
+
+### Shop GUI
+
+A 3-row GUI opens when a player right-clicks the sign:
+
+| Slot | Contents |
+| --- | --- |
+| Centre (slot 13) | Item preview |
+| Slots 19–21 | Buy ×1 / ×8 / ×64 |
+| Slots 23–25 | Sell ×1 / ×8 / ×64 |
+
+### Admin Shops
+
+Admin shops have **unlimited stock** and are created by setting the owner UUID to `null` internally. Use `nexusslime.economy.shop.admin` to create them.
+
+### Permissions
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusslime.economy.shop.create` | Create player chest shops | true |
+| `nexusslime.economy.shop.admin` | Create admin (unlimited stock) shops | OP |
+
+---
+
+## Player Warps
+
+Players can set named warp points that any other player can visit.
+
+### Commands
+
+| Command | Description |
+| --- | --- |
+| `/pw set <name>` | Create a warp at your current location |
+| `/pw delete <name>` | Remove one of your warps |
+| `/pw desc <name> <text>` | Set a description for the warp |
+| `/pw icon <name> <material>` | Set the icon shown in the GUI |
+| `/pw list` | Browse all player warps (paginated 6-row GUI) |
+| `/pw visit <player> <name>` | Teleport to another player's warp |
+
+### Warp Limits
+
+| Permission | Max Warps |
+| --- | --- |
+| `nexusslime.economy.playerwarp.unlimited` | Unlimited |
+| `nexusslime.economy.playerwarp.10` | 10 |
+| `nexusslime.economy.playerwarp.3` | 3 |
+| *(default)* | 1 |
+
+---
+
+## Auction House
+
+A global listing board where players buy and sell items with each other.
+
+### How It Works
+
+- List any item from your hand with `/ah sell <price>`
+- Listings expire after **7 days** if unsold
+- Expired or cancelled items are returned to the owner (hourly cleanup)
+- Each player can have up to **10 active listings** at once
+
+### Commands
+
+| Command | Description | Permission |
+| --- | --- | --- |
+| `/ah` | Browse active listings (6-row paginated GUI) | `nexusslime.economy.ah.use` |
+| `/ah sell <price>` | List held item at a price | `nexusslime.economy.ah.use` |
+| `/ah own` | View your listings; cancel active or reclaim expired | `nexusslime.economy.ah.use` |
+| `/ah cancel <id>` | Cancel a listing by its ID | `nexusslime.economy.ah.use` |

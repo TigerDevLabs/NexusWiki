@@ -244,6 +244,59 @@ alert-admins: true             # Notify online admins in-game
 
 ---
 
+## Leveled Mobs
+
+Every hostile mob that spawns in the world is automatically assigned a **level** that scales with how dangerous the environment is. Higher-level mobs deal more damage, have more health, and drop more XP.
+
+### Level Roll Table
+
+Levels are rolled at spawn based on Y-height, dimension, and biome. Bonuses stack.
+
+| Condition | Level Range / Bonus |
+| --- | --- |
+| Y > 64 (surface) | Lv. 1–4 |
+| Y ≤ 64 | Lv. 3–6 |
+| Y ≤ 30 | Lv. 5–8 |
+| Y ≤ 0 (deep underground) | Lv. 8–12 |
+| Nether dimension | +3 to roll |
+| The End dimension | +4 to roll |
+| Deep Dark biome | +5 to roll |
+| Blood Moon active | +2 to all rolls |
+
+All results are clamped to `[1, max-level]` from config.
+
+### Name Format
+
+| Situation | Display Name |
+| --- | --- |
+| Stacked + leveled | `3x [Lv.5] Zombie` |
+| Single + leveled | `[Lv.5] Zombie` |
+| Level 1 (any stack) | `3x Zombie` *(no level tag)* |
+
+### Stat Formulas
+
+| Stat | Formula |
+| --- | --- |
+| **Damage** | `baseDamage × (1 + (level-1) × damageMultiplierPerLevel) × stackCount` |
+| **XP** | `baseXP × stackCount × (1 + (level-1) × xpMultiplierPerLevel)` |
+| **Health** | Scaled by `healthMultiplierPerLevel` per level above 1 |
+
+### Configuration (`security/antilag.yml`)
+
+```yaml
+leveled-mobs:
+  enabled: true
+  max-level: 20
+  xp-multiplier-per-level: 0.20      # +20% XP per level above 1
+  damage-multiplier-per-level: 0.15  # +15% damage per level above 1
+  health-multiplier-per-level: 0.10  # +10% health per level above 1
+```
+
+!!! note "Blood Moon Integration"
+    When the **Blood Moon** is active (see the [Events module](events.md)), all level rolls receive a **+2 bonus**, making surface mobs significantly more dangerous at night.
+
+---
+
 ## PlaceholderAPI
 
 | Placeholder | Description |
