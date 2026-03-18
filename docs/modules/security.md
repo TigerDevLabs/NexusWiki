@@ -10,6 +10,7 @@ The Security module provides **BCrypt-based player authentication**, CAPTCHA ant
 | --- | --- |
 | **Auth** | Register/login with BCrypt passwords, persistent sessions |
 | **Anti-Bot** | IP rate-limiting, CAPTCHA map challenge, name blacklisting, VPN detection |
+| **Mod Detection** | Plugin-channel scanner — kicks hacked clients, alerts staff on Forge/NeoForge |
 | **Anti-Dupe** | Detects and prevents common item duplication exploits |
 | **Anti-Lag** | Scheduled world cleaner, entity stacker |
 
@@ -135,6 +136,74 @@ stacker:
     - CREEPER
     - BLAZE
 ```
+
+---
+
+## Mod Detection
+
+The mod detection system scans the **plugin-message channels** that clients register during the login handshake. This reveals the mod loader and specific mods being used.
+
+### How It Works
+
+- **Blacklisted channels** → player is kicked immediately and staff are notified (e.g. Wurst, Meteor Client, LiquidBounce)
+- **Watch-list channels** → staff are notified but the player is **never kicked** (e.g. Forge, NeoForge — may be legitimate mod users)
+- All channel registrations are stored per-player for the session; use `/modcheck <player>` to inspect them
+
+### Configuration (`security/mods.yml`)
+
+```yaml
+mod-detector:
+  enabled: true
+  action: KICK           # LOG | NOTIFY | KICK (applies to blacklisted channels)
+  notify-staff: true     # Always alert staff regardless of action
+  kick-message: "§cYou are using a blacklisted modification."
+
+  # Channels that trigger the configured action (kick by default)
+  blacklisted-channels:
+    - "wurst:*"
+    - "meteor-client:*"
+    - "impact:*"
+    - "liquidbounce:*"
+    - "aristois:*"
+    - "labymod:*"
+    - "hacked:*"
+    - "cheat:*"
+
+  # Watch-list: always notifies staff, NEVER kicks
+  # Used for mod loaders that may be legitimate
+  watch-channels:
+    - "forge:*"
+    - "fml:*"
+    - "fmlhandshake:*"
+    - "fmlnetworking:*"
+    - "neoforge:*"
+    - "FML|HS"
+    - "FML|MP"
+    - "FML"
+
+  # Allowed channels (safe — logged for info only, no action)
+  allowed-channels:
+    - "minecraft:*"
+    - "fabric:*"
+    - "bungeecord:*"
+    - "velocity:*"
+```
+
+### Pattern Syntax
+
+| Pattern | Matches |
+| --- | --- |
+| `"wurst:*"` | Any channel whose namespace starts with `wurst:` |
+| `"FML\|HS"` | Exact channel name `FML\|HS` (legacy Forge handshake) |
+
+!!! tip "Forge / NeoForge"
+    Forge and NeoForge users are put on the **watch-list**, not kicked. A `§e[ModWatch]` alert is sent to staff with the `nexusslime.security.notify` permission so they can manually verify whether the player is cheating.
+
+### Staff Permissions for Mod Detection
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusslime.security.notify` | Receive mod-detection and watch-list alerts | OP |
 
 ---
 

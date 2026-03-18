@@ -35,6 +35,10 @@ The Clans module lets players create persistent teams with **territory claiming*
 | `/clan chest` | Open clan chest | `nexusslime.clan.use` |
 | `/clan upgrade` | Open upgrade menu | `nexusslime.clan.use` |
 | `/clan top` | Clan leaderboard | `nexusslime.clan.use` |
+| `/clan ally <clan>` | Send or accept an alliance request | `nexusslime.clan.use` |
+| `/clan ally remove <clan>` | Remove an alliance | `nexusslime.clan.use` |
+| `/clan enemy <clan>` | Mark a clan as an enemy | `nexusslime.clan.use` |
+| `/clan enemy remove <clan>` | Remove enemy status | `nexusslime.clan.use` |
 | `/clan admin disband <name>` | Force-disband (admin) | `nexusslime.clan.admin` |
 | `/clan admin unclaim <name>` | Force-unclaim (admin) | `nexusslime.clan.admin` |
 
@@ -78,7 +82,18 @@ territory-worlds:
 
 ## Upgrade Tree (`clans/upgrades.yml`)
 
-Clans spend resources to unlock upgrades that increase their capabilities.
+Clans spend resources to unlock upgrades across **8 upgrade paths**.
+
+| Upgrade Key | Description |
+| --- | --- |
+| `member_cap` | Increase the maximum number of clan members |
+| `territory_cap` | Claim additional chunks as territory |
+| `chest_size` | Expand the shared clan chest capacity |
+| `home_warps` | Unlock additional clan home warp points |
+| `exp_boost` | Bonus XP multiplier for all clan members |
+| `stacker_bonus` | Increased mob stacker drops for clan members |
+| `bank_cap` | Raise the maximum clan bank balance |
+| `ally_cap` | Allow more simultaneous alliances |
 
 ```yaml
 upgrades:
@@ -100,15 +115,60 @@ upgrades:
     bonus-per-level:
       chunks: 10
 
-  chest_slots:
+  chest_size:
     display-name: "&aClan Chest Expansion"
     description: "Add 9 more slots to the clan chest."
-    max-level: 5
+    max-level: 6
     cost-per-level:
       money: 2000
     bonus-per-level:
       slots: 9
+
+  home_warps:
+    display-name: "&aHome Warps"
+    description: "Unlock an additional clan home location."
+    max-level: 3
+    cost-per-level:
+      money: 4000
+
+  exp_boost:
+    display-name: "&aEXP Boost"
+    description: "Grant all members a bonus XP multiplier."
+    max-level: 5
+    cost-per-level:
+      money: 6000
+
+  stacker_bonus:
+    display-name: "&aStacker Bonus"
+    description: "Increase mob stacker loot drops for members."
+    max-level: 5
+    cost-per-level:
+      money: 4000
+
+  bank_cap:
+    display-name: "&aBank Capacity"
+    description: "Raise the maximum balance of the clan bank."
+    max-level: 5
+    cost-per-level:
+      money: 8000
+
+  ally_cap:
+    display-name: "&aAlliance Slots"
+    description: "Allow one additional clan alliance."
+    max-level: 3
+    cost-per-level:
+      money: 5000
 ```
+
+---
+
+## Alliances & Enemies
+
+Clans can form **alliances** (allied members can build in each other's territory) or declare **enemies** (for display and future PvP mechanics).
+
+- Alliance requests must be accepted by the other clan leader/officer with `/clan ally <requesting-clan>`
+- The number of simultaneous alliances is capped by the `ally_cap` upgrade
+- Enemy status is one-sided and does not require confirmation
 
 ---
 

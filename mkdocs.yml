@@ -69,6 +69,17 @@ plugins:
             Custom Mobs: Mobs Personalizados
             Infinity Crafting: Crafting Infinito
             Twitch Integration: Integração Twitch
+            TAB: TAB
+            Chat: Chat
+            Holograms: Hologramas
+            Traits: Traits
+            RNG: RNG
+            Crates: Caixas
+            Enchantments: Encantamentos
+            ME Storage: Armazenamento ME
+            Energy: Energia
+            Structures: Estruturas
+            Web & GDPR: Web & LGPD
             Reference: Referência
             PlaceholderAPI: PlaceholderAPI
             Permissions: Permissões
@@ -95,6 +106,17 @@ plugins:
             Custom Mobs: Mobs Personalizados
             Infinity Crafting: Crafteo Infinito
             Twitch Integration: Integración Twitch
+            TAB: TAB
+            Chat: Chat
+            Holograms: Hologramas
+            Traits: Traits
+            RNG: RNG
+            Crates: Cofres
+            Enchantments: Encantamientos
+            ME Storage: Almacenamiento ME
+            Energy: Energía
+            Structures: Estructuras
+            Web & GDPR: Web & RGPD
             Reference: Referencia
             PlaceholderAPI: PlaceholderAPI
             Permissions: Permisos
@@ -143,6 +165,17 @@ nav:
       - Custom Mobs: modules/custom-mobs.md
       - Infinity Crafting: modules/infinity-crafting.md
       - Twitch Integration: modules/twitch.md
+      - TAB: modules/tab.md
+      - Chat: modules/chat.md
+      - Holograms: modules/holograms.md
+      - Traits: modules/traits.md
+      - RNG: modules/rng.md
+      - Crates: modules/crates.md
+      - Enchantments: modules/enchantments.md
+      - ME Storage: modules/ae.md
+      - Energy: modules/energy.md
+      - Structures: modules/structures.md
+      - Web & GDPR: modules/web.md
   - Reference:
       - PlaceholderAPI: reference/placeholders.md
       - Permissions: reference/permissions.md

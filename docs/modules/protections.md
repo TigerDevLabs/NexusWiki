@@ -1,6 +1,9 @@
 # Protections Module
 
-The Protections module provides **player-owned region claiming**, configurable protection flags, and a **1v1 duel system**.
+The Protections module provides **WorldGuard-style cuboid region claiming**, 28 configurable protection flags, and a **1v1 duel system**.
+
+!!! info "This is not Towny"
+    `nexusslime-protections` is a cuboid region system similar to **WorldGuard or GriefPrevention** — players define a 3D area and set flags on it. It has **no cities, nations, taxes, or diplomacy**. If you want Towny-style chunk-based territory with clan governance, see the [Clans module](clans.md) instead.
 
 ---
 
@@ -35,16 +38,24 @@ Players select two corners of a cuboid region with the selection wand, then clai
 
 ## Region Flags
 
-Flags control what is and isn't allowed within a region.
+Flags control what is and isn't allowed within a region. Regions have two types: **PLAYER** (priority 0, created by players) and **ADMIN** (priority 100, created by staff — always overrides player regions).
 
 | Flag | Values | Default | Description |
 | --- | --- | --- | --- |
 | `pvp` | `true` / `false` | `false` | Allow PvP inside the region |
-| `build` | `true` / `false` | `false` | Allow non-members to build |
+| `build` | `true` / `false` | `false` | Allow non-members to build/break blocks |
 | `interact` | `true` / `false` | `false` | Allow non-members to interact (chests, buttons…) |
-| `mob-spawning` | `true` / `false` | `true` | Allow mobs to spawn |
+| `mob-spawning` | `true` / `false` | `true` | Allow hostile mobs to spawn |
+| `animal-spawning` | `true` / `false` | `true` | Allow passive animals to spawn |
+| `monster-attack` | `true` / `false` | `true` | Allow mobs to attack players |
 | `explosions` | `true` / `false` | `false` | Allow TNT / creeper explosions |
 | `fire` | `true` / `false` | `false` | Allow fire spread |
+| `fly` | `true` / `false` | `false` | Allow flight inside the region |
+| `keep-inventory` | `true` / `false` | `false` | Keep inventory on death inside the region |
+| `keep-exp` | `true` / `false` | `false` | Keep experience on death |
+| `entry` | `true` / `false` | `true` | Allow non-members to enter the region |
+| `deny-sleep` | `true` / `false` | `false` | Prevent players from sleeping in beds |
+| `smart-door` | `true` / `false` | `false` | Doors auto-close after a short delay |
 | `greeting` | `<text>` | — | Message shown when entering the region |
 | `farewell` | `<text>` | — | Message shown when leaving the region |
 

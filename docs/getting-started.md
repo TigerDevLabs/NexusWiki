@@ -102,24 +102,31 @@ All modules are bundled into the final plugin JAR automatically.
 | `nexusslime-storage` | SQLite / PostgreSQL data persistence |
 | `nexusslime-gui` | GUI framework (menus and interfaces) |
 | `nexusslime-utils` | Utility helpers |
-| `nexusslime-web` | Webstore bridge, VIP kits, payment handling |
+| `nexusslime-web` | Webstore bridge, VIP kits, payment handling, GDPR |
 | `nexusslime-plugin` | Main entry point, command handler |
 | `nexusslime-discord` | JDA Discord bot, webhooks, account linking |
 | `nexusslime-chat` | 4-channel chat system with moderation |
+| `nexusslime-tab` | TAB list header/footer, scoreboards, MOTD |
 | `nexusslime-ae` | ME (Applied Energistics-style) network storage |
 | `nexusslime-energy` | Energy generators and cable networks |
 | `nexusslime-waila` | WAILA/HUD tooltips |
-| `nexusslime-security` | BCrypt auth, anti-bot, anti-lag, anti-dupe |
-| `nexusslime-clans` | Clans, territory claiming, upgrades |
+| `nexusslime-security` | BCrypt auth, anti-bot, mod detection, anti-lag, anti-dupe |
+| `nexusslime-clans` | Clans, territory claiming, upgrades, alliance system |
 | `nexusslime-economy` | Money, credits, /sell, /baltop |
 | `nexusslime-essentials` | 40+ QoL commands |
 | `nexusslime-crystaldefense` | Wave-based Crystal Defense minigame |
 | `nexusslime-custommobs` | YAML-defined custom bosses |
 | `nexusslime-dreams` | Sleep cutscene system |
-| `nexusslime-protections` | Region protection, flags, duel system |
+| `nexusslime-protections` | WorldGuard-style region protection, flags, duel system |
 | `nexusslime-ss` | Silk Spawner support |
 | `nexusslime-votifier` | Standalone Votifier V1/V2 server |
 | `nexusslime-twitch` | Twitch integration (live alerts, giveaways) |
+| `nexusslime-holograms` | YAML-driven floating text and item displays |
+| `nexusslime-traits` | Tarot card trait system with economy integration |
+| `nexusslime-rng` | Daily spin, lucky blocks, gacha, server events |
+| `nexusslime-crates` | Key-based loot crates with animated openings |
+| `nexusslime-enchantments` | 175 custom enchants across 6 rarities and 10 trigger types |
+| `nexusslime-structures` | Custom loot injection for 11 vanilla structure types |
 
 ---
 
