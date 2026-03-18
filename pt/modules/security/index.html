@@ -543,6 +543,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -918,6 +922,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mobs-com-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobs com Nível
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobs com Nível">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-rolagem-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela de Rolagem de Nível
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-do-nome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato do Nome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas-de-atributo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmulas de Atributo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-securityantilagyml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração (security/antilag.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#placeholderapi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1036,6 +1101,62 @@
     
   
     Sonhos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMO
   
 
     
@@ -1849,6 +1970,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mobs-com-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobs com Nível
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobs com Nível">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-rolagem-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela de Rolagem de Nível
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-do-nome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato do Nome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas-de-atributo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmulas de Atributo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-securityantilagyml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração (security/antilag.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#placeholderapi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2067,6 +2249,112 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="mobs-com-nivel">Mobs com Nível<a class="headerlink" href="#mobs-com-nivel" title="Permanent link">&para;</a></h2>
+<p>Todo mob hostil que aparece no mundo recebe automaticamente um <strong>nível</strong> que escala de acordo com o perigo do ambiente. Mobs de nível mais alto causam mais dano, têm mais vida e concedem mais XP.</p>
+<h3 id="tabela-de-rolagem-de-nivel">Tabela de Rolagem de Nível<a class="headerlink" href="#tabela-de-rolagem-de-nivel" title="Permanent link">&para;</a></h3>
+<p>Os níveis são rolados no spawn com base na altura Y, dimensão e bioma. Os bônus se acumulam.</p>
+<table>
+<thead>
+<tr>
+<th>Condição</th>
+<th>Faixa / Bônus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Y &gt; 64 (superfície)</td>
+<td>Nv. 1–4</td>
+</tr>
+<tr>
+<td>Y ≤ 64</td>
+<td>Nv. 3–6</td>
+</tr>
+<tr>
+<td>Y ≤ 30</td>
+<td>Nv. 5–8</td>
+</tr>
+<tr>
+<td>Y ≤ 0 (subterrâneo profundo)</td>
+<td>Nv. 8–12</td>
+</tr>
+<tr>
+<td>Dimensão Nether</td>
+<td>+3 ao resultado</td>
+</tr>
+<tr>
+<td>The End</td>
+<td>+4 ao resultado</td>
+</tr>
+<tr>
+<td>Bioma Deep Dark</td>
+<td>+5 ao resultado</td>
+</tr>
+<tr>
+<td>Lua de Sangue ativa</td>
+<td>+2 a todos os resultados</td>
+</tr>
+</tbody>
+</table>
+<p>Todos os resultados são limitados ao intervalo <code>[1, max-level]</code> da configuração.</p>
+<h3 id="formato-do-nome">Formato do Nome<a class="headerlink" href="#formato-do-nome" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Nome exibido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empilhado + com nível</td>
+<td><code>3x [Nv.5] Zumbi</code></td>
+</tr>
+<tr>
+<td>Único + com nível</td>
+<td><code>[Nv.5] Zumbi</code></td>
+</tr>
+<tr>
+<td>Nível 1 (qualquer pilha)</td>
+<td><code>3x Zumbi</code> <em>(sem tag de nível)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="formulas-de-atributo">Fórmulas de Atributo<a class="headerlink" href="#formulas-de-atributo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dano</strong></td>
+<td><code>danoBase × (1 + (nível-1) × multiplicadorDanoPorNível) × contadorPilha</code></td>
+</tr>
+<tr>
+<td><strong>XP</strong></td>
+<td><code>xpBase × contadorPilha × (1 + (nível-1) × multiplicadorXPPorNível)</code></td>
+</tr>
+<tr>
+<td><strong>Vida</strong></td>
+<td>Escalada por <code>multiplicadorVidaPorNível</code> por nível acima de 1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuracao-securityantilagyml_1">Configuração (<code>security/antilag.yml</code>)<a class="headerlink" href="#configuracao-securityantilagyml_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">leveled-mobs</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">max-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">xp-multiplier-per-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.20</span><span class="w">      </span><span class="c1"># +20% XP por nível acima de 1</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">damage-multiplier-per-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15</span><span class="w">  </span><span class="c1"># +15% dano por nível acima de 1</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">health-multiplier-per-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.10</span><span class="w">  </span><span class="c1"># +10% vida por nível acima de 1</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Integração com Lua de Sangue</p>
+<p>Quando a <strong>Lua de Sangue</strong> está ativa (veja o <a href="../events/">módulo Events</a>), todas as rolagens de nível recebem um bônus de <strong>+2</strong>, tornando os mobs de superfície significativamente mais perigosos à noite.</p>
+</div>
 <hr />
 <h2 id="placeholderapi">PlaceholderAPI<a class="headerlink" href="#placeholderapi" title="Permanent link">&para;</a></h2>
 <table>

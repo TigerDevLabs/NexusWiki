@@ -18,7 +18,7 @@
         <link rel="prev" href="../votifier/">
       
       
-        <link rel="next" href="../protections/">
+        <link rel="next" href="../events/">
       
       
         
@@ -543,6 +543,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -973,10 +977,77 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#integracao-com-o-arco-do-sacrificio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integração com o Arco do Sacrifício
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1725,6 +1796,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#integracao-com-o-arco-do-sacrificio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integração com o Arco do Sacrifício
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1921,6 +2003,15 @@
 <p class="admonition-title">Tip</p>
 <p>Deixe <code>world</code> vazio para usar o mundo principal. Os jogadores serão teleportados para as coordenadas XYZ configuradas no mundo padrão.</p>
 </div>
+<hr />
+<h2 id="integracao-com-o-arco-do-sacrificio">Integração com o Arco do Sacrifício<a class="headerlink" href="#integracao-com-o-arco-do-sacrificio" title="Permanent link">&para;</a></h2>
+<p>Quando o módulo <strong>Events</strong> está ativo, o <strong>Arco do Sacrifício</strong> pode suprimir completamente a cutscene normal de sonho.</p>
+<p>Se a sequência de sobrevivência à Lua de Sangue de um jogador atingir um múltiplo de 7 (7, 14, 21, 28...) e o jogador entrar em uma cama, o Arco do Sacrifício intercepta o evento de dormir <strong>antes</strong> de qualquer sonho ou pesadelo ser sorteado. Em vez disso, é exibida uma GUI de escolha.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Este comportamento é controlado pelo <code>DreamsManager.SACRIFICE_HOOK</code> — um hook definido pelo módulo Events no carregamento e removido no desligamento. Se o módulo Events estiver desativado, os sonhos funcionam exatamente como descrito acima, sem alterações.</p>
+</div>
+<p>Veja o <a href="../events/">módulo Events</a> para mais detalhes sobre o Arco do Sacrifício.</p>
 
 
 
