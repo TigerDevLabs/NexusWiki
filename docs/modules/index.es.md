@@ -15,6 +15,8 @@ NexusSlime está organizado en **módulos de funcionalidades**, cada uno gestion
 | [Crystal Defense](crystal-defense.md) | Minijuego cooperativo de defensa de Cristales Ender por oleadas |
 | [Votifier](votifier.md) | Servidor Votifier V1/V2 independiente, rachas de votos, clasificación |
 | [Sueños](dreams.md) | Sistema de cutscene de sueño con variantes de sueño y pesadilla |
+| [Events](events.md) | Luna de Sangre, oleadas de hordas, racha de supervivencia, Arco del Sacrificio, Jefes Isekai |
+| [MMO](mmo.md) | Puntos de atributo, 6 árboles de habilidad, 18 habilidades activas, 8 profesiones con pasivas |
 | [Protecciones](protections.md) | Reclamación de regiones estilo WorldGuard, 28 banderas de protección, duelo |
 | [Mobs Personalizados](custom-mobs.md) | Jefes definidos en YAML con tablas de botín, formas de IA y huevos de spawn |
 | [Crafteo Infinito](infinity-crafting.md) | Estaciones de crafteo multibloques con formato de receta YAML |

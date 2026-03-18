@@ -15,6 +15,8 @@ NexusSlime is organized into **feature modules**, each handling a distinct gamep
 | [Crystal Defense](crystal-defense.md) | Wave-based Ender Crystal defense minigame |
 | [Votifier](votifier.md) | Standalone V1/V2 vote server, vote streaks, leaderboard |
 | [Dreams](dreams.md) | Sleep cutscene system with dream and nightmare variants |
+| [Events](events.md) | Blood Moon, horde waves, survival streak, Sacrifice Arc, Isekai Bosses |
+| [MMO](mmo.md) | Stat points, 6 skill trees, 18 active abilities, 8 professions with mastery passives |
 | [Protections](protections.md) | WorldGuard-style region claims, 28 protection flags, duel system |
 | [Custom Mobs](custom-mobs.md) | YAML-defined bosses with loot tables, AI forms, and spawn eggs |
 | [Infinity Crafting](infinity-crafting.md) | Multiblock crafting stations with YAML recipe format |

@@ -57,6 +57,17 @@ Every player has a personal **Blood Moon survival streak** stored persistently i
 
 When the streak reaches a **multiple of 7** (7, 14, 21, 28...), the player receives a **Sacrifice Invitation** the next time they sleep.
 
+### Streak Difficulty Scaling
+
+Higher streaks make every Blood Moon harder — more mob levels, more spawns, and additional mini-boss events.
+
+| Streak Range | Level Bonus | Spawn Rate Bonus | Elite Multiplier | Extra Events |
+| --- | --- | --- | --- | --- |
+| 1–6 | Base | Base | Base | — |
+| 7–13 | +4 | +500% | ×3 | — |
+| 14–20 | +7 | +700% | ×5 | Mid-event boss spawn |
+| 21+ | +10 | +900% | Unlimited | Mini-bosses every 5 min |
+
 ---
 
 ## Sacrifice Arc
@@ -88,6 +99,21 @@ Closing the GUI without clicking counts as **Decline**.
 | **Die** | Streak reset to 0 |
 | **Quit/disconnect** | Session cleaned up, treated as failure |
 
+### Sacrifice Reward Tiers
+
+Rewards scale with how many Sacrifices you have completed (every 7 streak milestones).
+
+| Streak Milestone | Rewards |
+| --- | --- |
+| **7** | Tier 1 MMO item + permanent **+5 Max HP** |
+| **14** | Tier 2 MMO item + permanent **+10 Max HP** + **1 stat point** |
+| **21** | Tier 3 MMO item + permanent **+2 stat points** + cosmetic effect |
+| **28** | Tier 4 MMO item + permanent **+3 stat points** + title + boss egg |
+| **35+** | Multiplying stat points + exclusive anime cosmetic per milestone |
+
+!!! warning "Streak Reset After Sacrifice"
+    Completing a Sacrifice — win or lose — resets your streak to 0. Your **best streak** is recorded separately and never resets.
+
 ### Configuration (`events/config.yml`)
 
 ```yaml
@@ -101,6 +127,143 @@ sacrifice:
 
 !!! tip "Setting Up the Arena"
     Build a dedicated PvE arena and set its coordinates under `sacrifice.arena`. Leave `world` blank to fight in place — useful for testing.
+
+---
+
+## Isekai Boss Codex
+
+When a Sacrifice is accepted, a random **Isekai Boss** is summoned in the arena. The boss pool available depends on the player's current streak. Each boss has multiple phases, unique mechanics, and a unique drop.
+
+Boss definitions live in `events/isekai_bosses/*.yml`. Health and damage scale with streak:
+
+```
+finalStat = baseStat × (1 + (streak - 7) × 0.2)
+```
+
+### Boss Pool
+
+| Boss | Min Streak | Base Entity | Spawn Weight |
+| --- | --- | --- | --- |
+| Rimuru Tempest | 7 | Giant Slime | 10 |
+| Kazuma Satou | 7 | Villager | 9 |
+| Subaru Natsuki | 7 | Zombie | 8 |
+| Ainz Ooal Gown | 14 | Wither Skeleton | 7 |
+| Itadori Yuji | 14 | Piglin Brute | 6 |
+| Kirito | 14 | Zombie | 6 |
+| Gojo Satoru | 21 | Phantom / Vex | 5 |
+| Levi Ackermann | 21 | Vindicator | 4 |
+
+---
+
+=== "Rimuru Tempest"
+
+    **Min Streak:** 7 · **Base Entity:** Giant Slime
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Predator Aura (absorbs projectiles), Slime Split (mini-slimes at 80%/70%) |
+    | 2 | 60% → 25% | Storm of Steel (12 arrows 360°), Predator Drain (heals on hit) — swaps to Guardian |
+    | 3 | 25% → 0% | Void Collapse (8-block pull AoE, 3 dmg/tick), Infinite Regen (2 HP/2 ticks) — immune to knockback |
+
+    **Transitions:** Blue nova + Wither sound (→ Phase 2). Black collapse + Dragon Death sound + 2s Blindness (→ Phase 3).
+
+    **Drop:** Slime-core fragment · Blue shimmer aura cosmetic
+
+=== "Kazuma Satou"
+
+    **Min Streak:** 7 · **Base Entity:** Villager
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Steal (removes random hotbar item every 12s), Lucky Trigger (15% crit for 5× dmg, no tell) |
+    | 2 | 60% → 25% | Drain Touch (drains XP levels), Party Command (2 "Aqua" + 1 "Darkness" entity), Megumin Explosion (one-time at phase transition) |
+    | 3 | 25% → 0% | Lucky Trigger rises to 35% but same damage reflects to Kazuma; Final Steal (attempts to steal weapon); Aqua Call (one-time full HP restore) |
+
+    **Drop:** Adventurer's card · "Adventurer" rank item · Stolen items returned doubled
+
+=== "Subaru Natsuki"
+
+    **Min Streak:** 7 · **Base Entity:** Zombie
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | Ground Slam, Desperate Call (spawns "Rem" zombie at 60%) |
+    | **Return by Death** | At 0 HP (once) | Resets to 100% HP, player HP restored to pre-killing-blow, title: `⟳ RETURN BY DEATH` |
+    | Post-RBD | 100% → 0% | Witch Factor (Wither I + Hunger II every 20s), Last Stand (below 25%: +40% speed, +50% dmg) |
+
+    !!! danger "Return by Death"
+        Subaru cannot be killed the first time. The mechanic fires exactly **once per fight** — if you don't account for it, you'll lose your killing-blow window.
+
+    **Drop:** Silver coin cosmetic · "Witch's Scent" aura
+
+=== "Ainz Ooal Gown"
+
+    **Min Streak:** 14 · **Base Entity:** Wither Skeleton
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 70% | Summon Floor Guardians (3 zombies every 30s), Negative Burst (wither skull → Wither II + Weakness) |
+    | 2 | 70% → 30% | Grasp of Death (delayed 10 true dmg 4s after hit), Dark Wisdom (15s immunity to repeated damage type) |
+    | 3 | 30% → 0% | Touch of Ainz (3s standing still = instant kill), Soul Eater (heals 5 HP per killed entity) |
+
+    !!! warning "Cannot be killed below 1 HP while summoned entities are alive."
+
+    **Drop:** Undead Crown cosmetic · "§8Overlord" title fragment
+
+=== "Itadori Yuji"
+
+    **Min Streak:** 14 · **Base Entity:** Piglin Brute
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | Divergent Fist (8% Black Flash proc = 10× dmg), Rush Down (3-hit combo telegraphed by orange pulse) |
+    | 2 — **Sukuna Awakens** | 50% → 0% | Dismantle (3 shulker bullets in V + bleed), Cleave (5-block AoE melee), Malevolent Shrine (below 20%: 20 slashes in 3s), Black Flash rises to 15% |
+
+    **Drop:** Curse energy crystal · "§4Cursed" title · Tattoo cosmetic
+
+=== "Kirito"
+
+    **Min Streak:** 14 · **Base Entity:** Zombie
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 40% | Sword Skill Vorpal (straight-line 5-hit charge), Parry (20% negate incoming hit) |
+    | 2 — **Dual Blades** | 40% → 0% | SPEED III permanent, Starburst Stream (16 consecutive hits over 4s — break with 8+ dmg in one hit), Finish Move (below 15%: guaranteed crit charge) |
+
+    **Drop:** Black coat elytra cosmetic · "§7Solo Player" title · Dual sword CMD set
+
+=== "Gojo Satoru"
+
+    **Min Streak:** 21 · **Base Entity:** Phantom / Vex
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Infinity (70% of all attacks deal 1 dmg), Phase Shift (invisible every 8s for 4s) |
+    | 2 | 60% → 25% | Blue Pull (yanks player), Purple Hollow (straight beam AoE — 1s warning, 15 dmg + Levitation) |
+    | 3 — **Domain Expansion** | 25% → 0% | Darkness every 2s, Total Information (confusion bursts), Domain Strike (instant directional hit +50%), Infinity FULLY active |
+
+    !!! tip "Mage abilities and fire damage bypass Infinity."
+
+    **Drop:** Blindfold cosmetic · "§b∞ Limitless" title
+
+=== "Levi Ackermann"
+
+    **Min Streak:** 21 · **Base Entity:** Vindicator
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 50% | ODM Charge (teleports to wall → instant dash to player), Clean Cut (bypasses 50% defense), Vertical Manoeuvre (SPEED IV circles for 3s) |
+    | 2 | 50% → 0% | Wall to Wall (4 chained charges, decreasing telegraph), Titan Killer Form (below 25%: 5s stance — one-hit-to-0.5-hearts on connection, white outline tell) |
+
+    !!! danger "Cannot be stunned, knocked back, or slowed — ever."
+
+    **Drop:** ODM gear elytra cosmetic · "§8Survey Corps" title · Titan-slayer blade CMD
+
+---
+
+### Future Boss Pool (Streak 28+)
+
+Bosses planned for future releases: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dragneel, Sung Jin-Woo, Giorno Giovanna.
 
 ---
 
