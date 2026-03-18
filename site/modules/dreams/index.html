@@ -18,7 +18,7 @@
         <link rel="prev" href="../votifier/">
       
       
-        <link rel="next" href="../protections/">
+        <link rel="next" href="../events/">
       
       
         
@@ -543,6 +543,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -973,10 +977,77 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sacrifice-arc-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sacrifice Arc Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1725,6 +1796,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sacrifice-arc-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sacrifice Arc Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1921,6 +2003,15 @@
 <p class="admonition-title">Tip</p>
 <p>Leave <code>world</code> empty to use the main overworld. Players will be teleported to the configured XYZ coordinates in the default world.</p>
 </div>
+<hr />
+<h2 id="sacrifice-arc-integration">Sacrifice Arc Integration<a class="headerlink" href="#sacrifice-arc-integration" title="Permanent link">&para;</a></h2>
+<p>When the <strong>Events</strong> module is loaded, the <strong>Sacrifice Arc</strong> can suppress the normal dream cutscene entirely.</p>
+<p>If a player's Blood Moon survival streak has reached a multiple of 7 (7, 14, 21, 28...) and they enter a bed, the Sacrifice Arc intercepts the sleep event <strong>before</strong> any dream or nightmare is chosen. The player is shown a choice GUI instead of entering the cutscene.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This behaviour is controlled by <code>DreamsManager.SACRIFICE_HOOK</code> — a hook set by the Events module at load time and cleared on shutdown. If the Events module is disabled, dreams work exactly as described above with no changes.</p>
+</div>
+<p>See the <a href="../events/">Events module</a> for full details on the Sacrifice Arc.</p>
 
 
 

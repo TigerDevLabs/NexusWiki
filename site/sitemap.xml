@@ -145,6 +145,14 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/essentials/"/>
     </url>
     <url>
+        <loc>https://o-tiger.github.io/NexusWiki/modules/events/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/events/"/>
+    </url>
+    <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/holograms/</loc>
         <lastmod>2026-03-18</lastmod>
         <changefreq>daily</changefreq>
@@ -159,6 +167,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/infinity-crafting/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusWiki/modules/mmo/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/mmo/"/>
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/protections/</loc>
@@ -401,6 +417,14 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/essentials/"/>
     </url>
     <url>
+        <loc>https://o-tiger.github.io/NexusWiki/pt/modules/events/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/events/"/>
+    </url>
+    <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/holograms/</loc>
         <lastmod>2026-03-18</lastmod>
         <changefreq>daily</changefreq>
@@ -415,6 +439,14 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusWiki/pt/modules/mmo/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/mmo/"/>
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/protections/</loc>
@@ -657,6 +689,14 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/essentials/"/>
     </url>
     <url>
+        <loc>https://o-tiger.github.io/NexusWiki/es/modules/events/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/events/"/>
+    </url>
+    <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/holograms/</loc>
         <lastmod>2026-03-18</lastmod>
         <changefreq>daily</changefreq>
@@ -671,6 +711,14 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/infinity-crafting/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusWiki/es/modules/mmo/</loc>
+        <lastmod>2026-03-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/mmo/"/>
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/protections/</loc>
