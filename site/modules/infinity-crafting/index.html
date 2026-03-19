@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1689,6 +1711,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1928,7 +2043,7 @@
 
 
 <h1 id="infinity-crafting-module">Infinity Crafting Module<a class="headerlink" href="#infinity-crafting-module" title="Permanent link">&para;</a></h1>
-<p>Infinity Crafting is NexusSlime's <strong>multiblock crafting system</strong>. Players build physical multiblock structures in the world and use them as advanced crafting stations. Recipes are defined entirely in YAML.</p>
+<p>Infinity Crafting is NexusPrism's <strong>multiblock crafting system</strong>. Players build physical multiblock structures in the world and use them as advanced crafting stations. Recipes are defined entirely in YAML.</p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <table>
@@ -1993,7 +2108,7 @@
 </code></pre></div>
 <hr />
 <h2 id="recipe-yaml-format">Recipe YAML Format<a class="headerlink" href="#recipe-yaml-format" title="Permanent link">&para;</a></h2>
-<p>Recipes are placed in <code>plugins/NexusSlime/infinity_recipes/</code> as individual <code>.yml</code> files. The filename serves as the recipe ID.</p>
+<p>Recipes are placed in <code>plugins/NexusPrism/infinity_recipes/</code> as individual <code>.yml</code> files. The filename serves as the recipe ID.</p>
 <h3 id="shaped-recipe">Shaped Recipe<a class="headerlink" href="#shaped-recipe" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># infinity_recipes/nexus_core.yml</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SHAPED</span>
@@ -2063,7 +2178,7 @@
 </tr>
 <tr>
 <td><code>output.item</code></td>
-<td>Output item ID (NexusSlime custom or vanilla Material)</td>
+<td>Output item ID (NexusPrism custom or vanilla Material)</td>
 </tr>
 <tr>
 <td><code>output.amount</code></td>
@@ -2093,7 +2208,7 @@
 </table>
 <hr />
 <h2 id="in-game-guide">In-Game Guide<a class="headerlink" href="#in-game-guide" title="Permanent link">&para;</a></h2>
-<p>All infinity recipes are visible in the in-game guide. Open it with <code>/nexusslime guide</code> and navigate to the <strong>Infinity</strong> tier section.</p>
+<p>All infinity recipes are visible in the in-game guide. Open it with <code>/nexusprism guide</code> and navigate to the <strong>Infinity</strong> tier section.</p>
 <p>The guide shows:</p>
 <ul>
 <li>Required multiblock station</li>
@@ -2115,17 +2230,17 @@
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
 <td>Show recipe(s) for an item</td>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td>Open item guide GUI</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td>Reload all recipes and multiblocks</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 </tbody>
 </table>
@@ -2141,17 +2256,17 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 <td>View recipes with <code>/recipe</code></td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.craft</code></td>
+<td><code>nexusprism.craft</code></td>
 <td>Use crafting stations</td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 <td>Reload plugin configs/recipes</td>
 <td>OP</td>
 </tr>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nexusslime" class="md-skip">
+        <a href="#nexusprism" class="md-skip">
           Skip to content
         </a>
       
@@ -329,6 +329,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1584,6 +1606,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="store/" class="md-nav__link">
         
@@ -1722,11 +1837,11 @@
   
 
 
-<h1 id="nexusslime">NexusSlime<a class="headerlink" href="#nexusslime" title="Permanent link">&para;</a></h1>
+<h1 id="nexusprism">NexusPrism<a class="headerlink" href="#nexusprism" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>A comprehensive reimplementation and evolution of Slimefun4</strong> — next-generation tech, magic, and quality-of-life systems for Minecraft servers.</p>
 </blockquote>
-<p>NexusSlime is a modular Spigot plugin built on a +25-module Maven architecture.
+<p>NexusPrism is a modular Spigot plugin built on a +25-module Maven architecture.
 It brings custom items, machines, energy networks, clans, economy, minigames, and deep integrations all under a single, lightweight plugin JAR.</p>
 <hr />
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
@@ -1798,34 +1913,34 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 </table>
 <hr />
 <h2 id="module-overview">Module Overview<a class="headerlink" href="#module-overview" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NexusSlime
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── nexusslime-api          Public API for addon developers
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── nexusslime-core         Core managers, PDC registry, language
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── nexusslime-items        Custom item storage (235+ items)
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── nexusslime-machines     Machine definitions, processing engine
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── nexusslime-systems      Energy network implementation
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── nexusslime-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── nexusslime-storage      SQLite / PostgreSQL persistence
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── nexusslime-gui          GUI framework
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── nexusslime-utils        Utility helpers
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── nexusslime-web          Webstore delivery, VIP kits, payments
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── nexusslime-plugin       Main entry point (Spigot)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── nexusslime-discord      JDA bot, webhooks, account linking
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── nexusslime-chat         4-channel chat system
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── nexusslime-ae           ME (Applied Energistics-style) storage
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── nexusslime-energy       Energy generation and cable networks
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── nexusslime-waila        WAILA/HUD integration
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── nexusslime-security     Auth, anti-bot, anti-lag, anti-dupe
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── nexusslime-clans        Clans, territory, upgrades
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── nexusslime-economy      Money, credits, sell prices
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── nexusslime-essentials   40+ QoL commands
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── nexusslime-crystaldefense Wave-based Crystal Defense minigame
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├── nexusslime-custommobs   YAML-defined bosses
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>├── nexusslime-dreams       Sleep cutscene system
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>├── nexusslime-protections  Region protection, duel system
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>├── nexusslime-ss           Silk Spawner support
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>├── nexusslime-votifier     Standalone Votifier V1/V2 server
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>└── nexusslime-twitch       Twitch integration
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NexusPrism
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── nexusprism-api          Public API for addon developers
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── nexusprism-core         Core managers, PDC registry, language
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── nexusprism-items        Custom item storage (235+ items)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── nexusprism-machines     Machine definitions, processing engine
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── nexusprism-systems      Energy network implementation
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── nexusprism-storage      SQLite / PostgreSQL persistence
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── nexusprism-gui          GUI framework
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── nexusprism-utils        Utility helpers
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── nexusprism-web          Webstore delivery, VIP kits, payments
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── nexusprism-plugin       Main entry point (Spigot)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── nexusprism-discord      JDA bot, webhooks, account linking
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── nexusprism-chat         4-channel chat system
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── nexusprism-ae           ME (Applied Energistics-style) storage
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── nexusprism-energy       Energy generation and cable networks
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── nexusprism-waila        WAILA/HUD integration
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── nexusprism-security     Auth, anti-bot, anti-lag, anti-dupe
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── nexusprism-clans        Clans, territory, upgrades
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── nexusprism-economy      Money, credits, sell prices
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── nexusprism-essentials   40+ QoL commands
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── nexusprism-crystaldefense Wave-based Crystal Defense minigame
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├── nexusprism-custommobs   YAML-defined bosses
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>├── nexusprism-dreams       Sleep cutscene system
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>├── nexusprism-protections  Region protection, duel system
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>├── nexusprism-ss           Silk Spawner support
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>├── nexusprism-votifier     Standalone Votifier V1/V2 server
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>└── nexusprism-twitch       Twitch integration
 </code></pre></div>
 <hr />
 <h2 id="quick-navigation">Quick Navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
@@ -1859,13 +1974,13 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 </tr>
 <tr>
 <td><strong><a href="reference/placeholders/">PlaceholderAPI</a></strong></td>
-<td>All <code>%nexusslime_*%</code> placeholders</td>
+<td>All <code>%nexusprism_*%</code> placeholders</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h2>
-<p>NexusSlime is developed by <strong>O-Tiger</strong></p>
+<p>NexusPrism is developed by <strong>O-Tiger</strong></p>
 <ul>
 <li>API version: <code>1.21</code></li>
 <li>Soft dependencies: <code>PlaceholderAPI</code>, <code>LuckPerms</code>, <code>SkinsRestorer</code></li>

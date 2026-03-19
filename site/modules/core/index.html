@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1717,6 +1739,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1984,10 +2099,10 @@
 
 
 <h1 id="core-module">Core Module<a class="headerlink" href="#core-module" title="Permanent link">&para;</a></h1>
-<p>The Core module is the foundation of NexusSlime. It manages the custom item registry, PDC (PersistentDataContainer) tagging system, machine engine, research tree, backpacks, and waypoints.</p>
+<p>The Core module is the foundation of NexusPrism. It manages the custom item registry, PDC (PersistentDataContainer) tagging system, machine engine, research tree, backpacks, and waypoints.</p>
 <hr />
 <h2 id="custom-item-system">Custom Item System<a class="headerlink" href="#custom-item-system" title="Permanent link">&para;</a></h2>
-<p>All custom items are defined in <code>plugins/NexusSlime/items.yml</code>. The plugin ships with <strong>235+ items</strong> out of the box.</p>
+<p>All custom items are defined in <code>plugins/NexusPrism/items.yml</code>. The plugin ships with <strong>235+ items</strong> out of the box.</p>
 <h3 id="itemsyml-example"><code>items.yml</code> Example<a class="headerlink" href="#itemsyml-example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">COPPER_DUST</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DUST</span>
@@ -2083,7 +2198,7 @@
 </table>
 <hr />
 <h2 id="pdc-system">PDC System<a class="headerlink" href="#pdc-system" title="Permanent link">&para;</a></h2>
-<p>NexusSlime uses Minecraft's <strong>PersistentDataContainer</strong> to tag custom items, machines, and player data. Each NexusSlime item carries a <code>nexusslime:id</code> PDC key that identifies it uniquely.</p>
+<p>NexusPrism uses Minecraft's <strong>PersistentDataContainer</strong> to tag custom items, machines, and player data. Each NexusPrism item carries a <code>nexusprism:id</code> PDC key that identifies it uniquely.</p>
 <p>Key classes:</p>
 <ul>
 <li><code>CustomItemRegistry</code> — registers and resolves all custom items</li>
@@ -2113,11 +2228,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.research</code></td>
+<td><code>nexusprism.research</code></td>
 <td>Use the research system (default: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.research.all</code></td>
+<td><code>nexusprism.research.all</code></td>
 <td>Unlock all research instantly (OP)</td>
 </tr>
 </tbody>
@@ -2138,17 +2253,17 @@
 <tr>
 <td><code>/backpack open</code></td>
 <td>Open your backpack</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/backpack open &lt;id&gt;</code></td>
 <td>Open a specific backpack</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/backpack list</code></td>
 <td>List all backpacks</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 </tbody>
 </table>
@@ -2162,15 +2277,15 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.backpack.create</code></td>
+<td><code>nexusprism.backpack.create</code></td>
 <td>Create backpacks (default: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.backpack.upgrade</code></td>
+<td><code>nexusprism.backpack.upgrade</code></td>
 <td>Upgrade backpacks (default: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.backpack.unlimited</code></td>
+<td><code>nexusprism.backpack.unlimited</code></td>
 <td>Unlimited backpack slots (OP)</td>
 </tr>
 </tbody>
@@ -2191,27 +2306,27 @@
 <tr>
 <td><code>/waypoint create &lt;name&gt;</code></td>
 <td>Create a waypoint</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint delete &lt;name&gt;</code></td>
 <td>Delete a waypoint</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint list</code></td>
 <td>List all waypoints</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint tp &lt;name&gt;</code></td>
 <td>Teleport to a waypoint</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint info &lt;name&gt;</code></td>
 <td>Show waypoint details</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 </tbody>
 </table>
@@ -2226,19 +2341,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.essentials.waypoints.1</code></td>
+<td><code>nexusprism.essentials.waypoints.1</code></td>
 <td>1 (default)</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.5</code></td>
+<td><code>nexusprism.essentials.waypoints.5</code></td>
 <td>5</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.25</code></td>
+<td><code>nexusprism.essentials.waypoints.25</code></td>
 <td>25</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.unlimited</code></td>
+<td><code>nexusprism.essentials.waypoints.unlimited</code></td>
 <td>Unlimited (OP)</td>
 </tr>
 </tbody>
@@ -2255,61 +2370,61 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/nexusslime help</code></td>
+<td><code>/nexusprism help</code></td>
 <td>Show help</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime info</code></td>
+<td><code>/nexusprism info</code></td>
 <td>Plugin info</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td>Reload all configs</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime give &lt;player&gt; &lt;item&gt;</code></td>
+<td><code>/nexusprism give &lt;player&gt; &lt;item&gt;</code></td>
 <td>Give a custom item</td>
-<td><code>nexusslime.admin.give</code></td>
+<td><code>nexusprism.admin.give</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td>Open the item guide</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime modules</code></td>
+<td><code>/nexusprism modules</code></td>
 <td>List loaded modules</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine info &lt;id&gt;</code></td>
+<td><code>/nexusprism machine info &lt;id&gt;</code></td>
 <td>Machine info</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine list</code></td>
+<td><code>/nexusprism machine list</code></td>
 <td>List machines</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy info &lt;loc&gt;</code></td>
+<td><code>/nexusprism energy info &lt;loc&gt;</code></td>
 <td>Energy node info</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy network</code></td>
+<td><code>/nexusprism energy network</code></td>
 <td>Energy network view</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 </tbody>
 </table>
 <p>Aliases: <code>/ns</code>, <code>/nexus</code>, <code>/slime</code>, <code>/nslime</code></p>
 <hr />
 <h2 id="language-support">Language Support<a class="headerlink" href="#language-support" title="Permanent link">&para;</a></h2>
-<p>NexusSlime ships with four language files:</p>
+<p>NexusPrism ships with four language files:</p>
 <table>
 <thead>
 <tr>

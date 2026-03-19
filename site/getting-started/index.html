@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1636,6 +1658,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../store/" class="md-nav__link">
         
@@ -1825,7 +1940,7 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>This page covers everything you need to install and configure NexusSlime on your server.</p>
+<p>This page covers everything you need to install and configure NexusPrism on your server.</p>
 <hr />
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <table>
@@ -1865,13 +1980,13 @@
 <hr />
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Download the latest <code>NexusSlime.jar</code> from the <a href="https://github.com/O-Tiger/NexusSlime/releases">GitHub Releases</a> page.</li>
+<li>Download the latest <code>NexusPrism.jar</code> from the <a href="https://github.com/O-Tiger/NexusPrism/releases">GitHub Releases</a> page.</li>
 <li>Place the JAR in your server's <code>plugins/</code> folder.</li>
 <li>Start the server once to generate all default configuration files.</li>
 <li>Stop the server, edit the generated configs (see below), then restart.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>plugins/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── NexusSlime/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── NexusPrism/
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ├── config.yml
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ├── items.yml
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ├── machines.yml
@@ -1899,7 +2014,7 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">mysql</span><span class="p">:</span><span class="w">                  </span><span class="c1"># Only used when type: MYSQL</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nexusslime</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nexusprism</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nt">pool-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
@@ -1924,7 +2039,7 @@
 </code></pre></div>
 <hr />
 <h2 id="maven-modules">Maven Modules<a class="headerlink" href="#maven-modules" title="Permanent link">&para;</a></h2>
-<p>NexusSlime is a <strong>multi-module Maven project</strong>.
+<p>NexusPrism is a <strong>multi-module Maven project</strong>.
 All modules are bundled into the final plugin JAR automatically.</p>
 <table>
 <thead>
@@ -1935,150 +2050,150 @@ All modules are bundled into the final plugin JAR automatically.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime-api</code></td>
+<td><code>nexusprism-api</code></td>
 <td>Public API — interfaces for addon developers</td>
 </tr>
 <tr>
-<td><code>nexusslime-core</code></td>
+<td><code>nexusprism-core</code></td>
 <td>Core managers, PDC registry, language system</td>
 </tr>
 <tr>
-<td><code>nexusslime-items</code></td>
+<td><code>nexusprism-items</code></td>
 <td>Data-driven custom item storage</td>
 </tr>
 <tr>
-<td><code>nexusslime-machines</code></td>
+<td><code>nexusprism-machines</code></td>
 <td>Machine definitions and processing engine</td>
 </tr>
 <tr>
-<td><code>nexusslime-systems</code></td>
+<td><code>nexusprism-systems</code></td>
 <td>Energy network implementation</td>
 </tr>
 <tr>
-<td><code>nexusslime-integrations</code></td>
+<td><code>nexusprism-integrations</code></td>
 <td>PlaceholderAPI, LuckPerms, SkinsRestorer hooks</td>
 </tr>
 <tr>
-<td><code>nexusslime-storage</code></td>
+<td><code>nexusprism-storage</code></td>
 <td>SQLite / PostgreSQL data persistence</td>
 </tr>
 <tr>
-<td><code>nexusslime-gui</code></td>
+<td><code>nexusprism-gui</code></td>
 <td>GUI framework (menus and interfaces)</td>
 </tr>
 <tr>
-<td><code>nexusslime-utils</code></td>
+<td><code>nexusprism-utils</code></td>
 <td>Utility helpers</td>
 </tr>
 <tr>
-<td><code>nexusslime-web</code></td>
+<td><code>nexusprism-web</code></td>
 <td>Webstore bridge, VIP kits, payment handling, GDPR</td>
 </tr>
 <tr>
-<td><code>nexusslime-plugin</code></td>
+<td><code>nexusprism-plugin</code></td>
 <td>Main entry point, command handler</td>
 </tr>
 <tr>
-<td><code>nexusslime-discord</code></td>
+<td><code>nexusprism-discord</code></td>
 <td>JDA Discord bot, webhooks, account linking</td>
 </tr>
 <tr>
-<td><code>nexusslime-chat</code></td>
+<td><code>nexusprism-chat</code></td>
 <td>4-channel chat system with moderation</td>
 </tr>
 <tr>
-<td><code>nexusslime-tab</code></td>
+<td><code>nexusprism-tab</code></td>
 <td>TAB list header/footer, scoreboards, MOTD</td>
 </tr>
 <tr>
-<td><code>nexusslime-ae</code></td>
+<td><code>nexusprism-ae</code></td>
 <td>ME (Applied Energistics-style) network storage</td>
 </tr>
 <tr>
-<td><code>nexusslime-energy</code></td>
+<td><code>nexusprism-energy</code></td>
 <td>Energy generators and cable networks</td>
 </tr>
 <tr>
-<td><code>nexusslime-waila</code></td>
+<td><code>nexusprism-waila</code></td>
 <td>WAILA/HUD tooltips</td>
 </tr>
 <tr>
-<td><code>nexusslime-security</code></td>
+<td><code>nexusprism-security</code></td>
 <td>BCrypt auth, anti-bot, mod detection, anti-lag, anti-dupe</td>
 </tr>
 <tr>
-<td><code>nexusslime-clans</code></td>
+<td><code>nexusprism-clans</code></td>
 <td>Clans, territory claiming, upgrades, alliance system</td>
 </tr>
 <tr>
-<td><code>nexusslime-economy</code></td>
+<td><code>nexusprism-economy</code></td>
 <td>Money, credits, /sell, /baltop</td>
 </tr>
 <tr>
-<td><code>nexusslime-essentials</code></td>
+<td><code>nexusprism-essentials</code></td>
 <td>40+ QoL commands</td>
 </tr>
 <tr>
-<td><code>nexusslime-crystaldefense</code></td>
+<td><code>nexusprism-crystaldefense</code></td>
 <td>Wave-based Crystal Defense minigame</td>
 </tr>
 <tr>
-<td><code>nexusslime-custommobs</code></td>
+<td><code>nexusprism-custommobs</code></td>
 <td>YAML-defined custom bosses</td>
 </tr>
 <tr>
-<td><code>nexusslime-dreams</code></td>
+<td><code>nexusprism-dreams</code></td>
 <td>Sleep cutscene system</td>
 </tr>
 <tr>
-<td><code>nexusslime-protections</code></td>
+<td><code>nexusprism-protections</code></td>
 <td>WorldGuard-style region protection, flags, duel system</td>
 </tr>
 <tr>
-<td><code>nexusslime-ss</code></td>
+<td><code>nexusprism-ss</code></td>
 <td>Silk Spawner support</td>
 </tr>
 <tr>
-<td><code>nexusslime-votifier</code></td>
+<td><code>nexusprism-votifier</code></td>
 <td>Standalone Votifier V1/V2 server</td>
 </tr>
 <tr>
-<td><code>nexusslime-twitch</code></td>
+<td><code>nexusprism-twitch</code></td>
 <td>Twitch integration (live alerts, giveaways)</td>
 </tr>
 <tr>
-<td><code>nexusslime-holograms</code></td>
+<td><code>nexusprism-holograms</code></td>
 <td>YAML-driven floating text and item displays</td>
 </tr>
 <tr>
-<td><code>nexusslime-traits</code></td>
+<td><code>nexusprism-traits</code></td>
 <td>Tarot card trait system with economy integration</td>
 </tr>
 <tr>
-<td><code>nexusslime-rng</code></td>
+<td><code>nexusprism-rng</code></td>
 <td>Daily spin, lucky blocks, gacha, server events</td>
 </tr>
 <tr>
-<td><code>nexusslime-crates</code></td>
+<td><code>nexusprism-crates</code></td>
 <td>Key-based loot crates with animated openings</td>
 </tr>
 <tr>
-<td><code>nexusslime-enchantments</code></td>
+<td><code>nexusprism-enchantments</code></td>
 <td>175 custom enchants across 6 rarities and 10 trigger types</td>
 </tr>
 <tr>
-<td><code>nexusslime-structures</code></td>
+<td><code>nexusprism-structures</code></td>
 <td>Custom loot injection for 11 vanilla structure types</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="developer-api-jitpack">Developer API (Jitpack)<a class="headerlink" href="#developer-api-jitpack" title="Permanent link">&para;</a></h2>
-<p>Add NexusSlime as a dependency in your addon or plugin using <a href="https://jitpack.io/#O-Tiger/NexusSlime">Jitpack</a>.
-Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt="" src="https://jitpack.io/v/O-Tiger/NexusSlime.svg" /></a></p>
+<p>Add NexusPrism as a dependency in your addon or plugin using <a href="https://jitpack.io/#O-Tiger/NexusPrism">Jitpack</a>.
+Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusPrism"><img alt="" src="https://jitpack.io/v/O-Tiger/NexusPrism.svg" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">API-only dependency</p>
-<p>Depend on <code>nexusslime-api</code>, not <code>nexusslime-plugin</code>, to avoid pulling the full implementation into your project. Mark it as <code>provided</code> — the plugin JAR is already on the server at runtime.</p>
+<p>Depend on <code>nexusprism-api</code>, not <code>nexusprism-plugin</code>, to avoid pulling the full implementation into your project. Mark it as <code>provided</code> — the plugin JAR is already on the server at runtime.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Maven</label><label for="__tabbed_1_2">Gradle (Kotlin DSL)</label><label for="__tabbed_1_3">Gradle (Groovy)</label></div>
 <div class="tabbed-content">
@@ -2092,8 +2207,8 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">&lt;dependencies&gt;</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>com.github.O-Tiger.NexusSlime<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>nexusslime-api<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>com.github.O-Tiger.NexusPrism<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>nexusprism-api<span class="nt">&lt;/artifactId&gt;</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>TAG<span class="nt">&lt;/version&gt;</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
@@ -2106,7 +2221,7 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">compileOnly</span><span class="p">(</span><span class="s">&quot;com.github.O-Tiger.NexusSlime:nexusslime-api:TAG&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">compileOnly</span><span class="p">(</span><span class="s">&quot;com.github.O-Tiger.NexusPrism:nexusprism-api:TAG&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div>
 </div>
@@ -2116,7 +2231,7 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">}</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">compileOnly</span><span class="w"> </span><span class="s1">&#39;com.github.O-Tiger.NexusSlime:nexusslime-api:TAG&#39;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">compileOnly</span><span class="w"> </span><span class="s1">&#39;com.github.O-Tiger.NexusPrism:nexusprism-api:TAG&#39;</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">}</span>
 </code></pre></div>
 </div>
@@ -2124,22 +2239,22 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 </div>
 <p>Replace <code>TAG</code> with the release version (e.g. <code>2.0.0-BETA</code>) or a commit hash for snapshots.</p>
 <h3 id="pluginyml-dependency"><code>plugin.yml</code> dependency<a class="headerlink" href="#pluginyml-dependency" title="Permanent link">&para;</a></h3>
-<p>Declare NexusSlime as a soft or hard dependency in your addon's <code>plugin.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Hard dependency — your plugin won&#39;t load without NexusSlime</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">depend</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">NexusSlime</span><span class="p p-Indicator">]</span>
+<p>Declare NexusPrism as a soft or hard dependency in your addon's <code>plugin.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Hard dependency — your plugin won&#39;t load without NexusPrism</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">depend</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">NexusPrism</span><span class="p p-Indicator">]</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Soft dependency — loads after NexusSlime if present</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nt">softdepend</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">NexusSlime</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Soft dependency — loads after NexusPrism if present</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nt">softdepend</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">NexusPrism</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <h3 id="using-the-api">Using the API<a class="headerlink" href="#using-the-api" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusslime.api.NexusSlimeAPI</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusslime.api.items.NexusItem</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.NexusPrismAPI</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.items.NexusItem</span><span class="p">;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyAddon</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JavaPlugin</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nd">@Override</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onEnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">NexusSlimeAPI</span><span class="w"> </span><span class="n">api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusSlimeAPI</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">NexusPrismAPI</span><span class="w"> </span><span class="n">api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="c1">// Access the item registry</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="n">api</span><span class="p">.</span><span class="na">getItemRegistry</span><span class="p">().</span><span class="na">getItem</span><span class="p">(</span><span class="s">&quot;COPPER_DUST&quot;</span><span class="p">).</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">item</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -2155,7 +2270,7 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Uploading to Jitpack</p>
-<p>Push a tagged release to GitHub, then visit <code>https://jitpack.io/#O-Tiger/NexusSlime</code> and click <strong>Look up</strong> next to your tag to trigger the build. Once green, the dependency is ready to use.</p>
+<p>Push a tagged release to GitHub, then visit <code>https://jitpack.io/#O-Tiger/NexusPrism</code> and click <strong>Look up</strong> next to your tag to trigger the build. Once green, the dependency is ready to use.</p>
 </div>
 <hr />
 <h2 id="first-steps-after-install">First Steps After Install<a class="headerlink" href="#first-steps-after-install" title="Permanent link">&para;</a></h2>
@@ -2165,11 +2280,11 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusSlime"><img alt=
 <li><strong>Configure the Economy module</strong> (<code>economy/sell-prices.yml</code>) with your item prices</li>
 <li><strong>Set up Discord</strong> (<code>discord/config.yml</code>) with your bot token and channel IDs</li>
 <li><strong>Set up Votifier</strong> (<code>votifier/config.yml</code>) with your vote links and rewards</li>
-<li>Give yourself <code>nexusslime.admin.*</code> or use LuckPerms to assign permission groups</li>
+<li>Give yourself <code>nexusprism.admin.*</code> or use LuckPerms to assign permission groups</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Reload command</p>
-<p>After changing any config file, run <code>/nexusslime reload</code> to apply changes without restarting.</p>
+<p>After changing any config file, run <code>/nexusprism reload</code> to apply changes without restarting.</p>
 </div>
 
 
