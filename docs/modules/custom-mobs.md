@@ -22,19 +22,19 @@ The Custom Mobs module lets server admins define **YAML-based bosses** with cust
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/boss spawn <id>` | Spawn a boss at your location | `nexusslime.boss.admin` |
-| `/boss spawn <id> <world> <x> <y> <z>` | Spawn at coordinates | `nexusslime.boss.admin` |
-| `/boss list` | List all registered bosses | `nexusslime.boss.admin` |
-| `/boss info <id>` | Show boss definition details | `nexusslime.boss.admin` |
-| `/boss kill <id>` | Kill all active instances of a boss | `nexusslime.boss.admin` |
-| `/bossegg give <player> <id>` | Give a boss spawn egg | `nexusslime.boss.admin` |
-| `/bossegg <id>` | Get your own boss spawn egg | `nexusslime.boss.admin` |
+| `/boss spawn <id>` | Spawn a boss at your location | `nexusprism.boss.admin` |
+| `/boss spawn <id> <world> <x> <y> <z>` | Spawn at coordinates | `nexusprism.boss.admin` |
+| `/boss list` | List all registered bosses | `nexusprism.boss.admin` |
+| `/boss info <id>` | Show boss definition details | `nexusprism.boss.admin` |
+| `/boss kill <id>` | Kill all active instances of a boss | `nexusprism.boss.admin` |
+| `/bossegg give <player> <id>` | Give a boss spawn egg | `nexusprism.boss.admin` |
+| `/bossegg <id>` | Get your own boss spawn egg | `nexusprism.boss.admin` |
 
 ---
 
 ## Boss YAML Format
 
-Boss files are placed in `plugins/NexusSlime/custommobs/bosses/<id>.yml`.
+Boss files are placed in `plugins/NexusPrism/custommobs/bosses/<id>.yml`.
 
 ### Full Example (`white_death.yml`)
 
@@ -96,13 +96,13 @@ form_switch_interval_ticks: 300
 
 ### Loot Items
 
-Both Bukkit `Material` names and NexusSlime custom item IDs can be used in loot tables:
+Both Bukkit `Material` names and NexusPrism custom item IDs can be used in loot tables:
 
 ```yaml
 loot:
   always:
     - DIAMOND:3           # Vanilla material
-    - NEXUS_SHARD:1       # Custom NexusSlime item ID
+    - NEXUS_SHARD:1       # Custom NexusPrism item ID
   chance:
     - item: BOSS_TROPHY
       chance: 0.05        # 5% drop chance
@@ -118,7 +118,7 @@ loot:
 | `DAGGER` | Fast hit-and-run attacks |
 | `GLADIUS` | Balanced attack with shield bashing |
 
-Custom AI forms can be added by creating addon modules using the `nexusslime-api`.
+Custom AI forms can be added by creating addon modules using the `nexusprism-api`.
 
 ---
 
@@ -126,7 +126,7 @@ Custom AI forms can be added by creating addon modules using the `nexusslime-api
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.boss.admin` | All boss and spawn egg commands | OP |
+| `nexusprism.boss.admin` | All boss and spawn egg commands | OP |
 
 ---
 

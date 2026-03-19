@@ -1,6 +1,6 @@
 # Primeiros Passos
 
-Esta página cobre tudo o que você precisa para instalar e configurar o NexusSlime no seu servidor.
+Esta página cobre tudo o que você precisa para instalar e configurar o NexusPrism no seu servidor.
 
 ---
 
@@ -21,14 +21,14 @@ Esta página cobre tudo o que você precisa para instalar e configurar o NexusSl
 
 ## Instalação
 
-1. Baixe o `NexusSlime.jar` mais recente na página de [GitHub Releases](https://github.com/O-Tiger/NexusSlime/releases).
+1. Baixe o `NexusPrism.jar` mais recente na página de [GitHub Releases](https://github.com/O-Tiger/NexusPrism/releases).
 2. Coloque o JAR na pasta `plugins/` do seu servidor.
 3. Inicie o servidor uma vez para gerar todos os arquivos de configuração padrão.
 4. Pare o servidor, edite as configurações geradas (veja abaixo) e reinicie.
 
 ```text
 plugins/
-└── NexusSlime/
+└── NexusPrism/
     ├── config.yml
     ├── items.yml
     ├── machines.yml
@@ -60,7 +60,7 @@ database:
   mysql:                  # Usado apenas quando type: MYSQL
     host: localhost
     port: 3306
-    database: nexusslime
+    database: nexusprism
     username: root
     password: senha
     pool-size: 10
@@ -88,48 +88,48 @@ machines:
 
 ## Módulos Maven
 
-NexusSlime é um **projeto Maven multi-módulo**. Todos os módulos são empacotados no JAR final automaticamente.
+NexusPrism é um **projeto Maven multi-módulo**. Todos os módulos são empacotados no JAR final automaticamente.
 
 | Módulo | Descrição |
 | --- | --- |
-| `nexusslime-api` | API pública — interfaces para desenvolvedores de addons |
-| `nexusslime-core` | Gerenciadores principais, registro PDC, sistema de idioma |
-| `nexusslime-items` | Armazenamento de itens personalizados orientado a dados |
-| `nexusslime-machines` | Definições de máquinas e motor de processamento |
-| `nexusslime-systems` | Implementação de redes de energia |
-| `nexusslime-integrations` | Hooks para PlaceholderAPI, LuckPerms, SkinsRestorer |
-| `nexusslime-storage` | Persistência de dados SQLite / PostgreSQL |
-| `nexusslime-gui` | Framework de GUI (menus e interfaces) |
-| `nexusslime-utils` | Utilitários auxiliares |
-| `nexusslime-web` | Bridge da loja web, kits VIP, processamento de pagamentos |
-| `nexusslime-plugin` | Ponto de entrada principal, handler de comandos |
-| `nexusslime-discord` | Bot Discord JDA, webhooks, vinculação de conta |
-| `nexusslime-chat` | Sistema de chat com 4 canais e moderação |
-| `nexusslime-ae` | Armazenamento em rede estilo ME |
-| `nexusslime-energy` | Geradores de energia e redes de cabos |
-| `nexusslime-waila` | Tooltips WAILA/HUD |
-| `nexusslime-security` | Auth BCrypt, anti-bot, anti-lag, anti-dupe |
-| `nexusslime-clans` | Clãs, conquista de território, melhorias |
-| `nexusslime-economy` | Dinheiro, créditos, /sell, /baltop |
-| `nexusslime-essentials` | +40 comandos QoL |
-| `nexusslime-crystaldefense` | Minijogo Crystal Defense por ondas |
-| `nexusslime-custommobs` | Chefes personalizados definidos em YAML |
-| `nexusslime-dreams` | Sistema de cutscene de sono |
-| `nexusslime-protections` | Proteção de regiões, flags, sistema de duelo |
-| `nexusslime-ss` | Suporte a Silk Spawner |
-| `nexusslime-votifier` | Servidor Votifier V1/V2 independente |
-| `nexusslime-twitch` | Integração Twitch (alertas ao vivo, sorteios) |
+| `nexusprism-api` | API pública — interfaces para desenvolvedores de addons |
+| `nexusprism-core` | Gerenciadores principais, registro PDC, sistema de idioma |
+| `nexusprism-items` | Armazenamento de itens personalizados orientado a dados |
+| `nexusprism-machines` | Definições de máquinas e motor de processamento |
+| `nexusprism-systems` | Implementação de redes de energia |
+| `nexusprism-integrations` | Hooks para PlaceholderAPI, LuckPerms, SkinsRestorer |
+| `nexusprism-storage` | Persistência de dados SQLite / PostgreSQL |
+| `nexusprism-gui` | Framework de GUI (menus e interfaces) |
+| `nexusprism-utils` | Utilitários auxiliares |
+| `nexusprism-web` | Bridge da loja web, kits VIP, processamento de pagamentos |
+| `nexusprism-plugin` | Ponto de entrada principal, handler de comandos |
+| `nexusprism-discord` | Bot Discord JDA, webhooks, vinculação de conta |
+| `nexusprism-chat` | Sistema de chat com 4 canais e moderação |
+| `nexusprism-ae` | Armazenamento em rede estilo ME |
+| `nexusprism-energy` | Geradores de energia e redes de cabos |
+| `nexusprism-waila` | Tooltips WAILA/HUD |
+| `nexusprism-security` | Auth BCrypt, anti-bot, anti-lag, anti-dupe |
+| `nexusprism-clans` | Clãs, conquista de território, melhorias |
+| `nexusprism-economy` | Dinheiro, créditos, /sell, /baltop |
+| `nexusprism-essentials` | +40 comandos QoL |
+| `nexusprism-crystaldefense` | Minijogo Crystal Defense por ondas |
+| `nexusprism-custommobs` | Chefes personalizados definidos em YAML |
+| `nexusprism-dreams` | Sistema de cutscene de sono |
+| `nexusprism-protections` | Proteção de regiões, flags, sistema de duelo |
+| `nexusprism-ss` | Suporte a Silk Spawner |
+| `nexusprism-votifier` | Servidor Votifier V1/V2 independente |
+| `nexusprism-twitch` | Integração Twitch (alertas ao vivo, sorteios) |
 
 ---
 
 ## API para Desenvolvedores (Jitpack)
 
-Adicione o NexusSlime como dependência no seu addon ou plugin usando o [Jitpack](https://jitpack.io/#O-Tiger/NexusSlime).
+Adicione o NexusPrism como dependência no seu addon ou plugin usando o [Jitpack](https://jitpack.io/#O-Tiger/NexusPrism).
 
-[![](https://jitpack.io/v/O-Tiger/NexusSlime.svg)](https://jitpack.io/#O-Tiger/NexusSlime)
+[![](https://jitpack.io/v/O-Tiger/NexusPrism.svg)](https://jitpack.io/#O-Tiger/NexusPrism)
 
 !!! info "Dependência somente da API"
-    Dependa de `nexusslime-api`, não de `nexusslime-plugin`, para evitar puxar a implementação completa para o seu projeto. Marque como `provided` — o JAR do plugin já está no servidor em tempo de execução.
+    Dependa de `nexusprism-api`, não de `nexusprism-plugin`, para evitar puxar a implementação completa para o seu projeto. Marque como `provided` — o JAR do plugin já está no servidor em tempo de execução.
 
 === "Maven"
 
@@ -143,8 +143,8 @@ Adicione o NexusSlime como dependência no seu addon ou plugin usando o [Jitpack
 
     <dependencies>
         <dependency>
-            <groupId>com.github.O-Tiger.NexusSlime</groupId>
-            <artifactId>nexusslime-api</artifactId>
+            <groupId>com.github.O-Tiger.NexusPrism</groupId>
+            <artifactId>nexusprism-api</artifactId>
             <version>TAG</version>
             <scope>provided</scope>
         </dependency>
@@ -159,7 +159,7 @@ Adicione o NexusSlime como dependência no seu addon ou plugin usando o [Jitpack
     }
 
     dependencies {
-        compileOnly("com.github.O-Tiger.NexusSlime:nexusslime-api:TAG")
+        compileOnly("com.github.O-Tiger.NexusPrism:nexusprism-api:TAG")
     }
     ```
 
@@ -171,7 +171,7 @@ Adicione o NexusSlime como dependência no seu addon ou plugin usando o [Jitpack
     }
 
     dependencies {
-        compileOnly 'com.github.O-Tiger.NexusSlime:nexusslime-api:TAG'
+        compileOnly 'com.github.O-Tiger.NexusPrism:nexusprism-api:TAG'
     }
     ```
 
@@ -180,11 +180,11 @@ Substitua `TAG` pela versão do release (ex: `2.0.0-BETA`) ou um hash de commit 
 ### Dependência no `plugin.yml`
 
 ```yaml
-# Dependência obrigatória — seu plugin não carrega sem o NexusSlime
-depend: [NexusSlime]
+# Dependência obrigatória — seu plugin não carrega sem o NexusPrism
+depend: [NexusPrism]
 
-# Dependência opcional — carrega após o NexusSlime se presente
-softdepend: [NexusSlime]
+# Dependência opcional — carrega após o NexusPrism se presente
+softdepend: [NexusPrism]
 ```
 
 ---
@@ -196,7 +196,7 @@ softdepend: [NexusSlime]
 3. **Configure o módulo Economy** (`economy/sell-prices.yml`) com os preços dos itens
 4. **Configure o Discord** (`discord/config.yml`) com seu token de bot e IDs de canais
 5. **Configure o Votifier** (`votifier/config.yml`) com seus links de votação e recompensas
-6. Conceda a si mesmo `nexusslime.admin.*` ou use o LuckPerms para atribuir grupos de permissões
+6. Conceda a si mesmo `nexusprism.admin.*` ou use o LuckPerms para atribuir grupos de permissões
 
 !!! tip "Comando de recarga"
-    Após alterar qualquer arquivo de configuração, execute `/nexusslime reload` para aplicar as mudanças sem reiniciar o servidor.
+    Após alterar qualquer arquivo de configuração, execute `/nexusprism reload` para aplicar as mudanças sem reiniciar o servidor.

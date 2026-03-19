@@ -17,18 +17,18 @@ El módulo Economía proporciona un **sistema de moneda dual** (dinero y crédit
 
 | Comando | Uso | Permiso |
 | --- | --- | --- |
-| `/money` | Verificar tu saldo | `nexusslime.economy.money` |
-| `/money <jugador>` | Verificar saldo de otro jugador | `nexusslime.economy.money` |
-| `/credits` | Verificar tus créditos | `nexusslime.economy.credits` |
-| `/baltop` | Top 10 jugadores más ricos | `nexusslime.economy.baltop` |
-| `/sell hand` | Vender ítem en mano | `nexusslime.economy.sell` |
-| `/sell all` | Vender todos los ítems vendibles | `nexusslime.economy.sell` |
-| `/sell inventory` | Vender inventario completo | `nexusslime.economy.sell` |
-| `/worth [ítem]` | Verificar valor de venta del ítem | `nexusslime.essentials.worth` |
-| `/eco give <jugador> <cantidad>` | Dar dinero (admin) | `nexusslime.economy.admin` |
-| `/eco take <jugador> <cantidad>` | Quitar dinero (admin) | `nexusslime.economy.admin` |
-| `/eco set <jugador> <cantidad>` | Establecer saldo (admin) | `nexusslime.economy.admin` |
-| `/eco reset <jugador>` | Resetear saldo (admin) | `nexusslime.economy.admin` |
+| `/money` | Verificar tu saldo | `nexusprism.economy.money` |
+| `/money <jugador>` | Verificar saldo de otro jugador | `nexusprism.economy.money` |
+| `/credits` | Verificar tus créditos | `nexusprism.economy.credits` |
+| `/baltop` | Top 10 jugadores más ricos | `nexusprism.economy.baltop` |
+| `/sell hand` | Vender ítem en mano | `nexusprism.economy.sell` |
+| `/sell all` | Vender todos los ítems vendibles | `nexusprism.economy.sell` |
+| `/sell inventory` | Vender inventario completo | `nexusprism.economy.sell` |
+| `/worth [ítem]` | Verificar valor de venta del ítem | `nexusprism.essentials.worth` |
+| `/eco give <jugador> <cantidad>` | Dar dinero (admin) | `nexusprism.economy.admin` |
+| `/eco take <jugador> <cantidad>` | Quitar dinero (admin) | `nexusprism.economy.admin` |
+| `/eco set <jugador> <cantidad>` | Establecer saldo (admin) | `nexusprism.economy.admin` |
+| `/eco reset <jugador>` | Resetear saldo (admin) | `nexusprism.economy.admin` |
 
 ---
 
@@ -36,11 +36,11 @@ El módulo Economía proporciona un **sistema de moneda dual** (dinero y crédit
 
 | Permiso | Descripción | Predeterminado |
 | --- | --- | --- |
-| `nexusslime.economy.money` | Ver saldos | true |
-| `nexusslime.economy.credits` | Ver créditos | true |
-| `nexusslime.economy.baltop` | Ver clasificación | true |
-| `nexusslime.economy.sell` | Usar /sell | true |
-| `nexusslime.economy.admin` | Comandos de admin eco | OP |
+| `nexusprism.economy.money` | Ver saldos | true |
+| `nexusprism.economy.credits` | Ver créditos | true |
+| `nexusprism.economy.baltop` | Ver clasificación | true |
+| `nexusprism.economy.sell` | Usar /sell | true |
+| `nexusprism.economy.admin` | Comandos de admin eco | OP |
 
 ---
 
@@ -79,8 +79,8 @@ prices:
 
 | Placeholder | Descripción |
 | --- | --- |
-| `%nexusslime_money%` | Saldo de dinero del jugador |
-| `%nexusslime_credits%` | Saldo de créditos del jugador |
+| `%nexusprism_money%` | Saldo de dinero del jugador |
+| `%nexusprism_credits%` | Saldo de créditos del jugador |
 
 ---
 
@@ -114,11 +114,11 @@ Los jugadores solo pueden tener **un empleo a la vez**. Las configuraciones de e
 
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
-| `/job` | Abrir GUI de empleos | `nexusslime.economy.job.use` |
-| `/job join <id>` | Unirse a un empleo | `nexusslime.economy.job.use` |
-| `/job leave` | Abandonar el empleo actual | `nexusslime.economy.job.use` |
-| `/job info [id]` | Ver estadísticas del empleo | `nexusslime.economy.job.use` |
-| `/job top` | Clasificación de empleos | `nexusslime.economy.job.use` |
+| `/job` | Abrir GUI de empleos | `nexusprism.economy.job.use` |
+| `/job join <id>` | Unirse a un empleo | `nexusprism.economy.job.use` |
+| `/job leave` | Abandonar el empleo actual | `nexusprism.economy.job.use` |
+| `/job info [id]` | Ver estadísticas del empleo | `nexusprism.economy.job.use` |
+| `/job top` | Clasificación de empleos | `nexusprism.economy.job.use` |
 
 !!! note "Bonificación de Luna de Sangre"
     Durante una Luna de Sangre, el pago por matar del empleo **Cazador** se multiplica (por defecto ×1,5). Ver el [módulo Events](events.md).
@@ -162,8 +162,8 @@ Se abre una GUI de 3 filas al hacer clic derecho en el letrero:
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.economy.shop.create` | Crear tiendas de cofre | true |
-| `nexusslime.economy.shop.admin` | Crear tiendas admin (stock ilimitado) | OP |
+| `nexusprism.economy.shop.create` | Crear tiendas de cofre | true |
+| `nexusprism.economy.shop.admin` | Crear tiendas admin (stock ilimitado) | OP |
 
 ---
 
@@ -186,9 +186,9 @@ Los jugadores pueden establecer puntos de teletransporte con nombre que cualquie
 
 | Permiso | Máximo de Puntos |
 | --- | --- |
-| `nexusslime.economy.playerwarp.unlimited` | Ilimitado |
-| `nexusslime.economy.playerwarp.10` | 10 |
-| `nexusslime.economy.playerwarp.3` | 3 |
+| `nexusprism.economy.playerwarp.unlimited` | Ilimitado |
+| `nexusprism.economy.playerwarp.10` | 10 |
+| `nexusprism.economy.playerwarp.3` | 3 |
 | *(por defecto)* | 1 |
 
 ---
@@ -208,7 +208,7 @@ Un tablón de listados global donde los jugadores compran y venden ítems entre 
 
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
-| `/ah` | Explorar listados activos (GUI paginada de 6 filas) | `nexusslime.economy.ah.use` |
-| `/ah sell <precio>` | Listar ítem en mano a un precio | `nexusslime.economy.ah.use` |
-| `/ah own` | Ver tus listados; cancelar activos o reclamar expirados | `nexusslime.economy.ah.use` |
-| `/ah cancel <id>` | Cancelar un listado por su ID | `nexusslime.economy.ah.use` |
+| `/ah` | Explorar listados activos (GUI paginada de 6 filas) | `nexusprism.economy.ah.use` |
+| `/ah sell <precio>` | Listar ítem en mano a un precio | `nexusprism.economy.ah.use` |
+| `/ah own` | Ver tus listados; cancelar activos o reclamar expirados | `nexusprism.economy.ah.use` |
+| `/ah cancel <id>` | Cancelar un listado por su ID | `nexusprism.economy.ah.use` |

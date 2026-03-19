@@ -44,7 +44,7 @@ Enchants specify which item types they can be applied to via `applicable-items:`
 
 ## Commands
 
-All commands require `nexusslime.enchantments.admin`.
+All commands require `nexusprism.enchantments.admin`.
 
 | Command | Description |
 | --- | --- |
@@ -61,7 +61,7 @@ All commands require `nexusslime.enchantments.admin`.
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.enchantments.admin` | All enchantment management commands | OP |
+| `nexusprism.enchantments.admin` | All enchantment management commands | OP |
 
 ---
 

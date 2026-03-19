@@ -1,6 +1,6 @@
 # Tienda / Webstore
 
-NexusSlime incluye un bridge de tienda web integrado que entrega los paquetes comprados a los jugadores automáticamente, incluso cuando están desconectados.
+NexusPrism incluye un bridge de tienda web integrado que entrega los paquetes comprados a los jugadores automáticamente, incluso cuando están desconectados.
 
 !!! warning "Cumplimiento del EULA"
     Todos los paquetes de la tienda deben cumplir con las [Directrices de Uso Comercial de Minecraft](https://www.minecraft.net/en-us/eula). La venta de ventajas de juego que no puedan obtenerse normalmente **no está permitida** en servidores accesibles al público.
@@ -27,7 +27,7 @@ NexusSlime incluye un bridge de tienda web integrado que entrega los paquetes co
 
 ## Sistema de Entrega
 
-El bridge de webstore de NexusSlime usa una cola de entrega. Cuando un jugador compra un paquete:
+El bridge de webstore de NexusPrism usa una cola de entrega. Cuando un jugador compra un paquete:
 
 1. La tienda envía una solicitud de entrega al plugin mediante el bridge
 2. La entrega se pone en cola en `delivery.yml` (persistente)
@@ -57,24 +57,24 @@ file-fallback: "pending_deliveries.jsonl"
 kits:
   vip:
     display-name: "&6Kit VIP"
-    permission: "nexusslime.kit.vip"
+    permission: "nexusprism.kit.vip"
     cooldown-hours: 24
     items:
       - material: GOLDEN_APPLE
         amount: 5
-      - nexusslime-id: SERVER_KEY
+      - nexusprism-id: SERVER_KEY
         amount: 1
     commands:
       - "eco give {player} 1000"
 
   mvp:
     display-name: "&bKit MVP"
-    permission: "nexusslime.kit.mvp"
+    permission: "nexusprism.kit.mvp"
     cooldown-hours: 24
     items:
       - material: GOLDEN_APPLE
         amount: 16
-      - nexusslime-id: SERVER_KEY
+      - nexusprism-id: SERVER_KEY
         amount: 2
     commands:
       - "eco give {player} 2500"

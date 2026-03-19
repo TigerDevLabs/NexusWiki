@@ -1,6 +1,6 @@
 # Módulo Votifier
 
-O módulo Votifier é um **servidor Votifier V1 e V2 autônomo** embutido diretamente no NexusSlime. Ele processa votos recebidos de sites de listagem de servidores, distribui recompensas configuráveis e acompanha sequências de votos dos jogadores em um placar.
+O módulo Votifier é um **servidor Votifier V1 e V2 autônomo** embutido diretamente no NexusPrism. Ele processa votos recebidos de sites de listagem de servidores, distribui recompensas configuráveis e acompanha sequências de votos dos jogadores em um placar.
 
 ---
 
@@ -14,7 +14,7 @@ Site de Votação  ──► Servidor Votifier (porta 8192)  ──► VoteManag
 1. Cadastre seu servidor em sites de votação (Minecraftservers.org, etc.)
 2. Aponte cada site para o IP do seu servidor e a porta do Votifier (padrão `8192`)
 3. Quando um jogador votar, o site envia um payload para o seu servidor Votifier
-4. O NexusSlime processa o voto, executa os comandos de recompensa e atualiza a sequência
+4. O NexusPrism processa o voto, executa os comandos de recompensa e atualiza a sequência
 
 ---
 
@@ -22,8 +22,8 @@ Site de Votação  ──► Servidor Votifier (porta 8192)  ──► VoteManag
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/vote` | Exibir links de votação e sua sequência atual | `nexusslime.vote` |
-| `/votetop` | Exibir o placar de votos | `nexusslime.vote.top` |
+| `/vote` | Exibir links de votação e sua sequência atual | `nexusprism.vote` |
+| `/votetop` | Exibir o placar de votos | `nexusprism.vote.top` |
 
 ---
 
@@ -31,8 +31,8 @@ Site de Votação  ──► Servidor Votifier (porta 8192)  ──► VoteManag
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.vote` | Usar `/vote` | true |
-| `nexusslime.vote.top` | Usar `/votetop` | true |
+| `nexusprism.vote` | Usar `/vote` | true |
+| `nexusprism.vote.top` | Usar `/votetop` | true |
 
 ---
 
@@ -96,7 +96,7 @@ Ao se cadastrar em um site de votação, você precisará de:
 
 - **IP do Servidor** — o endereço IP público do seu servidor
 - **Porta do Votifier** — `8192` (ou o valor definido em `config.yml`)
-- **Chave Pública** — copie de `plugins/NexusSlime/votifier/rsa/public.key` (sites V1)
+- **Chave Pública** — copie de `plugins/NexusPrism/votifier/rsa/public.key` (sites V1)
 - **Token** — o valor de `token` em `config.yml` (sites V2)
 
 ---
@@ -110,7 +110,7 @@ Ao se cadastrar em um site de votação, você precisará de:
 | 10–29 votos | 2× |
 | 30+ votos | 3× |
 
-Quando o multiplicador está ativo, os valores `COMMAND` de recompensa são executados múltiplas vezes de acordo com o multiplicador (arredondado para o inteiro mais próximo). Você também pode implementar lógica de multiplicador personalizada usando o placeholder `%nexusslime_vote_streak%` em plugins externos.
+Quando o multiplicador está ativo, os valores `COMMAND` de recompensa são executados múltiplas vezes de acordo com o multiplicador (arredondado para o inteiro mais próximo). Você também pode implementar lógica de multiplicador personalizada usando o placeholder `%nexusprism_vote_streak%` em plugins externos.
 
 ---
 
@@ -118,5 +118,5 @@ Quando o multiplicador está ativo, os valores `COMMAND` de recompensa são exec
 
 | Placeholder | Descrição |
 | --- | --- |
-| `%nexusslime_votes_total%` | Total de votos acumulados do jogador |
-| `%nexusslime_vote_streak%` | Sequência de votos atual do jogador |
+| `%nexusprism_votes_total%` | Total de votos acumulados do jogador |
+| `%nexusprism_vote_streak%` | Sequência de votos atual do jogador |

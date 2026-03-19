@@ -21,14 +21,14 @@ The Twitch module connects your Minecraft server to Twitch. Players can **link t
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/twitch link <username>` | Start linking your Twitch account | `nexusslime.twitch.use` |
-| `/twitch unlink` | Unlink your Twitch account | `nexusslime.twitch.use` |
-| `/twitch status` | Check your link status | `nexusslime.twitch.use` |
-| `/twitch approve <player>` | Approve a pending link | `nexusslime.twitch.staff` |
-| `/twitch reject <player>` | Reject a pending link | `nexusslime.twitch.staff` |
-| `/twitch pending` | List pending link requests | `nexusslime.twitch.staff` |
-| `/twitch giveaway <streamer>` | Draw a giveaway winner | `nexusslime.twitch.staff` |
-| `/twitch reload` | Reload Twitch config | `nexusslime.twitch.admin` |
+| `/twitch link <username>` | Start linking your Twitch account | `nexusprism.twitch.use` |
+| `/twitch unlink` | Unlink your Twitch account | `nexusprism.twitch.use` |
+| `/twitch status` | Check your link status | `nexusprism.twitch.use` |
+| `/twitch approve <player>` | Approve a pending link | `nexusprism.twitch.staff` |
+| `/twitch reject <player>` | Reject a pending link | `nexusprism.twitch.staff` |
+| `/twitch pending` | List pending link requests | `nexusprism.twitch.staff` |
+| `/twitch giveaway <streamer>` | Draw a giveaway winner | `nexusprism.twitch.staff` |
+| `/twitch reload` | Reload Twitch config | `nexusprism.twitch.admin` |
 
 ---
 
@@ -36,9 +36,9 @@ The Twitch module connects your Minecraft server to Twitch. Players can **link t
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.twitch.use` | Basic Twitch commands | true |
-| `nexusslime.twitch.staff` | Approve links, run giveaways | OP |
-| `nexusslime.twitch.admin` | Reload config | OP |
+| `nexusprism.twitch.use` | Basic Twitch commands | true |
+| `nexusprism.twitch.staff` | Approve links, run giveaways | OP |
+| `nexusprism.twitch.admin` | Reload config | OP |
 
 ---
 

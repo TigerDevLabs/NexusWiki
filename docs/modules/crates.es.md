@@ -8,13 +8,13 @@ El módulo Crates proporciona **cofres de botín basados en llaves** con animaci
 
 | Comando | Permiso | Descripción |
 | --- | --- | --- |
-| `/crate give <jugador> <cofre> [cantidad]` | `nexusslime.crates.admin` | Dar llaves de cofre a un jugador |
-| `/crate keys [jugador]` | `nexusslime.crates.use` | Ver saldo de llaves virtuales |
-| `/crate setblock <cofre>` | `nexusslime.crates.admin` | Registrar el bloque apuntado como cofre |
-| `/crate removeblock` | `nexusslime.crates.admin` | Desregistrar el bloque apuntado |
+| `/crate give <jugador> <cofre> [cantidad]` | `nexusprism.crates.admin` | Dar llaves de cofre a un jugador |
+| `/crate keys [jugador]` | `nexusprism.crates.use` | Ver saldo de llaves virtuales |
+| `/crate setblock <cofre>` | `nexusprism.crates.admin` | Registrar el bloque apuntado como cofre |
+| `/crate removeblock` | `nexusprism.crates.admin` | Desregistrar el bloque apuntado |
 | `/crate preview <cofre>` | *(todos los jugadores)* | Vista previa de posibles recompensas |
 | `/crate list` | *(todos los jugadores)* | Listar todos los tipos de cofres |
-| `/crate reload` | `nexusslime.crates.admin` | Recargar todas las definiciones de cofres |
+| `/crate reload` | `nexusprism.crates.admin` | Recargar todas las definiciones de cofres |
 
 ---
 
@@ -22,8 +22,8 @@ El módulo Crates proporciona **cofres de botín basados en llaves** con animaci
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.crates.admin` | Crear, eliminar y dar cofres | OP |
-| `nexusslime.crates.use` | Verificar saldo de llaves | true |
+| `nexusprism.crates.admin` | Crear, eliminar y dar cofres | OP |
+| `nexusprism.crates.use` | Verificar saldo de llaves | true |
 
 ---
 

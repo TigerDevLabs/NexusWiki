@@ -20,7 +20,7 @@ The TAB module customizes the **player list** (TAB overlay) with formatted heade
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/ntab reload` | Reload TAB configuration | `nexusslime.tab.admin` |
+| `/ntab reload` | Reload TAB configuration | `nexusprism.tab.admin` |
 
 ---
 
@@ -28,7 +28,7 @@ The TAB module customizes the **player list** (TAB overlay) with formatted heade
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.tab.admin` | Reload TAB configuration | OP |
+| `nexusprism.tab.admin` | Reload TAB configuration | OP |
 
 ---
 
@@ -42,7 +42,7 @@ tab:
   # Supports & color codes and PlaceholderAPI placeholders
   header:
     - ""
-    - "&b&lNexusSlime &8— &7Skyblock"
+    - "&b&lNexusPrism &8— &7Skyblock"
     - ""
   footer:
     - ""
@@ -64,13 +64,13 @@ tab:
 
 scoreboard:
   enabled: true
-  title: "&b&lNexusSlime"
+  title: "&b&lNexusPrism"
   update-ticks: 20   # Refresh rate (20 ticks = 1 second)
   lines:
     - ""
     - "&7Player: &f%player_name%"
-    - "&7Money: &a$%nexusslime_money%"
-    - "&7Clan: &b%nexusslime_clan_name%"
+    - "&7Money: &a$%nexusprism_money%"
+    - "&7Clan: &b%nexusprism_clan_name%"
     - ""
     - "&enexusprism.blazebr.com"
     - ""
@@ -78,7 +78,7 @@ scoreboard:
 motd:
   enabled: false
   lines:
-    - "&b&lNexusSlime &r&7— Skyblock MMO"
+    - "&b&lNexusPrism &r&7— Skyblock MMO"
     - "&7Join and explore!"
 ```
 
@@ -98,4 +98,4 @@ motd:
 
 ## PlaceholderAPI
 
-The TAB module works with any PlaceholderAPI placeholder in header, footer, and scoreboard lines. See the [PlaceholderAPI reference](../reference/placeholders.md) for all available `%nexusslime_*%` placeholders.
+The TAB module works with any PlaceholderAPI placeholder in header, footer, and scoreboard lines. See the [PlaceholderAPI reference](../reference/placeholders.md) for all available `%nexusprism_*%` placeholders.

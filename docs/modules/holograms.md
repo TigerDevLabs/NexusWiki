@@ -18,7 +18,7 @@ Lines are stacked upward with 0.3-block spacing. Line `0` is the topmost line.
 
 ## Commands
 
-All subcommands require `nexusslime.holograms.admin`.
+All subcommands require `nexusprism.holograms.admin`.
 
 | Command | Description |
 | --- | --- |
@@ -42,7 +42,7 @@ All subcommands require `nexusslime.holograms.admin`.
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.holograms.admin` | All hologram management commands | OP |
+| `nexusprism.holograms.admin` | All hologram management commands | OP |
 
 ---
 

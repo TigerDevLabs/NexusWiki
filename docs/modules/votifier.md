@@ -1,6 +1,6 @@
 # Votifier Module
 
-The Votifier module is a **standalone Votifier V1 and V2 server** built directly into NexusSlime. It handles incoming votes from server listing websites, distributes configurable rewards, and tracks player vote streaks on a leaderboard.
+The Votifier module is a **standalone Votifier V1 and V2 server** built directly into NexusPrism. It handles incoming votes from server listing websites, distributes configurable rewards, and tracks player vote streaks on a leaderboard.
 
 ---
 
@@ -14,7 +14,7 @@ Vote Site  ──► Votifier Server (port 8192)  ──► VoteManager  ──�
 1. Register your server on voting sites (Minecraftservers.org, etc.)
 2. Point each site to your server IP and Votifier port (default `8192`)
 3. When a player votes, the site sends a payload to your Votifier server
-4. NexusSlime processes the vote, runs reward commands, and updates the streak
+4. NexusPrism processes the vote, runs reward commands, and updates the streak
 
 ---
 
@@ -22,8 +22,8 @@ Vote Site  ──► Votifier Server (port 8192)  ──► VoteManager  ──�
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/vote` | Show voting links and your current streak | `nexusslime.vote` |
-| `/votetop` | Show the vote leaderboard | `nexusslime.vote.top` |
+| `/vote` | Show voting links and your current streak | `nexusprism.vote` |
+| `/votetop` | Show the vote leaderboard | `nexusprism.vote.top` |
 
 ---
 
@@ -31,8 +31,8 @@ Vote Site  ──► Votifier Server (port 8192)  ──► VoteManager  ──�
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.vote` | Use `/vote` | true |
-| `nexusslime.vote.top` | Use `/votetop` | true |
+| `nexusprism.vote` | Use `/vote` | true |
+| `nexusprism.vote.top` | Use `/votetop` | true |
 
 ---
 
@@ -96,7 +96,7 @@ When registering on a vote site, you will need:
 
 - **Server IP** — your server's public IP address
 - **Votifier Port** — `8192` (or whatever you set in `config.yml`)
-- **Public Key** — copy from `plugins/NexusSlime/votifier/rsa/public.key` (V1 sites)
+- **Public Key** — copy from `plugins/NexusPrism/votifier/rsa/public.key` (V1 sites)
 - **Token** — the `token` value from `config.yml` (V2 sites)
 
 ---
@@ -110,7 +110,7 @@ When registering on a vote site, you will need:
 | 10–29 votes | 2× |
 | 30+ votes | 3× |
 
-When the multiplier is active, reward `COMMAND` values are executed multiple times equal to the multiplier (rounded to nearest integer), or you can implement custom multiplier logic using the `%nexusslime_vote_streak%` placeholder in external plugins.
+When the multiplier is active, reward `COMMAND` values are executed multiple times equal to the multiplier (rounded to nearest integer), or you can implement custom multiplier logic using the `%nexusprism_vote_streak%` placeholder in external plugins.
 
 ---
 
@@ -118,5 +118,5 @@ When the multiplier is active, reward `COMMAND` values are executed multiple tim
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_votes_total%` | Total lifetime votes by the player |
-| `%nexusslime_vote_streak%` | Player's current vote streak |
+| `%nexusprism_votes_total%` | Total lifetime votes by the player |
+| `%nexusprism_vote_streak%` | Player's current vote streak |

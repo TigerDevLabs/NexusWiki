@@ -21,8 +21,8 @@ El módulo Traits asigna a cada jugador un conjunto de **3 Cartas del Tarot** qu
 | --- | --- | --- |
 | `/traits` | *(todos los jugadores)* | Abrir el GUI de Traits del Tarot |
 | `/traits info` | *(todos los jugadores)* | Listar las cartas actuales en el chat |
-| `/traits admin set <jugador> <slot 1-3> <NOMBRE_CARTA>` | `nexusslime.traits.admin` | Forzar una carta (omite costo y cooldown) |
-| `/traits admin reload` | `nexusslime.traits.admin` | Recargar `traits/config.yml` |
+| `/traits admin set <jugador> <slot 1-3> <NOMBRE_CARTA>` | `nexusprism.traits.admin` | Forzar una carta (omite costo y cooldown) |
+| `/traits admin reload` | `nexusprism.traits.admin` | Recargar `traits/config.yml` |
 
 ---
 
@@ -30,7 +30,7 @@ El módulo Traits asigna a cada jugador un conjunto de **3 Cartas del Tarot** qu
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.traits.admin` | Comandos administrativos de traits | OP |
+| `nexusprism.traits.admin` | Comandos administrativos de traits | OP |
 
 ---
 

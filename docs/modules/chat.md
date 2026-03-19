@@ -19,10 +19,10 @@ The Chat module replaces the default Minecraft chat with a **4-channel system** 
 
 | Command | Aliases | Usage | Permission |
 | --- | --- | --- | --- |
-| `/globalchat <message>` | `/g`, `/gc` | Send a message to all players | `nexusslime.chat.global` |
-| `/staffchat <message>` | `/sc` | Send a message to staff | `nexusslime.chat.staff` |
-| `/report <player> <reason>` | — | Report a player to staff | `nexusslime.chat.report` |
-| `/chat reload` | — | Reload chat configuration | `nexusslime.chat.admin` |
+| `/globalchat <message>` | `/g`, `/gc` | Send a message to all players | `nexusprism.chat.global` |
+| `/staffchat <message>` | `/sc` | Send a message to staff | `nexusprism.chat.staff` |
+| `/report <player> <reason>` | — | Report a player to staff | `nexusprism.chat.report` |
+| `/chat reload` | — | Reload chat configuration | `nexusprism.chat.admin` |
 
 ---
 
@@ -30,10 +30,10 @@ The Chat module replaces the default Minecraft chat with a **4-channel system** 
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.chat.global` | Use global chat channel | true |
-| `nexusslime.chat.staff` | Access staff chat channel | OP |
-| `nexusslime.chat.report` | Submit player reports | true |
-| `nexusslime.chat.admin` | Reload chat configuration | OP |
+| `nexusprism.chat.global` | Use global chat channel | true |
+| `nexusprism.chat.staff` | Access staff chat channel | OP |
+| `nexusprism.chat.report` | Submit player reports | true |
+| `nexusprism.chat.admin` | Reload chat configuration | OP |
 
 ---
 

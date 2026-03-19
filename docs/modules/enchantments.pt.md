@@ -36,7 +36,7 @@ O módulo Enchantments adiciona **175 encantamentos personalizados** em 6 nívei
 
 ## Comandos
 
-Todos os comandos requerem `nexusslime.enchantments.admin`.
+Todos os comandos requerem `nexusprism.enchantments.admin`.
 
 | Comando | Descrição |
 | --- | --- |
@@ -53,7 +53,7 @@ Todos os comandos requerem `nexusslime.enchantments.admin`.
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.enchantments.admin` | Todos os comandos de gerenciamento de encantamentos | OP |
+| `nexusprism.enchantments.admin` | Todos os comandos de gerenciamento de encantamentos | OP |
 
 ---
 

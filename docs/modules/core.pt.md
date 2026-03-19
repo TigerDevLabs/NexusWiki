@@ -1,12 +1,12 @@
 # Módulo Core
 
-O módulo Core é a base do NexusSlime. Ele gerencia o registro de itens personalizados, o sistema de marcação PDC (PersistentDataContainer), o motor de máquinas, a árvore de pesquisa, mochilas e pontos de viagem.
+O módulo Core é a base do NexusPrism. Ele gerencia o registro de itens personalizados, o sistema de marcação PDC (PersistentDataContainer), o motor de máquinas, a árvore de pesquisa, mochilas e pontos de viagem.
 
 ---
 
 ## Sistema de Itens Personalizados
 
-Todos os itens personalizados são definidos em `plugins/NexusSlime/items.yml`. O plugin já vem com **mais de 235 itens** de fábrica.
+Todos os itens personalizados são definidos em `plugins/NexusPrism/items.yml`. O plugin já vem com **mais de 235 itens** de fábrica.
 
 ### Exemplo de `items.yml`
 
@@ -63,7 +63,7 @@ NEXUS_PICKAXE:
 
 ## Sistema PDC
 
-O NexusSlime usa o **PersistentDataContainer** do Minecraft para marcar itens personalizados, máquinas e dados de jogadores. Cada item do NexusSlime carrega uma chave PDC `nexusslime:id` que o identifica de forma única.
+O NexusPrism usa o **PersistentDataContainer** do Minecraft para marcar itens personalizados, máquinas e dados de jogadores. Cada item do NexusPrism carrega uma chave PDC `nexusprism:id` que o identifica de forma única.
 
 Classes principais:
 
@@ -92,8 +92,8 @@ COPPER_PROCESSING:
 
 | Permissão | Descrição |
 | --- | --- |
-| `nexusslime.research` | Usar o sistema de pesquisa (padrão: true) |
-| `nexusslime.research.all` | Desbloquear toda a pesquisa instantaneamente (OP) |
+| `nexusprism.research` | Usar o sistema de pesquisa (padrão: true) |
+| `nexusprism.research.all` | Desbloquear toda a pesquisa instantaneamente (OP) |
 
 ---
 
@@ -105,17 +105,17 @@ Mochilas são recipientes de armazenamento portáteis. Os jogadores começam com
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/backpack open` | Abrir sua mochila | `nexusslime.essentials.backpack` |
-| `/backpack open <id>` | Abrir uma mochila específica | `nexusslime.essentials.backpack` |
-| `/backpack list` | Listar todas as mochilas | `nexusslime.essentials.backpack` |
+| `/backpack open` | Abrir sua mochila | `nexusprism.essentials.backpack` |
+| `/backpack open <id>` | Abrir uma mochila específica | `nexusprism.essentials.backpack` |
+| `/backpack list` | Listar todas as mochilas | `nexusprism.essentials.backpack` |
 
 ### Permissões
 
 | Permissão | Descrição |
 | --- | --- |
-| `nexusslime.backpack.create` | Criar mochilas (padrão: true) |
-| `nexusslime.backpack.upgrade` | Atualizar mochilas (padrão: true) |
-| `nexusslime.backpack.unlimited` | Slots ilimitados de mochila (OP) |
+| `nexusprism.backpack.create` | Criar mochilas (padrão: true) |
+| `nexusprism.backpack.upgrade` | Atualizar mochilas (padrão: true) |
+| `nexusprism.backpack.unlimited` | Slots ilimitados de mochila (OP) |
 
 ---
 
@@ -127,11 +127,11 @@ Pontos de viagem são pontos de viagem rápida pessoais salvos pelo jogador.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/waypoint create <nome>` | Criar um ponto de viagem | `nexusslime.essentials.waypoint` |
-| `/waypoint delete <nome>` | Excluir um ponto de viagem | `nexusslime.essentials.waypoint` |
-| `/waypoint list` | Listar todos os pontos de viagem | `nexusslime.essentials.waypoint` |
-| `/waypoint tp <nome>` | Teleportar para um ponto de viagem | `nexusslime.essentials.waypoint` |
-| `/waypoint info <nome>` | Mostrar detalhes do ponto de viagem | `nexusslime.essentials.waypoint` |
+| `/waypoint create <nome>` | Criar um ponto de viagem | `nexusprism.essentials.waypoint` |
+| `/waypoint delete <nome>` | Excluir um ponto de viagem | `nexusprism.essentials.waypoint` |
+| `/waypoint list` | Listar todos os pontos de viagem | `nexusprism.essentials.waypoint` |
+| `/waypoint tp <nome>` | Teleportar para um ponto de viagem | `nexusprism.essentials.waypoint` |
+| `/waypoint info <nome>` | Mostrar detalhes do ponto de viagem | `nexusprism.essentials.waypoint` |
 
 Aliases: `/wp`
 
@@ -139,10 +139,10 @@ Aliases: `/wp`
 
 | Permissão | Slots |
 | --- | --- |
-| `nexusslime.essentials.waypoints.1` | 1 (padrão) |
-| `nexusslime.essentials.waypoints.5` | 5 |
-| `nexusslime.essentials.waypoints.25` | 25 |
-| `nexusslime.essentials.waypoints.unlimited` | Ilimitado (OP) |
+| `nexusprism.essentials.waypoints.1` | 1 (padrão) |
+| `nexusprism.essentials.waypoints.5` | 5 |
+| `nexusprism.essentials.waypoints.25` | 25 |
+| `nexusprism.essentials.waypoints.unlimited` | Ilimitado (OP) |
 
 ---
 
@@ -150,16 +150,16 @@ Aliases: `/wp`
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/nexusslime help` | Mostrar ajuda | `nexusslime.command` |
-| `/nexusslime info` | Informações do plugin | `nexusslime.command` |
-| `/nexusslime reload` | Recarregar todas as configurações | `nexusslime.admin.reload` |
-| `/nexusslime give <jogador> <item>` | Dar um item personalizado | `nexusslime.admin.give` |
-| `/nexusslime guide` | Abrir o guia de itens | `nexusslime.command` |
-| `/nexusslime modules` | Listar módulos carregados | `nexusslime.command` |
-| `/nexusslime machine info <id>` | Informações da máquina | `nexusslime.command` |
-| `/nexusslime machine list` | Listar máquinas | `nexusslime.command` |
-| `/nexusslime energy info <loc>` | Informações do nó de energia | `nexusslime.command` |
-| `/nexusslime energy network` | Visualização da rede de energia | `nexusslime.command` |
+| `/nexusprism help` | Mostrar ajuda | `nexusprism.command` |
+| `/nexusprism info` | Informações do plugin | `nexusprism.command` |
+| `/nexusprism reload` | Recarregar todas as configurações | `nexusprism.admin.reload` |
+| `/nexusprism give <jogador> <item>` | Dar um item personalizado | `nexusprism.admin.give` |
+| `/nexusprism guide` | Abrir o guia de itens | `nexusprism.command` |
+| `/nexusprism modules` | Listar módulos carregados | `nexusprism.command` |
+| `/nexusprism machine info <id>` | Informações da máquina | `nexusprism.command` |
+| `/nexusprism machine list` | Listar máquinas | `nexusprism.command` |
+| `/nexusprism energy info <loc>` | Informações do nó de energia | `nexusprism.command` |
+| `/nexusprism energy network` | Visualização da rede de energia | `nexusprism.command` |
 
 Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 
@@ -167,7 +167,7 @@ Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 
 ## Suporte a Idiomas
 
-O NexusSlime vem com quatro arquivos de idioma:
+O NexusPrism vem com quatro arquivos de idioma:
 
 | Arquivo | Idioma |
 | --- | --- |

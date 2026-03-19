@@ -77,7 +77,7 @@ alt-detection:
 
 | Comando | Uso | Permiso |
 | --- | --- | --- |
-| `/cleanworld` | Ejecutar limpieza manual del mundo | `nexusslime.security.cleanworld` |
+| `/cleanworld` | Ejecutar limpieza manual del mundo | `nexusprism.security.cleanworld` |
 
 ### Configuración (`security/antilag.yml`)
 
@@ -101,9 +101,9 @@ stacker:
 
 | Comando | Uso | Permiso |
 | --- | --- | --- |
-| `/vanish` | Alternar invisibilidad (OP) | `nexusslime.staff.vanish` |
-| `/invsee <jugador>` | Inspeccionar inventario (OP) | `nexusslime.staff.invsee` |
-| `/spy` | Alternar espionaje de chat (OP) | `nexusslime.staff.spy` |
+| `/vanish` | Alternar invisibilidad (OP) | `nexusprism.staff.vanish` |
+| `/invsee <jugador>` | Inspeccionar inventario (OP) | `nexusprism.staff.invsee` |
+| `/spy` | Alternar espionaje de chat (OP) | `nexusprism.staff.spy` |
 
 ---
 
@@ -111,10 +111,10 @@ stacker:
 
 | Permiso | Descripción | Predeterminado |
 | --- | --- | --- |
-| `nexusslime.security.cleanworld` | Limpieza manual del mundo | OP |
-| `nexusslime.staff.vanish` | Volverse invisible | OP |
-| `nexusslime.staff.invsee` | Inspeccionar inventarios | OP |
-| `nexusslime.staff.spy` | Modo espía de chat | OP |
+| `nexusprism.security.cleanworld` | Limpieza manual del mundo | OP |
+| `nexusprism.staff.vanish` | Volverse invisible | OP |
+| `nexusprism.staff.invsee` | Inspeccionar inventarios | OP |
+| `nexusprism.staff.spy` | Modo espía de chat | OP |
 
 ---
 
@@ -175,5 +175,5 @@ leveled-mobs:
 
 | Placeholder | Descripción |
 | --- | --- |
-| `%nexusslime_authenticated%` | `true` si el jugador está autenticado |
-| `%nexusslime_auth_status%` | Estado de auth legible (`Autenticado`, `Pendiente`) |
+| `%nexusprism_authenticated%` | `true` si el jugador está autenticado |
+| `%nexusprism_auth_status%` | Estado de auth legible (`Autenticado`, `Pendiente`) |

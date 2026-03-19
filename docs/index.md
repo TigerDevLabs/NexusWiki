@@ -1,8 +1,8 @@
-# NexusSlime
+# NexusPrism
 
 > **A comprehensive reimplementation and evolution of Slimefun4** — next-generation tech, magic, and quality-of-life systems for Minecraft servers.
 
-NexusSlime is a modular Spigot plugin built on a +25-module Maven architecture.
+NexusPrism is a modular Spigot plugin built on a +25-module Maven architecture.
 It brings custom items, machines, energy networks, clans, economy, minigames, and deep integrations all under a single, lightweight plugin JAR.
 
 ---
@@ -31,34 +31,34 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 ## Module Overview
 
 ```text
-NexusSlime
-├── nexusslime-api          Public API for addon developers
-├── nexusslime-core         Core managers, PDC registry, language
-├── nexusslime-items        Custom item storage (235+ items)
-├── nexusslime-machines     Machine definitions, processing engine
-├── nexusslime-systems      Energy network implementation
-├── nexusslime-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
-├── nexusslime-storage      SQLite / PostgreSQL persistence
-├── nexusslime-gui          GUI framework
-├── nexusslime-utils        Utility helpers
-├── nexusslime-web          Webstore delivery, VIP kits, payments
-├── nexusslime-plugin       Main entry point (Spigot)
-├── nexusslime-discord      JDA bot, webhooks, account linking
-├── nexusslime-chat         4-channel chat system
-├── nexusslime-ae           ME (Applied Energistics-style) storage
-├── nexusslime-energy       Energy generation and cable networks
-├── nexusslime-waila        WAILA/HUD integration
-├── nexusslime-security     Auth, anti-bot, anti-lag, anti-dupe
-├── nexusslime-clans        Clans, territory, upgrades
-├── nexusslime-economy      Money, credits, sell prices
-├── nexusslime-essentials   40+ QoL commands
-├── nexusslime-crystaldefense Wave-based Crystal Defense minigame
-├── nexusslime-custommobs   YAML-defined bosses
-├── nexusslime-dreams       Sleep cutscene system
-├── nexusslime-protections  Region protection, duel system
-├── nexusslime-ss           Silk Spawner support
-├── nexusslime-votifier     Standalone Votifier V1/V2 server
-└── nexusslime-twitch       Twitch integration
+NexusPrism
+├── nexusprism-api          Public API for addon developers
+├── nexusprism-core         Core managers, PDC registry, language
+├── nexusprism-items        Custom item storage (235+ items)
+├── nexusprism-machines     Machine definitions, processing engine
+├── nexusprism-systems      Energy network implementation
+├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
+├── nexusprism-storage      SQLite / PostgreSQL persistence
+├── nexusprism-gui          GUI framework
+├── nexusprism-utils        Utility helpers
+├── nexusprism-web          Webstore delivery, VIP kits, payments
+├── nexusprism-plugin       Main entry point (Spigot)
+├── nexusprism-discord      JDA bot, webhooks, account linking
+├── nexusprism-chat         4-channel chat system
+├── nexusprism-ae           ME (Applied Energistics-style) storage
+├── nexusprism-energy       Energy generation and cable networks
+├── nexusprism-waila        WAILA/HUD integration
+├── nexusprism-security     Auth, anti-bot, anti-lag, anti-dupe
+├── nexusprism-clans        Clans, territory, upgrades
+├── nexusprism-economy      Money, credits, sell prices
+├── nexusprism-essentials   40+ QoL commands
+├── nexusprism-crystaldefense Wave-based Crystal Defense minigame
+├── nexusprism-custommobs   YAML-defined bosses
+├── nexusprism-dreams       Sleep cutscene system
+├── nexusprism-protections  Region protection, duel system
+├── nexusprism-ss           Silk Spawner support
+├── nexusprism-votifier     Standalone Votifier V1/V2 server
+└── nexusprism-twitch       Twitch integration
 ```
 
 ---
@@ -72,13 +72,13 @@ NexusSlime
 | **[All Modules](modules/index.md)** | Browse all 13 feature modules |
 | **[Commands Reference](reference/commands.md)** | All 40+ commands with usage and permissions |
 | **[Permissions Reference](reference/permissions.md)** | Complete permission node list |
-| **[PlaceholderAPI](reference/placeholders.md)** | All `%nexusslime_*%` placeholders |
+| **[PlaceholderAPI](reference/placeholders.md)** | All `%nexusprism_*%` placeholders |
 
 ---
 
 ## Author
 
-NexusSlime is developed by **O-Tiger**
+NexusPrism is developed by **O-Tiger**
 
 - API version: `1.21`
 - Soft dependencies: `PlaceholderAPI`, `LuckPerms`, `SkinsRestorer`

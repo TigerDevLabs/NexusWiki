@@ -12,19 +12,19 @@ Players can set named homes and teleport back to them.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/home [name]` | Teleport to a home | `nexusslime.essentials.home` |
-| `/home list` | List all homes | `nexusslime.essentials.home` |
-| `/sethome <name>` | Set a home at your location | `nexusslime.essentials.home` |
-| `/delhome <name>` | Delete a home | `nexusslime.essentials.home` |
+| `/home [name]` | Teleport to a home | `nexusprism.essentials.home` |
+| `/home list` | List all homes | `nexusprism.essentials.home` |
+| `/sethome <name>` | Set a home at your location | `nexusprism.essentials.home` |
+| `/delhome <name>` | Delete a home | `nexusprism.essentials.home` |
 
 ### Home Slot Permissions
 
 | Permission | Slots |
 | --- | --- |
-| `nexusslime.essentials.homes.1` | 1 (default: true) |
-| `nexusslime.essentials.homes.3` | 3 |
-| `nexusslime.essentials.homes.10` | 10 |
-| `nexusslime.essentials.homes.unlimited` | Unlimited (OP) |
+| `nexusprism.essentials.homes.1` | 1 (default: true) |
+| `nexusprism.essentials.homes.3` | 3 |
+| `nexusprism.essentials.homes.10` | 10 |
+| `nexusprism.essentials.homes.unlimited` | Unlimited (OP) |
 
 ---
 
@@ -36,10 +36,10 @@ Server-wide public teleport destinations managed by admins.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/warp <name>` | Teleport to a warp | `nexusslime.essentials.warp.use` |
-| `/warp list` | List all warps | `nexusslime.essentials.warp.use` |
-| `/setwarp <name>` | Create a warp | `nexusslime.essentials.warp.admin` |
-| `/delwarp <name>` | Delete a warp | `nexusslime.essentials.warp.admin` |
+| `/warp <name>` | Teleport to a warp | `nexusprism.essentials.warp.use` |
+| `/warp list` | List all warps | `nexusprism.essentials.warp.use` |
+| `/setwarp <name>` | Create a warp | `nexusprism.essentials.warp.admin` |
+| `/delwarp <name>` | Delete a warp | `nexusprism.essentials.warp.admin` |
 
 ---
 
@@ -49,14 +49,14 @@ Server-wide public teleport destinations managed by admins.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/tpa <player>` | Send a teleport request | `nexusslime.essentials.tpa` |
-| `/tpaccept` | Accept a teleport request | `nexusslime.essentials.tpa` |
-| `/tpdeny` | Deny a teleport request | `nexusslime.essentials.tpa` |
-| `/tphere <player>` | Teleport a player to you | `nexusslime.essentials.tphere` |
-| `/tppos <x> <y> <z>` | Teleport to coordinates | `nexusslime.essentials.tppos` |
-| `/spawn` | Teleport to spawn | `nexusslime.essentials.spawn` |
-| `/setspawn` | Set the server spawn | `nexusslime.essentials.setspawn` |
-| `/back` | Return to previous location | `nexusslime.essentials.back` |
+| `/tpa <player>` | Send a teleport request | `nexusprism.essentials.tpa` |
+| `/tpaccept` | Accept a teleport request | `nexusprism.essentials.tpa` |
+| `/tpdeny` | Deny a teleport request | `nexusprism.essentials.tpa` |
+| `/tphere <player>` | Teleport a player to you | `nexusprism.essentials.tphere` |
+| `/tppos <x> <y> <z>` | Teleport to coordinates | `nexusprism.essentials.tppos` |
+| `/spawn` | Teleport to spawn | `nexusprism.essentials.spawn` |
+| `/setspawn` | Set the server spawn | `nexusprism.essentials.setspawn` |
+| `/back` | Return to previous location | `nexusprism.essentials.back` |
 
 ### TPA Configuration (`essentials/config.yml`)
 
@@ -80,7 +80,7 @@ spawn:
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/afk` | Toggle AFK status | `nexusslime.essentials.afk` |
+| `/afk` | Toggle AFK status | `nexusprism.essentials.afk` |
 
 ### AFK Configuration
 
@@ -100,9 +100,9 @@ Admins can send players to a predefined jail location.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/jail <player> [duration]` | Jail a player | `nexusslime.essentials.jail.admin` |
-| `/unjail <player>` | Release a player | `nexusslime.essentials.jail.admin` |
-| `/setjail` | Set the jail location | `nexusslime.essentials.jail.admin` |
+| `/jail <player> [duration]` | Jail a player | `nexusprism.essentials.jail.admin` |
+| `/unjail <player>` | Release a player | `nexusprism.essentials.jail.admin` |
+| `/setjail` | Set the jail location | `nexusprism.essentials.jail.admin` |
 
 ---
 
@@ -110,38 +110,38 @@ Admins can send players to a predefined jail location.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/fly` | Toggle fly mode | `nexusslime.essentials.fly` |
-| `/fly <player>` | Toggle fly for another player | `nexusslime.essentials.fly.others` |
-| `/god` | Toggle god mode | `nexusslime.essentials.god` |
-| `/god <player>` | Toggle god for another player | `nexusslime.essentials.god.others` |
-| `/heal` | Heal yourself | `nexusslime.essentials.heal` |
-| `/heal <player>` | Heal another player | `nexusslime.essentials.heal.others` |
-| `/feed` | Feed yourself | `nexusslime.essentials.feed` |
-| `/feed <player>` | Feed another player | `nexusslime.essentials.feed.others` |
-| `/nick <name>` | Set your nickname | `nexusslime.essentials.nick` |
-| `/nick <player> <name>` | Set another player's nick | `nexusslime.essentials.nick.others` |
-| `/workbench` | Open a portable workbench | `nexusslime.essentials.workbench` |
-| `/trash` | Open a portable trash bin | `nexusslime.essentials.trash` |
-| `/anvil` | Open a portable anvil | `nexusslime.essentials.anvil` |
-| `/grindstone` | Open a portable grindstone | `nexusslime.essentials.grindstone` |
-| `/stonecutter` | Open a portable stonecutter | `nexusslime.essentials.stonecutter` |
-| `/speed <value>` | Set walk/fly speed | `nexusslime.essentials.speed` |
-| `/near` | List nearby players | `nexusslime.essentials.near` |
-| `/seen <player>` | Last seen info | `nexusslime.essentials.seen` |
-| `/clearinventory` | Clear your inventory | `nexusslime.essentials.clearinventory` |
-| `/clearinventory <player>` | Clear another's inventory | `nexusslime.essentials.clearinventory.others` |
-| `/getpos` | Show your coordinates | `nexusslime.essentials.getpos` |
-| `/playtime` | Check your playtime | `nexusslime.essentials.playtime` |
-| `/gamemode <mode>` | Change gamemode | `nexusslime.essentials.gamemode` |
-| `/enderchest` | Open your ender chest | `nexusslime.essentials.enderchest` |
-| `/enderchest <player>` | Open another's ender chest | `nexusslime.essentials.enderchest.others` |
-| `/repair` | Repair held item | `nexusslime.essentials.repair` |
-| `/ext` | Extinguish yourself | `nexusslime.essentials.ext` |
-| `/exp <amount>` | Give yourself XP | `nexusslime.essentials.exp` |
-| `/hat` | Wear held item as hat | `nexusslime.essentials.hat` |
-| `/skull <player>` | Get a player's head | `nexusslime.essentials.skull` |
-| `/rules` | Show server rules | `nexusslime.essentials.rules` |
-| `/worth [item]` | Check item sell value | `nexusslime.essentials.worth` |
+| `/fly` | Toggle fly mode | `nexusprism.essentials.fly` |
+| `/fly <player>` | Toggle fly for another player | `nexusprism.essentials.fly.others` |
+| `/god` | Toggle god mode | `nexusprism.essentials.god` |
+| `/god <player>` | Toggle god for another player | `nexusprism.essentials.god.others` |
+| `/heal` | Heal yourself | `nexusprism.essentials.heal` |
+| `/heal <player>` | Heal another player | `nexusprism.essentials.heal.others` |
+| `/feed` | Feed yourself | `nexusprism.essentials.feed` |
+| `/feed <player>` | Feed another player | `nexusprism.essentials.feed.others` |
+| `/nick <name>` | Set your nickname | `nexusprism.essentials.nick` |
+| `/nick <player> <name>` | Set another player's nick | `nexusprism.essentials.nick.others` |
+| `/workbench` | Open a portable workbench | `nexusprism.essentials.workbench` |
+| `/trash` | Open a portable trash bin | `nexusprism.essentials.trash` |
+| `/anvil` | Open a portable anvil | `nexusprism.essentials.anvil` |
+| `/grindstone` | Open a portable grindstone | `nexusprism.essentials.grindstone` |
+| `/stonecutter` | Open a portable stonecutter | `nexusprism.essentials.stonecutter` |
+| `/speed <value>` | Set walk/fly speed | `nexusprism.essentials.speed` |
+| `/near` | List nearby players | `nexusprism.essentials.near` |
+| `/seen <player>` | Last seen info | `nexusprism.essentials.seen` |
+| `/clearinventory` | Clear your inventory | `nexusprism.essentials.clearinventory` |
+| `/clearinventory <player>` | Clear another's inventory | `nexusprism.essentials.clearinventory.others` |
+| `/getpos` | Show your coordinates | `nexusprism.essentials.getpos` |
+| `/playtime` | Check your playtime | `nexusprism.essentials.playtime` |
+| `/gamemode <mode>` | Change gamemode | `nexusprism.essentials.gamemode` |
+| `/enderchest` | Open your ender chest | `nexusprism.essentials.enderchest` |
+| `/enderchest <player>` | Open another's ender chest | `nexusprism.essentials.enderchest.others` |
+| `/repair` | Repair held item | `nexusprism.essentials.repair` |
+| `/ext` | Extinguish yourself | `nexusprism.essentials.ext` |
+| `/exp <amount>` | Give yourself XP | `nexusprism.essentials.exp` |
+| `/hat` | Wear held item as hat | `nexusprism.essentials.hat` |
+| `/skull <player>` | Get a player's head | `nexusprism.essentials.skull` |
+| `/rules` | Show server rules | `nexusprism.essentials.rules` |
+| `/worth [item]` | Check item sell value | `nexusprism.essentials.worth` |
 
 ### Server Rules Configuration
 

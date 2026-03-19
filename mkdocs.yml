@@ -1,5 +1,5 @@
 site_name: NexusPrism Wiki
-site_description: Comprehensive documentation for the NexusSlime Minecraft plugin
+site_description: Comprehensive documentation for the NexusPrism Minecraft plugin
 site_author: O-Tiger
 site_url: https://o-tiger.github.io/NexusWiki/
 repo_url: https://github.com/O-Tiger/NexusWiki
@@ -86,6 +86,8 @@ plugins:
             PlaceholderAPI: PlaceholderAPI
             Permissions: Permissões
             Commands: Comandos
+            Developer: Desenvolvedor
+            API Guide: Guia da API
             Store: Loja
             Changelog: Histórico
         - locale: es
@@ -125,6 +127,8 @@ plugins:
             PlaceholderAPI: PlaceholderAPI
             Permissions: Permisos
             Commands: Comandos
+            Developer: Desarrollador
+            API Guide: Guía de la API
             Store: Tienda
             Changelog: Historial
 
@@ -186,5 +190,7 @@ nav:
       - PlaceholderAPI: reference/placeholders.md
       - Permissions: reference/permissions.md
       - Commands: reference/commands.md
+  - Developer:
+      - API Guide: developer/api.md
   - Store: store.md
   - Changelog: changelog.md

@@ -34,7 +34,7 @@ Players on cracked servers must `/register` on first join and `/login` on subseq
 storage: sqlite           # sqlite | postgres
 
 postgres:
-  url: "jdbc:postgresql://localhost:5432/nexusslime"
+  url: "jdbc:postgresql://localhost:5432/nexusprism"
   user: nexus
   password: changeme
 
@@ -107,7 +107,7 @@ Automatically removes old ground items and excess entities on a schedule.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/cleanworld` | Manually trigger a world clean | `nexusslime.security.cleanworld` |
+| `/cleanworld` | Manually trigger a world clean | `nexusprism.security.cleanworld` |
 
 ### Anti-Lag Configuration (`security/antilag.yml`)
 
@@ -197,13 +197,13 @@ mod-detector:
 | `"FML\|HS"` | Exact channel name `FML\|HS` (legacy Forge handshake) |
 
 !!! tip "Forge / NeoForge"
-    Forge and NeoForge users are put on the **watch-list**, not kicked. A `§e[ModWatch]` alert is sent to staff with the `nexusslime.security.notify` permission so they can manually verify whether the player is cheating.
+    Forge and NeoForge users are put on the **watch-list**, not kicked. A `§e[ModWatch]` alert is sent to staff with the `nexusprism.security.notify` permission so they can manually verify whether the player is cheating.
 
 ### Staff Permissions for Mod Detection
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.security.notify` | Receive mod-detection and watch-list alerts | OP |
+| `nexusprism.security.notify` | Receive mod-detection and watch-list alerts | OP |
 
 ---
 
@@ -224,10 +224,10 @@ alert-admins: true             # Notify online admins in-game
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/vanish` | Toggle visibility | `nexusslime.staff.vanish` |
-| `/vanish <player>` | Vanish another player | `nexusslime.staff.vanish.others` |
-| `/invsee <player>` | Inspect a player's inventory | `nexusslime.staff.invsee` |
-| `/spy` | Toggle chat spy mode | `nexusslime.staff.spy` |
+| `/vanish` | Toggle visibility | `nexusprism.staff.vanish` |
+| `/vanish <player>` | Vanish another player | `nexusprism.staff.vanish.others` |
+| `/invsee <player>` | Inspect a player's inventory | `nexusprism.staff.invsee` |
+| `/spy` | Toggle chat spy mode | `nexusprism.staff.spy` |
 
 ---
 
@@ -235,12 +235,12 @@ alert-admins: true             # Notify online admins in-game
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.security.cleanworld` | Manual world clean | OP |
-| `nexusslime.staff.vanish` | Vanish yourself | OP |
-| `nexusslime.staff.vanish.others` | Vanish other players | OP |
-| `nexusslime.staff.vanish.see` | See vanished players | OP |
-| `nexusslime.staff.invsee` | Inspect inventories | OP |
-| `nexusslime.staff.spy` | Chat spy mode | OP |
+| `nexusprism.security.cleanworld` | Manual world clean | OP |
+| `nexusprism.staff.vanish` | Vanish yourself | OP |
+| `nexusprism.staff.vanish.others` | Vanish other players | OP |
+| `nexusprism.staff.vanish.see` | See vanished players | OP |
+| `nexusprism.staff.invsee` | Inspect inventories | OP |
+| `nexusprism.staff.spy` | Chat spy mode | OP |
 
 ---
 
@@ -301,5 +301,5 @@ leveled-mobs:
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_authenticated%` | `true` / `false` — is the player logged in? |
-| `%nexusslime_auth_status%` | Human-readable status (`Authenticated`, `Pending`) |
+| `%nexusprism_authenticated%` | `true` / `false` — is the player logged in? |
+| `%nexusprism_auth_status%` | Human-readable status (`Authenticated`, `Pending`) |

@@ -27,10 +27,10 @@ Each horde interval, a random online player is chosen as the target. **30 mobs**
 
 | Command | Description | Permission |
 | --- | --- | --- |
-| `/bloodmoon` | Show current Blood Moon status | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon start` | Force-activate the Blood Moon | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon stop` | Force-deactivate the Blood Moon | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon status` | Detailed status output | `nexusslime.events.bloodmoon.admin` |
+| `/bloodmoon` | Show current Blood Moon status | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon start` | Force-activate the Blood Moon | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon stop` | Force-deactivate the Blood Moon | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon status` | Detailed status output | `nexusprism.events.bloodmoon.admin` |
 
 ### Configuration (`events/config.yml`)
 
@@ -271,4 +271,4 @@ Bosses planned for future releases: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dr
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.events.bloodmoon.admin` | Control Blood Moon manually | OP |
+| `nexusprism.events.bloodmoon.admin` | Control Blood Moon manually | OP |

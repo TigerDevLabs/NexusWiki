@@ -18,7 +18,7 @@ As linhas são empilhadas para cima com espaçamento de 0,3 blocos. A linha `0` 
 
 ## Comandos
 
-Todos os subcomandos requerem `nexusslime.holograms.admin`.
+Todos os subcomandos requerem `nexusprism.holograms.admin`.
 
 | Comando | Descrição |
 | --- | --- |
@@ -42,7 +42,7 @@ Todos os subcomandos requerem `nexusslime.holograms.admin`.
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.holograms.admin` | Todos os comandos de gerenciamento de hologramas | OP |
+| `nexusprism.holograms.admin` | Todos os comandos de gerenciamento de hologramas | OP |
 
 ---
 

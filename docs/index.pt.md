@@ -1,8 +1,8 @@
-# NexusSlime
+# NexusPrism
 
 > **Uma reimplementação abrangente e evolução do Slimefun4** — sistemas de tecnologia, magia e qualidade de vida de próxima geração para servidores Minecraft.
 
-NexusSlime é um plugin Spigot modular construído sobre uma arquitetura Maven de +25 módulos. Ele traz itens personalizados, máquinas, redes de energia, clãs, economia, minijogos e integrações profundas em um único JAR leve.
+NexusPrism é um plugin Spigot modular construído sobre uma arquitetura Maven de +25 módulos. Ele traz itens personalizados, máquinas, redes de energia, clãs, economia, minijogos e integrações profundas em um único JAR leve.
 
 ---
 
@@ -30,34 +30,34 @@ NexusSlime é um plugin Spigot modular construído sobre uma arquitetura Maven d
 ## Visão Geral dos Módulos
 
 ```text
-NexusSlime
-├── nexusslime-api          API pública para desenvolvedores de addons
-├── nexusslime-core         Gerenciadores principais, registro PDC, idioma
-├── nexusslime-items        Armazenamento de itens personalizados (+235 itens)
-├── nexusslime-machines     Definições de máquinas, motor de processamento
-├── nexusslime-systems      Implementação de redes de energia
-├── nexusslime-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
-├── nexusslime-storage      Persistência SQLite / PostgreSQL
-├── nexusslime-gui          Framework de GUI
-├── nexusslime-utils        Utilitários auxiliares
-├── nexusslime-web          Bridge da loja web, kits VIP, pagamentos
-├── nexusslime-plugin       Ponto de entrada principal (Spigot)
-├── nexusslime-discord      Bot JDA, webhooks, vinculação de conta
-├── nexusslime-chat         Sistema de chat com 4 canais
-├── nexusslime-ae           Armazenamento em rede estilo ME
-├── nexusslime-energy       Geração de energia e redes de cabos
-├── nexusslime-waila        Integração WAILA/HUD
-├── nexusslime-security     Auth, anti-bot, anti-lag, anti-dupe
-├── nexusslime-clans        Clãs, território, melhorias
-├── nexusslime-economy      Dinheiro, créditos, preços de venda
-├── nexusslime-essentials   +40 comandos QoL
-├── nexusslime-crystaldefense Minijogo Crystal Defense por ondas
-├── nexusslime-custommobs   Chefes definidos em YAML
-├── nexusslime-dreams       Sistema de cutscene de sono
-├── nexusslime-protections  Proteção de regiões, sistema de duelo
-├── nexusslime-ss           Suporte a Silk Spawner
-├── nexusslime-votifier     Servidor Votifier V1/V2 independente
-└── nexusslime-twitch       Integração Twitch
+NexusPrism
+├── nexusprism-api          API pública para desenvolvedores de addons
+├── nexusprism-core         Gerenciadores principais, registro PDC, idioma
+├── nexusprism-items        Armazenamento de itens personalizados (+235 itens)
+├── nexusprism-machines     Definições de máquinas, motor de processamento
+├── nexusprism-systems      Implementação de redes de energia
+├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
+├── nexusprism-storage      Persistência SQLite / PostgreSQL
+├── nexusprism-gui          Framework de GUI
+├── nexusprism-utils        Utilitários auxiliares
+├── nexusprism-web          Bridge da loja web, kits VIP, pagamentos
+├── nexusprism-plugin       Ponto de entrada principal (Spigot)
+├── nexusprism-discord      Bot JDA, webhooks, vinculação de conta
+├── nexusprism-chat         Sistema de chat com 4 canais
+├── nexusprism-ae           Armazenamento em rede estilo ME
+├── nexusprism-energy       Geração de energia e redes de cabos
+├── nexusprism-waila        Integração WAILA/HUD
+├── nexusprism-security     Auth, anti-bot, anti-lag, anti-dupe
+├── nexusprism-clans        Clãs, território, melhorias
+├── nexusprism-economy      Dinheiro, créditos, preços de venda
+├── nexusprism-essentials   +40 comandos QoL
+├── nexusprism-crystaldefense Minijogo Crystal Defense por ondas
+├── nexusprism-custommobs   Chefes definidos em YAML
+├── nexusprism-dreams       Sistema de cutscene de sono
+├── nexusprism-protections  Proteção de regiões, sistema de duelo
+├── nexusprism-ss           Suporte a Silk Spawner
+├── nexusprism-votifier     Servidor Votifier V1/V2 independente
+└── nexusprism-twitch       Integração Twitch
 ```
 
 ---
@@ -71,13 +71,13 @@ NexusSlime
 | **[Todos os Módulos](modules/index.md)** | Navegue pelos 13 módulos de funcionalidades |
 | **[Referência de Comandos](reference/commands.md)** | Todos os +40 comandos com uso e permissões |
 | **[Referência de Permissões](reference/permissions.md)** | Lista completa de nós de permissão |
-| **[PlaceholderAPI](reference/placeholders.md)** | Todos os placeholders `%nexusslime_*%` |
+| **[PlaceholderAPI](reference/placeholders.md)** | Todos os placeholders `%nexusprism_*%` |
 
 ---
 
 ## Autor
 
-NexusSlime é desenvolvido por **O-Tiger**
+NexusPrism é desenvolvido por **O-Tiger**
 
 - Versão da API: `1.21`
 - Dependências opcionais: `PlaceholderAPI`, `LuckPerms`, `SkinsRestorer`

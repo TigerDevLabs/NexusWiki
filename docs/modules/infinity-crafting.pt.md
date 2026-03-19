@@ -1,6 +1,6 @@
 # Módulo Infinity Crafting
 
-Infinity Crafting é o **sistema de crafting multiblocos** do NexusSlime. Os jogadores constroem estruturas multiblocos físicas no mundo e as usam como estações de crafting avançadas. As receitas são definidas inteiramente em YAML.
+Infinity Crafting é o **sistema de crafting multiblocos** do NexusPrism. Os jogadores constroem estruturas multiblocos físicas no mundo e as usam como estações de crafting avançadas. As receitas são definidas inteiramente em YAML.
 
 ---
 
@@ -54,7 +54,7 @@ INFINITY_TABLE:
 
 ## Formato YAML de Receitas
 
-As receitas são colocadas em `plugins/NexusSlime/infinity_recipes/` como arquivos `.yml` individuais. O nome do arquivo serve como ID da receita.
+As receitas são colocadas em `plugins/NexusPrism/infinity_recipes/` como arquivos `.yml` individuais. O nome do arquivo serve como ID da receita.
 
 ### Receita Shapeed (Com Formato)
 
@@ -121,7 +121,7 @@ processing-ticks: 200
 | --- | --- |
 | `type` | `SHAPED`, `SHAPELESS`, `MACHINE_SMELT` |
 | `station` | ID do multiblocos necessário para criar esta receita |
-| `output.item` | ID do item de saída (personalizado do NexusSlime ou Material vanilla) |
+| `output.item` | ID do item de saída (personalizado do NexusPrism ou Material vanilla) |
 | `output.amount` | Tamanho da pilha de saída |
 | `shape` | Grade de 3 linhas para receitas shaped (3 caracteres por linha) |
 | `ingredients` | Mapa de char → ID de item (shaped) ou lista de IDs de itens (shapeless) |
@@ -133,7 +133,7 @@ processing-ticks: 200
 
 ## Guia no Jogo
 
-Todas as receitas infinity são visíveis no guia do jogo. Abra-o com `/nexusslime guide` e navegue até a seção do tier **Infinity**.
+Todas as receitas infinity são visíveis no guia do jogo. Abra-o com `/nexusprism guide` e navegue até a seção do tier **Infinity**.
 
 O guia mostra:
 
@@ -148,9 +148,9 @@ O guia mostra:
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/recipe <item>` | Mostrar receita(s) de um item | `nexusslime.recipe` |
-| `/nexusslime guide` | Abrir GUI do guia de itens | `nexusslime.command` |
-| `/nexusslime reload` | Recarregar todas as receitas e multiblocos | `nexusslime.admin.reload` |
+| `/recipe <item>` | Mostrar receita(s) de um item | `nexusprism.recipe` |
+| `/nexusprism guide` | Abrir GUI do guia de itens | `nexusprism.command` |
+| `/nexusprism reload` | Recarregar todas as receitas e multiblocos | `nexusprism.admin.reload` |
 
 ---
 
@@ -158,6 +158,6 @@ O guia mostra:
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.recipe` | Ver receitas com `/recipe` | true |
-| `nexusslime.craft` | Usar estações de crafting | true |
-| `nexusslime.admin.reload` | Recarregar configurações/receitas do plugin | OP |
+| `nexusprism.recipe` | Ver receitas com `/recipe` | true |
+| `nexusprism.craft` | Usar estações de crafting | true |
+| `nexusprism.admin.reload` | Recarregar configurações/receitas do plugin | OP |

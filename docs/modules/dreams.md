@@ -27,9 +27,9 @@ The Dreams module triggers a **cinematic sleep experience** when a player sleeps
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/dreams reload` | Reload dreams configuration | `nexusslime.dreams.admin` |
-| `/dreams trigger <player>` | Force-trigger a dream for a player | `nexusslime.dreams.admin` |
-| `/dreams trigger <player> nightmare` | Force a nightmare | `nexusslime.dreams.admin` |
+| `/dreams reload` | Reload dreams configuration | `nexusprism.dreams.admin` |
+| `/dreams trigger <player>` | Force-trigger a dream for a player | `nexusprism.dreams.admin` |
+| `/dreams trigger <player> nightmare` | Force a nightmare | `nexusprism.dreams.admin` |
 
 ---
 
@@ -37,7 +37,7 @@ The Dreams module triggers a **cinematic sleep experience** when a player sleeps
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.dreams.admin` | Admin dream commands | OP |
+| `nexusprism.dreams.admin` | Admin dream commands | OP |
 
 ---
 

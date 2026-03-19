@@ -16,7 +16,7 @@ El módulo Holograms crea **textos flotantes y displays de ítems** en el mundo,
 
 ## Comandos
 
-Todos los subcomandos requieren `nexusslime.holograms.admin`.
+Todos los subcomandos requieren `nexusprism.holograms.admin`.
 
 | Comando | Descripción |
 | --- | --- |
@@ -40,7 +40,7 @@ Todos los subcomandos requieren `nexusslime.holograms.admin`.
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.holograms.admin` | Todos los comandos de gestión de hologramas | OP |
+| `nexusprism.holograms.admin` | Todos los comandos de gestión de hologramas | OP |
 
 ---
 

@@ -18,18 +18,18 @@ Os jogadores selecionam dois cantos de uma região cúbica com a varinha de sele
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/region claim <nome>` | Reivindicar área selecionada | `nexusslime.region.use` |
-| `/region delete <nome>` | Excluir uma região | `nexusslime.region.use` |
-| `/region list` | Listar suas regiões | `nexusslime.region.use` |
-| `/region info [nome]` | Ver detalhes da região | `nexusslime.region.use` |
-| `/region addmember <região> <jogador>` | Adicionar um membro | `nexusslime.region.use` |
-| `/region removemember <região> <jogador>` | Remover um membro | `nexusslime.region.use` |
-| `/region setflag <região> <flag> <valor>` | Definir uma flag | `nexusslime.region.use` |
-| `/region flags <região>` | Ver todas as flags | `nexusslime.region.use` |
-| `/protect <nome>` | Proteger rapidamente o chunk atual | `nexusslime.region.use` |
-| `/region admin list [jogador]` | Admin: listar todas as regiões | `nexusslime.protect.admin` |
-| `/region admin delete <nome>` | Admin: forçar exclusão de região | `nexusslime.protect.admin` |
-| `/region admin setowner <região> <jogador>` | Admin: alterar proprietário | `nexusslime.protect.admin` |
+| `/region claim <nome>` | Reivindicar área selecionada | `nexusprism.region.use` |
+| `/region delete <nome>` | Excluir uma região | `nexusprism.region.use` |
+| `/region list` | Listar suas regiões | `nexusprism.region.use` |
+| `/region info [nome]` | Ver detalhes da região | `nexusprism.region.use` |
+| `/region addmember <região> <jogador>` | Adicionar um membro | `nexusprism.region.use` |
+| `/region removemember <região> <jogador>` | Remover um membro | `nexusprism.region.use` |
+| `/region setflag <região> <flag> <valor>` | Definir uma flag | `nexusprism.region.use` |
+| `/region flags <região>` | Ver todas as flags | `nexusprism.region.use` |
+| `/protect <nome>` | Proteger rapidamente o chunk atual | `nexusprism.region.use` |
+| `/region admin list [jogador]` | Admin: listar todas as regiões | `nexusprism.protect.admin` |
+| `/region admin delete <nome>` | Admin: forçar exclusão de região | `nexusprism.protect.admin` |
+| `/region admin setowner <região> <jogador>` | Admin: alterar proprietário | `nexusprism.protect.admin` |
 
 ---
 
@@ -85,12 +85,12 @@ O sistema de duelo permite que os jogadores se desafiem para uma luta 1v1 em uma
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/duel <jogador>` | Desafiar um jogador para um duelo | `nexusslime.duel.use` |
-| `/duel accept` | Aceitar um desafio de duelo | `nexusslime.duel.use` |
-| `/duel deny` | Recusar um desafio de duelo | `nexusslime.duel.use` |
-| `/duel spectate <jogador>` | Espectador de um duelo | `nexusslime.duel.use` |
-| `/duel stats` | Ver suas estatísticas de duelo | `nexusslime.duel.use` |
-| `/duel setarena` | Definir arena de duelo na sua localização | `nexusslime.protect.admin` |
+| `/duel <jogador>` | Desafiar um jogador para um duelo | `nexusprism.duel.use` |
+| `/duel accept` | Aceitar um desafio de duelo | `nexusprism.duel.use` |
+| `/duel deny` | Recusar um desafio de duelo | `nexusprism.duel.use` |
+| `/duel spectate <jogador>` | Espectador de um duelo | `nexusprism.duel.use` |
+| `/duel stats` | Ver suas estatísticas de duelo | `nexusprism.duel.use` |
+| `/duel setarena` | Definir arena de duelo na sua localização | `nexusprism.protect.admin` |
 
 ### Regras de Duelo
 
@@ -105,7 +105,7 @@ O sistema de duelo permite que os jogadores se desafiem para uma luta 1v1 em uma
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.region.use` | Criar e gerenciar próprias regiões | true |
-| `nexusslime.protect.admin` | Gerenciamento administrativo de regiões | OP |
-| `nexusslime.bypass.protection` | Ignorar todas as proteções de região | OP |
-| `nexusslime.duel.use` | Desafiar e aceitar duelos | true |
+| `nexusprism.region.use` | Criar e gerenciar próprias regiões | true |
+| `nexusprism.protect.admin` | Gerenciamento administrativo de regiões | OP |
+| `nexusprism.bypass.protection` | Ignorar todas as proteções de região | OP |
+| `nexusprism.duel.use` | Desafiar e aceitar duelos | true |

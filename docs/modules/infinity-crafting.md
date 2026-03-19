@@ -1,6 +1,6 @@
 # Infinity Crafting Module
 
-Infinity Crafting is NexusSlime's **multiblock crafting system**. Players build physical multiblock structures in the world and use them as advanced crafting stations. Recipes are defined entirely in YAML.
+Infinity Crafting is NexusPrism's **multiblock crafting system**. Players build physical multiblock structures in the world and use them as advanced crafting stations. Recipes are defined entirely in YAML.
 
 ---
 
@@ -54,7 +54,7 @@ INFINITY_TABLE:
 
 ## Recipe YAML Format
 
-Recipes are placed in `plugins/NexusSlime/infinity_recipes/` as individual `.yml` files. The filename serves as the recipe ID.
+Recipes are placed in `plugins/NexusPrism/infinity_recipes/` as individual `.yml` files. The filename serves as the recipe ID.
 
 ### Shaped Recipe
 
@@ -121,7 +121,7 @@ processing-ticks: 200
 | --- | --- |
 | `type` | `SHAPED`, `SHAPELESS`, `MACHINE_SMELT` |
 | `station` | The multiblock ID required to craft this recipe |
-| `output.item` | Output item ID (NexusSlime custom or vanilla Material) |
+| `output.item` | Output item ID (NexusPrism custom or vanilla Material) |
 | `output.amount` | Stack size of the output |
 | `shape` | 3-row grid pattern for shaped recipes (3 chars per row) |
 | `ingredients` | Map of char → item ID (shaped) or list of item IDs (shapeless) |
@@ -133,7 +133,7 @@ processing-ticks: 200
 
 ## In-Game Guide
 
-All infinity recipes are visible in the in-game guide. Open it with `/nexusslime guide` and navigate to the **Infinity** tier section.
+All infinity recipes are visible in the in-game guide. Open it with `/nexusprism guide` and navigate to the **Infinity** tier section.
 
 The guide shows:
 
@@ -148,9 +148,9 @@ The guide shows:
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/recipe <item>` | Show recipe(s) for an item | `nexusslime.recipe` |
-| `/nexusslime guide` | Open item guide GUI | `nexusslime.command` |
-| `/nexusslime reload` | Reload all recipes and multiblocks | `nexusslime.admin.reload` |
+| `/recipe <item>` | Show recipe(s) for an item | `nexusprism.recipe` |
+| `/nexusprism guide` | Open item guide GUI | `nexusprism.command` |
+| `/nexusprism reload` | Reload all recipes and multiblocks | `nexusprism.admin.reload` |
 
 ---
 
@@ -158,6 +158,6 @@ The guide shows:
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.recipe` | View recipes with `/recipe` | true |
-| `nexusslime.craft` | Use crafting stations | true |
-| `nexusslime.admin.reload` | Reload plugin configs/recipes | OP |
+| `nexusprism.recipe` | View recipes with `/recipe` | true |
+| `nexusprism.craft` | Use crafting stations | true |
+| `nexusprism.admin.reload` | Reload plugin configs/recipes | OP |

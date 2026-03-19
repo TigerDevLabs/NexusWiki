@@ -1,6 +1,6 @@
 # Módulos
 
-NexusSlime está organizado en **módulos de funcionalidades**, cada uno gestionando un sistema de juego distinto. Todos los módulos están incluidos en el JAR final y habilitados por defecto.
+NexusPrism está organizado en **módulos de funcionalidades**, cada uno gestionando un sistema de juego distinto. Todos los módulos están incluidos en el JAR final y habilitados por defecto.
 
 ---
 

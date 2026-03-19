@@ -17,19 +17,19 @@ The Economy module provides a **dual-currency system** (money and credits), sell
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/money` | Check your balance | `nexusslime.economy.money` |
-| `/money <player>` | Check another player's balance | `nexusslime.economy.money` |
-| `/credits` | Check your credits | `nexusslime.economy.credits` |
-| `/credits <player>` | Check another's credits | `nexusslime.economy.credits` |
-| `/baltop` | Top 10 richest players | `nexusslime.economy.baltop` |
-| `/sell hand` | Sell item in hand | `nexusslime.economy.sell` |
-| `/sell all` | Sell all sellable items | `nexusslime.economy.sell` |
-| `/sell inventory` | Sell entire inventory | `nexusslime.economy.sell` |
-| `/worth [item]` | Check sell value of item | `nexusslime.essentials.worth` |
-| `/eco give <player> <amount>` | Give money (admin) | `nexusslime.economy.admin` |
-| `/eco take <player> <amount>` | Take money (admin) | `nexusslime.economy.admin` |
-| `/eco set <player> <amount>` | Set balance (admin) | `nexusslime.economy.admin` |
-| `/eco reset <player>` | Reset balance (admin) | `nexusslime.economy.admin` |
+| `/money` | Check your balance | `nexusprism.economy.money` |
+| `/money <player>` | Check another player's balance | `nexusprism.economy.money` |
+| `/credits` | Check your credits | `nexusprism.economy.credits` |
+| `/credits <player>` | Check another's credits | `nexusprism.economy.credits` |
+| `/baltop` | Top 10 richest players | `nexusprism.economy.baltop` |
+| `/sell hand` | Sell item in hand | `nexusprism.economy.sell` |
+| `/sell all` | Sell all sellable items | `nexusprism.economy.sell` |
+| `/sell inventory` | Sell entire inventory | `nexusprism.economy.sell` |
+| `/worth [item]` | Check sell value of item | `nexusprism.essentials.worth` |
+| `/eco give <player> <amount>` | Give money (admin) | `nexusprism.economy.admin` |
+| `/eco take <player> <amount>` | Take money (admin) | `nexusprism.economy.admin` |
+| `/eco set <player> <amount>` | Set balance (admin) | `nexusprism.economy.admin` |
+| `/eco reset <player>` | Reset balance (admin) | `nexusprism.economy.admin` |
 
 ---
 
@@ -37,11 +37,11 @@ The Economy module provides a **dual-currency system** (money and credits), sell
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.economy.money` | Check balances | true |
-| `nexusslime.economy.credits` | Check credits | true |
-| `nexusslime.economy.baltop` | View leaderboard | true |
-| `nexusslime.economy.sell` | Use /sell commands | true |
-| `nexusslime.economy.admin` | Admin eco commands | OP |
+| `nexusprism.economy.money` | Check balances | true |
+| `nexusprism.economy.credits` | Check credits | true |
+| `nexusprism.economy.baltop` | View leaderboard | true |
+| `nexusprism.economy.sell` | Use /sell commands | true |
+| `nexusprism.economy.admin` | Admin eco commands | OP |
 
 ---
 
@@ -87,7 +87,7 @@ prices:
 ```
 
 !!! tip
-    Use Material names (Bukkit uppercase). Items not listed in `sell-prices.yml` cannot be sold. Custom NexusSlime items can also be added by their item ID.
+    Use Material names (Bukkit uppercase). Items not listed in `sell-prices.yml` cannot be sold. Custom NexusPrism items can also be added by their item ID.
 
 ---
 
@@ -95,8 +95,8 @@ prices:
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_money%` | Player's money balance |
-| `%nexusslime_credits%` | Player's credit balance |
+| `%nexusprism_money%` | Player's money balance |
+| `%nexusprism_credits%` | Player's credit balance |
 
 See the full [PlaceholderAPI reference](../reference/placeholders.md).
 
@@ -132,11 +132,11 @@ Players can only hold **one job at a time**. Job configurations are YAML files u
 
 | Command | Description | Permission |
 | --- | --- | --- |
-| `/job` | Open Job Browser GUI | `nexusslime.economy.job.use` |
-| `/job join <id>` | Join a job | `nexusslime.economy.job.use` |
-| `/job leave` | Leave current job | `nexusslime.economy.job.use` |
-| `/job info [id]` | View job stats | `nexusslime.economy.job.use` |
-| `/job top` | Job leaderboard | `nexusslime.economy.job.use` |
+| `/job` | Open Job Browser GUI | `nexusprism.economy.job.use` |
+| `/job join <id>` | Join a job | `nexusprism.economy.job.use` |
+| `/job leave` | Leave current job | `nexusprism.economy.job.use` |
+| `/job info [id]` | View job stats | `nexusprism.economy.job.use` |
+| `/job top` | Job leaderboard | `nexusprism.economy.job.use` |
 
 !!! note "Blood Moon Bonus"
     During a Blood Moon, the **Hunter** job's kill-pay is multiplied (default ×1.5). See the [Events module](events.md).
@@ -178,14 +178,14 @@ A 3-row GUI opens when a player right-clicks the sign:
 
 ### Admin Shops
 
-Admin shops have **unlimited stock** and are created by setting the owner UUID to `null` internally. Use `nexusslime.economy.shop.admin` to create them.
+Admin shops have **unlimited stock** and are created by setting the owner UUID to `null` internally. Use `nexusprism.economy.shop.admin` to create them.
 
 ### Permissions
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.economy.shop.create` | Create player chest shops | true |
-| `nexusslime.economy.shop.admin` | Create admin (unlimited stock) shops | OP |
+| `nexusprism.economy.shop.create` | Create player chest shops | true |
+| `nexusprism.economy.shop.admin` | Create admin (unlimited stock) shops | OP |
 
 ---
 
@@ -208,9 +208,9 @@ Players can set named warp points that any other player can visit.
 
 | Permission | Max Warps |
 | --- | --- |
-| `nexusslime.economy.playerwarp.unlimited` | Unlimited |
-| `nexusslime.economy.playerwarp.10` | 10 |
-| `nexusslime.economy.playerwarp.3` | 3 |
+| `nexusprism.economy.playerwarp.unlimited` | Unlimited |
+| `nexusprism.economy.playerwarp.10` | 10 |
+| `nexusprism.economy.playerwarp.3` | 3 |
 | *(default)* | 1 |
 
 ---
@@ -230,7 +230,7 @@ A global listing board where players buy and sell items with each other.
 
 | Command | Description | Permission |
 | --- | --- | --- |
-| `/ah` | Browse active listings (6-row paginated GUI) | `nexusslime.economy.ah.use` |
-| `/ah sell <price>` | List held item at a price | `nexusslime.economy.ah.use` |
-| `/ah own` | View your listings; cancel active or reclaim expired | `nexusslime.economy.ah.use` |
-| `/ah cancel <id>` | Cancel a listing by its ID | `nexusslime.economy.ah.use` |
+| `/ah` | Browse active listings (6-row paginated GUI) | `nexusprism.economy.ah.use` |
+| `/ah sell <price>` | List held item at a price | `nexusprism.economy.ah.use` |
+| `/ah own` | View your listings; cancel active or reclaim expired | `nexusprism.economy.ah.use` |
+| `/ah cancel <id>` | Cancel a listing by its ID | `nexusprism.economy.ah.use` |

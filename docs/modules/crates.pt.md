@@ -26,13 +26,13 @@ O módulo Crates oferece **caixas de loot baseadas em chaves** com animações d
 
 | Comando | Permissão | Descrição |
 | --- | --- | --- |
-| `/crate give <jogador> <caixa> [quantidade]` | `nexusslime.crates.admin` | Dar chaves de caixa a um jogador |
-| `/crate keys [jogador]` | `nexusslime.crates.use` | Ver saldo de chaves virtuais |
-| `/crate setblock <caixa>` | `nexusslime.crates.admin` | Registrar o bloco mirado como uma caixa |
-| `/crate removeblock` | `nexusslime.crates.admin` | Desregistrar o bloco mirado |
+| `/crate give <jogador> <caixa> [quantidade]` | `nexusprism.crates.admin` | Dar chaves de caixa a um jogador |
+| `/crate keys [jogador]` | `nexusprism.crates.use` | Ver saldo de chaves virtuais |
+| `/crate setblock <caixa>` | `nexusprism.crates.admin` | Registrar o bloco mirado como uma caixa |
+| `/crate removeblock` | `nexusprism.crates.admin` | Desregistrar o bloco mirado |
 | `/crate preview <caixa>` | *(todos os jogadores)* | Visualizar possíveis recompensas |
 | `/crate list` | *(todos os jogadores)* | Listar todos os tipos de caixa |
-| `/crate reload` | `nexusslime.crates.admin` | Recarregar todas as definições de caixas |
+| `/crate reload` | `nexusprism.crates.admin` | Recarregar todas as definições de caixas |
 
 ---
 
@@ -40,8 +40,8 @@ O módulo Crates oferece **caixas de loot baseadas em chaves** com animações d
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.crates.admin` | Criar, remover e dar caixas | OP |
-| `nexusslime.crates.use` | Verificar saldo de chaves | true |
+| `nexusprism.crates.admin` | Criar, remover e dar caixas | OP |
+| `nexusprism.crates.use` | Verificar saldo de chaves | true |
 
 ---
 

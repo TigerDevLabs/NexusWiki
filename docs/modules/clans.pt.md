@@ -8,24 +8,24 @@ O módulo Clãs permite que jogadores criem equipes persistentes com **conquista
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/clan create <nome> <tag>` | Criar um novo clã | `nexusslime.clan.use` |
-| `/clan disband` | Dissolver o clã | `nexusslime.clan.use` |
-| `/clan invite <jogador>` | Convidar um jogador | `nexusslime.clan.use` |
-| `/clan join <nome>` | Entrar em um clã | `nexusslime.clan.use` |
-| `/clan leave` | Sair do clã | `nexusslime.clan.use` |
-| `/clan kick <jogador>` | Expulsar um membro | `nexusslime.clan.use` |
-| `/clan promote <jogador>` | Promover a oficial | `nexusslime.clan.use` |
-| `/clan demote <jogador>` | Rebaixar a membro | `nexusslime.clan.use` |
-| `/clan info [nome]` | Ver informações do clã | `nexusslime.clan.use` |
-| `/clan list` | Listar todos os clãs | `nexusslime.clan.use` |
-| `/clan chat` | Alternar chat de clã | `nexusslime.clan.use` |
-| `/clan claim` | Reivindicar chunk atual | `nexusslime.clan.use` |
-| `/clan unclaim` | Liberar chunk atual | `nexusslime.clan.use` |
-| `/clan map` | Mostrar mapa de território | `nexusslime.clan.use` |
-| `/clan chest` | Abrir baú do clã | `nexusslime.clan.use` |
-| `/clan upgrade` | Abrir menu de melhorias | `nexusslime.clan.use` |
-| `/clan top` | Placar de clãs | `nexusslime.clan.use` |
-| `/clan admin disband <nome>` | Forçar dissolução (admin) | `nexusslime.clan.admin` |
+| `/clan create <nome> <tag>` | Criar um novo clã | `nexusprism.clan.use` |
+| `/clan disband` | Dissolver o clã | `nexusprism.clan.use` |
+| `/clan invite <jogador>` | Convidar um jogador | `nexusprism.clan.use` |
+| `/clan join <nome>` | Entrar em um clã | `nexusprism.clan.use` |
+| `/clan leave` | Sair do clã | `nexusprism.clan.use` |
+| `/clan kick <jogador>` | Expulsar um membro | `nexusprism.clan.use` |
+| `/clan promote <jogador>` | Promover a oficial | `nexusprism.clan.use` |
+| `/clan demote <jogador>` | Rebaixar a membro | `nexusprism.clan.use` |
+| `/clan info [nome]` | Ver informações do clã | `nexusprism.clan.use` |
+| `/clan list` | Listar todos os clãs | `nexusprism.clan.use` |
+| `/clan chat` | Alternar chat de clã | `nexusprism.clan.use` |
+| `/clan claim` | Reivindicar chunk atual | `nexusprism.clan.use` |
+| `/clan unclaim` | Liberar chunk atual | `nexusprism.clan.use` |
+| `/clan map` | Mostrar mapa de território | `nexusprism.clan.use` |
+| `/clan chest` | Abrir baú do clã | `nexusprism.clan.use` |
+| `/clan upgrade` | Abrir menu de melhorias | `nexusprism.clan.use` |
+| `/clan top` | Placar de clãs | `nexusprism.clan.use` |
+| `/clan admin disband <nome>` | Forçar dissolução (admin) | `nexusprism.clan.admin` |
 
 ---
 
@@ -94,9 +94,9 @@ upgrades:
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.clan.use` | Usar comandos de clã | true |
-| `nexusslime.clan.admin` | Gerenciamento admin de clãs | OP |
-| `nexusslime.clan.bypass-protection` | Ignorar proteção de território | OP |
+| `nexusprism.clan.use` | Usar comandos de clã | true |
+| `nexusprism.clan.admin` | Gerenciamento admin de clãs | OP |
+| `nexusprism.clan.bypass-protection` | Ignorar proteção de território | OP |
 
 ---
 
@@ -104,9 +104,9 @@ upgrades:
 
 | Placeholder | Descrição |
 | --- | --- |
-| `%nexusslime_clan_name%` | Nome do clã do jogador |
-| `%nexusslime_clan_tag%` | Tag do clã |
-| `%nexusslime_clan_role%` | Cargo do jogador no clã |
-| `%nexusslime_clan_level%` | Nível do clã |
-| `%nexusslime_clan_members%` | Contagem de membros online |
-| `%nexusslime_clan_bank%` | Saldo do banco do clã |
+| `%nexusprism_clan_name%` | Nome do clã do jogador |
+| `%nexusprism_clan_tag%` | Tag do clã |
+| `%nexusprism_clan_role%` | Cargo do jogador no clã |
+| `%nexusprism_clan_level%` | Nível do clã |
+| `%nexusprism_clan_members%` | Contagem de membros online |
+| `%nexusprism_clan_bank%` | Saldo do banco do clã |

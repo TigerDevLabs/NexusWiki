@@ -27,10 +27,10 @@ A cada intervalo de horda, um jogador online aleatório é escolhido como alvo. 
 
 | Comando | Descrição | Permissão |
 | --- | --- | --- |
-| `/bloodmoon` | Exibir status atual da Lua de Sangue | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon start` | Ativar a Lua de Sangue manualmente | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon stop` | Desativar a Lua de Sangue manualmente | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon status` | Saída de status detalhada | `nexusslime.events.bloodmoon.admin` |
+| `/bloodmoon` | Exibir status atual da Lua de Sangue | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon start` | Ativar a Lua de Sangue manualmente | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon stop` | Desativar a Lua de Sangue manualmente | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon status` | Saída de status detalhada | `nexusprism.events.bloodmoon.admin` |
 
 ### Configuração (`events/config.yml`)
 
@@ -269,4 +269,4 @@ Chefes planejados para lançamentos futuros: Goku, Naruto Uzumaki, Aizen Sosuke,
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.events.bloodmoon.admin` | Controlar a Lua de Sangue manualmente | OP |
+| `nexusprism.events.bloodmoon.admin` | Controlar a Lua de Sangue manualmente | OP |

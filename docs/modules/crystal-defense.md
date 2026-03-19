@@ -19,17 +19,17 @@ Crystal Defense is a **wave-based cooperative minigame** where players defend En
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/crystal join <arena>` | Join an arena | `nexusslime.crystaldefense.use` |
-| `/crystal leave` | Leave the current arena | `nexusslime.crystaldefense.use` |
-| `/crystal list` | List available arenas | `nexusslime.crystaldefense.use` |
-| `/crystal status` | Show current wave and crystal HP | `nexusslime.crystaldefense.use` |
-| `/crystal create <name>` | Create a new arena | `nexusslime.crystaldefense.admin` |
-| `/crystal delete <name>` | Delete an arena | `nexusslime.crystaldefense.admin` |
-| `/crystal setcrystal <arena>` | Set crystal location | `nexusslime.crystaldefense.admin` |
-| `/crystal setspawn <arena>` | Set player spawn for arena | `nexusslime.crystaldefense.admin` |
-| `/crystal start [arena]` | Force-start a game | `nexusslime.crystaldefense.admin` |
-| `/crystal stop [arena]` | Stop a game | `nexusslime.crystaldefense.admin` |
-| `/crystal reload` | Reload arena configs | `nexusslime.crystaldefense.admin` |
+| `/crystal join <arena>` | Join an arena | `nexusprism.crystaldefense.use` |
+| `/crystal leave` | Leave the current arena | `nexusprism.crystaldefense.use` |
+| `/crystal list` | List available arenas | `nexusprism.crystaldefense.use` |
+| `/crystal status` | Show current wave and crystal HP | `nexusprism.crystaldefense.use` |
+| `/crystal create <name>` | Create a new arena | `nexusprism.crystaldefense.admin` |
+| `/crystal delete <name>` | Delete an arena | `nexusprism.crystaldefense.admin` |
+| `/crystal setcrystal <arena>` | Set crystal location | `nexusprism.crystaldefense.admin` |
+| `/crystal setspawn <arena>` | Set player spawn for arena | `nexusprism.crystaldefense.admin` |
+| `/crystal start [arena]` | Force-start a game | `nexusprism.crystaldefense.admin` |
+| `/crystal stop [arena]` | Stop a game | `nexusprism.crystaldefense.admin` |
+| `/crystal reload` | Reload arena configs | `nexusprism.crystaldefense.admin` |
 
 ---
 
@@ -126,8 +126,8 @@ waves:
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.crystaldefense.use` | Join arenas and play | true |
-| `nexusslime.crystaldefense.admin` | Create/manage arenas | OP |
+| `nexusprism.crystaldefense.use` | Join arenas and play | true |
+| `nexusprism.crystaldefense.admin` | Create/manage arenas | OP |
 
 ---
 
@@ -135,7 +135,7 @@ waves:
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_crystal_wave%` | Current wave number |
-| `%nexusslime_crystal_health%` | Crystal HP remaining |
-| `%nexusslime_crystal_points%` | Player's points in current game |
-| `%nexusslime_crystal_arena%` | Arena the player is in |
+| `%nexusprism_crystal_wave%` | Current wave number |
+| `%nexusprism_crystal_health%` | Crystal HP remaining |
+| `%nexusprism_crystal_points%` | Player's points in current game |
+| `%nexusprism_crystal_arena%` | Arena the player is in |

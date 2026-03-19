@@ -1,6 +1,6 @@
 # Módulo Structures
 
-O módulo Structures **injeta loot personalizado** nos baús de estruturas vanilla. Quando o servidor gera loot para qualquer estrutura suportada, o módulo adiciona (ou substitui) o conteúdo dos baús com itens definidos em `structures/loot-tables.yml` — incluindo itens personalizados do NexusSlime.
+O módulo Structures **injeta loot personalizado** nos baús de estruturas vanilla. Quando o servidor gera loot para qualquer estrutura suportada, o módulo adiciona (ou substitui) o conteúdo dos baús com itens definidos em `structures/loot-tables.yml` — incluindo itens personalizados do NexusPrism.
 
 ---
 
@@ -53,7 +53,7 @@ minecraft:dungeon:
         min: 1
         max: 1
       random-enchant: true
-    - nexusslime-item: RESEARCH_PARCHMENT_BASIC
+    - nexusprism-item: RESEARCH_PARCHMENT_BASIC
       weight: 5
       amount:
         min: 1

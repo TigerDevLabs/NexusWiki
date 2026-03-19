@@ -1,6 +1,6 @@
 # Structures Module
 
-The Structures module **injects custom loot** into vanilla structure chests. When the server generates loot for any supported structure, the module appends (or replaces) the chest contents with items defined in `structures/loot-tables.yml` — including custom NexusSlime items.
+The Structures module **injects custom loot** into vanilla structure chests. When the server generates loot for any supported structure, the module appends (or replaces) the chest contents with items defined in `structures/loot-tables.yml` — including custom NexusPrism items.
 
 ---
 
@@ -53,7 +53,7 @@ minecraft:dungeon:
         min: 1
         max: 1
       random-enchant: true        # Applies a random vanilla enchant to the book
-    - nexusslime-item: RESEARCH_PARCHMENT_BASIC   # Custom NexusSlime item by ID
+    - nexusprism-item: RESEARCH_PARCHMENT_BASIC   # Custom NexusPrism item by ID
       weight: 5
       amount:
         min: 1
@@ -67,7 +67,7 @@ minecraft:dungeon:
 | `mode` | `APPEND` — add to vanilla loot. `REPLACE` — clear vanilla loot and use only this table. |
 | `rolls.min` / `rolls.max` | Number of additional item stacks injected per chest open |
 | `items[].material` | Vanilla `Material` name |
-| `items[].nexusslime-item` | Custom NexusSlime item ID (from `items.yml`) |
+| `items[].nexusprism-item` | Custom NexusPrism item ID (from `items.yml`) |
 | `items[].weight` | Relative probability; higher = more common |
 | `items[].amount.min` / `.max` | Stack size range |
 | `items[].random-enchant` | If `true` and material is `ENCHANTED_BOOK`, applies a random vanilla enchantment |

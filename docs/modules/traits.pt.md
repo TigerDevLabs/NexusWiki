@@ -32,8 +32,8 @@ As cartas são sorteadas dos 22 Arcanos Maiores em 4 níveis de raridade.
 | --- | --- | --- |
 | `/traits` | *(todos os jogadores)* | Abrir o GUI de Traits de Tarô |
 | `/traits info` | *(todos os jogadores)* | Listar as cartas atuais no chat |
-| `/traits admin set <jogador> <slot 1-3> <NOME_DA_CARTA>` | `nexusslime.traits.admin` | Forçar a definição de uma carta (ignora custo e cooldown) |
-| `/traits admin reload` | `nexusslime.traits.admin` | Recarregar `traits/config.yml` |
+| `/traits admin set <jogador> <slot 1-3> <NOME_DA_CARTA>` | `nexusprism.traits.admin` | Forçar a definição de uma carta (ignora custo e cooldown) |
+| `/traits admin reload` | `nexusprism.traits.admin` | Recarregar `traits/config.yml` |
 
 ---
 
@@ -41,7 +41,7 @@ As cartas são sorteadas dos 22 Arcanos Maiores em 4 níveis de raridade.
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.traits.admin` | Comandos administrativos de traits | OP |
+| `nexusprism.traits.admin` | Comandos administrativos de traits | OP |
 
 ---
 

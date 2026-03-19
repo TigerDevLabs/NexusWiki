@@ -27,10 +27,10 @@ En cada intervalo de horda, se elige un jugador en línea aleatorio como objetiv
 
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
-| `/bloodmoon` | Mostrar estado actual de la Luna de Sangre | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon start` | Activar la Luna de Sangre manualmente | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon stop` | Desactivar la Luna de Sangre manualmente | `nexusslime.events.bloodmoon.admin` |
-| `/bloodmoon status` | Salida de estado detallada | `nexusslime.events.bloodmoon.admin` |
+| `/bloodmoon` | Mostrar estado actual de la Luna de Sangre | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon start` | Activar la Luna de Sangre manualmente | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon stop` | Desactivar la Luna de Sangre manualmente | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon status` | Salida de estado detallada | `nexusprism.events.bloodmoon.admin` |
 
 ### Configuración (`events/config.yml`)
 
@@ -269,4 +269,4 @@ Jefes planificados para lanzamientos futuros: Goku, Naruto Uzumaki, Aizen Sosuke
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.events.bloodmoon.admin` | Controlar la Luna de Sangre manualmente | OP |
+| `nexusprism.events.bloodmoon.admin` | Controlar la Luna de Sangre manualmente | OP |

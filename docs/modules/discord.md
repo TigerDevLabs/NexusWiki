@@ -25,7 +25,7 @@ The Discord module provides a **JDA-powered bot** with Minecraft ↔ Discord cha
 | `/discord link` | Start account linking process | *(all players)* |
 | `/discord unlink` | Unlink your Discord account | *(all players)* |
 | `/discord info` | Show your linked Discord account | *(all players)* |
-| `/discordrr` | Manage reaction-role messages | `nexusslime.admin` |
+| `/discordrr` | Manage reaction-role messages | `nexusprism.admin` |
 
 ---
 
@@ -165,5 +165,5 @@ Key classes: `GitHubActionsManager`, `WorkflowPoller`, `WorkflowTriggerRecord`
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.discord.link` | Link Discord account | true |
-| `nexusslime.admin` | Admin Discord commands | OP |
+| `nexusprism.discord.link` | Link Discord account | true |
+| `nexusprism.admin` | Admin Discord commands | OP |

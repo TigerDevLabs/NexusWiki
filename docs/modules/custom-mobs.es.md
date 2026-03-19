@@ -22,19 +22,19 @@ El módulo Custom Mobs permite a los administradores de servidores definir **bos
 
 | Comando | Uso | Permiso |
 | --- | --- | --- |
-| `/boss spawn <id>` | Invocar un boss en tu ubicación | `nexusslime.boss.admin` |
-| `/boss spawn <id> <mundo> <x> <y> <z>` | Invocar en coordenadas | `nexusslime.boss.admin` |
-| `/boss list` | Listar todos los bosses registrados | `nexusslime.boss.admin` |
-| `/boss info <id>` | Mostrar detalles de la definición del boss | `nexusslime.boss.admin` |
-| `/boss kill <id>` | Matar todas las instancias activas de un boss | `nexusslime.boss.admin` |
-| `/bossegg give <jugador> <id>` | Dar un huevo de aparición de boss | `nexusslime.boss.admin` |
-| `/bossegg <id>` | Obtener tu propio huevo de aparición de boss | `nexusslime.boss.admin` |
+| `/boss spawn <id>` | Invocar un boss en tu ubicación | `nexusprism.boss.admin` |
+| `/boss spawn <id> <mundo> <x> <y> <z>` | Invocar en coordenadas | `nexusprism.boss.admin` |
+| `/boss list` | Listar todos los bosses registrados | `nexusprism.boss.admin` |
+| `/boss info <id>` | Mostrar detalles de la definición del boss | `nexusprism.boss.admin` |
+| `/boss kill <id>` | Matar todas las instancias activas de un boss | `nexusprism.boss.admin` |
+| `/bossegg give <jugador> <id>` | Dar un huevo de aparición de boss | `nexusprism.boss.admin` |
+| `/bossegg <id>` | Obtener tu propio huevo de aparición de boss | `nexusprism.boss.admin` |
 
 ---
 
 ## Formato YAML de Boss
 
-Los archivos de boss se colocan en `plugins/NexusSlime/custommobs/bosses/<id>.yml`.
+Los archivos de boss se colocan en `plugins/NexusPrism/custommobs/bosses/<id>.yml`.
 
 ### Ejemplo Completo (`white_death.yml`)
 
@@ -96,13 +96,13 @@ form_switch_interval_ticks: 300
 
 ### Ítems de Loot
 
-Tanto nombres de `Material` de Bukkit como IDs de ítems personalizados de NexusSlime pueden usarse en las tablas de loot:
+Tanto nombres de `Material` de Bukkit como IDs de ítems personalizados de NexusPrism pueden usarse en las tablas de loot:
 
 ```yaml
 loot:
   always:
     - DIAMOND:3           # Material vanilla
-    - NEXUS_SHARD:1       # ID de ítem personalizado de NexusSlime
+    - NEXUS_SHARD:1       # ID de ítem personalizado de NexusPrism
   chance:
     - item: BOSS_TROPHY
       chance: 0.05        # 5% de probabilidad de drop
@@ -118,7 +118,7 @@ loot:
 | `DAGGER` | Ataques rápidos de hit-and-run |
 | `GLADIUS` | Ataque equilibrado con golpes de escudo |
 
-Las formas de IA personalizadas pueden añadirse creando módulos addon usando la `nexusslime-api`.
+Las formas de IA personalizadas pueden añadirse creando módulos addon usando la `nexusprism-api`.
 
 ---
 
@@ -126,7 +126,7 @@ Las formas de IA personalizadas pueden añadirse creando módulos addon usando l
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.boss.admin` | Todos los comandos de boss y huevo de aparición | OP |
+| `nexusprism.boss.admin` | Todos los comandos de boss y huevo de aparición | OP |
 
 ---
 

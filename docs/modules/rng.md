@@ -19,15 +19,15 @@ The RNG module provides **daily spin rewards**, **lucky blocks**, **gacha pulls*
 
 | Command | Permission | Description |
 | --- | --- | --- |
-| `/spin` | `nexusslime.rng.spin` | Open the daily spin GUI |
-| `/rng event start <id>` | `nexusslime.rng.admin` | Force-start a server event |
-| `/rng event stop` | `nexusslime.rng.admin` | Stop the active event |
-| `/rng event list` | `nexusslime.rng.admin` | List all defined events |
-| `/rng giveblock <player> [pool] [amount]` | `nexusslime.rng.admin` | Give lucky block items |
-| `/rng giveparchment <player> <BASIC\|ADVANCED\|INFINITY>` | `nexusslime.rng.admin` | Give a Research Parchment |
-| `/rng research get <player>` | `nexusslime.rng.admin` | Check a player's research level |
-| `/rng research set <player> <level>` | `nexusslime.rng.admin` | Set a player's research level |
-| `/rng reload` | `nexusslime.rng.admin` | Reload config, events, and reward pools |
+| `/spin` | `nexusprism.rng.spin` | Open the daily spin GUI |
+| `/rng event start <id>` | `nexusprism.rng.admin` | Force-start a server event |
+| `/rng event stop` | `nexusprism.rng.admin` | Stop the active event |
+| `/rng event list` | `nexusprism.rng.admin` | List all defined events |
+| `/rng giveblock <player> [pool] [amount]` | `nexusprism.rng.admin` | Give lucky block items |
+| `/rng giveparchment <player> <BASIC\|ADVANCED\|INFINITY>` | `nexusprism.rng.admin` | Give a Research Parchment |
+| `/rng research get <player>` | `nexusprism.rng.admin` | Check a player's research level |
+| `/rng research set <player> <level>` | `nexusprism.rng.admin` | Set a player's research level |
+| `/rng reload` | `nexusprism.rng.admin` | Reload config, events, and reward pools |
 
 ---
 
@@ -35,8 +35,8 @@ The RNG module provides **daily spin rewards**, **lucky blocks**, **gacha pulls*
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.rng.spin` | Use the daily spin | true |
-| `nexusslime.rng.admin` | All admin RNG commands | OP |
+| `nexusprism.rng.spin` | Use the daily spin | true |
+| `nexusprism.rng.admin` | All admin RNG commands | OP |
 
 ---
 

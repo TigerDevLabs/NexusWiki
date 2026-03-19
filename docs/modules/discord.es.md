@@ -25,7 +25,7 @@ El módulo Discord proporciona un **bot impulsado por JDA** con puente de chat M
 | `/discord link` | Inicia el proceso de vinculación de cuenta | *(todos los jugadores)* |
 | `/discord unlink` | Desvincula tu cuenta de Discord | *(todos los jugadores)* |
 | `/discord info` | Muestra tu cuenta de Discord vinculada | *(todos los jugadores)* |
-| `/discordrr` | Administra mensajes de reacción-rol | `nexusslime.admin` |
+| `/discordrr` | Administra mensajes de reacción-rol | `nexusprism.admin` |
 
 ---
 
@@ -165,5 +165,5 @@ Clases principales: `GitHubActionsManager`, `WorkflowPoller`, `WorkflowTriggerRe
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.discord.link` | Vincular cuenta de Discord | true |
-| `nexusslime.admin` | Comandos administrativos de Discord | OP |
+| `nexusprism.discord.link` | Vincular cuenta de Discord | true |
+| `nexusprism.admin` | Comandos administrativos de Discord | OP |

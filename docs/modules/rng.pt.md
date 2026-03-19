@@ -19,15 +19,15 @@ O módulo RNG oferece **giro diário de recompensas**, **blocos de sorte**, **pu
 
 | Comando | Permissão | Descrição |
 | --- | --- | --- |
-| `/spin` | `nexusslime.rng.spin` | Abrir o GUI de giro diário |
-| `/rng event start <id>` | `nexusslime.rng.admin` | Forçar início de um evento de servidor |
-| `/rng event stop` | `nexusslime.rng.admin` | Parar o evento ativo |
-| `/rng event list` | `nexusslime.rng.admin` | Listar todos os eventos definidos |
-| `/rng giveblock <jogador> [pool] [quantidade]` | `nexusslime.rng.admin` | Dar itens de bloco de sorte |
-| `/rng giveparchment <jogador> <BASIC\|ADVANCED\|INFINITY>` | `nexusslime.rng.admin` | Dar um Pergaminho de Pesquisa |
-| `/rng research get <jogador>` | `nexusslime.rng.admin` | Verificar o nível de pesquisa de um jogador |
-| `/rng research set <jogador> <nível>` | `nexusslime.rng.admin` | Definir o nível de pesquisa de um jogador |
-| `/rng reload` | `nexusslime.rng.admin` | Recarregar configuração, eventos e pools |
+| `/spin` | `nexusprism.rng.spin` | Abrir o GUI de giro diário |
+| `/rng event start <id>` | `nexusprism.rng.admin` | Forçar início de um evento de servidor |
+| `/rng event stop` | `nexusprism.rng.admin` | Parar o evento ativo |
+| `/rng event list` | `nexusprism.rng.admin` | Listar todos os eventos definidos |
+| `/rng giveblock <jogador> [pool] [quantidade]` | `nexusprism.rng.admin` | Dar itens de bloco de sorte |
+| `/rng giveparchment <jogador> <BASIC\|ADVANCED\|INFINITY>` | `nexusprism.rng.admin` | Dar um Pergaminho de Pesquisa |
+| `/rng research get <jogador>` | `nexusprism.rng.admin` | Verificar o nível de pesquisa de um jogador |
+| `/rng research set <jogador> <nível>` | `nexusprism.rng.admin` | Definir o nível de pesquisa de um jogador |
+| `/rng reload` | `nexusprism.rng.admin` | Recarregar configuração, eventos e pools |
 
 ---
 
@@ -35,8 +35,8 @@ O módulo RNG oferece **giro diário de recompensas**, **blocos de sorte**, **pu
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.rng.spin` | Usar o giro diário | true |
-| `nexusslime.rng.admin` | Todos os comandos administrativos de RNG | OP |
+| `nexusprism.rng.spin` | Usar o giro diário | true |
+| `nexusprism.rng.admin` | Todos os comandos administrativos de RNG | OP |
 
 ---
 

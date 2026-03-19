@@ -1,6 +1,6 @@
 # MMO Module
 
-The MMO module transforms NexusSlime into a light RPG experience. Players earn an **MMO level**, allocate **stat points**, level up **six skill trees**, unlock and use **abilities**, and progress through **eight professions** — each with a unique mastery passive.
+The MMO module transforms NexusPrism into a light RPG experience. Players earn an **MMO level**, allocate **stat points**, level up **six skill trees**, unlock and use **abilities**, and progress through **eight professions** — each with a unique mastery passive.
 
 ---
 
@@ -121,8 +121,8 @@ Or open `/skill`, click a tree, then click the ability icon. Cooldowns are track
 
 | Command | Description | Permission |
 | --- | --- | --- |
-| `/skill` | Open Skill Tree Browser GUI (3-row, 6 tree icons) | `nexusslime.mmo.use` |
-| `/skill use <id>` | Activate an unlocked ability | `nexusslime.mmo.use` |
+| `/skill` | Open Skill Tree Browser GUI (3-row, 6 tree icons) | `nexusprism.mmo.use` |
+| `/skill use <id>` | Activate an unlocked ability | `nexusprism.mmo.use` |
 
 ---
 
@@ -157,4 +157,4 @@ xpToLevel(n) = baseXp × 1.8^(level / 10)
 | --- | --- |
 | Database | SQLite — `mmo/mmo.db` |
 | Tables | `player_mmo`, `player_skills`, `player_professions` |
-| Permission | `nexusslime.mmo.use` (default: **true**) |
+| Permission | `nexusprism.mmo.use` (default: **true**) |

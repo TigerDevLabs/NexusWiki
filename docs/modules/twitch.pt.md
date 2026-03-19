@@ -21,14 +21,14 @@ O módulo Twitch conecta seu servidor Minecraft ao Twitch. Os jogadores podem **
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/twitch link <usuário>` | Iniciar vinculação da conta Twitch | `nexusslime.twitch.use` |
-| `/twitch unlink` | Desvincular conta Twitch | `nexusslime.twitch.use` |
-| `/twitch status` | Verificar status da vinculação | `nexusslime.twitch.use` |
-| `/twitch approve <jogador>` | Aprovar uma vinculação pendente | `nexusslime.twitch.staff` |
-| `/twitch reject <jogador>` | Rejeitar uma vinculação pendente | `nexusslime.twitch.staff` |
-| `/twitch pending` | Listar solicitações de vinculação pendentes | `nexusslime.twitch.staff` |
-| `/twitch giveaway <streamer>` | Sortear um vencedor | `nexusslime.twitch.staff` |
-| `/twitch reload` | Recarregar configuração do Twitch | `nexusslime.twitch.admin` |
+| `/twitch link <usuário>` | Iniciar vinculação da conta Twitch | `nexusprism.twitch.use` |
+| `/twitch unlink` | Desvincular conta Twitch | `nexusprism.twitch.use` |
+| `/twitch status` | Verificar status da vinculação | `nexusprism.twitch.use` |
+| `/twitch approve <jogador>` | Aprovar uma vinculação pendente | `nexusprism.twitch.staff` |
+| `/twitch reject <jogador>` | Rejeitar uma vinculação pendente | `nexusprism.twitch.staff` |
+| `/twitch pending` | Listar solicitações de vinculação pendentes | `nexusprism.twitch.staff` |
+| `/twitch giveaway <streamer>` | Sortear um vencedor | `nexusprism.twitch.staff` |
+| `/twitch reload` | Recarregar configuração do Twitch | `nexusprism.twitch.admin` |
 
 ---
 
@@ -36,9 +36,9 @@ O módulo Twitch conecta seu servidor Minecraft ao Twitch. Os jogadores podem **
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.twitch.use` | Comandos básicos do Twitch | true |
-| `nexusslime.twitch.staff` | Aprovar vinculações, realizar sorteios | OP |
-| `nexusslime.twitch.admin` | Recarregar configuração | OP |
+| `nexusprism.twitch.use` | Comandos básicos do Twitch | true |
+| `nexusprism.twitch.staff` | Aprovar vinculações, realizar sorteios | OP |
+| `nexusprism.twitch.admin` | Recarregar configuração | OP |
 
 ---
 

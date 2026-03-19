@@ -19,10 +19,10 @@ O módulo Chat substitui o chat padrão do Minecraft por um **sistema de 4 canai
 
 | Comando | Aliases | Uso | Permissão |
 | --- | --- | --- | --- |
-| `/globalchat <mensagem>` | `/g`, `/gc` | Enviar mensagem para todos | `nexusslime.chat.global` |
-| `/staffchat <mensagem>` | `/sc` | Enviar mensagem para a staff | `nexusslime.chat.staff` |
-| `/report <jogador> <motivo>` | — | Denunciar um jogador | `nexusslime.chat.report` |
-| `/chat reload` | — | Recarregar configuração do chat | `nexusslime.chat.admin` |
+| `/globalchat <mensagem>` | `/g`, `/gc` | Enviar mensagem para todos | `nexusprism.chat.global` |
+| `/staffchat <mensagem>` | `/sc` | Enviar mensagem para a staff | `nexusprism.chat.staff` |
+| `/report <jogador> <motivo>` | — | Denunciar um jogador | `nexusprism.chat.report` |
+| `/chat reload` | — | Recarregar configuração do chat | `nexusprism.chat.admin` |
 
 ---
 
@@ -30,10 +30,10 @@ O módulo Chat substitui o chat padrão do Minecraft por um **sistema de 4 canai
 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
-| `nexusslime.chat.global` | Usar o canal de chat global | true |
-| `nexusslime.chat.staff` | Acessar o canal de staff | OP |
-| `nexusslime.chat.report` | Enviar denúncias de jogadores | true |
-| `nexusslime.chat.admin` | Recarregar configuração do chat | OP |
+| `nexusprism.chat.global` | Usar o canal de chat global | true |
+| `nexusprism.chat.staff` | Acessar o canal de staff | OP |
+| `nexusprism.chat.report` | Enviar denúncias de jogadores | true |
+| `nexusprism.chat.admin` | Recarregar configuração do chat | OP |
 
 ---
 

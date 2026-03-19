@@ -18,29 +18,29 @@ The Clans module lets players create persistent teams with **territory claiming*
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/clan create <name> <tag>` | Create a new clan | `nexusslime.clan.use` |
-| `/clan disband` | Disband your clan | `nexusslime.clan.use` |
-| `/clan invite <player>` | Invite a player | `nexusslime.clan.use` |
-| `/clan join <name>` | Join a clan by invite | `nexusslime.clan.use` |
-| `/clan leave` | Leave your clan | `nexusslime.clan.use` |
-| `/clan kick <player>` | Kick a member | `nexusslime.clan.use` |
-| `/clan promote <player>` | Promote to officer | `nexusslime.clan.use` |
-| `/clan demote <player>` | Demote to member | `nexusslime.clan.use` |
-| `/clan info [name]` | View clan info | `nexusslime.clan.use` |
-| `/clan list` | List all clans | `nexusslime.clan.use` |
-| `/clan chat` | Toggle clan chat | `nexusslime.clan.use` |
-| `/clan claim` | Claim current chunk | `nexusslime.clan.use` |
-| `/clan unclaim` | Unclaim current chunk | `nexusslime.clan.use` |
-| `/clan map` | Show territory map | `nexusslime.clan.use` |
-| `/clan chest` | Open clan chest | `nexusslime.clan.use` |
-| `/clan upgrade` | Open upgrade menu | `nexusslime.clan.use` |
-| `/clan top` | Clan leaderboard | `nexusslime.clan.use` |
-| `/clan ally <clan>` | Send or accept an alliance request | `nexusslime.clan.use` |
-| `/clan ally remove <clan>` | Remove an alliance | `nexusslime.clan.use` |
-| `/clan enemy <clan>` | Mark a clan as an enemy | `nexusslime.clan.use` |
-| `/clan enemy remove <clan>` | Remove enemy status | `nexusslime.clan.use` |
-| `/clan admin disband <name>` | Force-disband (admin) | `nexusslime.clan.admin` |
-| `/clan admin unclaim <name>` | Force-unclaim (admin) | `nexusslime.clan.admin` |
+| `/clan create <name> <tag>` | Create a new clan | `nexusprism.clan.use` |
+| `/clan disband` | Disband your clan | `nexusprism.clan.use` |
+| `/clan invite <player>` | Invite a player | `nexusprism.clan.use` |
+| `/clan join <name>` | Join a clan by invite | `nexusprism.clan.use` |
+| `/clan leave` | Leave your clan | `nexusprism.clan.use` |
+| `/clan kick <player>` | Kick a member | `nexusprism.clan.use` |
+| `/clan promote <player>` | Promote to officer | `nexusprism.clan.use` |
+| `/clan demote <player>` | Demote to member | `nexusprism.clan.use` |
+| `/clan info [name]` | View clan info | `nexusprism.clan.use` |
+| `/clan list` | List all clans | `nexusprism.clan.use` |
+| `/clan chat` | Toggle clan chat | `nexusprism.clan.use` |
+| `/clan claim` | Claim current chunk | `nexusprism.clan.use` |
+| `/clan unclaim` | Unclaim current chunk | `nexusprism.clan.use` |
+| `/clan map` | Show territory map | `nexusprism.clan.use` |
+| `/clan chest` | Open clan chest | `nexusprism.clan.use` |
+| `/clan upgrade` | Open upgrade menu | `nexusprism.clan.use` |
+| `/clan top` | Clan leaderboard | `nexusprism.clan.use` |
+| `/clan ally <clan>` | Send or accept an alliance request | `nexusprism.clan.use` |
+| `/clan ally remove <clan>` | Remove an alliance | `nexusprism.clan.use` |
+| `/clan enemy <clan>` | Mark a clan as an enemy | `nexusprism.clan.use` |
+| `/clan enemy remove <clan>` | Remove enemy status | `nexusprism.clan.use` |
+| `/clan admin disband <name>` | Force-disband (admin) | `nexusprism.clan.admin` |
+| `/clan admin unclaim <name>` | Force-unclaim (admin) | `nexusprism.clan.admin` |
 
 ---
 
@@ -188,9 +188,9 @@ Toggle clan-only chat with `/clan chat`. Messages sent while in clan chat mode a
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.clan.use` | Use clan commands | true |
-| `nexusslime.clan.admin` | Admin clan management | OP |
-| `nexusslime.clan.bypass-protection` | Bypass clan territory protection | OP |
+| `nexusprism.clan.use` | Use clan commands | true |
+| `nexusprism.clan.admin` | Admin clan management | OP |
+| `nexusprism.clan.bypass-protection` | Bypass clan territory protection | OP |
 
 ---
 
@@ -198,11 +198,11 @@ Toggle clan-only chat with `/clan chat`. Messages sent while in clan chat mode a
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_clan_name%` | Player's clan name |
-| `%nexusslime_clan_tag%` | Clan tag (e.g. `[TAG]`) |
-| `%nexusslime_clan_role%` | Player's role in clan |
-| `%nexusslime_clan_level%` | Clan level |
-| `%nexusslime_clan_members%` | Online member count |
-| `%nexusslime_clan_bank%` | Clan bank balance |
+| `%nexusprism_clan_name%` | Player's clan name |
+| `%nexusprism_clan_tag%` | Clan tag (e.g. `[TAG]`) |
+| `%nexusprism_clan_role%` | Player's role in clan |
+| `%nexusprism_clan_level%` | Clan level |
+| `%nexusprism_clan_members%` | Online member count |
+| `%nexusprism_clan_bank%` | Clan bank balance |
 
 See the full [PlaceholderAPI reference](../reference/placeholders.md).

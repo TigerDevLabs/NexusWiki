@@ -36,7 +36,7 @@ minecraft:dungeon:
       amount:
         min: 1
         max: 5
-    - nexusslime-item: RESEARCH_PARCHMENT_BASIC
+    - nexusprism-item: RESEARCH_PARCHMENT_BASIC
       weight: 5
       amount:
         min: 1

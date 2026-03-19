@@ -3,7 +3,7 @@
 The Protections module provides **WorldGuard-style cuboid region claiming**, 28 configurable protection flags, and a **1v1 duel system**.
 
 !!! info "This is not Towny"
-    `nexusslime-protections` is a cuboid region system similar to **WorldGuard or GriefPrevention** — players define a 3D area and set flags on it. It has **no cities, nations, taxes, or diplomacy**. If you want Towny-style chunk-based territory with clan governance, see the [Clans module](clans.md) instead.
+    `nexusprism-protections` is a cuboid region system similar to **WorldGuard or GriefPrevention** — players define a 3D area and set flags on it. It has **no cities, nations, taxes, or diplomacy**. If you want Towny-style chunk-based territory with clan governance, see the [Clans module](clans.md) instead.
 
 ---
 
@@ -21,18 +21,18 @@ Players select two corners of a cuboid region with the selection wand, then clai
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/region claim <name>` | Claim selected area | `nexusslime.region.use` |
-| `/region delete <name>` | Delete a region | `nexusslime.region.use` |
-| `/region list` | List your regions | `nexusslime.region.use` |
-| `/region info [name]` | View region details | `nexusslime.region.use` |
-| `/region addmember <region> <player>` | Add a member | `nexusslime.region.use` |
-| `/region removemember <region> <player>` | Remove a member | `nexusslime.region.use` |
-| `/region setflag <region> <flag> <value>` | Set a flag | `nexusslime.region.use` |
-| `/region flags <region>` | View all flags | `nexusslime.region.use` |
-| `/protect <name>` | Quick-protect current chunk | `nexusslime.region.use` |
-| `/region admin list [player]` | Admin: list all regions | `nexusslime.protect.admin` |
-| `/region admin delete <name>` | Admin: force-delete region | `nexusslime.protect.admin` |
-| `/region admin setowner <region> <player>` | Admin: change owner | `nexusslime.protect.admin` |
+| `/region claim <name>` | Claim selected area | `nexusprism.region.use` |
+| `/region delete <name>` | Delete a region | `nexusprism.region.use` |
+| `/region list` | List your regions | `nexusprism.region.use` |
+| `/region info [name]` | View region details | `nexusprism.region.use` |
+| `/region addmember <region> <player>` | Add a member | `nexusprism.region.use` |
+| `/region removemember <region> <player>` | Remove a member | `nexusprism.region.use` |
+| `/region setflag <region> <flag> <value>` | Set a flag | `nexusprism.region.use` |
+| `/region flags <region>` | View all flags | `nexusprism.region.use` |
+| `/protect <name>` | Quick-protect current chunk | `nexusprism.region.use` |
+| `/region admin list [player]` | Admin: list all regions | `nexusprism.protect.admin` |
+| `/region admin delete <name>` | Admin: force-delete region | `nexusprism.protect.admin` |
+| `/region admin setowner <region> <player>` | Admin: change owner | `nexusprism.protect.admin` |
 
 ---
 
@@ -96,12 +96,12 @@ The duel system lets players challenge each other to a 1v1 fight in a safe duel 
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/duel <player>` | Challenge a player to a duel | `nexusslime.duel.use` |
-| `/duel accept` | Accept a duel challenge | `nexusslime.duel.use` |
-| `/duel deny` | Deny a duel challenge | `nexusslime.duel.use` |
-| `/duel spectate <player>` | Spectate a duel | `nexusslime.duel.use` |
-| `/duel stats` | View your duel stats | `nexusslime.duel.use` |
-| `/duel setarena` | Set duel arena at your location | `nexusslime.protect.admin` |
+| `/duel <player>` | Challenge a player to a duel | `nexusprism.duel.use` |
+| `/duel accept` | Accept a duel challenge | `nexusprism.duel.use` |
+| `/duel deny` | Deny a duel challenge | `nexusprism.duel.use` |
+| `/duel spectate <player>` | Spectate a duel | `nexusprism.duel.use` |
+| `/duel stats` | View your duel stats | `nexusprism.duel.use` |
+| `/duel setarena` | Set duel arena at your location | `nexusprism.protect.admin` |
 
 ### Duel Rules
 
@@ -116,7 +116,7 @@ The duel system lets players challenge each other to a 1v1 fight in a safe duel 
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.region.use` | Create and manage own regions | true |
-| `nexusslime.protect.admin` | Admin region management | OP |
-| `nexusslime.bypass.protection` | Bypass all region protections | OP |
-| `nexusslime.duel.use` | Challenge and accept duels | true |
+| `nexusprism.region.use` | Create and manage own regions | true |
+| `nexusprism.protect.admin` | Admin region management | OP |
+| `nexusprism.bypass.protection` | Bypass all region protections | OP |
+| `nexusprism.duel.use` | Challenge and accept duels | true |

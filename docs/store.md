@@ -1,6 +1,6 @@
 # Store / Webstore
 
-NexusSlime includes a built-in webstore bridge that delivers purchased packages to players automatically, even while they are offline.
+NexusPrism includes a built-in webstore bridge that delivers purchased packages to players automatically, even while they are offline.
 
 !!! warning "EULA Compliance"
     All store packages must comply with the [Minecraft Commercial Usage Guidelines](https://www.minecraft.net/en-us/eula). Selling gameplay advantages that cannot be earned in-game through normal play is **not permitted** on servers accessible to the public. The features listed below follow EULA-compliant design principles.
@@ -29,7 +29,7 @@ The following features are safely offered in a store under the Minecraft EULA:
 
 ## Delivery System
 
-NexusSlime's webstore bridge (`nexusslime-web`) uses a delivery queue. When a player purchases a package:
+NexusPrism's webstore bridge (`nexusprism-web`) uses a delivery queue. When a player purchases a package:
 
 1. The webstore posts a delivery request to the plugin via the delivery bridge
 2. The delivery is queued in `delivery.yml` (persistent)
@@ -65,26 +65,26 @@ VIP kits are given to players on purchase or via `/kit <name>`. Configure them i
 kits:
   vip:
     display-name: "&6VIP Kit"
-    permission: "nexusslime.kit.vip"
+    permission: "nexusprism.kit.vip"
     cooldown-hours: 24
     items:
       - material: GOLDEN_APPLE
         amount: 5
       - material: FIREWORK_ROCKET
         amount: 16
-      - nexusslime-id: SERVER_KEY    # Custom NexusSlime item
+      - nexusprism-id: SERVER_KEY    # Custom NexusPrism item
         amount: 1
     commands:
       - "eco give {player} 1000"
 
   mvp:
     display-name: "&bMVP Kit"
-    permission: "nexusslime.kit.mvp"
+    permission: "nexusprism.kit.mvp"
     cooldown-hours: 24
     items:
       - material: GOLDEN_APPLE
         amount: 16
-      - nexusslime-id: SERVER_KEY
+      - nexusprism-id: SERVER_KEY
         amount: 2
     commands:
       - "eco give {player} 2500"
@@ -94,7 +94,7 @@ kits:
 
 ## GDPR / Consent
 
-NexusSlime includes a GDPR consent system (`GDPRManager`) for servers operating in the EU. Players can be prompted to consent to data collection on first join.
+NexusPrism includes a GDPR consent system (`GDPRManager`) for servers operating in the EU. Players can be prompted to consent to data collection on first join.
 
 ```yaml
 # web-config.yml
@@ -110,11 +110,11 @@ gdpr:
 
 ## Recommended Store Platforms
 
-NexusSlime's delivery system is compatible with any store platform that can make HTTP POST requests or write to a shared file. Commonly used platforms include:
+NexusPrism's delivery system is compatible with any store platform that can make HTTP POST requests or write to a shared file. Commonly used platforms include:
 
 - **Tebex** (formerly Buycraft) — EULA-certified
 - **CraftingStore** — EULA-certified
 - **Custom panel** — Use the HTTP delivery endpoint
 
 !!! tip "Test your delivery"
-    Use `/nexusslime reload` after editing `delivery.yml`. Test a delivery manually by writing a delivery JSON to the file-fallback and relogging.
+    Use `/nexusprism reload` after editing `delivery.yml`. Test a delivery manually by writing a delivery JSON to the file-fallback and relogging.

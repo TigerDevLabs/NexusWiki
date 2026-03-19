@@ -1,6 +1,6 @@
 # PlaceholderAPI Reference
 
-NexusSlime registers its own PlaceholderAPI expansion under the `nexusslime` identifier. All placeholders follow the pattern `%nexusslime_<name>%`.
+NexusPrism registers its own PlaceholderAPI expansion under the `nexusprism` identifier. All placeholders follow the pattern `%nexusprism_<name>%`.
 
 **Requires:** [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) (soft dependency — install separately)
 
@@ -10,8 +10,8 @@ NexusSlime registers its own PlaceholderAPI expansion under the `nexusslime` ide
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_money%` | Player's current money balance | `12500.00` |
-| `%nexusslime_credits%` | Player's credit balance | `350` |
+| `%nexusprism_money%` | Player's current money balance | `12500.00` |
+| `%nexusprism_credits%` | Player's credit balance | `350` |
 
 ---
 
@@ -19,11 +19,11 @@ NexusSlime registers its own PlaceholderAPI expansion under the `nexusslime` ide
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_playtime%` | Total playtime (formatted) | `3d 12h 45m` |
-| `%nexusslime_playtime_minutes%` | Total playtime in minutes | `5085` |
-| `%nexusslime_homes%` | Number of homes set | `3` |
-| `%nexusslime_afk%` | `true` if player is AFK | `false` |
-| `%nexusslime_afk_status%` | Human-readable AFK status | `AFK` / `Online` |
+| `%nexusprism_playtime%` | Total playtime (formatted) | `3d 12h 45m` |
+| `%nexusprism_playtime_minutes%` | Total playtime in minutes | `5085` |
+| `%nexusprism_homes%` | Number of homes set | `3` |
+| `%nexusprism_afk%` | `true` if player is AFK | `false` |
+| `%nexusprism_afk_status%` | Human-readable AFK status | `AFK` / `Online` |
 
 ---
 
@@ -31,12 +31,12 @@ NexusSlime registers its own PlaceholderAPI expansion under the `nexusslime` ide
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_clan_name%` | Player's clan name | `Shadowborn` |
-| `%nexusslime_clan_tag%` | Clan tag | `SHD` |
-| `%nexusslime_clan_role%` | Player's role in clan | `Owner` / `Officer` / `Member` |
-| `%nexusslime_clan_level%` | Clan's current level | `5` |
-| `%nexusslime_clan_members%` | Online member count | `8` |
-| `%nexusslime_clan_bank%` | Clan bank balance | `75000.00` |
+| `%nexusprism_clan_name%` | Player's clan name | `Shadowborn` |
+| `%nexusprism_clan_tag%` | Clan tag | `SHD` |
+| `%nexusprism_clan_role%` | Player's role in clan | `Owner` / `Officer` / `Member` |
+| `%nexusprism_clan_level%` | Clan's current level | `5` |
+| `%nexusprism_clan_members%` | Online member count | `8` |
+| `%nexusprism_clan_bank%` | Clan bank balance | `75000.00` |
 
 Returns empty string if the player is not in a clan.
 
@@ -46,10 +46,10 @@ Returns empty string if the player is not in a clan.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_crystal_wave%` | Current wave number | `7` |
-| `%nexusslime_crystal_health%` | Crystal HP remaining | `680.0` |
-| `%nexusslime_crystal_points%` | Player's kill points in current game | `145` |
-| `%nexusslime_crystal_arena%` | Arena name the player is in | `arena1` |
+| `%nexusprism_crystal_wave%` | Current wave number | `7` |
+| `%nexusprism_crystal_health%` | Crystal HP remaining | `680.0` |
+| `%nexusprism_crystal_points%` | Player's kill points in current game | `145` |
+| `%nexusprism_crystal_arena%` | Arena name the player is in | `arena1` |
 
 Returns empty string if the player is not in a Crystal Defense game.
 
@@ -59,8 +59,8 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_authenticated%` | `true` if the player is logged in | `true` |
-| `%nexusslime_auth_status%` | Human-readable auth status | `Authenticated` / `Pending` |
+| `%nexusprism_authenticated%` | `true` if the player is logged in | `true` |
+| `%nexusprism_auth_status%` | Human-readable auth status | `Authenticated` / `Pending` |
 
 ---
 
@@ -68,8 +68,8 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_votes_total%` | Total lifetime votes | `127` |
-| `%nexusslime_vote_streak%` | Current vote streak length | `12` |
+| `%nexusprism_votes_total%` | Total lifetime votes | `127` |
+| `%nexusprism_vote_streak%` | Current vote streak length | `12` |
 
 ---
 
@@ -77,14 +77,14 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_player_blocks_broken%` | Total blocks broken | `48320` |
-| `%nexusslime_player_machines_placed%` | Total machines placed | `214` |
-| `%nexusslime_player_items_crafted%` | Total items crafted | `5630` |
-| `%nexusslime_player_energy_generated%` | Total energy generated (RF) | `1200000` |
-| `%nexusslime_player_items_smelted%` | Total items smelted | `890` |
-| `%nexusslime_player_research_unlocked%` | Research entries unlocked | `34` |
-| `%nexusslime_player_level%` | Player NexusSlime level | `15` |
-| `%nexusslime_researched_<id>%` | `true` if a specific research is unlocked | `true` |
+| `%nexusprism_player_blocks_broken%` | Total blocks broken | `48320` |
+| `%nexusprism_player_machines_placed%` | Total machines placed | `214` |
+| `%nexusprism_player_items_crafted%` | Total items crafted | `5630` |
+| `%nexusprism_player_energy_generated%` | Total energy generated (RF) | `1200000` |
+| `%nexusprism_player_items_smelted%` | Total items smelted | `890` |
+| `%nexusprism_player_research_unlocked%` | Research entries unlocked | `34` |
+| `%nexusprism_player_level%` | Player NexusPrism level | `15` |
+| `%nexusprism_researched_<id>%` | `true` if a specific research is unlocked | `true` |
 
 ---
 
@@ -92,7 +92,7 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_backpacks_owned%` | Number of backpacks the player owns | `2` |
+| `%nexusprism_backpacks_owned%` | Number of backpacks the player owns | `2` |
 
 ---
 
@@ -100,7 +100,7 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_machines_count%` | Total machines placed by player | `42` |
+| `%nexusprism_machines_count%` | Total machines placed by player | `42` |
 
 ---
 
@@ -108,8 +108,8 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_lp_prefix%` | Player's LuckPerms prefix | `&6[VIP]` |
-| `%nexusslime_lp_suffix%` | Player's LuckPerms suffix | `&7✦` |
+| `%nexusprism_lp_prefix%` | Player's LuckPerms prefix | `&6[VIP]` |
+| `%nexusprism_lp_suffix%` | Player's LuckPerms suffix | `&7✦` |
 
 These require LuckPerms to be installed.
 
@@ -119,7 +119,7 @@ These require LuckPerms to be installed.
 
 | Placeholder | Description |
 | --- | --- |
-| `%nexusslime_guide_<id>%` | Dynamic guide entry for item/machine ID |
+| `%nexusprism_guide_<id>%` | Dynamic guide entry for item/machine ID |
 
 These are dynamic — replace `<id>` with any registered item or machine ID.
 
@@ -129,9 +129,9 @@ These are dynamic — replace `<id>` with any registered item or machine ID.
 
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusslime_version%` | Plugin version string | `2.0.0-BETA` |
-| `%nexusslime_player%` | Player username | `Steve` |
-| `%nexusslime_uuid%` | Player UUID | `069a79f4-...` |
+| `%nexusprism_version%` | Plugin version string | `2.0.0-BETA` |
+| `%nexusprism_player%` | Player username | `Steve` |
+| `%nexusprism_uuid%` | Player UUID | `069a79f4-...` |
 
 ---
 
@@ -139,14 +139,14 @@ These are dynamic — replace `<id>` with any registered item or machine ID.
 
 ```yaml
 # Example with TAB plugin
-header: "&bNexusSlime &7%nexusslime_version%"
-tablist-name: "%nexusslime_lp_prefix%%player_name%"
+header: "&bNexusPrism &7%nexusprism_version%"
+tablist-name: "%nexusprism_lp_prefix%%player_name%"
 scoreboard:
   title: "&b&lYour Stats"
   lines:
-    - "&7Money: &a$%nexusslime_money%"
-    - "&7Credits: &b%nexusslime_credits%"
-    - "&7Votes: &e%nexusslime_votes_total% &7(streak: %nexusslime_vote_streak%)"
-    - "&7Clan: &f%nexusslime_clan_name%"
-    - "&7Playtime: &f%nexusslime_playtime%"
+    - "&7Money: &a$%nexusprism_money%"
+    - "&7Credits: &b%nexusprism_credits%"
+    - "&7Votes: &e%nexusprism_votes_total% &7(streak: %nexusprism_vote_streak%)"
+    - "&7Clan: &f%nexusprism_clan_name%"
+    - "&7Playtime: &f%nexusprism_playtime%"
 ```

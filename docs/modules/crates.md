@@ -28,13 +28,13 @@ Configured globally in `crates/config.yml`:
 
 | Command | Permission | Description |
 | --- | --- | --- |
-| `/crate give <player> <crate> [amount]` | `nexusslime.crates.admin` | Give crate keys to a player |
-| `/crate keys [player]` | `nexusslime.crates.use` | View virtual key balance |
-| `/crate setblock <crate>` | `nexusslime.crates.admin` | Register the targeted block as a crate |
-| `/crate removeblock` | `nexusslime.crates.admin` | Unregister the targeted block |
+| `/crate give <player> <crate> [amount]` | `nexusprism.crates.admin` | Give crate keys to a player |
+| `/crate keys [player]` | `nexusprism.crates.use` | View virtual key balance |
+| `/crate setblock <crate>` | `nexusprism.crates.admin` | Register the targeted block as a crate |
+| `/crate removeblock` | `nexusprism.crates.admin` | Unregister the targeted block |
 | `/crate preview <crate>` | *(all players)* | Preview possible rewards |
 | `/crate list` | *(all players)* | List all crate types |
-| `/crate reload` | `nexusslime.crates.admin` | Reload all crate definitions |
+| `/crate reload` | `nexusprism.crates.admin` | Reload all crate definitions |
 
 ---
 
@@ -42,8 +42,8 @@ Configured globally in `crates/config.yml`:
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.crates.admin` | Create, remove, and give crates | OP |
-| `nexusslime.crates.use` | Check key balance | true |
+| `nexusprism.crates.admin` | Create, remove, and give crates | OP |
+| `nexusprism.crates.use` | Check key balance | true |
 
 ---
 

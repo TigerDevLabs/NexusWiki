@@ -1,6 +1,6 @@
 # Módulo MMO
 
-El módulo MMO transforma NexusSlime en una experiencia ligera de RPG. Los jugadores ganan un **nivel MMO**, asignan **puntos de estadística**, suben de nivel en **seis árboles de habilidades**, desbloquean y usan **habilidades**, y progresan por **ocho profesiones** — cada una con una pasiva de maestría única.
+El módulo MMO transforma NexusPrism en una experiencia ligera de RPG. Los jugadores ganan un **nivel MMO**, asignan **puntos de estadística**, suben de nivel en **seis árboles de habilidades**, desbloquean y usan **habilidades**, y progresan por **ocho profesiones** — cada una con una pasiva de maestría única.
 
 ---
 
@@ -121,8 +121,8 @@ O abre `/skill`, haz clic en un árbol y luego en el ícono de la habilidad. Los
 
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
-| `/skill` | Abrir GUI del Navegador de Árboles de Habilidades | `nexusslime.mmo.use` |
-| `/skill use <id>` | Activar una habilidad desbloqueada | `nexusslime.mmo.use` |
+| `/skill` | Abrir GUI del Navegador de Árboles de Habilidades | `nexusprism.mmo.use` |
+| `/skill use <id>` | Activar una habilidad desbloqueada | `nexusprism.mmo.use` |
 
 ---
 
@@ -157,4 +157,4 @@ xpParaNivel(n) = xpBase × 1,8^(nivel / 10)
 | --- | --- |
 | Base de datos | SQLite — `mmo/mmo.db` |
 | Tablas | `player_mmo`, `player_skills`, `player_professions` |
-| Permiso | `nexusslime.mmo.use` (por defecto: **true**) |
+| Permiso | `nexusprism.mmo.use` (por defecto: **true**) |

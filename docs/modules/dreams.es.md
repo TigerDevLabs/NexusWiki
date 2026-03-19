@@ -27,9 +27,9 @@ El módulo Dreams activa una **experiencia cinematográfica al dormir** cuando u
 
 | Comando | Uso | Permiso |
 | --- | --- | --- |
-| `/dreams reload` | Recargar configuración de sueños | `nexusslime.dreams.admin` |
-| `/dreams trigger <player>` | Forzar un sueño para un jugador | `nexusslime.dreams.admin` |
-| `/dreams trigger <player> nightmare` | Forzar una pesadilla | `nexusslime.dreams.admin` |
+| `/dreams reload` | Recargar configuración de sueños | `nexusprism.dreams.admin` |
+| `/dreams trigger <player>` | Forzar un sueño para un jugador | `nexusprism.dreams.admin` |
+| `/dreams trigger <player> nightmare` | Forzar una pesadilla | `nexusprism.dreams.admin` |
 
 ---
 
@@ -37,7 +37,7 @@ El módulo Dreams activa una **experiencia cinematográfica al dormir** cuando u
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
-| `nexusslime.dreams.admin` | Comandos administrativos de sueños | OP |
+| `nexusprism.dreams.admin` | Comandos administrativos de sueños | OP |
 
 ---
 

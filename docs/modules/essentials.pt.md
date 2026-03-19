@@ -12,19 +12,19 @@ Jogadores podem definir homes com nome e se teletransportar para elas.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/home [nome]` | Teletransportar para uma home | `nexusslime.essentials.home` |
-| `/home list` | Listar todas as homes | `nexusslime.essentials.home` |
-| `/sethome <nome>` | Definir home na posição atual | `nexusslime.essentials.home` |
-| `/delhome <nome>` | Deletar uma home | `nexusslime.essentials.home` |
+| `/home [nome]` | Teletransportar para uma home | `nexusprism.essentials.home` |
+| `/home list` | Listar todas as homes | `nexusprism.essentials.home` |
+| `/sethome <nome>` | Definir home na posição atual | `nexusprism.essentials.home` |
+| `/delhome <nome>` | Deletar uma home | `nexusprism.essentials.home` |
 
 ### Permissões de Slots de Home
 
 | Permissão | Slots |
 | --- | --- |
-| `nexusslime.essentials.homes.1` | 1 (padrão) |
-| `nexusslime.essentials.homes.3` | 3 |
-| `nexusslime.essentials.homes.10` | 10 |
-| `nexusslime.essentials.homes.unlimited` | Ilimitado (OP) |
+| `nexusprism.essentials.homes.1` | 1 (padrão) |
+| `nexusprism.essentials.homes.3` | 3 |
+| `nexusprism.essentials.homes.10` | 10 |
+| `nexusprism.essentials.homes.unlimited` | Ilimitado (OP) |
 
 ---
 
@@ -36,10 +36,10 @@ Destinos de teletransporte públicos em todo o servidor gerenciados por admins.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/warp <nome>` | Teletransportar para um warp | `nexusslime.essentials.warp.use` |
-| `/warp list` | Listar todos os warps | `nexusslime.essentials.warp.use` |
-| `/setwarp <nome>` | Criar um warp (OP) | `nexusslime.essentials.warp.admin` |
-| `/delwarp <nome>` | Deletar um warp (OP) | `nexusslime.essentials.warp.admin` |
+| `/warp <nome>` | Teletransportar para um warp | `nexusprism.essentials.warp.use` |
+| `/warp list` | Listar todos os warps | `nexusprism.essentials.warp.use` |
+| `/setwarp <nome>` | Criar um warp (OP) | `nexusprism.essentials.warp.admin` |
+| `/delwarp <nome>` | Deletar um warp (OP) | `nexusprism.essentials.warp.admin` |
 
 ---
 
@@ -49,14 +49,14 @@ Destinos de teletransporte públicos em todo o servidor gerenciados por admins.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/tpa <jogador>` | Enviar pedido de teletransporte | `nexusslime.essentials.tpa` |
-| `/tpaccept` | Aceitar pedido de teletransporte | `nexusslime.essentials.tpa` |
-| `/tpdeny` | Recusar pedido de teletransporte | `nexusslime.essentials.tpa` |
-| `/tphere <jogador>` | Teletransportar jogador até você (OP) | `nexusslime.essentials.tphere` |
-| `/tppos <x> <y> <z>` | Teletransportar para coordenadas (OP) | `nexusslime.essentials.tppos` |
-| `/spawn` | Teletransportar para o spawn | `nexusslime.essentials.spawn` |
-| `/setspawn` | Definir o spawn do servidor (OP) | `nexusslime.essentials.setspawn` |
-| `/back` | Voltar para localização anterior | `nexusslime.essentials.back` |
+| `/tpa <jogador>` | Enviar pedido de teletransporte | `nexusprism.essentials.tpa` |
+| `/tpaccept` | Aceitar pedido de teletransporte | `nexusprism.essentials.tpa` |
+| `/tpdeny` | Recusar pedido de teletransporte | `nexusprism.essentials.tpa` |
+| `/tphere <jogador>` | Teletransportar jogador até você (OP) | `nexusprism.essentials.tphere` |
+| `/tppos <x> <y> <z>` | Teletransportar para coordenadas (OP) | `nexusprism.essentials.tppos` |
+| `/spawn` | Teletransportar para o spawn | `nexusprism.essentials.spawn` |
+| `/setspawn` | Definir o spawn do servidor (OP) | `nexusprism.essentials.setspawn` |
+| `/back` | Voltar para localização anterior | `nexusprism.essentials.back` |
 
 ### Configuração (`essentials/config.yml`)
 
@@ -80,7 +80,7 @@ spawn:
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/afk` | Alternar status AFK | `nexusslime.essentials.afk` |
+| `/afk` | Alternar status AFK | `nexusprism.essentials.afk` |
 
 ### Configuração AFK
 
@@ -100,9 +100,9 @@ Admins podem enviar jogadores para uma localização de prisão predefinida.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/jail <jogador> [duração]` | Prender um jogador (OP) | `nexusslime.essentials.jail.admin` |
-| `/unjail <jogador>` | Soltar um jogador (OP) | `nexusslime.essentials.jail.admin` |
-| `/setjail` | Definir localização da prisão (OP) | `nexusslime.essentials.jail.admin` |
+| `/jail <jogador> [duração]` | Prender um jogador (OP) | `nexusprism.essentials.jail.admin` |
+| `/unjail <jogador>` | Soltar um jogador (OP) | `nexusprism.essentials.jail.admin` |
+| `/setjail` | Definir localização da prisão (OP) | `nexusprism.essentials.jail.admin` |
 
 ---
 
@@ -110,24 +110,24 @@ Admins podem enviar jogadores para uma localização de prisão predefinida.
 
 | Comando | Uso | Permissão |
 | --- | --- | --- |
-| `/fly` | Alternar modo de voo | `nexusslime.essentials.fly` |
-| `/fly <jogador>` | Alternar voo para outro jogador (OP) | `nexusslime.essentials.fly.others` |
-| `/god` | Alternar modo deus | `nexusslime.essentials.god` |
-| `/heal` | Curar a si mesmo (OP) | `nexusslime.essentials.heal` |
-| `/feed` | Alimentar a si mesmo (OP) | `nexusslime.essentials.feed` |
-| `/nick <nome>` | Definir apelido | `nexusslime.essentials.nick` |
-| `/workbench` | Bancada portátil | `nexusslime.essentials.workbench` |
-| `/trash` | Lixeira portátil | `nexusslime.essentials.trash` |
-| `/anvil` | Bigorna portátil (OP) | `nexusslime.essentials.anvil` |
-| `/speed <valor>` | Definir velocidade de movimento (OP) | `nexusslime.essentials.speed` |
-| `/near` | Listar jogadores próximos | `nexusslime.essentials.near` |
-| `/seen <jogador>` | Última vez visto | `nexusslime.essentials.seen` |
-| `/getpos` | Mostrar suas coordenadas | `nexusslime.essentials.getpos` |
-| `/playtime` | Verificar tempo de jogo | `nexusslime.essentials.playtime` |
-| `/gamemode <modo>` | Alterar modo de jogo (OP) | `nexusslime.essentials.gamemode` |
-| `/enderchest` | Abrir seu baú de ender | `nexusslime.essentials.enderchest` |
-| `/repair` | Reparar item segurado (OP) | `nexusslime.essentials.repair` |
-| `/ext` | Apagar a si mesmo (OP) | `nexusslime.essentials.ext` |
-| `/hat` | Usar item como chapéu | `nexusslime.essentials.hat` |
-| `/rules` | Mostrar regras do servidor | `nexusslime.essentials.rules` |
-| `/worth [item]` | Verificar valor de venda | `nexusslime.essentials.worth` |
+| `/fly` | Alternar modo de voo | `nexusprism.essentials.fly` |
+| `/fly <jogador>` | Alternar voo para outro jogador (OP) | `nexusprism.essentials.fly.others` |
+| `/god` | Alternar modo deus | `nexusprism.essentials.god` |
+| `/heal` | Curar a si mesmo (OP) | `nexusprism.essentials.heal` |
+| `/feed` | Alimentar a si mesmo (OP) | `nexusprism.essentials.feed` |
+| `/nick <nome>` | Definir apelido | `nexusprism.essentials.nick` |
+| `/workbench` | Bancada portátil | `nexusprism.essentials.workbench` |
+| `/trash` | Lixeira portátil | `nexusprism.essentials.trash` |
+| `/anvil` | Bigorna portátil (OP) | `nexusprism.essentials.anvil` |
+| `/speed <valor>` | Definir velocidade de movimento (OP) | `nexusprism.essentials.speed` |
+| `/near` | Listar jogadores próximos | `nexusprism.essentials.near` |
+| `/seen <jogador>` | Última vez visto | `nexusprism.essentials.seen` |
+| `/getpos` | Mostrar suas coordenadas | `nexusprism.essentials.getpos` |
+| `/playtime` | Verificar tempo de jogo | `nexusprism.essentials.playtime` |
+| `/gamemode <modo>` | Alterar modo de jogo (OP) | `nexusprism.essentials.gamemode` |
+| `/enderchest` | Abrir seu baú de ender | `nexusprism.essentials.enderchest` |
+| `/repair` | Reparar item segurado (OP) | `nexusprism.essentials.repair` |
+| `/ext` | Apagar a si mesmo (OP) | `nexusprism.essentials.ext` |
+| `/hat` | Usar item como chapéu | `nexusprism.essentials.hat` |
+| `/rules` | Mostrar regras do servidor | `nexusprism.essentials.rules` |
+| `/worth [item]` | Verificar valor de venda | `nexusprism.essentials.worth` |

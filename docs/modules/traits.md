@@ -32,8 +32,8 @@ Cards are drawn from 22 Major Arcana across 4 rarity tiers. Higher-rarity cards 
 | --- | --- | --- |
 | `/traits` | *(all players)* | Open the Tarot Traits GUI |
 | `/traits info` | *(all players)* | List current cards in chat |
-| `/traits admin set <player> <slot 1-3> <CARD_NAME>` | `nexusslime.traits.admin` | Force-set a card (bypasses cost and cooldown) |
-| `/traits admin reload` | `nexusslime.traits.admin` | Reload `traits/config.yml` |
+| `/traits admin set <player> <slot 1-3> <CARD_NAME>` | `nexusprism.traits.admin` | Force-set a card (bypasses cost and cooldown) |
+| `/traits admin reload` | `nexusprism.traits.admin` | Reload `traits/config.yml` |
 
 ---
 
@@ -41,7 +41,7 @@ Cards are drawn from 22 Major Arcana across 4 rarity tiers. Higher-rarity cards 
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `nexusslime.traits.admin` | Admin trait management commands | OP |
+| `nexusprism.traits.admin` | Admin trait management commands | OP |
 
 ---
 

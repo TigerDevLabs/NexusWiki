@@ -1,12 +1,12 @@
 # Core Module
 
-The Core module is the foundation of NexusSlime. It manages the custom item registry, PDC (PersistentDataContainer) tagging system, machine engine, research tree, backpacks, and waypoints.
+The Core module is the foundation of NexusPrism. It manages the custom item registry, PDC (PersistentDataContainer) tagging system, machine engine, research tree, backpacks, and waypoints.
 
 ---
 
 ## Custom Item System
 
-All custom items are defined in `plugins/NexusSlime/items.yml`. The plugin ships with **235+ items** out of the box.
+All custom items are defined in `plugins/NexusPrism/items.yml`. The plugin ships with **235+ items** out of the box.
 
 ### `items.yml` Example
 
@@ -63,7 +63,7 @@ NEXUS_PICKAXE:
 
 ## PDC System
 
-NexusSlime uses Minecraft's **PersistentDataContainer** to tag custom items, machines, and player data. Each NexusSlime item carries a `nexusslime:id` PDC key that identifies it uniquely.
+NexusPrism uses Minecraft's **PersistentDataContainer** to tag custom items, machines, and player data. Each NexusPrism item carries a `nexusprism:id` PDC key that identifies it uniquely.
 
 Key classes:
 
@@ -92,8 +92,8 @@ COPPER_PROCESSING:
 
 | Permission | Description |
 | --- | --- |
-| `nexusslime.research` | Use the research system (default: true) |
-| `nexusslime.research.all` | Unlock all research instantly (OP) |
+| `nexusprism.research` | Use the research system (default: true) |
+| `nexusprism.research.all` | Unlock all research instantly (OP) |
 
 ---
 
@@ -105,17 +105,17 @@ Backpacks are portable storage containers. Players start with a basic backpack a
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/backpack open` | Open your backpack | `nexusslime.essentials.backpack` |
-| `/backpack open <id>` | Open a specific backpack | `nexusslime.essentials.backpack` |
-| `/backpack list` | List all backpacks | `nexusslime.essentials.backpack` |
+| `/backpack open` | Open your backpack | `nexusprism.essentials.backpack` |
+| `/backpack open <id>` | Open a specific backpack | `nexusprism.essentials.backpack` |
+| `/backpack list` | List all backpacks | `nexusprism.essentials.backpack` |
 
 ### Permissions
 
 | Permission | Description |
 | --- | --- |
-| `nexusslime.backpack.create` | Create backpacks (default: true) |
-| `nexusslime.backpack.upgrade` | Upgrade backpacks (default: true) |
-| `nexusslime.backpack.unlimited` | Unlimited backpack slots (OP) |
+| `nexusprism.backpack.create` | Create backpacks (default: true) |
+| `nexusprism.backpack.upgrade` | Upgrade backpacks (default: true) |
+| `nexusprism.backpack.unlimited` | Unlimited backpack slots (OP) |
 
 ---
 
@@ -127,11 +127,11 @@ Waypoints are personal fast-travel points saved by the player.
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/waypoint create <name>` | Create a waypoint | `nexusslime.essentials.waypoint` |
-| `/waypoint delete <name>` | Delete a waypoint | `nexusslime.essentials.waypoint` |
-| `/waypoint list` | List all waypoints | `nexusslime.essentials.waypoint` |
-| `/waypoint tp <name>` | Teleport to a waypoint | `nexusslime.essentials.waypoint` |
-| `/waypoint info <name>` | Show waypoint details | `nexusslime.essentials.waypoint` |
+| `/waypoint create <name>` | Create a waypoint | `nexusprism.essentials.waypoint` |
+| `/waypoint delete <name>` | Delete a waypoint | `nexusprism.essentials.waypoint` |
+| `/waypoint list` | List all waypoints | `nexusprism.essentials.waypoint` |
+| `/waypoint tp <name>` | Teleport to a waypoint | `nexusprism.essentials.waypoint` |
+| `/waypoint info <name>` | Show waypoint details | `nexusprism.essentials.waypoint` |
 
 Aliases: `/wp`
 
@@ -139,10 +139,10 @@ Aliases: `/wp`
 
 | Permission | Slots |
 | --- | --- |
-| `nexusslime.essentials.waypoints.1` | 1 (default) |
-| `nexusslime.essentials.waypoints.5` | 5 |
-| `nexusslime.essentials.waypoints.25` | 25 |
-| `nexusslime.essentials.waypoints.unlimited` | Unlimited (OP) |
+| `nexusprism.essentials.waypoints.1` | 1 (default) |
+| `nexusprism.essentials.waypoints.5` | 5 |
+| `nexusprism.essentials.waypoints.25` | 25 |
+| `nexusprism.essentials.waypoints.unlimited` | Unlimited (OP) |
 
 ---
 
@@ -150,16 +150,16 @@ Aliases: `/wp`
 
 | Command | Usage | Permission |
 | --- | --- | --- |
-| `/nexusslime help` | Show help | `nexusslime.command` |
-| `/nexusslime info` | Plugin info | `nexusslime.command` |
-| `/nexusslime reload` | Reload all configs | `nexusslime.admin.reload` |
-| `/nexusslime give <player> <item>` | Give a custom item | `nexusslime.admin.give` |
-| `/nexusslime guide` | Open the item guide | `nexusslime.command` |
-| `/nexusslime modules` | List loaded modules | `nexusslime.command` |
-| `/nexusslime machine info <id>` | Machine info | `nexusslime.command` |
-| `/nexusslime machine list` | List machines | `nexusslime.command` |
-| `/nexusslime energy info <loc>` | Energy node info | `nexusslime.command` |
-| `/nexusslime energy network` | Energy network view | `nexusslime.command` |
+| `/nexusprism help` | Show help | `nexusprism.command` |
+| `/nexusprism info` | Plugin info | `nexusprism.command` |
+| `/nexusprism reload` | Reload all configs | `nexusprism.admin.reload` |
+| `/nexusprism give <player> <item>` | Give a custom item | `nexusprism.admin.give` |
+| `/nexusprism guide` | Open the item guide | `nexusprism.command` |
+| `/nexusprism modules` | List loaded modules | `nexusprism.command` |
+| `/nexusprism machine info <id>` | Machine info | `nexusprism.command` |
+| `/nexusprism machine list` | List machines | `nexusprism.command` |
+| `/nexusprism energy info <loc>` | Energy node info | `nexusprism.command` |
+| `/nexusprism energy network` | Energy network view | `nexusprism.command` |
 
 Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 
@@ -167,7 +167,7 @@ Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 
 ## Language Support
 
-NexusSlime ships with four language files:
+NexusPrism ships with four language files:
 
 | File | Language |
 | --- | --- |

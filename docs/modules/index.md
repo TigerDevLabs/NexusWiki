@@ -1,6 +1,6 @@
 # Modules
 
-NexusSlime is organized into **feature modules**, each handling a distinct gameplay system. All modules are bundled in the final JAR and enabled by default.
+NexusPrism is organized into **feature modules**, each handling a distinct gameplay system. All modules are bundled in the final JAR and enabled by default.
 
 ---
 
