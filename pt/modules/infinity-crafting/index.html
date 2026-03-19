@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Referência
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desenvolvedor
 
         </a>
       </li>
@@ -1689,6 +1711,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvedor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia da API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1928,7 +2043,7 @@
 
 
 <h1 id="modulo-infinity-crafting">Módulo Infinity Crafting<a class="headerlink" href="#modulo-infinity-crafting" title="Permanent link">&para;</a></h1>
-<p>Infinity Crafting é o <strong>sistema de crafting multiblocos</strong> do NexusSlime. Os jogadores constroem estruturas multiblocos físicas no mundo e as usam como estações de crafting avançadas. As receitas são definidas inteiramente em YAML.</p>
+<p>Infinity Crafting é o <strong>sistema de crafting multiblocos</strong> do NexusPrism. Os jogadores constroem estruturas multiblocos físicas no mundo e as usam como estações de crafting avançadas. As receitas são definidas inteiramente em YAML.</p>
 <hr />
 <h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">&para;</a></h2>
 <table>
@@ -1993,7 +2108,7 @@
 </code></pre></div>
 <hr />
 <h2 id="formato-yaml-de-receitas">Formato YAML de Receitas<a class="headerlink" href="#formato-yaml-de-receitas" title="Permanent link">&para;</a></h2>
-<p>As receitas são colocadas em <code>plugins/NexusSlime/infinity_recipes/</code> como arquivos <code>.yml</code> individuais. O nome do arquivo serve como ID da receita.</p>
+<p>As receitas são colocadas em <code>plugins/NexusPrism/infinity_recipes/</code> como arquivos <code>.yml</code> individuais. O nome do arquivo serve como ID da receita.</p>
 <h3 id="receita-shapeed-com-formato">Receita Shapeed (Com Formato)<a class="headerlink" href="#receita-shapeed-com-formato" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># infinity_recipes/nexus_core.yml</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SHAPED</span>
@@ -2063,7 +2178,7 @@
 </tr>
 <tr>
 <td><code>output.item</code></td>
-<td>ID do item de saída (personalizado do NexusSlime ou Material vanilla)</td>
+<td>ID do item de saída (personalizado do NexusPrism ou Material vanilla)</td>
 </tr>
 <tr>
 <td><code>output.amount</code></td>
@@ -2093,7 +2208,7 @@
 </table>
 <hr />
 <h2 id="guia-no-jogo">Guia no Jogo<a class="headerlink" href="#guia-no-jogo" title="Permanent link">&para;</a></h2>
-<p>Todas as receitas infinity são visíveis no guia do jogo. Abra-o com <code>/nexusslime guide</code> e navegue até a seção do tier <strong>Infinity</strong>.</p>
+<p>Todas as receitas infinity são visíveis no guia do jogo. Abra-o com <code>/nexusprism guide</code> e navegue até a seção do tier <strong>Infinity</strong>.</p>
 <p>O guia mostra:</p>
 <ul>
 <li>Estação multiblocos necessária</li>
@@ -2115,17 +2230,17 @@
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
 <td>Mostrar receita(s) de um item</td>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td>Abrir GUI do guia de itens</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td>Recarregar todas as receitas e multiblocos</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 </tbody>
 </table>
@@ -2141,17 +2256,17 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 <td>Ver receitas com <code>/recipe</code></td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.craft</code></td>
+<td><code>nexusprism.craft</code></td>
 <td>Usar estações de crafting</td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 <td>Recarregar configurações/receitas do plugin</td>
 <td>OP</td>
 </tr>

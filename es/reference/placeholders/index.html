@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desarrollador
 
         </a>
       </li>
@@ -1688,6 +1710,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desarrollador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desarrollador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de la API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1926,7 +2041,7 @@
 
 
 <h1 id="referencia-placeholderapi">Referencia PlaceholderAPI<a class="headerlink" href="#referencia-placeholderapi" title="Permanent link">&para;</a></h1>
-<p>NexusSlime registra su propia expansión PlaceholderAPI bajo el identificador <code>nexusslime</code>. Todos los placeholders siguen el patrón <code>%nexusslime_&lt;nombre&gt;%</code>.</p>
+<p>NexusPrism registra su propia expansión PlaceholderAPI bajo el identificador <code>nexusprism</code>. Todos los placeholders siguen el patrón <code>%nexusprism_&lt;nombre&gt;%</code>.</p>
 <p><strong>Requiere:</strong> <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> (dependencia suave — instálalo por separado)</p>
 <hr />
 <h2 id="economia">Economía<a class="headerlink" href="#economia" title="Permanent link">&para;</a></h2>
@@ -1940,12 +2055,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_money%</code></td>
+<td><code>%nexusprism_money%</code></td>
 <td>Saldo de dinero actual del jugador</td>
 <td><code>12500.00</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_credits%</code></td>
+<td><code>%nexusprism_credits%</code></td>
 <td>Saldo de créditos del jugador</td>
 <td><code>350</code></td>
 </tr>
@@ -1963,27 +2078,27 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_playtime%</code></td>
+<td><code>%nexusprism_playtime%</code></td>
 <td>Tiempo total de juego (formateado)</td>
 <td><code>3d 12h 45m</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_playtime_minutes%</code></td>
+<td><code>%nexusprism_playtime_minutes%</code></td>
 <td>Tiempo total de juego en minutos</td>
 <td><code>5085</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_homes%</code></td>
+<td><code>%nexusprism_homes%</code></td>
 <td>Número de homes establecidos</td>
 <td><code>3</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_afk%</code></td>
+<td><code>%nexusprism_afk%</code></td>
 <td><code>true</code> si el jugador está AFK</td>
 <td><code>false</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_afk_status%</code></td>
+<td><code>%nexusprism_afk_status%</code></td>
 <td>Estado AFK legible por humanos</td>
 <td><code>AFK</code> / <code>Online</code></td>
 </tr>
@@ -2001,32 +2116,32 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_clan_name%</code></td>
+<td><code>%nexusprism_clan_name%</code></td>
 <td>Nombre del clan del jugador</td>
 <td><code>Shadowborn</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_clan_tag%</code></td>
+<td><code>%nexusprism_clan_tag%</code></td>
 <td>Etiqueta del clan</td>
 <td><code>SHD</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_clan_role%</code></td>
+<td><code>%nexusprism_clan_role%</code></td>
 <td>Rol del jugador en el clan</td>
 <td><code>Owner</code> / <code>Officer</code> / <code>Member</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_clan_level%</code></td>
+<td><code>%nexusprism_clan_level%</code></td>
 <td>Nivel actual del clan</td>
 <td><code>5</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_clan_members%</code></td>
+<td><code>%nexusprism_clan_members%</code></td>
 <td>Conteo de miembros en línea</td>
 <td><code>8</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_clan_bank%</code></td>
+<td><code>%nexusprism_clan_bank%</code></td>
 <td>Saldo del banco del clan</td>
 <td><code>75000.00</code></td>
 </tr>
@@ -2045,22 +2160,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_crystal_wave%</code></td>
+<td><code>%nexusprism_crystal_wave%</code></td>
 <td>Número de oleada actual</td>
 <td><code>7</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_crystal_health%</code></td>
+<td><code>%nexusprism_crystal_health%</code></td>
 <td>HP restante del cristal</td>
 <td><code>680.0</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_crystal_points%</code></td>
+<td><code>%nexusprism_crystal_points%</code></td>
 <td>Puntos de eliminación del jugador en el juego actual</td>
 <td><code>145</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_crystal_arena%</code></td>
+<td><code>%nexusprism_crystal_arena%</code></td>
 <td>Nombre de la arena en la que se encuentra el jugador</td>
 <td><code>arena1</code></td>
 </tr>
@@ -2079,12 +2194,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_authenticated%</code></td>
+<td><code>%nexusprism_authenticated%</code></td>
 <td><code>true</code> si el jugador está autenticado</td>
 <td><code>true</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_auth_status%</code></td>
+<td><code>%nexusprism_auth_status%</code></td>
 <td>Estado de autenticación legible</td>
 <td><code>Authenticated</code> / <code>Pending</code></td>
 </tr>
@@ -2102,12 +2217,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_votes_total%</code></td>
+<td><code>%nexusprism_votes_total%</code></td>
 <td>Total de votos acumulados</td>
 <td><code>127</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_vote_streak%</code></td>
+<td><code>%nexusprism_vote_streak%</code></td>
 <td>Longitud de la racha de votos actual</td>
 <td><code>12</code></td>
 </tr>
@@ -2125,42 +2240,42 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_player_blocks_broken%</code></td>
+<td><code>%nexusprism_player_blocks_broken%</code></td>
 <td>Total de bloques rotos</td>
 <td><code>48320</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_machines_placed%</code></td>
+<td><code>%nexusprism_player_machines_placed%</code></td>
 <td>Total de máquinas colocadas</td>
 <td><code>214</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_items_crafted%</code></td>
+<td><code>%nexusprism_player_items_crafted%</code></td>
 <td>Total de ítems crafteados</td>
 <td><code>5630</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_energy_generated%</code></td>
+<td><code>%nexusprism_player_energy_generated%</code></td>
 <td>Total de energía generada (RF)</td>
 <td><code>1200000</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_items_smelted%</code></td>
+<td><code>%nexusprism_player_items_smelted%</code></td>
 <td>Total de ítems fundidos</td>
 <td><code>890</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_research_unlocked%</code></td>
+<td><code>%nexusprism_player_research_unlocked%</code></td>
 <td>Entradas de investigación desbloqueadas</td>
 <td><code>34</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player_level%</code></td>
-<td>Nivel NexusSlime del jugador</td>
+<td><code>%nexusprism_player_level%</code></td>
+<td>Nivel NexusPrism del jugador</td>
 <td><code>15</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_researched_&lt;id&gt;%</code></td>
+<td><code>%nexusprism_researched_&lt;id&gt;%</code></td>
 <td><code>true</code> si una investigación específica está desbloqueada</td>
 <td><code>true</code></td>
 </tr>
@@ -2178,7 +2293,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_backpacks_owned%</code></td>
+<td><code>%nexusprism_backpacks_owned%</code></td>
 <td>Número de mochilas que posee el jugador</td>
 <td><code>2</code></td>
 </tr>
@@ -2196,7 +2311,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_machines_count%</code></td>
+<td><code>%nexusprism_machines_count%</code></td>
 <td>Total de máquinas colocadas por el jugador</td>
 <td><code>42</code></td>
 </tr>
@@ -2214,12 +2329,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_lp_prefix%</code></td>
+<td><code>%nexusprism_lp_prefix%</code></td>
 <td>Prefijo LuckPerms del jugador</td>
 <td><code>&amp;6[VIP]</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_lp_suffix%</code></td>
+<td><code>%nexusprism_lp_suffix%</code></td>
 <td>Sufijo LuckPerms del jugador</td>
 <td><code>&amp;7✦</code></td>
 </tr>
@@ -2237,7 +2352,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_guide_&lt;id&gt;%</code></td>
+<td><code>%nexusprism_guide_&lt;id&gt;%</code></td>
 <td>Entrada dinámica de la guía para ID de ítem/máquina</td>
 </tr>
 </tbody>
@@ -2255,17 +2370,17 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_version%</code></td>
+<td><code>%nexusprism_version%</code></td>
 <td>Cadena de versión del plugin</td>
 <td><code>2.0.0-BETA</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_player%</code></td>
+<td><code>%nexusprism_player%</code></td>
 <td>Nombre de usuario del jugador</td>
 <td><code>Steve</code></td>
 </tr>
 <tr>
-<td><code>%nexusslime_uuid%</code></td>
+<td><code>%nexusprism_uuid%</code></td>
 <td>UUID del jugador</td>
 <td><code>069a79f4-...</code></td>
 </tr>
@@ -2274,16 +2389,16 @@
 <hr />
 <h2 id="uso-en-scoreboards-tab">Uso en Scoreboards / TAB<a class="headerlink" href="#uso-en-scoreboards-tab" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Ejemplo con el plugin TAB</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;bNexusSlime</span><span class="nv"> </span><span class="s">&amp;7%nexusslime_version%&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">tablist-name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%nexusslime_lp_prefix%%player_name%&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;bNexusPrism</span><span class="nv"> </span><span class="s">&amp;7%nexusprism_version%&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">tablist-name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%nexusprism_lp_prefix%%player_name%&quot;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">scoreboard</span><span class="p">:</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;b&amp;lTus</span><span class="nv"> </span><span class="s">Estadísticas&quot;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">lines</span><span class="p">:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Dinero:</span><span class="nv"> </span><span class="s">&amp;a$%nexusslime_money%&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Créditos:</span><span class="nv"> </span><span class="s">&amp;b%nexusslime_credits%&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Votos:</span><span class="nv"> </span><span class="s">&amp;e%nexusslime_votes_total%</span><span class="nv"> </span><span class="s">&amp;7(racha:</span><span class="nv"> </span><span class="s">%nexusslime_vote_streak%)&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Clan:</span><span class="nv"> </span><span class="s">&amp;f%nexusslime_clan_name%&quot;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Tiempo</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Juego:</span><span class="nv"> </span><span class="s">&amp;f%nexusslime_playtime%&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Dinero:</span><span class="nv"> </span><span class="s">&amp;a$%nexusprism_money%&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Créditos:</span><span class="nv"> </span><span class="s">&amp;b%nexusprism_credits%&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Votos:</span><span class="nv"> </span><span class="s">&amp;e%nexusprism_votes_total%</span><span class="nv"> </span><span class="s">&amp;7(racha:</span><span class="nv"> </span><span class="s">%nexusprism_vote_streak%)&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Clan:</span><span class="nv"> </span><span class="s">&amp;f%nexusprism_clan_name%&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Tiempo</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Juego:</span><span class="nv"> </span><span class="s">&amp;f%nexusprism_playtime%&quot;</span>
 </code></pre></div>
 
 

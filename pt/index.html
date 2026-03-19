@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nexusslime" class="md-skip">
+        <a href="#nexusprism" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -329,6 +329,28 @@
     
   
   Referência
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desenvolvedor
 
         </a>
       </li>
@@ -1584,6 +1606,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvedor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia da API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="store/" class="md-nav__link">
         
@@ -1722,11 +1837,11 @@
   
 
 
-<h1 id="nexusslime">NexusSlime<a class="headerlink" href="#nexusslime" title="Permanent link">&para;</a></h1>
+<h1 id="nexusprism">NexusPrism<a class="headerlink" href="#nexusprism" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>Uma reimplementação abrangente e evolução do Slimefun4</strong> — sistemas de tecnologia, magia e qualidade de vida de próxima geração para servidores Minecraft.</p>
 </blockquote>
-<p>NexusSlime é um plugin Spigot modular construído sobre uma arquitetura Maven de +25 módulos. Ele traz itens personalizados, máquinas, redes de energia, clãs, economia, minijogos e integrações profundas em um único JAR leve.</p>
+<p>NexusPrism é um plugin Spigot modular construído sobre uma arquitetura Maven de +25 módulos. Ele traz itens personalizados, máquinas, redes de energia, clãs, economia, minijogos e integrações profundas em um único JAR leve.</p>
 <hr />
 <h2 id="funcionalidades-principais">Funcionalidades Principais<a class="headerlink" href="#funcionalidades-principais" title="Permanent link">&para;</a></h2>
 <table>
@@ -1797,34 +1912,34 @@
 </table>
 <hr />
 <h2 id="visao-geral-dos-modulos">Visão Geral dos Módulos<a class="headerlink" href="#visao-geral-dos-modulos" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NexusSlime
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── nexusslime-api          API pública para desenvolvedores de addons
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── nexusslime-core         Gerenciadores principais, registro PDC, idioma
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── nexusslime-items        Armazenamento de itens personalizados (+235 itens)
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── nexusslime-machines     Definições de máquinas, motor de processamento
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── nexusslime-systems      Implementação de redes de energia
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── nexusslime-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── nexusslime-storage      Persistência SQLite / PostgreSQL
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── nexusslime-gui          Framework de GUI
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── nexusslime-utils        Utilitários auxiliares
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── nexusslime-web          Bridge da loja web, kits VIP, pagamentos
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── nexusslime-plugin       Ponto de entrada principal (Spigot)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── nexusslime-discord      Bot JDA, webhooks, vinculação de conta
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── nexusslime-chat         Sistema de chat com 4 canais
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── nexusslime-ae           Armazenamento em rede estilo ME
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── nexusslime-energy       Geração de energia e redes de cabos
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── nexusslime-waila        Integração WAILA/HUD
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── nexusslime-security     Auth, anti-bot, anti-lag, anti-dupe
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── nexusslime-clans        Clãs, território, melhorias
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── nexusslime-economy      Dinheiro, créditos, preços de venda
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── nexusslime-essentials   +40 comandos QoL
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── nexusslime-crystaldefense Minijogo Crystal Defense por ondas
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├── nexusslime-custommobs   Chefes definidos em YAML
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>├── nexusslime-dreams       Sistema de cutscene de sono
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>├── nexusslime-protections  Proteção de regiões, sistema de duelo
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>├── nexusslime-ss           Suporte a Silk Spawner
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>├── nexusslime-votifier     Servidor Votifier V1/V2 independente
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>└── nexusslime-twitch       Integração Twitch
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NexusPrism
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── nexusprism-api          API pública para desenvolvedores de addons
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── nexusprism-core         Gerenciadores principais, registro PDC, idioma
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── nexusprism-items        Armazenamento de itens personalizados (+235 itens)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── nexusprism-machines     Definições de máquinas, motor de processamento
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── nexusprism-systems      Implementação de redes de energia
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── nexusprism-storage      Persistência SQLite / PostgreSQL
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── nexusprism-gui          Framework de GUI
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── nexusprism-utils        Utilitários auxiliares
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── nexusprism-web          Bridge da loja web, kits VIP, pagamentos
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── nexusprism-plugin       Ponto de entrada principal (Spigot)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── nexusprism-discord      Bot JDA, webhooks, vinculação de conta
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── nexusprism-chat         Sistema de chat com 4 canais
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── nexusprism-ae           Armazenamento em rede estilo ME
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── nexusprism-energy       Geração de energia e redes de cabos
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── nexusprism-waila        Integração WAILA/HUD
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── nexusprism-security     Auth, anti-bot, anti-lag, anti-dupe
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── nexusprism-clans        Clãs, território, melhorias
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── nexusprism-economy      Dinheiro, créditos, preços de venda
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── nexusprism-essentials   +40 comandos QoL
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── nexusprism-crystaldefense Minijogo Crystal Defense por ondas
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├── nexusprism-custommobs   Chefes definidos em YAML
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>├── nexusprism-dreams       Sistema de cutscene de sono
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>├── nexusprism-protections  Proteção de regiões, sistema de duelo
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>├── nexusprism-ss           Suporte a Silk Spawner
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>├── nexusprism-votifier     Servidor Votifier V1/V2 independente
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>└── nexusprism-twitch       Integração Twitch
 </code></pre></div>
 <hr />
 <h2 id="navegacao-rapida">Navegação Rápida<a class="headerlink" href="#navegacao-rapida" title="Permanent link">&para;</a></h2>
@@ -1858,13 +1973,13 @@
 </tr>
 <tr>
 <td><strong><a href="reference/placeholders/">PlaceholderAPI</a></strong></td>
-<td>Todos os placeholders <code>%nexusslime_*%</code></td>
+<td>Todos os placeholders <code>%nexusprism_*%</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="autor">Autor<a class="headerlink" href="#autor" title="Permanent link">&para;</a></h2>
-<p>NexusSlime é desenvolvido por <strong>O-Tiger</strong></p>
+<p>NexusPrism é desenvolvido por <strong>O-Tiger</strong></p>
 <ul>
 <li>Versão da API: <code>1.21</code></li>
 <li>Dependências opcionais: <code>PlaceholderAPI</code>, <code>LuckPerms</code>, <code>SkinsRestorer</code></li>

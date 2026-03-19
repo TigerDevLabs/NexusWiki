@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://o-tiger.github.io/NexusWiki/store/">
       
       
-        <link rel="prev" href="../reference/commands/">
+        <link rel="prev" href="../developer/api/">
       
       
         <link rel="next" href="../changelog/">
@@ -329,6 +329,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1493,6 +1515,99 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -1781,7 +1896,7 @@
 
 
 <h1 id="store-webstore">Store / Webstore<a class="headerlink" href="#store-webstore" title="Permanent link">&para;</a></h1>
-<p>NexusSlime includes a built-in webstore bridge that delivers purchased packages to players automatically, even while they are offline.</p>
+<p>NexusPrism includes a built-in webstore bridge that delivers purchased packages to players automatically, even while they are offline.</p>
 <div class="admonition warning">
 <p class="admonition-title">EULA Compliance</p>
 <p>All store packages must comply with the <a href="https://www.minecraft.net/en-us/eula">Minecraft Commercial Usage Guidelines</a>. Selling gameplay advantages that cannot be earned in-game through normal play is <strong>not permitted</strong> on servers accessible to the public. The features listed below follow EULA-compliant design principles.</p>
@@ -1845,7 +1960,7 @@
 </table>
 <hr />
 <h2 id="delivery-system">Delivery System<a class="headerlink" href="#delivery-system" title="Permanent link">&para;</a></h2>
-<p>NexusSlime's webstore bridge (<code>nexusslime-web</code>) uses a delivery queue. When a player purchases a package:</p>
+<p>NexusPrism's webstore bridge (<code>nexusprism-web</code>) uses a delivery queue. When a player purchases a package:</p>
 <ol>
 <li>The webstore posts a delivery request to the plugin via the delivery bridge</li>
 <li>The delivery is queued in <code>delivery.yml</code> (persistent)</li>
@@ -1873,33 +1988,33 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">kits</span><span class="p">:</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">vip</span><span class="p">:</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">display-name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;6VIP</span><span class="nv"> </span><span class="s">Kit&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nexusslime.kit.vip&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nexusprism.kit.vip&quot;</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">cooldown-hours</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">items</span><span class="p">:</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLDEN_APPLE</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FIREWORK_ROCKET</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">nexusslime-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVER_KEY</span><span class="w">    </span><span class="c1"># Custom NexusSlime item</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">nexusprism-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVER_KEY</span><span class="w">    </span><span class="c1"># Custom NexusPrism item</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">commands</span><span class="p">:</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;eco</span><span class="nv"> </span><span class="s">give</span><span class="nv"> </span><span class="s">{player}</span><span class="nv"> </span><span class="s">1000&quot;</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">mvp</span><span class="p">:</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nt">display-name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;bMVP</span><span class="nv"> </span><span class="s">Kit&quot;</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nexusslime.kit.mvp&quot;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nexusprism.kit.mvp&quot;</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nt">cooldown-hours</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">items</span><span class="p">:</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLDEN_APPLE</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">nexusslime-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVER_KEY</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">nexusprism-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVER_KEY</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">commands</span><span class="p">:</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;eco</span><span class="nv"> </span><span class="s">give</span><span class="nv"> </span><span class="s">{player}</span><span class="nv"> </span><span class="s">2500&quot;</span>
 </code></pre></div>
 <hr />
 <h2 id="gdpr-consent">GDPR / Consent<a class="headerlink" href="#gdpr-consent" title="Permanent link">&para;</a></h2>
-<p>NexusSlime includes a GDPR consent system (<code>GDPRManager</code>) for servers operating in the EU. Players can be prompted to consent to data collection on first join.</p>
+<p>NexusPrism includes a GDPR consent system (<code>GDPRManager</code>) for servers operating in the EU. Players can be prompted to consent to data collection on first join.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># web-config.yml</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">gdpr</span><span class="p">:</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -1910,7 +2025,7 @@
 </code></pre></div>
 <hr />
 <h2 id="recommended-store-platforms">Recommended Store Platforms<a class="headerlink" href="#recommended-store-platforms" title="Permanent link">&para;</a></h2>
-<p>NexusSlime's delivery system is compatible with any store platform that can make HTTP POST requests or write to a shared file. Commonly used platforms include:</p>
+<p>NexusPrism's delivery system is compatible with any store platform that can make HTTP POST requests or write to a shared file. Commonly used platforms include:</p>
 <ul>
 <li><strong>Tebex</strong> (formerly Buycraft) — EULA-certified</li>
 <li><strong>CraftingStore</strong> — EULA-certified</li>
@@ -1918,7 +2033,7 @@
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Test your delivery</p>
-<p>Use <code>/nexusslime reload</code> after editing <code>delivery.yml</code>. Test a delivery manually by writing a delivery JSON to the file-fallback and relogging.</p>
+<p>Use <code>/nexusprism reload</code> after editing <code>delivery.yml</code>. Test a delivery manually by writing a delivery JSON to the file-fallback and relogging.</p>
 </div>
 
 

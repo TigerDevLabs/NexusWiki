@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../permissions/">
       
       
-        <link rel="next" href="../../store/">
+        <link rel="next" href="../../developer/api/">
       
       
         
@@ -331,6 +331,28 @@
     
   
   Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desarrollador
 
         </a>
       </li>
@@ -1732,6 +1754,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desarrollador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desarrollador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de la API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -2014,7 +2129,7 @@
 
 
 <h1 id="referencia-de-comandos">Referencia de Comandos<a class="headerlink" href="#referencia-de-comandos" title="Permanent link">&para;</a></h1>
-<p>Lista completa de todos los comandos registrados por NexusSlime, organizados por módulo.</p>
+<p>Lista completa de todos los comandos registrados por NexusPrism, organizados por módulo.</p>
 <p><strong>Leyenda:</strong></p>
 <ul>
 <li><code>&lt;arg&gt;</code> — argumento requerido</li>
@@ -2035,88 +2150,88 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/nexusslime help</code></td>
+<td><code>/nexusprism help</code></td>
 <td><code>/ns</code>, <code>/nexus</code>, <code>/slime</code></td>
 <td>Mostrar ayuda</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime info</code></td>
+<td><code>/nexusprism info</code></td>
 <td></td>
 <td>Versión y estado del plugin</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td></td>
 <td>Recargar todas las configuraciones</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime give &lt;player&gt; &lt;item&gt;</code></td>
+<td><code>/nexusprism give &lt;player&gt; &lt;item&gt;</code></td>
 <td></td>
 <td>Dar un ítem personalizado</td>
-<td><code>nexusslime.admin.give</code></td>
+<td><code>nexusprism.admin.give</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td></td>
 <td>Abrir GUI de la guía de ítems</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime modules</code></td>
+<td><code>/nexusprism modules</code></td>
 <td></td>
 <td>Listar todos los módulos cargados</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine info &lt;id&gt;</code></td>
+<td><code>/nexusprism machine info &lt;id&gt;</code></td>
 <td></td>
 <td>Detalles de la máquina</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine list</code></td>
+<td><code>/nexusprism machine list</code></td>
 <td></td>
 <td>Listar todas las máquinas</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy info &lt;x,y,z&gt;</code></td>
+<td><code>/nexusprism energy info &lt;x,y,z&gt;</code></td>
 <td></td>
 <td>Información del nodo de energía</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy network</code></td>
+<td><code>/nexusprism energy network</code></td>
 <td></td>
 <td>Ver red de energía</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
 <td><code>/research</code></td>
 <td></td>
 <td>Ver progreso de investigación</td>
-<td><code>nexusslime.research</code></td>
+<td><code>nexusprism.research</code></td>
 </tr>
 <tr>
 <td><code>/research list [tier]</code></td>
 <td></td>
 <td>Listar investigaciones por tier</td>
-<td><code>nexusslime.research</code></td>
+<td><code>nexusprism.research</code></td>
 </tr>
 <tr>
 <td><code>/research &lt;item-id&gt;</code></td>
 <td></td>
 <td>Verificar investigación específica</td>
-<td><code>nexusslime.research</code></td>
+<td><code>nexusprism.research</code></td>
 </tr>
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
 <td></td>
 <td>Mostrar receta(s) de crafteo</td>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 </tr>
 </tbody>
 </table>
@@ -2136,43 +2251,43 @@
 <td><code>/backpack open [id]</code></td>
 <td></td>
 <td>Abrir tu mochila</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/backpack list</code></td>
 <td></td>
 <td>Listar todas las mochilas</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/waypoint create &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
 <td>Crear un punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint delete &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
 <td>Eliminar un punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint list</code></td>
 <td><code>/wp</code></td>
 <td>Listar todos los puntos de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint tp &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
 <td>Teletransportarse a punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint info &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
 <td>Información del punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 </tbody>
 </table>
@@ -2190,22 +2305,22 @@
 <tr>
 <td><code>/home [name]</code></td>
 <td>Teletransportarse a un home</td>
-<td><code>nexusslime.essentials.home</code></td>
+<td><code>nexusprism.essentials.home</code></td>
 </tr>
 <tr>
 <td><code>/home list</code></td>
 <td>Listar todos los homes</td>
-<td><code>nexusslime.essentials.home</code></td>
+<td><code>nexusprism.essentials.home</code></td>
 </tr>
 <tr>
 <td><code>/sethome &lt;name&gt;</code></td>
 <td>Establecer home en la ubicación actual</td>
-<td><code>nexusslime.essentials.home</code></td>
+<td><code>nexusprism.essentials.home</code></td>
 </tr>
 <tr>
 <td><code>/delhome &lt;name&gt;</code></td>
 <td>Eliminar un home</td>
-<td><code>nexusslime.essentials.home</code></td>
+<td><code>nexusprism.essentials.home</code></td>
 </tr>
 </tbody>
 </table>
@@ -2223,22 +2338,22 @@
 <tr>
 <td><code>/warp &lt;name&gt;</code></td>
 <td>Teletransportarse a un warp</td>
-<td><code>nexusslime.essentials.warp.use</code></td>
+<td><code>nexusprism.essentials.warp.use</code></td>
 </tr>
 <tr>
 <td><code>/warp list</code></td>
 <td>Listar todos los warps</td>
-<td><code>nexusslime.essentials.warp.use</code></td>
+<td><code>nexusprism.essentials.warp.use</code></td>
 </tr>
 <tr>
 <td><code>/setwarp &lt;name&gt;</code></td>
 <td>Crear un warp (OP)</td>
-<td><code>nexusslime.essentials.warp.admin</code></td>
+<td><code>nexusprism.essentials.warp.admin</code></td>
 </tr>
 <tr>
 <td><code>/delwarp &lt;name&gt;</code></td>
 <td>Eliminar un warp (OP)</td>
-<td><code>nexusslime.essentials.warp.admin</code></td>
+<td><code>nexusprism.essentials.warp.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2256,42 +2371,42 @@
 <tr>
 <td><code>/tpa &lt;player&gt;</code></td>
 <td>Enviar solicitud de teletransporte</td>
-<td><code>nexusslime.essentials.tpa</code></td>
+<td><code>nexusprism.essentials.tpa</code></td>
 </tr>
 <tr>
 <td><code>/tpaccept</code></td>
 <td>Aceptar solicitud de teletransporte</td>
-<td><code>nexusslime.essentials.tpa</code></td>
+<td><code>nexusprism.essentials.tpa</code></td>
 </tr>
 <tr>
 <td><code>/tpdeny</code></td>
 <td>Rechazar solicitud de teletransporte</td>
-<td><code>nexusslime.essentials.tpa</code></td>
+<td><code>nexusprism.essentials.tpa</code></td>
 </tr>
 <tr>
 <td><code>/tphere &lt;player&gt;</code></td>
 <td>Convocar un jugador (OP)</td>
-<td><code>nexusslime.essentials.tphere</code></td>
+<td><code>nexusprism.essentials.tphere</code></td>
 </tr>
 <tr>
 <td><code>/tppos &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td>
 <td>Teletransportarse a coordenadas (OP)</td>
-<td><code>nexusslime.essentials.tppos</code></td>
+<td><code>nexusprism.essentials.tppos</code></td>
 </tr>
 <tr>
 <td><code>/spawn</code></td>
 <td>Teletransportarse al spawn</td>
-<td><code>nexusslime.essentials.spawn</code></td>
+<td><code>nexusprism.essentials.spawn</code></td>
 </tr>
 <tr>
 <td><code>/setspawn</code></td>
 <td>Establecer spawn del servidor (OP)</td>
-<td><code>nexusslime.essentials.setspawn</code></td>
+<td><code>nexusprism.essentials.setspawn</code></td>
 </tr>
 <tr>
 <td><code>/back</code></td>
 <td>Regresar a la ubicación anterior</td>
-<td><code>nexusslime.essentials.back</code></td>
+<td><code>nexusprism.essentials.back</code></td>
 </tr>
 </tbody>
 </table>
@@ -2309,167 +2424,167 @@
 <tr>
 <td><code>/afk</code></td>
 <td>Alternar AFK</td>
-<td><code>nexusslime.essentials.afk</code></td>
+<td><code>nexusprism.essentials.afk</code></td>
 </tr>
 <tr>
 <td><code>/fly</code></td>
 <td>Alternar vuelo (propio)</td>
-<td><code>nexusslime.essentials.fly</code></td>
+<td><code>nexusprism.essentials.fly</code></td>
 </tr>
 <tr>
 <td><code>/fly &lt;player&gt;</code></td>
 <td>Alternar vuelo (otro, OP)</td>
-<td><code>nexusslime.essentials.fly.others</code></td>
+<td><code>nexusprism.essentials.fly.others</code></td>
 </tr>
 <tr>
 <td><code>/god</code></td>
 <td>Alternar modo dios</td>
-<td><code>nexusslime.essentials.god</code></td>
+<td><code>nexusprism.essentials.god</code></td>
 </tr>
 <tr>
 <td><code>/god &lt;player&gt;</code></td>
 <td>Alternar dios (otro, OP)</td>
-<td><code>nexusslime.essentials.god.others</code></td>
+<td><code>nexusprism.essentials.god.others</code></td>
 </tr>
 <tr>
 <td><code>/heal</code></td>
 <td>Curarse a sí mismo (OP)</td>
-<td><code>nexusslime.essentials.heal</code></td>
+<td><code>nexusprism.essentials.heal</code></td>
 </tr>
 <tr>
 <td><code>/heal &lt;player&gt;</code></td>
 <td>Curar a otro (OP)</td>
-<td><code>nexusslime.essentials.heal.others</code></td>
+<td><code>nexusprism.essentials.heal.others</code></td>
 </tr>
 <tr>
 <td><code>/feed</code></td>
 <td>Alimentarse a sí mismo (OP)</td>
-<td><code>nexusslime.essentials.feed</code></td>
+<td><code>nexusprism.essentials.feed</code></td>
 </tr>
 <tr>
 <td><code>/feed &lt;player&gt;</code></td>
 <td>Alimentar a otro (OP)</td>
-<td><code>nexusslime.essentials.feed.others</code></td>
+<td><code>nexusprism.essentials.feed.others</code></td>
 </tr>
 <tr>
 <td><code>/nick &lt;name&gt;</code></td>
 <td>Establecer apodo</td>
-<td><code>nexusslime.essentials.nick</code></td>
+<td><code>nexusprism.essentials.nick</code></td>
 </tr>
 <tr>
 <td><code>/nick &lt;player&gt; &lt;name&gt;</code></td>
 <td>Establecer apodo (otro, OP)</td>
-<td><code>nexusslime.essentials.nick.others</code></td>
+<td><code>nexusprism.essentials.nick.others</code></td>
 </tr>
 <tr>
 <td><code>/hat</code></td>
 <td>Usar ítem como sombrero</td>
-<td><code>nexusslime.essentials.hat</code></td>
+<td><code>nexusprism.essentials.hat</code></td>
 </tr>
 <tr>
 <td><code>/speed &lt;value&gt;</code></td>
 <td>Establecer velocidad de caminar/volar (OP)</td>
-<td><code>nexusslime.essentials.speed</code></td>
+<td><code>nexusprism.essentials.speed</code></td>
 </tr>
 <tr>
 <td><code>/workbench</code></td>
 <td>Banco de trabajo portátil</td>
-<td><code>nexusslime.essentials.workbench</code></td>
+<td><code>nexusprism.essentials.workbench</code></td>
 </tr>
 <tr>
 <td><code>/anvil</code></td>
 <td>Yunque portátil (OP)</td>
-<td><code>nexusslime.essentials.anvil</code></td>
+<td><code>nexusprism.essentials.anvil</code></td>
 </tr>
 <tr>
 <td><code>/grindstone</code></td>
 <td>Piedra de afilar portátil (OP)</td>
-<td><code>nexusslime.essentials.grindstone</code></td>
+<td><code>nexusprism.essentials.grindstone</code></td>
 </tr>
 <tr>
 <td><code>/stonecutter</code></td>
 <td>Cortadora de piedra portátil (OP)</td>
-<td><code>nexusslime.essentials.stonecutter</code></td>
+<td><code>nexusprism.essentials.stonecutter</code></td>
 </tr>
 <tr>
 <td><code>/trash</code></td>
 <td>Papelera portátil</td>
-<td><code>nexusslime.essentials.trash</code></td>
+<td><code>nexusprism.essentials.trash</code></td>
 </tr>
 <tr>
 <td><code>/near</code></td>
 <td>Listar jugadores cercanos</td>
-<td><code>nexusslime.essentials.near</code></td>
+<td><code>nexusprism.essentials.near</code></td>
 </tr>
 <tr>
 <td><code>/seen &lt;player&gt;</code></td>
 <td>Información de última conexión</td>
-<td><code>nexusslime.essentials.seen</code></td>
+<td><code>nexusprism.essentials.seen</code></td>
 </tr>
 <tr>
 <td><code>/getpos</code></td>
 <td>Mostrar coordenadas</td>
-<td><code>nexusslime.essentials.getpos</code></td>
+<td><code>nexusprism.essentials.getpos</code></td>
 </tr>
 <tr>
 <td><code>/playtime</code></td>
 <td>Verificar tiempo de juego</td>
-<td><code>nexusslime.essentials.playtime</code></td>
+<td><code>nexusprism.essentials.playtime</code></td>
 </tr>
 <tr>
 <td><code>/gamemode &lt;mode&gt;</code></td>
 <td>Cambiar modo de juego (OP)</td>
-<td><code>nexusslime.essentials.gamemode</code></td>
+<td><code>nexusprism.essentials.gamemode</code></td>
 </tr>
 <tr>
 <td><code>/enderchest</code></td>
 <td>Abrir cofre del End</td>
-<td><code>nexusslime.essentials.enderchest</code></td>
+<td><code>nexusprism.essentials.enderchest</code></td>
 </tr>
 <tr>
 <td><code>/enderchest &lt;player&gt;</code></td>
 <td>Abrir cofre del End de otro (OP)</td>
-<td><code>nexusslime.essentials.enderchest.others</code></td>
+<td><code>nexusprism.essentials.enderchest.others</code></td>
 </tr>
 <tr>
 <td><code>/clearinventory</code></td>
 <td>Limpiar propio inventario (OP)</td>
-<td><code>nexusslime.essentials.clearinventory</code></td>
+<td><code>nexusprism.essentials.clearinventory</code></td>
 </tr>
 <tr>
 <td><code>/clearinventory &lt;player&gt;</code></td>
 <td>Limpiar inventario de otro (OP)</td>
-<td><code>nexusslime.essentials.clearinventory.others</code></td>
+<td><code>nexusprism.essentials.clearinventory.others</code></td>
 </tr>
 <tr>
 <td><code>/repair</code></td>
 <td>Reparar ítem en mano (OP)</td>
-<td><code>nexusslime.essentials.repair</code></td>
+<td><code>nexusprism.essentials.repair</code></td>
 </tr>
 <tr>
 <td><code>/ext</code></td>
 <td>Apagarse a sí mismo (OP)</td>
-<td><code>nexusslime.essentials.ext</code></td>
+<td><code>nexusprism.essentials.ext</code></td>
 </tr>
 <tr>
 <td><code>/exp &lt;amount&gt;</code></td>
 <td>Dar XP (OP)</td>
-<td><code>nexusslime.essentials.exp</code></td>
+<td><code>nexusprism.essentials.exp</code></td>
 </tr>
 <tr>
 <td><code>/skull [player]</code></td>
 <td>Obtener cabeza de jugador (OP)</td>
-<td><code>nexusslime.essentials.skull</code></td>
+<td><code>nexusprism.essentials.skull</code></td>
 </tr>
 <tr>
 <td><code>/rules</code></td>
 <td>Mostrar reglas del servidor</td>
-<td><code>nexusslime.essentials.rules</code></td>
+<td><code>nexusprism.essentials.rules</code></td>
 </tr>
 <tr>
 <td><code>/worth [item]</code></td>
 <td>Valor de venta del ítem</td>
-<td><code>nexusslime.essentials.worth</code></td>
+<td><code>nexusprism.essentials.worth</code></td>
 </tr>
 </tbody>
 </table>
@@ -2487,17 +2602,17 @@
 <tr>
 <td><code>/jail &lt;player&gt; [duration]</code></td>
 <td>Encarcelar a un jugador (OP)</td>
-<td><code>nexusslime.essentials.jail.admin</code></td>
+<td><code>nexusprism.essentials.jail.admin</code></td>
 </tr>
 <tr>
 <td><code>/unjail &lt;player&gt;</code></td>
 <td>Liberar a un jugador (OP)</td>
-<td><code>nexusslime.essentials.jail.admin</code></td>
+<td><code>nexusprism.essentials.jail.admin</code></td>
 </tr>
 <tr>
 <td><code>/setjail</code></td>
 <td>Establecer ubicación de la prisión (OP)</td>
-<td><code>nexusslime.essentials.jail.admin</code></td>
+<td><code>nexusprism.essentials.jail.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2515,57 +2630,57 @@
 <tr>
 <td><code>/money [player]</code></td>
 <td>Verificar saldo</td>
-<td><code>nexusslime.economy.money</code></td>
+<td><code>nexusprism.economy.money</code></td>
 </tr>
 <tr>
 <td><code>/credits [player]</code></td>
 <td>Verificar créditos</td>
-<td><code>nexusslime.economy.credits</code></td>
+<td><code>nexusprism.economy.credits</code></td>
 </tr>
 <tr>
 <td><code>/baltop</code></td>
 <td>Top 10 más ricos</td>
-<td><code>nexusslime.economy.baltop</code></td>
+<td><code>nexusprism.economy.baltop</code></td>
 </tr>
 <tr>
 <td><code>/sell hand</code></td>
 <td>Vender ítem en mano</td>
-<td><code>nexusslime.economy.sell</code></td>
+<td><code>nexusprism.economy.sell</code></td>
 </tr>
 <tr>
 <td><code>/sell all</code></td>
 <td>Vender todos los ítems vendibles</td>
-<td><code>nexusslime.economy.sell</code></td>
+<td><code>nexusprism.economy.sell</code></td>
 </tr>
 <tr>
 <td><code>/sell inventory</code></td>
 <td>Vender inventario completo</td>
-<td><code>nexusslime.economy.sell</code></td>
+<td><code>nexusprism.economy.sell</code></td>
 </tr>
 <tr>
 <td><code>/worth [item]</code></td>
 <td>Verificar valor de venta</td>
-<td><code>nexusslime.essentials.worth</code></td>
+<td><code>nexusprism.essentials.worth</code></td>
 </tr>
 <tr>
 <td><code>/eco give &lt;player&gt; &lt;amount&gt;</code></td>
 <td>Dar dinero (OP)</td>
-<td><code>nexusslime.economy.admin</code></td>
+<td><code>nexusprism.economy.admin</code></td>
 </tr>
 <tr>
 <td><code>/eco take &lt;player&gt; &lt;amount&gt;</code></td>
 <td>Quitar dinero (OP)</td>
-<td><code>nexusslime.economy.admin</code></td>
+<td><code>nexusprism.economy.admin</code></td>
 </tr>
 <tr>
 <td><code>/eco set &lt;player&gt; &lt;amount&gt;</code></td>
 <td>Establecer saldo (OP)</td>
-<td><code>nexusslime.economy.admin</code></td>
+<td><code>nexusprism.economy.admin</code></td>
 </tr>
 <tr>
 <td><code>/eco reset &lt;player&gt;</code></td>
 <td>Resetear saldo (OP)</td>
-<td><code>nexusslime.economy.admin</code></td>
+<td><code>nexusprism.economy.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2583,97 +2698,97 @@
 <tr>
 <td><code>/clan create &lt;name&gt; &lt;tag&gt;</code></td>
 <td>Crear un clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan disband</code></td>
 <td>Disolver clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan invite &lt;player&gt;</code></td>
 <td>Invitar a un jugador</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan join &lt;name&gt;</code></td>
 <td>Unirse a un clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan leave</code></td>
 <td>Salir del clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan kick &lt;player&gt;</code></td>
 <td>Expulsar a un miembro</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan promote &lt;player&gt;</code></td>
 <td>Ascender a oficial</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan demote &lt;player&gt;</code></td>
 <td>Degradar a miembro</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan info [name]</code></td>
 <td>Información del clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan list</code></td>
 <td>Listar todos los clanes</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan chat</code></td>
 <td>Alternar chat de clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan claim</code></td>
 <td>Reclamar chunk actual</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan unclaim</code></td>
 <td>Liberar chunk actual</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan map</code></td>
 <td>Mostrar mapa de territorio</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan chest</code></td>
 <td>Abrir cofre del clan</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan upgrade</code></td>
 <td>Abrir menú de mejoras</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan top</code></td>
 <td>Clasificación de clanes</td>
-<td><code>nexusslime.clan.use</code></td>
+<td><code>nexusprism.clan.use</code></td>
 </tr>
 <tr>
 <td><code>/clan admin disband &lt;name&gt;</code></td>
 <td>Forzar disolución (OP)</td>
-<td><code>nexusslime.clan.admin</code></td>
+<td><code>nexusprism.clan.admin</code></td>
 </tr>
 <tr>
 <td><code>/clan admin unclaim &lt;name&gt;</code></td>
 <td>Forzar liberación (OP)</td>
-<td><code>nexusslime.clan.admin</code></td>
+<td><code>nexusprism.clan.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2706,27 +2821,27 @@
 <tr>
 <td><code>/vanish</code></td>
 <td>Alternar invisibilidad (OP)</td>
-<td><code>nexusslime.staff.vanish</code></td>
+<td><code>nexusprism.staff.vanish</code></td>
 </tr>
 <tr>
 <td><code>/vanish &lt;player&gt;</code></td>
 <td>Hacer invisible a otro (OP)</td>
-<td><code>nexusslime.staff.vanish.others</code></td>
+<td><code>nexusprism.staff.vanish.others</code></td>
 </tr>
 <tr>
 <td><code>/invsee &lt;player&gt;</code></td>
 <td>Inspeccionar inventario (OP)</td>
-<td><code>nexusslime.staff.invsee</code></td>
+<td><code>nexusprism.staff.invsee</code></td>
 </tr>
 <tr>
 <td><code>/spy</code></td>
 <td>Alternar espía de chat (OP)</td>
-<td><code>nexusslime.staff.spy</code></td>
+<td><code>nexusprism.staff.spy</code></td>
 </tr>
 <tr>
 <td><code>/cleanworld</code></td>
 <td>Ejecutar limpiador de mundo (OP)</td>
-<td><code>nexusslime.security.cleanworld</code></td>
+<td><code>nexusprism.security.cleanworld</code></td>
 </tr>
 </tbody>
 </table>
@@ -2764,7 +2879,7 @@
 <tr>
 <td><code>/discordrr</code></td>
 <td>Gestionar roles de reacción (OP)</td>
-<td><code>nexusslime.admin</code></td>
+<td><code>nexusprism.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2782,87 +2897,87 @@
 <tr>
 <td><code>/region claim &lt;name&gt;</code></td>
 <td>Reclamar área seleccionada</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region delete &lt;name&gt;</code></td>
 <td>Eliminar región</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region list</code></td>
 <td>Listar tus regiones</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region info [name]</code></td>
 <td>Detalles de la región</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region addmember &lt;region&gt; &lt;player&gt;</code></td>
 <td>Añadir miembro</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region removemember &lt;region&gt; &lt;player&gt;</code></td>
 <td>Eliminar miembro</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region setflag &lt;region&gt; &lt;flag&gt; &lt;val&gt;</code></td>
 <td>Establecer una flag</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region flags &lt;region&gt;</code></td>
 <td>Ver flags</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/protect &lt;name&gt;</code></td>
 <td>Protección rápida de chunk</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region admin list</code></td>
 <td>Admin: todas las regiones (OP)</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 <tr>
 <td><code>/region admin delete &lt;name&gt;</code></td>
 <td>Admin: eliminar región (OP)</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 <tr>
 <td><code>/duel &lt;player&gt;</code></td>
 <td>Desafiar a duelo</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel accept</code></td>
 <td>Aceptar duelo</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel deny</code></td>
 <td>Rechazar duelo</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel spectate &lt;player&gt;</code></td>
 <td>Espectador de duelo</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel stats</code></td>
 <td>Estadísticas de duelo</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel setarena</code></td>
 <td>Establecer arena de duelo (OP)</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2880,57 +2995,57 @@
 <tr>
 <td><code>/crystal join &lt;arena&gt;</code></td>
 <td>Unirse a una arena</td>
-<td><code>nexusslime.crystaldefense.use</code></td>
+<td><code>nexusprism.crystaldefense.use</code></td>
 </tr>
 <tr>
 <td><code>/crystal leave</code></td>
 <td>Salir de la arena</td>
-<td><code>nexusslime.crystaldefense.use</code></td>
+<td><code>nexusprism.crystaldefense.use</code></td>
 </tr>
 <tr>
 <td><code>/crystal list</code></td>
 <td>Listar arenas</td>
-<td><code>nexusslime.crystaldefense.use</code></td>
+<td><code>nexusprism.crystaldefense.use</code></td>
 </tr>
 <tr>
 <td><code>/crystal status</code></td>
 <td>Oleada y HP del cristal</td>
-<td><code>nexusslime.crystaldefense.use</code></td>
+<td><code>nexusprism.crystaldefense.use</code></td>
 </tr>
 <tr>
 <td><code>/crystal create &lt;name&gt;</code></td>
 <td>Crear arena (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal delete &lt;name&gt;</code></td>
 <td>Eliminar arena (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal setcrystal &lt;arena&gt;</code></td>
 <td>Establecer ubicación del cristal (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal setspawn &lt;arena&gt;</code></td>
 <td>Establecer spawn (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal start [arena]</code></td>
 <td>Forzar inicio (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal stop [arena]</code></td>
 <td>Detener juego (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 <tr>
 <td><code>/crystal reload</code></td>
 <td>Recargar configuraciones (OP)</td>
-<td><code>nexusslime.crystaldefense.admin</code></td>
+<td><code>nexusprism.crystaldefense.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2948,12 +3063,12 @@
 <tr>
 <td><code>/vote</code></td>
 <td>Mostrar enlaces de votación y racha</td>
-<td><code>nexusslime.vote</code></td>
+<td><code>nexusprism.vote</code></td>
 </tr>
 <tr>
 <td><code>/votetop</code></td>
 <td>Clasificación de votos</td>
-<td><code>nexusslime.vote.top</code></td>
+<td><code>nexusprism.vote.top</code></td>
 </tr>
 </tbody>
 </table>
@@ -2971,32 +3086,32 @@
 <tr>
 <td><code>/boss spawn &lt;id&gt;</code></td>
 <td>Invocar un boss</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 <tr>
 <td><code>/boss spawn &lt;id&gt; &lt;w&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td>
 <td>Invocar en coordenadas</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 <tr>
 <td><code>/boss list</code></td>
 <td>Listar todos los bosses</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 <tr>
 <td><code>/boss info &lt;id&gt;</code></td>
 <td>Definición del boss</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 <tr>
 <td><code>/boss kill &lt;id&gt;</code></td>
 <td>Matar todas las instancias del boss</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 <tr>
 <td><code>/bossegg give &lt;player&gt; &lt;id&gt;</code></td>
 <td>Dar huevo de aparición</td>
-<td><code>nexusslime.boss.admin</code></td>
+<td><code>nexusprism.boss.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -3014,17 +3129,17 @@
 <tr>
 <td><code>/dreams reload</code></td>
 <td>Recargar configuración</td>
-<td><code>nexusslime.dreams.admin</code></td>
+<td><code>nexusprism.dreams.admin</code></td>
 </tr>
 <tr>
 <td><code>/dreams trigger &lt;player&gt;</code></td>
 <td>Forzar sueño</td>
-<td><code>nexusslime.dreams.admin</code></td>
+<td><code>nexusprism.dreams.admin</code></td>
 </tr>
 <tr>
 <td><code>/dreams trigger &lt;player&gt; nightmare</code></td>
 <td>Forzar pesadilla</td>
-<td><code>nexusslime.dreams.admin</code></td>
+<td><code>nexusprism.dreams.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -3042,42 +3157,42 @@
 <tr>
 <td><code>/twitch link &lt;username&gt;</code></td>
 <td>Iniciar vinculación</td>
-<td><code>nexusslime.twitch.use</code></td>
+<td><code>nexusprism.twitch.use</code></td>
 </tr>
 <tr>
 <td><code>/twitch unlink</code></td>
 <td>Desvincular cuenta</td>
-<td><code>nexusslime.twitch.use</code></td>
+<td><code>nexusprism.twitch.use</code></td>
 </tr>
 <tr>
 <td><code>/twitch status</code></td>
 <td>Estado de vinculación</td>
-<td><code>nexusslime.twitch.use</code></td>
+<td><code>nexusprism.twitch.use</code></td>
 </tr>
 <tr>
 <td><code>/twitch approve &lt;player&gt;</code></td>
 <td>Aprobar vinculación (OP)</td>
-<td><code>nexusslime.twitch.staff</code></td>
+<td><code>nexusprism.twitch.staff</code></td>
 </tr>
 <tr>
 <td><code>/twitch reject &lt;player&gt;</code></td>
 <td>Rechazar vinculación (OP)</td>
-<td><code>nexusslime.twitch.staff</code></td>
+<td><code>nexusprism.twitch.staff</code></td>
 </tr>
 <tr>
 <td><code>/twitch pending</code></td>
 <td>Solicitudes pendientes (OP)</td>
-<td><code>nexusslime.twitch.staff</code></td>
+<td><code>nexusprism.twitch.staff</code></td>
 </tr>
 <tr>
 <td><code>/twitch giveaway &lt;streamer&gt;</code></td>
 <td>Realizar sorteo (OP)</td>
-<td><code>nexusslime.twitch.staff</code></td>
+<td><code>nexusprism.twitch.staff</code></td>
 </tr>
 <tr>
 <td><code>/twitch reload</code></td>
 <td>Recargar configuración (OP)</td>
-<td><code>nexusslime.twitch.admin</code></td>
+<td><code>nexusprism.twitch.admin</code></td>
 </tr>
 </tbody>
 </table>

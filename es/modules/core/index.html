@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desarrollador
 
         </a>
       </li>
@@ -1717,6 +1739,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desarrollador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desarrollador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de la API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1984,10 +2099,10 @@
 
 
 <h1 id="modulo-core">Módulo Core<a class="headerlink" href="#modulo-core" title="Permanent link">&para;</a></h1>
-<p>El módulo Core es la base de NexusSlime. Gestiona el registro de ítems personalizados, el sistema de etiquetado PDC (PersistentDataContainer), el motor de máquinas, el árbol de investigación, mochilas y puntos de viaje.</p>
+<p>El módulo Core es la base de NexusPrism. Gestiona el registro de ítems personalizados, el sistema de etiquetado PDC (PersistentDataContainer), el motor de máquinas, el árbol de investigación, mochilas y puntos de viaje.</p>
 <hr />
 <h2 id="sistema-de-items-personalizados">Sistema de Ítems Personalizados<a class="headerlink" href="#sistema-de-items-personalizados" title="Permanent link">&para;</a></h2>
-<p>Todos los ítems personalizados se definen en <code>plugins/NexusSlime/items.yml</code>. El plugin incluye <strong>más de 235 ítems</strong> de fábrica.</p>
+<p>Todos los ítems personalizados se definen en <code>plugins/NexusPrism/items.yml</code>. El plugin incluye <strong>más de 235 ítems</strong> de fábrica.</p>
 <h3 id="ejemplo-de-itemsyml">Ejemplo de <code>items.yml</code><a class="headerlink" href="#ejemplo-de-itemsyml" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">COPPER_DUST</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DUST</span>
@@ -2083,7 +2198,7 @@
 </table>
 <hr />
 <h2 id="sistema-pdc">Sistema PDC<a class="headerlink" href="#sistema-pdc" title="Permanent link">&para;</a></h2>
-<p>NexusSlime usa el <strong>PersistentDataContainer</strong> de Minecraft para etiquetar ítems personalizados, máquinas y datos de jugadores. Cada ítem de NexusSlime lleva una clave PDC <code>nexusslime:id</code> que lo identifica de forma única.</p>
+<p>NexusPrism usa el <strong>PersistentDataContainer</strong> de Minecraft para etiquetar ítems personalizados, máquinas y datos de jugadores. Cada ítem de NexusPrism lleva una clave PDC <code>nexusprism:id</code> que lo identifica de forma única.</p>
 <p>Clases principales:</p>
 <ul>
 <li><code>CustomItemRegistry</code> — registra y resuelve todos los ítems personalizados</li>
@@ -2113,11 +2228,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.research</code></td>
+<td><code>nexusprism.research</code></td>
 <td>Usar el sistema de investigación (por defecto: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.research.all</code></td>
+<td><code>nexusprism.research.all</code></td>
 <td>Desbloquear toda la investigación instantáneamente (OP)</td>
 </tr>
 </tbody>
@@ -2138,17 +2253,17 @@
 <tr>
 <td><code>/backpack open</code></td>
 <td>Abrir tu mochila</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/backpack open &lt;id&gt;</code></td>
 <td>Abrir una mochila específica</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 <tr>
 <td><code>/backpack list</code></td>
 <td>Listar todas las mochilas</td>
-<td><code>nexusslime.essentials.backpack</code></td>
+<td><code>nexusprism.essentials.backpack</code></td>
 </tr>
 </tbody>
 </table>
@@ -2162,15 +2277,15 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.backpack.create</code></td>
+<td><code>nexusprism.backpack.create</code></td>
 <td>Crear mochilas (por defecto: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.backpack.upgrade</code></td>
+<td><code>nexusprism.backpack.upgrade</code></td>
 <td>Actualizar mochilas (por defecto: true)</td>
 </tr>
 <tr>
-<td><code>nexusslime.backpack.unlimited</code></td>
+<td><code>nexusprism.backpack.unlimited</code></td>
 <td>Ranuras ilimitadas de mochila (OP)</td>
 </tr>
 </tbody>
@@ -2191,27 +2306,27 @@
 <tr>
 <td><code>/waypoint create &lt;nombre&gt;</code></td>
 <td>Crear un punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint delete &lt;nombre&gt;</code></td>
 <td>Eliminar un punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint list</code></td>
 <td>Listar todos los puntos de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint tp &lt;nombre&gt;</code></td>
 <td>Teletransportarse a un punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 <tr>
 <td><code>/waypoint info &lt;nombre&gt;</code></td>
 <td>Mostrar detalles del punto de viaje</td>
-<td><code>nexusslime.essentials.waypoint</code></td>
+<td><code>nexusprism.essentials.waypoint</code></td>
 </tr>
 </tbody>
 </table>
@@ -2226,19 +2341,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.essentials.waypoints.1</code></td>
+<td><code>nexusprism.essentials.waypoints.1</code></td>
 <td>1 (por defecto)</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.5</code></td>
+<td><code>nexusprism.essentials.waypoints.5</code></td>
 <td>5</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.25</code></td>
+<td><code>nexusprism.essentials.waypoints.25</code></td>
 <td>25</td>
 </tr>
 <tr>
-<td><code>nexusslime.essentials.waypoints.unlimited</code></td>
+<td><code>nexusprism.essentials.waypoints.unlimited</code></td>
 <td>Ilimitado (OP)</td>
 </tr>
 </tbody>
@@ -2255,61 +2370,61 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/nexusslime help</code></td>
+<td><code>/nexusprism help</code></td>
 <td>Mostrar ayuda</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime info</code></td>
+<td><code>/nexusprism info</code></td>
 <td>Información del plugin</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td>Recargar todas las configuraciones</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime give &lt;jugador&gt; &lt;item&gt;</code></td>
+<td><code>/nexusprism give &lt;jugador&gt; &lt;item&gt;</code></td>
 <td>Dar un ítem personalizado</td>
-<td><code>nexusslime.admin.give</code></td>
+<td><code>nexusprism.admin.give</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td>Abrir la guía de ítems</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime modules</code></td>
+<td><code>/nexusprism modules</code></td>
 <td>Listar módulos cargados</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine info &lt;id&gt;</code></td>
+<td><code>/nexusprism machine info &lt;id&gt;</code></td>
 <td>Información de la máquina</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime machine list</code></td>
+<td><code>/nexusprism machine list</code></td>
 <td>Listar máquinas</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy info &lt;loc&gt;</code></td>
+<td><code>/nexusprism energy info &lt;loc&gt;</code></td>
 <td>Información del nodo de energía</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime energy network</code></td>
+<td><code>/nexusprism energy network</code></td>
 <td>Vista de la red de energía</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 </tbody>
 </table>
 <p>Alias: <code>/ns</code>, <code>/nexus</code>, <code>/slime</code>, <code>/nslime</code></p>
 <hr />
 <h2 id="soporte-de-idiomas">Soporte de Idiomas<a class="headerlink" href="#soporte-de-idiomas" title="Permanent link">&para;</a></h2>
-<p>NexusSlime incluye cuatro archivos de idioma:</p>
+<p>NexusPrism incluye cuatro archivos de idioma:</p>
 <table>
 <thead>
 <tr>

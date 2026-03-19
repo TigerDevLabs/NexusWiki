@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desarrollador
 
         </a>
       </li>
@@ -1689,6 +1711,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desarrollador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desarrollador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de la API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1928,7 +2043,7 @@
 
 
 <h1 id="modulo-infinity-crafting">Módulo Infinity Crafting<a class="headerlink" href="#modulo-infinity-crafting" title="Permanent link">&para;</a></h1>
-<p>Infinity Crafting es el <strong>sistema de crafteo multibloques</strong> de NexusSlime. Los jugadores construyen estructuras multibloques físicas en el mundo y las usan como estaciones de crafteo avanzadas. Las recetas se definen íntegramente en YAML.</p>
+<p>Infinity Crafting es el <strong>sistema de crafteo multibloques</strong> de NexusPrism. Los jugadores construyen estructuras multibloques físicas en el mundo y las usan como estaciones de crafteo avanzadas. Las recetas se definen íntegramente en YAML.</p>
 <hr />
 <h2 id="descripcion-general">Descripción General<a class="headerlink" href="#descripcion-general" title="Permanent link">&para;</a></h2>
 <table>
@@ -1993,7 +2108,7 @@
 </code></pre></div>
 <hr />
 <h2 id="formato-yaml-de-recetas">Formato YAML de Recetas<a class="headerlink" href="#formato-yaml-de-recetas" title="Permanent link">&para;</a></h2>
-<p>Las recetas se colocan en <code>plugins/NexusSlime/infinity_recipes/</code> como archivos <code>.yml</code> individuales. El nombre del archivo sirve como ID de la receta.</p>
+<p>Las recetas se colocan en <code>plugins/NexusPrism/infinity_recipes/</code> como archivos <code>.yml</code> individuales. El nombre del archivo sirve como ID de la receta.</p>
 <h3 id="receta-shaped-con-forma">Receta Shaped (Con Forma)<a class="headerlink" href="#receta-shaped-con-forma" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># infinity_recipes/nexus_core.yml</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SHAPED</span>
@@ -2063,7 +2178,7 @@
 </tr>
 <tr>
 <td><code>output.item</code></td>
-<td>ID del ítem de salida (personalizado de NexusSlime o Material vanilla)</td>
+<td>ID del ítem de salida (personalizado de NexusPrism o Material vanilla)</td>
 </tr>
 <tr>
 <td><code>output.amount</code></td>
@@ -2093,7 +2208,7 @@
 </table>
 <hr />
 <h2 id="guia-en-el-juego">Guía en el Juego<a class="headerlink" href="#guia-en-el-juego" title="Permanent link">&para;</a></h2>
-<p>Todas las recetas infinity son visibles en la guía del juego. Ábrela con <code>/nexusslime guide</code> y navega a la sección de tier <strong>Infinity</strong>.</p>
+<p>Todas las recetas infinity son visibles en la guía del juego. Ábrela con <code>/nexusprism guide</code> y navega a la sección de tier <strong>Infinity</strong>.</p>
 <p>La guía muestra:</p>
 <ul>
 <li>Estación multibloques requerida</li>
@@ -2115,17 +2230,17 @@
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
 <td>Mostrar receta(s) de un ítem</td>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime guide</code></td>
+<td><code>/nexusprism guide</code></td>
 <td>Abrir GUI de la guía de ítems</td>
-<td><code>nexusslime.command</code></td>
+<td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusslime reload</code></td>
+<td><code>/nexusprism reload</code></td>
 <td>Recargar todas las recetas y multibloques</td>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 </tr>
 </tbody>
 </table>
@@ -2141,17 +2256,17 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.recipe</code></td>
+<td><code>nexusprism.recipe</code></td>
 <td>Ver recetas con <code>/recipe</code></td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.craft</code></td>
+<td><code>nexusprism.craft</code></td>
 <td>Usar estaciones de crafteo</td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.admin.reload</code></td>
+<td><code>nexusprism.admin.reload</code></td>
 <td>Recargar configuraciones/recetas del plugin</td>
 <td>OP</td>
 </tr>

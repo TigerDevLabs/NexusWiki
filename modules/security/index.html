@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1850,6 +1872,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -2317,7 +2432,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sqlite</span><span class="w">           </span><span class="c1"># sqlite | postgres</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">postgres</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/nexusslime&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/nexusprism&quot;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nexus</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">changeme</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
@@ -2389,7 +2504,7 @@
 <tr>
 <td><code>/cleanworld</code></td>
 <td>Manually trigger a world clean</td>
-<td><code>nexusslime.security.cleanworld</code></td>
+<td><code>nexusprism.security.cleanworld</code></td>
 </tr>
 </tbody>
 </table>
@@ -2485,7 +2600,7 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Forge / NeoForge</p>
-<p>Forge and NeoForge users are put on the <strong>watch-list</strong>, not kicked. A <code>§e[ModWatch]</code> alert is sent to staff with the <code>nexusslime.security.notify</code> permission so they can manually verify whether the player is cheating.</p>
+<p>Forge and NeoForge users are put on the <strong>watch-list</strong>, not kicked. A <code>§e[ModWatch]</code> alert is sent to staff with the <code>nexusprism.security.notify</code> permission so they can manually verify whether the player is cheating.</p>
 </div>
 <h3 id="staff-permissions-for-mod-detection">Staff Permissions for Mod Detection<a class="headerlink" href="#staff-permissions-for-mod-detection" title="Permanent link">&para;</a></h3>
 <table>
@@ -2498,7 +2613,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.security.notify</code></td>
+<td><code>nexusprism.security.notify</code></td>
 <td>Receive mod-detection and watch-list alerts</td>
 <td>OP</td>
 </tr>
@@ -2526,22 +2641,22 @@
 <tr>
 <td><code>/vanish</code></td>
 <td>Toggle visibility</td>
-<td><code>nexusslime.staff.vanish</code></td>
+<td><code>nexusprism.staff.vanish</code></td>
 </tr>
 <tr>
 <td><code>/vanish &lt;player&gt;</code></td>
 <td>Vanish another player</td>
-<td><code>nexusslime.staff.vanish.others</code></td>
+<td><code>nexusprism.staff.vanish.others</code></td>
 </tr>
 <tr>
 <td><code>/invsee &lt;player&gt;</code></td>
 <td>Inspect a player's inventory</td>
-<td><code>nexusslime.staff.invsee</code></td>
+<td><code>nexusprism.staff.invsee</code></td>
 </tr>
 <tr>
 <td><code>/spy</code></td>
 <td>Toggle chat spy mode</td>
-<td><code>nexusslime.staff.spy</code></td>
+<td><code>nexusprism.staff.spy</code></td>
 </tr>
 </tbody>
 </table>
@@ -2557,32 +2672,32 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.security.cleanworld</code></td>
+<td><code>nexusprism.security.cleanworld</code></td>
 <td>Manual world clean</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.staff.vanish</code></td>
+<td><code>nexusprism.staff.vanish</code></td>
 <td>Vanish yourself</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.staff.vanish.others</code></td>
+<td><code>nexusprism.staff.vanish.others</code></td>
 <td>Vanish other players</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.staff.vanish.see</code></td>
+<td><code>nexusprism.staff.vanish.see</code></td>
 <td>See vanished players</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.staff.invsee</code></td>
+<td><code>nexusprism.staff.invsee</code></td>
 <td>Inspect inventories</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.staff.spy</code></td>
+<td><code>nexusprism.staff.spy</code></td>
 <td>Chat spy mode</td>
 <td>OP</td>
 </tr>
@@ -2705,11 +2820,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_authenticated%</code></td>
+<td><code>%nexusprism_authenticated%</code></td>
 <td><code>true</code> / <code>false</code> — is the player logged in?</td>
 </tr>
 <tr>
-<td><code>%nexusslime_auth_status%</code></td>
+<td><code>%nexusprism_auth_status%</code></td>
 <td>Human-readable status (<code>Authenticated</code>, <code>Pending</code>)</td>
 </tr>
 </tbody>

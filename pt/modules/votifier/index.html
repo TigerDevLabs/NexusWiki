@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Referência
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Desenvolvedor
 
         </a>
       </li>
@@ -1650,6 +1672,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvedor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia da API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1850,7 +1965,7 @@
 
 
 <h1 id="modulo-votifier">Módulo Votifier<a class="headerlink" href="#modulo-votifier" title="Permanent link">&para;</a></h1>
-<p>O módulo Votifier é um <strong>servidor Votifier V1 e V2 autônomo</strong> embutido diretamente no NexusSlime. Ele processa votos recebidos de sites de listagem de servidores, distribui recompensas configuráveis e acompanha sequências de votos dos jogadores em um placar.</p>
+<p>O módulo Votifier é um <strong>servidor Votifier V1 e V2 autônomo</strong> embutido diretamente no NexusPrism. Ele processa votos recebidos de sites de listagem de servidores, distribui recompensas configuráveis e acompanha sequências de votos dos jogadores em um placar.</p>
 <hr />
 <h2 id="como-funciona">Como Funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Site de Votação  ──► Servidor Votifier (porta 8192)  ──► VoteManager  ──► Recompensas + Sequência
@@ -1860,7 +1975,7 @@
 <li>Cadastre seu servidor em sites de votação (Minecraftservers.org, etc.)</li>
 <li>Aponte cada site para o IP do seu servidor e a porta do Votifier (padrão <code>8192</code>)</li>
 <li>Quando um jogador votar, o site envia um payload para o seu servidor Votifier</li>
-<li>O NexusSlime processa o voto, executa os comandos de recompensa e atualiza a sequência</li>
+<li>O NexusPrism processa o voto, executa os comandos de recompensa e atualiza a sequência</li>
 </ol>
 <hr />
 <h2 id="comandos">Comandos<a class="headerlink" href="#comandos" title="Permanent link">&para;</a></h2>
@@ -1876,12 +1991,12 @@
 <tr>
 <td><code>/vote</code></td>
 <td>Exibir links de votação e sua sequência atual</td>
-<td><code>nexusslime.vote</code></td>
+<td><code>nexusprism.vote</code></td>
 </tr>
 <tr>
 <td><code>/votetop</code></td>
 <td>Exibir o placar de votos</td>
-<td><code>nexusslime.vote.top</code></td>
+<td><code>nexusprism.vote.top</code></td>
 </tr>
 </tbody>
 </table>
@@ -1897,12 +2012,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.vote</code></td>
+<td><code>nexusprism.vote</code></td>
 <td>Usar <code>/vote</code></td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.vote.top</code></td>
+<td><code>nexusprism.vote.top</code></td>
 <td>Usar <code>/votetop</code></td>
 <td>true</td>
 </tr>
@@ -2004,7 +2119,7 @@
 <ul>
 <li><strong>IP do Servidor</strong> — o endereço IP público do seu servidor</li>
 <li><strong>Porta do Votifier</strong> — <code>8192</code> (ou o valor definido em <code>config.yml</code>)</li>
-<li><strong>Chave Pública</strong> — copie de <code>plugins/NexusSlime/votifier/rsa/public.key</code> (sites V1)</li>
+<li><strong>Chave Pública</strong> — copie de <code>plugins/NexusPrism/votifier/rsa/public.key</code> (sites V1)</li>
 <li><strong>Token</strong> — o valor de <code>token</code> em <code>config.yml</code> (sites V2)</li>
 </ul>
 <hr />
@@ -2035,7 +2150,7 @@
 </tr>
 </tbody>
 </table>
-<p>Quando o multiplicador está ativo, os valores <code>COMMAND</code> de recompensa são executados múltiplas vezes de acordo com o multiplicador (arredondado para o inteiro mais próximo). Você também pode implementar lógica de multiplicador personalizada usando o placeholder <code>%nexusslime_vote_streak%</code> em plugins externos.</p>
+<p>Quando o multiplicador está ativo, os valores <code>COMMAND</code> de recompensa são executados múltiplas vezes de acordo com o multiplicador (arredondado para o inteiro mais próximo). Você também pode implementar lógica de multiplicador personalizada usando o placeholder <code>%nexusprism_vote_streak%</code> em plugins externos.</p>
 <hr />
 <h2 id="placeholderapi">PlaceholderAPI<a class="headerlink" href="#placeholderapi" title="Permanent link">&para;</a></h2>
 <table>
@@ -2047,11 +2162,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>%nexusslime_votes_total%</code></td>
+<td><code>%nexusprism_votes_total%</code></td>
 <td>Total de votos acumulados do jogador</td>
 </tr>
 <tr>
-<td><code>%nexusslime_vote_streak%</code></td>
+<td><code>%nexusprism_vote_streak%</code></td>
 <td>Sequência de votos atual do jogador</td>
 </tr>
 </tbody>

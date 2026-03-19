@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
+        <meta name="description" content="Comprehensive documentation for the NexusPrism Minecraft plugin">
       
       
         <meta name="author" content="O-Tiger">
@@ -331,6 +331,28 @@
     
   
   Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer
 
         </a>
       </li>
@@ -1656,6 +1678,99 @@
   
   
   
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../store/" class="md-nav__link">
         
@@ -1865,7 +1980,7 @@
 <p>The Protections module provides <strong>WorldGuard-style cuboid region claiming</strong>, 28 configurable protection flags, and a <strong>1v1 duel system</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">This is not Towny</p>
-<p><code>nexusslime-protections</code> is a cuboid region system similar to <strong>WorldGuard or GriefPrevention</strong> — players define a 3D area and set flags on it. It has <strong>no cities, nations, taxes, or diplomacy</strong>. If you want Towny-style chunk-based territory with clan governance, see the <a href="../clans/">Clans module</a> instead.</p>
+<p><code>nexusprism-protections</code> is a cuboid region system similar to <strong>WorldGuard or GriefPrevention</strong> — players define a 3D area and set flags on it. It has <strong>no cities, nations, taxes, or diplomacy</strong>. If you want Towny-style chunk-based territory with clan governance, see the <a href="../clans/">Clans module</a> instead.</p>
 </div>
 <hr />
 <h2 id="region-claiming">Region Claiming<a class="headerlink" href="#region-claiming" title="Permanent link">&para;</a></h2>
@@ -1889,62 +2004,62 @@
 <tr>
 <td><code>/region claim &lt;name&gt;</code></td>
 <td>Claim selected area</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region delete &lt;name&gt;</code></td>
 <td>Delete a region</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region list</code></td>
 <td>List your regions</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region info [name]</code></td>
 <td>View region details</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region addmember &lt;region&gt; &lt;player&gt;</code></td>
 <td>Add a member</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region removemember &lt;region&gt; &lt;player&gt;</code></td>
 <td>Remove a member</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region setflag &lt;region&gt; &lt;flag&gt; &lt;value&gt;</code></td>
 <td>Set a flag</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region flags &lt;region&gt;</code></td>
 <td>View all flags</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/protect &lt;name&gt;</code></td>
 <td>Quick-protect current chunk</td>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 </tr>
 <tr>
 <td><code>/region admin list [player]</code></td>
 <td>Admin: list all regions</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 <tr>
 <td><code>/region admin delete &lt;name&gt;</code></td>
 <td>Admin: force-delete region</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 <tr>
 <td><code>/region admin setowner &lt;region&gt; &lt;player&gt;</code></td>
 <td>Admin: change owner</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2096,32 +2211,32 @@
 <tr>
 <td><code>/duel &lt;player&gt;</code></td>
 <td>Challenge a player to a duel</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel accept</code></td>
 <td>Accept a duel challenge</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel deny</code></td>
 <td>Deny a duel challenge</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel spectate &lt;player&gt;</code></td>
 <td>Spectate a duel</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel stats</code></td>
 <td>View your duel stats</td>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 </tr>
 <tr>
 <td><code>/duel setarena</code></td>
 <td>Set duel arena at your location</td>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 </tr>
 </tbody>
 </table>
@@ -2144,22 +2259,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nexusslime.region.use</code></td>
+<td><code>nexusprism.region.use</code></td>
 <td>Create and manage own regions</td>
 <td>true</td>
 </tr>
 <tr>
-<td><code>nexusslime.protect.admin</code></td>
+<td><code>nexusprism.protect.admin</code></td>
 <td>Admin region management</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.bypass.protection</code></td>
+<td><code>nexusprism.bypass.protection</code></td>
 <td>Bypass all region protections</td>
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusslime.duel.use</code></td>
+<td><code>nexusprism.duel.use</code></td>
 <td>Challenge and accept duels</td>
 <td>true</td>
 </tr>
