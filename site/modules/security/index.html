@@ -849,6 +849,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#premium-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premium Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Premium Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache &amp; Resilience
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2084,6 +2112,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#premium-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premium Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Premium Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache &amp; Resilience
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2449,6 +2505,49 @@
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">64.0</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
 </code></pre></div>
+<h3 id="premium-verification">Premium Verification<a class="headerlink" href="#premium-verification" title="Permanent link">&para;</a></h3>
+<p>When <code>premium-check.enabled</code> is <code>true</code>, NexusPrism validates premium accounts using a two-step process so cracked players cannot impersonate paid accounts:</p>
+<ol>
+<li><strong>UUID version check</strong> — offline-mode servers assign version-3 UUIDs to all players. A genuine premium player authenticated via FastLogin/JPremium receives their real Mojang UUID (version 4). Version 3 = cracked, immediately rejected.</li>
+<li><strong>Mojang API comparison</strong> — even for version-4 UUIDs, the name is looked up via <code>api.mojang.com</code> and the returned UUID is compared against the player's actual UUID. Any mismatch is flagged as an impersonation attempt and the player is treated as cracked.</li>
+</ol>
+<h4 id="cache-resilience">Cache &amp; Resilience<a class="headerlink" href="#cache-resilience" title="Permanent link">&para;</a></h4>
+<p>Results are cached to avoid hammering the Mojang API on every join:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>In-memory cache</strong></td>
+<td>24-hour TTL; cleared on restart</td>
+</tr>
+<tr>
+<td><strong>SQLite persistent cache</strong></td>
+<td>Survives restarts — file: <code>security/premium-cache.db</code></td>
+</tr>
+<tr>
+<td><strong>Rate limiter</strong></td>
+<td>Max 50 Mojang API calls per 10-minute window</td>
+</tr>
+<tr>
+<td><strong>Exponential backoff</strong></td>
+<td>Backs off up to 60 s on repeated API failures</td>
+</tr>
+<tr>
+<td><strong>Fallback</strong></td>
+<td>Uses last cached result when the API is unreachable</td>
+</tr>
+</tbody>
+</table>
+<p>If the Mojang API is down, the system falls back gracefully to cached data. If no cache exists for the player, they are treated as cracked.</p>
+<div class="admonition warning">
+<p class="admonition-title">Impersonation detection</p>
+<p>If a player connects with a version-3 (offline) UUID but the cache shows that username owns a Mojang account, a warning is logged: <code>IMPERSONATION DETECTED</code>. The player is still allowed in but is treated as cracked (must <code>/login</code>).</p>
+</div>
 <hr />
 <h2 id="anti-bot">Anti-Bot<a class="headerlink" href="#anti-bot" title="Permanent link">&para;</a></h2>
 <h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
