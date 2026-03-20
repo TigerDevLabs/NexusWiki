@@ -52,6 +52,30 @@ login-spawn:
   z: 0.0
 ```
 
+### Premium Verification
+
+When `premium-check.enabled` is `true`, NexusPrism validates premium accounts using a two-step process so cracked players cannot impersonate paid accounts:
+
+1. **UUID version check** — offline-mode servers assign version-3 UUIDs to all players. A genuine premium player authenticated via FastLogin/JPremium receives their real Mojang UUID (version 4). Version 3 = cracked, immediately rejected.
+2. **Mojang API comparison** — even for version-4 UUIDs, the name is looked up via `api.mojang.com` and the returned UUID is compared against the player's actual UUID. Any mismatch is flagged as an impersonation attempt and the player is treated as cracked.
+
+#### Cache & Resilience
+
+Results are cached to avoid hammering the Mojang API on every join:
+
+| Layer | Detail |
+| --- | --- |
+| **In-memory cache** | 24-hour TTL; cleared on restart |
+| **SQLite persistent cache** | Survives restarts — file: `security/premium-cache.db` |
+| **Rate limiter** | Max 50 Mojang API calls per 10-minute window |
+| **Exponential backoff** | Backs off up to 60 s on repeated API failures |
+| **Fallback** | Uses last cached result when the API is unreachable |
+
+If the Mojang API is down, the system falls back gracefully to cached data. If no cache exists for the player, they are treated as cracked.
+
+!!! warning "Impersonation detection"
+    If a player connects with a version-3 (offline) UUID but the cache shows that username owns a Mojang account, a warning is logged: `IMPERSONATION DETECTED`. The player is still allowed in but is treated as cracked (must `/login`).
+
 ---
 
 ## Anti-Bot
