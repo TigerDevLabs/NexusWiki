@@ -1145,6 +1145,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comandos-administrativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos Administrativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permisos" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2146,6 +2157,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comandos-administrativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos Administrativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permisos" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2644,7 +2666,7 @@
 <p><strong>Botín:</strong> Cristal de energía maldita · Título <code>§4Maldito</code> · Cosmético de tatuaje</p>
 </div>
 <div class="tabbed-block">
-<p><strong>Racha Mín.:</strong> 14 · <strong>Entidad Base:</strong> Zombie</p>
+<p><strong>Racha Mínima:</strong> 14 · <strong>Entidad Base:</strong> Zombie</p>
 <table>
 <thead>
 <tr>
@@ -2657,16 +2679,23 @@
 <tr>
 <td>1</td>
 <td>100% → 40%</td>
-<td>Skill Vorpal (carga de 5 golpes en línea recta), Parada (20% de negar golpe recibido)</td>
+<td>Habilidad de Espada Vorpal (carga de 5 golpes en línea recta), Parar (20% de probabilidad de negar un golpe)</td>
 </tr>
 <tr>
-<td>2 — <strong>Doble Espada</strong></td>
+<td>2 — <strong>???</strong></td>
 <td>40% → 0%</td>
-<td>VELOCIDAD III permanente, Starburst Stream (16 golpes consecutivos en 4s — rompe con 8+ daño en un golpe), Golpe Final (por debajo del 15%: carga crit garantizada)</td>
+<td><em>Algo despierta al 40% de HP. Descúbrelo tú mismo.</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Botín:</strong> Cosmético de élitra abrigo negro · Título <code>§7Solo Player</code> · Set de espadas dobles CMD</p>
+<p><strong>Botín:</strong> Cosmético de élitra abrigo negro · Título <code>§7Jugador Solo</code> · ???</p>
+<div class="admonition quote">
+<p class="admonition-title">Lore</p>
+<p><em>Aquel que derrota al Espadachín Negro hereda más que un título.</em></p>
+</div>
+<div class="admonition note">
+<p><code>NjZhNzY2NjU3NTZlNzQ2YTZiNjM2YTZiNjM2YTZiNjM2YTZiNjM2YTZi</code></p>
+</div>
 </div>
 <div class="tabbed-block">
 <p><strong>Racha Mín.:</strong> 21 · <strong>Entidad Base:</strong> Phantom</p>
@@ -2735,6 +2764,59 @@
 <h3 id="grupo-de-jefes-futuros-racha-28">Grupo de Jefes Futuros (Racha 28+)<a class="headerlink" href="#grupo-de-jefes-futuros-racha-28" title="Permanent link">&para;</a></h3>
 <p>Jefes planificados para lanzamientos futuros: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dragneel, Sung Jin-Woo, Giorno Giovanna.</p>
 <hr />
+<h2 id="comandos-administrativos">Comandos Administrativos<a class="headerlink" href="#comandos-administrativos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+<th>Permiso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/bloodmoon</code></td>
+<td>Mostrar estado de la Luna de Sangre</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/bloodmoon start</code></td>
+<td>Forzar activación de la Luna de Sangre</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/bloodmoon stop</code></td>
+<td>Forzar desactivación de la Luna de Sangre</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai</code></td>
+<td>Mostrar peleas activas del jefe Isekai</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai force &lt;jugador&gt;</code></td>
+<td>Forzar el inicio de una pelea para un jugador</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai force &lt;jugador&gt; &lt;jefeId&gt;</code></td>
+<td>Forzar con un jefe específico</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai stop &lt;jugador&gt;</code></td>
+<td>Finalizar una pelea activa</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai list</code></td>
+<td>Listar todos los IDs de jefes disponibles</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="permisos">Permisos<a class="headerlink" href="#permisos" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2748,6 +2830,11 @@
 <tr>
 <td><code>nexusprism.events.bloodmoon.admin</code></td>
 <td>Controlar la Luna de Sangre manualmente</td>
+<td>OP</td>
+</tr>
+<tr>
+<td><code>nexusprism.events.isekai.admin</code></td>
+<td>Controlar peleas de jefes Isekai manualmente</td>
 <td>OP</td>
 </tr>
 </tbody>

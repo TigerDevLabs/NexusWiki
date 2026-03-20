@@ -849,6 +849,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verificacao-premium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação Premium
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificação Premium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-e-resiliencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache e Resiliência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1990,6 +2018,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verificacao-premium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação Premium
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificação Premium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-e-resiliencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache e Resiliência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2248,6 +2304,47 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">login-spawn</span><span class="p">:</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">                 </span><span class="c1"># Teleportar para lobby enquanto não autenticado</span>
 </code></pre></div>
+<h3 id="verificacao-premium">Verificação Premium<a class="headerlink" href="#verificacao-premium" title="Permanent link">&para;</a></h3>
+<p>Quando <code>premium-check.enabled</code> é <code>true</code>, o NexusPrism valida contas premium com um processo de duas etapas para que jogadores cracked não possam se passar por contas pagas:</p>
+<ol>
+<li><strong>Verificação da versão do UUID</strong> — servidores offline atribuem UUIDs versão 3 a todos os jogadores. Um jogador premium autenticado via FastLogin/JPremium recebe seu UUID real da Mojang (versão 4). Versão 3 = cracked, rejeitado imediatamente.</li>
+<li><strong>Comparação com a API da Mojang</strong> — mesmo para UUIDs versão 4, o nome é consultado em <code>api.mojang.com</code> e o UUID retornado é comparado com o UUID real do jogador. Qualquer discrepância é sinalizada como tentativa de impersonação.</li>
+</ol>
+<h4 id="cache-e-resiliencia">Cache e Resiliência<a class="headerlink" href="#cache-e-resiliencia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cache em memória</strong></td>
+<td>TTL de 24 horas; limpo ao reiniciar</td>
+</tr>
+<tr>
+<td><strong>Cache persistente SQLite</strong></td>
+<td>Sobrevive a reinicializações — arquivo: <code>security/premium-cache.db</code></td>
+</tr>
+<tr>
+<td><strong>Limitador de taxa</strong></td>
+<td>Máx. 50 chamadas à API da Mojang por janela de 10 minutos</td>
+</tr>
+<tr>
+<td><strong>Backoff exponencial</strong></td>
+<td>Recua até 60 s em caso de falhas repetidas na API</td>
+</tr>
+<tr>
+<td><strong>Fallback</strong></td>
+<td>Usa o último resultado em cache quando a API estiver inacessível</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Detecção de impersonação</p>
+<p>Se um jogador se conectar com um UUID versão 3 (offline) mas o cache indicar que aquele nome possui uma conta Mojang, um aviso é registrado: <code>IMPERSONATION DETECTED</code>. O jogador ainda pode entrar, mas é tratado como cracked (deve usar <code>/login</code>).</p>
+</div>
 <hr />
 <h2 id="anti-bot">Anti-Bot<a class="headerlink" href="#anti-bot" title="Permanent link">&para;</a></h2>
 <h3 id="configuracao-securityantibotyml">Configuração (<code>security/antibot.yml</code>)<a class="headerlink" href="#configuracao-securityantibotyml" title="Permanent link">&para;</a></h3>

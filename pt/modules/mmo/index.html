@@ -1068,6 +1068,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vinculacao-de-teclas-de-habilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vinculação de Teclas de Habilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#comandos_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1080,6 +1091,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mana
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1991,6 +2013,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vinculacao-de-teclas-de-habilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vinculação de Teclas de Habilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#comandos_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2003,6 +2036,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mana
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2389,10 +2433,16 @@
 </div>
 </div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Habilidades ocultas</p>
+<p>Algumas habilidades não estão listadas aqui. Elas existem — mas suas condições, custos e nomes são para você descobrir.</p>
+</div>
 <h3 id="usando-habilidades">Usando Habilidades<a class="headerlink" href="#usando-habilidades" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/skill use &lt;idHabilidade&gt;
 </code></pre></div>
 <p>Ou abra <code>/skill</code>, clique em uma árvore e depois clique no ícone da habilidade. Os tempos de recarga são rastreados por jogador por habilidade.</p>
+<h3 id="vinculacao-de-teclas-de-habilidades">Vinculação de Teclas de Habilidades<a class="headerlink" href="#vinculacao-de-teclas-de-habilidades" title="Permanent link">&para;</a></h3>
+<p>Jogadores podem vincular habilidades desbloqueadas a slots da hotbar para ativação rápida sem digitar comandos. Abra <code>/skill keybind</code> para configurar os vínculos via GUI — cada slot mostra o nome da habilidade, o custo de mana e o cooldown atual. Pressionar a tecla da hotbar vinculada ativa a habilidade instantaneamente.</p>
 <h3 id="comandos_1">Comandos<a class="headerlink" href="#comandos_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2405,7 +2455,7 @@
 <tbody>
 <tr>
 <td><code>/skill</code></td>
-<td>Abrir GUI do Navegador de Árvores de Habilidades</td>
+<td>Abrir o GUI do Navegador de Árvores de Habilidades</td>
 <td><code>nexusprism.mmo.use</code></td>
 </tr>
 <tr>
@@ -2413,8 +2463,43 @@
 <td>Ativar uma habilidade desbloqueada</td>
 <td><code>nexusprism.mmo.use</code></td>
 </tr>
+<tr>
+<td><code>/skill keybind</code></td>
+<td>Abrir o GUI de vinculação de teclas</td>
+<td><code>nexusprism.mmo.use</code></td>
+</tr>
 </tbody>
 </table>
+<hr />
+<h2 id="mana">Mana<a class="headerlink" href="#mana" title="Permanent link">&para;</a></h2>
+<p>Cada jogador possui uma <strong>reserva de mana</strong> que as habilidades consomem. O mana regenera passivamente com base no atributo <strong>Sabedoria</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Mecânica</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reserva base</td>
+<td>Escala com o nível MMO</td>
+</tr>
+<tr>
+<td>Regeneração</td>
+<td>Baseada em Sabedoria, sempre ativa</td>
+</tr>
+<tr>
+<td>Mana insuficiente</td>
+<td>Barra de ação: <code>§cMana insuficiente!</code> — habilidade bloqueada</td>
+</tr>
+<tr>
+<td>Exibição do custo</td>
+<td>Mostrado nos ícones de habilidade e no GUI de vinculação de teclas</td>
+</tr>
+</tbody>
+</table>
+<p>O pool de mana também está acessível pela <a href="../../developer/api/">API de Addon</a>: <code>MmoRegistry.get()</code> → <code>getCurrentMana()</code>, <code>hasMana()</code>, <code>consumeMana()</code>.</p>
 <hr />
 <h2 id="profissoes">Profissões<a class="headerlink" href="#profissoes" title="Permanent link">&para;</a></h2>
 <p>Oito profissões sobem de nível independentemente das árvores de habilidades. Cada uma tem uma <strong>passiva de maestria</strong> que fica mais forte com o nível da profissão.</p>

@@ -1068,6 +1068,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ability-key-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ability Key Bindings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#commands_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1080,6 +1091,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mana
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1991,6 +2013,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ability-key-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ability Key Bindings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#commands_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2003,6 +2036,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mana
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2216,6 +2260,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Hidden abilities</p>
+<p>Some abilities are not listed here. They exist — but their conditions, costs, and names are for you to discover.</p>
+</div>
 <h3 id="ability-descriptions">Ability Descriptions<a class="headerlink" href="#ability-descriptions" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Warrior</label><label for="__tabbed_1_2">Rogue</label><label for="__tabbed_1_3">Mage</label><label for="__tabbed_1_4">Archer</label><label for="__tabbed_1_5">Healer</label><label for="__tabbed_1_6">Alchemist</label></div>
 <div class="tabbed-content">
@@ -2393,6 +2441,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/skill use &lt;abilityId&gt;
 </code></pre></div>
 <p>Or open <code>/skill</code>, click a tree, then click the ability icon. Cooldowns are tracked per player per ability.</p>
+<h3 id="ability-key-bindings">Ability Key Bindings<a class="headerlink" href="#ability-key-bindings" title="Permanent link">&para;</a></h3>
+<p>Players can bind unlocked abilities to hotbar slots for quick activation without typing commands. Open <code>/skill keybind</code> to configure bindings via GUI — each slot shows the ability name, mana cost, and current cooldown. Pressing the bound hotbar key activates the ability instantly.</p>
 <h3 id="commands_1">Commands<a class="headerlink" href="#commands_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2405,7 +2455,7 @@
 <tbody>
 <tr>
 <td><code>/skill</code></td>
-<td>Open Skill Tree Browser GUI (3-row, 6 tree icons)</td>
+<td>Open Skill Tree Browser GUI</td>
 <td><code>nexusprism.mmo.use</code></td>
 </tr>
 <tr>
@@ -2413,8 +2463,43 @@
 <td>Activate an unlocked ability</td>
 <td><code>nexusprism.mmo.use</code></td>
 </tr>
+<tr>
+<td><code>/skill keybind</code></td>
+<td>Open the key binding GUI</td>
+<td><code>nexusprism.mmo.use</code></td>
+</tr>
 </tbody>
 </table>
+<hr />
+<h2 id="mana">Mana<a class="headerlink" href="#mana" title="Permanent link">&para;</a></h2>
+<p>Each player has a <strong>mana pool</strong> that abilities draw from. Mana regenerates passively based on the <strong>Wisdom</strong> stat.</p>
+<table>
+<thead>
+<tr>
+<th>Mechanic</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base pool</td>
+<td>Scales with MMO level</td>
+</tr>
+<tr>
+<td>Regen</td>
+<td>Wisdom-based, always active</td>
+</tr>
+<tr>
+<td>On insufficient mana</td>
+<td>Action bar: <code>§cNot enough mana!</code> — ability is blocked</td>
+</tr>
+<tr>
+<td>Cost display</td>
+<td>Shown on ability icons and in the key binding GUI</td>
+</tr>
+</tbody>
+</table>
+<p>The mana pool is also accessible from the <a href="../../developer/api/">Addon API</a>: <code>MmoRegistry.get()</code> → <code>getCurrentMana()</code>, <code>hasMana()</code>, <code>consumeMana()</code>.</p>
 <hr />
 <h2 id="professions">Professions<a class="headerlink" href="#professions" title="Permanent link">&para;</a></h2>
 <p>Eight professions level independently from skill trees. Each has a <strong>mastery passive</strong> that grows stronger with profession level.</p>

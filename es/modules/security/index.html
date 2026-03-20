@@ -849,6 +849,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verificacion-premium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificación Premium
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificación Premium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-y-resiliencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché y Resiliencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1990,6 +2018,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#verificacion-premium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificación Premium
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificación Premium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-y-resiliencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché y Resiliencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2248,6 +2304,47 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">login-spawn</span><span class="p">:</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
+<h3 id="verificacion-premium">Verificación Premium<a class="headerlink" href="#verificacion-premium" title="Permanent link">&para;</a></h3>
+<p>Cuando <code>premium-check.enabled</code> es <code>true</code>, NexusPrism valida las cuentas premium mediante un proceso de dos pasos para que los jugadores crackeados no puedan hacerse pasar por cuentas de pago:</p>
+<ol>
+<li><strong>Verificación de versión de UUID</strong> — los servidores offline asignan UUIDs versión 3 a todos los jugadores. Un jugador premium autenticado mediante FastLogin/JPremium recibe su UUID real de Mojang (versión 4). Versión 3 = crackeado, rechazado inmediatamente.</li>
+<li><strong>Comparación con la API de Mojang</strong> — incluso para UUIDs versión 4, el nombre se consulta en <code>api.mojang.com</code> y el UUID devuelto se compara con el UUID real del jugador. Cualquier discrepancia se marca como intento de suplantación.</li>
+</ol>
+<h4 id="cache-y-resiliencia">Caché y Resiliencia<a class="headerlink" href="#cache-y-resiliencia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caché en memoria</strong></td>
+<td>TTL de 24 horas; limpiado al reiniciar</td>
+</tr>
+<tr>
+<td><strong>Caché persistente SQLite</strong></td>
+<td>Sobrevive a reinicios — archivo: <code>security/premium-cache.db</code></td>
+</tr>
+<tr>
+<td><strong>Limitador de tasa</strong></td>
+<td>Máx. 50 llamadas a la API de Mojang por ventana de 10 minutos</td>
+</tr>
+<tr>
+<td><strong>Backoff exponencial</strong></td>
+<td>Retrocede hasta 60 s en fallos repetidos de la API</td>
+</tr>
+<tr>
+<td><strong>Fallback</strong></td>
+<td>Usa el último resultado en caché cuando la API no está disponible</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Detección de suplantación</p>
+<p>Si un jugador se conecta con un UUID versión 3 (offline) pero la caché indica que ese nombre posee una cuenta de Mojang, se registra una advertencia: <code>IMPERSONATION DETECTED</code>. El jugador aún puede entrar, pero es tratado como crackeado (debe usar <code>/login</code>).</p>
+</div>
 <hr />
 <h2 id="anti-bot">Anti-Bot<a class="headerlink" href="#anti-bot" title="Permanent link">&para;</a></h2>
 <h3 id="configuracion-securityantibotyml">Configuración (<code>security/antibot.yml</code>)<a class="headerlink" href="#configuracion-securityantibotyml" title="Permanent link">&para;</a></h3>

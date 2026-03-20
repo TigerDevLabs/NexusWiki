@@ -1145,6 +1145,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#admin-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2146,6 +2157,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#admin-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2661,13 +2683,20 @@
 <td>Sword Skill Vorpal (straight-line 5-hit charge), Parry (20% negate incoming hit)</td>
 </tr>
 <tr>
-<td>2 — <strong>Dual Blades</strong></td>
+<td>2 — <strong>???</strong></td>
 <td>40% → 0%</td>
-<td>SPEED III permanent, Starburst Stream (16 consecutive hits over 4s — break with 8+ dmg in one hit), Finish Move (below 15%: guaranteed crit charge)</td>
+<td><em>Something awakens at 40% HP. Figure it out.</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Drop:</strong> Black coat elytra cosmetic · "§7Solo Player" title · Dual sword CMD set</p>
+<p><strong>Drop:</strong> Black coat elytra cosmetic · "§7Solo Player" title · <em>something else</em></p>
+<div class="admonition quote">
+<p class="admonition-title">Lore</p>
+<p><em>He who bests the Black Swordsman inherits more than a title.</em></p>
+</div>
+<div class="admonition note">
+<p><code>NjZhNzY2NjU3NTZlNzQ2YTZiNjM2YTZiNjM2YTZiNjM2YTZiNjM2YTZi</code></p>
+</div>
 </div>
 <div class="tabbed-block">
 <p><strong>Min Streak:</strong> 21 · <strong>Base Entity:</strong> Phantom / Vex</p>
@@ -2736,6 +2765,59 @@
 <h3 id="future-boss-pool-streak-28">Future Boss Pool (Streak 28+)<a class="headerlink" href="#future-boss-pool-streak-28" title="Permanent link">&para;</a></h3>
 <p>Bosses planned for future releases: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dragneel, Sung Jin-Woo, Giorno Giovanna.</p>
 <hr />
+<h2 id="admin-commands">Admin Commands<a class="headerlink" href="#admin-commands" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/bloodmoon</code></td>
+<td>Show Blood Moon status</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/bloodmoon start</code></td>
+<td>Force-activate Blood Moon</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/bloodmoon stop</code></td>
+<td>Force-deactivate Blood Moon</td>
+<td><code>nexusprism.events.bloodmoon.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai</code></td>
+<td>Show active Isekai boss fights</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai force &lt;player&gt;</code></td>
+<td>Force-start an Isekai boss fight for a player</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai force &lt;player&gt; &lt;bossId&gt;</code></td>
+<td>Force-start with a specific boss</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai stop &lt;player&gt;</code></td>
+<td>End an active boss fight</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+<tr>
+<td><code>/isekai list</code></td>
+<td>List all available boss IDs</td>
+<td><code>nexusprism.events.isekai.admin</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2749,6 +2831,11 @@
 <tr>
 <td><code>nexusprism.events.bloodmoon.admin</code></td>
 <td>Control Blood Moon manually</td>
+<td>OP</td>
+</tr>
+<tr>
+<td><code>nexusprism.events.isekai.admin</code></td>
+<td>Control Isekai boss fights manually</td>
 <td>OP</td>
 </tr>
 </tbody>

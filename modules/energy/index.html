@@ -1391,6 +1391,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#addon-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Addon API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Addon API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registering-a-custom-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a custom component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energynetwork-interface-selected-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EnergyNetwork interface (selected methods)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1844,6 +1894,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#addon-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Addon API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Addon API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querying networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registering-a-custom-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a custom component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energynetwork-interface-selected-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EnergyNetwork interface (selected methods)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1962,6 +2062,98 @@
 <hr />
 <h2 id="persistence">Persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h2>
 <p>Generator fuel levels and capacitor charge are saved to the <code>energy/</code> data folder and survive server restarts. Components rehydrate their state automatically on chunk load.</p>
+<hr />
+<h2 id="addon-api">Addon API<a class="headerlink" href="#addon-api" title="Permanent link">&para;</a></h2>
+<p>The energy system exposes a full API so addons can query networks and plug in custom components without importing any internal classes.</p>
+<h3 id="querying-networks">Querying networks<a class="headerlink" href="#querying-networks" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.energy.EnergyRegistry</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">EnergyRegistry</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">energy</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// Network at a specific block</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">energy</span><span class="p">.</span><span class="na">getNetworkAt</span><span class="p">(</span><span class="n">location</span><span class="p">).</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">net</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="na">getTotalStoredEnergy</span><span class="p">();</span><span class="w"> </span><span class="c1">// FE stored across all capacitors</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">cap</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="na">getTotalCapacity</span><span class="p">();</span><span class="w">     </span><span class="c1">// total storage capacity</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="kt">int</span><span class="w">  </span><span class="n">gen</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="na">getGenerationRate</span><span class="p">();</span><span class="w">    </span><span class="c1">// FE/t produced</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="kt">int</span><span class="w">  </span><span class="n">con</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="na">getConsumptionRate</span><span class="p">();</span><span class="w">   </span><span class="c1">// FE/t consumed</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="kt">int</span><span class="w">  </span><span class="n">flow</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="na">getNetFlow</span><span class="p">();</span><span class="w">           </span><span class="c1">// gen - con (positive = surplus)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">// All active networks on the server</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">energy</span><span class="p">.</span><span class="na">getAllNetworks</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">net</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="c1">// Quick helper</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">energy</span><span class="p">.</span><span class="na">getNetworkCount</span><span class="p">();</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">});</span>
+</code></pre></div>
+<h3 id="registering-a-custom-component">Registering a custom component<a class="headerlink" href="#registering-a-custom-component" title="Permanent link">&para;</a></h3>
+<p>Implement <code>EnergyComponent</code> to create custom generators, consumers, or storage blocks:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.energy.EnergyComponent</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.energy.EnergyComponentType</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.energy.EnergyRegistry</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// In onEnable or a block-place listener:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">EnergyRegistry</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">registerComponent</span><span class="p">(</span><span class="n">myComponent</span><span class="p">));</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">// In onDisable or a block-break listener — always clean up:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">EnergyRegistry</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">unregisterComponent</span><span class="p">(</span><span class="n">myComponent</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="energynetwork-interface-selected-methods"><code>EnergyNetwork</code> interface (selected methods)<a class="headerlink" href="#energynetwork-interface-selected-methods" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getTotalStoredEnergy()</code></td>
+<td><code>long</code></td>
+<td>Total FE stored in this network</td>
+</tr>
+<tr>
+<td><code>getTotalCapacity()</code></td>
+<td><code>long</code></td>
+<td>Total storage capacity in FE</td>
+</tr>
+<tr>
+<td><code>getGenerationRate()</code></td>
+<td><code>int</code></td>
+<td>FE/t produced by generators</td>
+</tr>
+<tr>
+<td><code>getConsumptionRate()</code></td>
+<td><code>int</code></td>
+<td>FE/t consumed by machines</td>
+</tr>
+<tr>
+<td><code>getNetFlow()</code></td>
+<td><code>int</code></td>
+<td><code>gen - con</code> (positive = surplus)</td>
+</tr>
+<tr>
+<td><code>requestEnergy(amount, simulate)</code></td>
+<td><code>long</code></td>
+<td>Withdraw energy; pass <code>true</code> to simulate</td>
+</tr>
+<tr>
+<td><code>provideEnergy(amount, simulate)</code></td>
+<td><code>long</code></td>
+<td>Inject energy; pass <code>true</code> to simulate</td>
+</tr>
+<tr>
+<td><code>getComponentAt(location)</code></td>
+<td><code>Optional&lt;EnergyComponent&gt;</code></td>
+<td>Component at a block</td>
+</tr>
+<tr>
+<td><code>getComponentsByType(type)</code></td>
+<td><code>Collection&lt;EnergyComponent&gt;</code></td>
+<td>Filter by <code>GENERATOR / STORAGE / CONSUMER / CABLE</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
