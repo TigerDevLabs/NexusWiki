@@ -59,6 +59,9 @@ Six independent skill trees, each leveled through specific activities. Leveling 
 | **Healer** | Wisdom, Max Health, Defense | Healing | Holy Aura (10), Revive (25), Sanctuary (50) |
 | **Alchemist** | Luck, Intelligence, Wisdom | Brewing | Toxic Cloud (10), Elixir Surge (25), Philosopher's Touch (50) |
 
+!!! warning "Hidden abilities"
+    Some abilities are not listed here. They exist — but their conditions, costs, and names are for you to discover.
+
 ### Ability Descriptions
 
 === "Warrior"
@@ -117,12 +120,32 @@ Six independent skill trees, each leveled through specific activities. Leveling 
 
 Or open `/skill`, click a tree, then click the ability icon. Cooldowns are tracked per player per ability.
 
+### Ability Key Bindings
+
+Players can bind unlocked abilities to hotbar slots for quick activation without typing commands. Open `/skill keybind` to configure bindings via GUI — each slot shows the ability name, mana cost, and current cooldown. Pressing the bound hotbar key activates the ability instantly.
+
 ### Commands
 
 | Command | Description | Permission |
 | --- | --- | --- |
-| `/skill` | Open Skill Tree Browser GUI (3-row, 6 tree icons) | `nexusprism.mmo.use` |
+| `/skill` | Open Skill Tree Browser GUI | `nexusprism.mmo.use` |
 | `/skill use <id>` | Activate an unlocked ability | `nexusprism.mmo.use` |
+| `/skill keybind` | Open the key binding GUI | `nexusprism.mmo.use` |
+
+---
+
+## Mana
+
+Each player has a **mana pool** that abilities draw from. Mana regenerates passively based on the **Wisdom** stat.
+
+| Mechanic | Detail |
+| --- | --- |
+| Base pool | Scales with MMO level |
+| Regen | Wisdom-based, always active |
+| On insufficient mana | Action bar: `§cNot enough mana!` — ability is blocked |
+| Cost display | Shown on ability icons and in the key binding GUI |
+
+The mana pool is also accessible from the [Addon API](../developer/api.md): `MmoRegistry.get()` → `getCurrentMana()`, `hasMana()`, `consumeMana()`.
 
 ---
 

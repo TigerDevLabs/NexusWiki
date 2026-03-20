@@ -195,6 +195,216 @@ NexusPrismAPI.crates().ifPresent(c ->
         c.giveKey(player, "VOTE_CRATE", 1));
 ```
 
+### MMO
+
+```java
+import io.github.otiger.nexusprism.api.mmo.MmoRegistry;
+
+UUID uuid = player.getUniqueId();
+
+MmoRegistry.get().ifPresent(mmo -> {
+    int level  = mmo.getLevel(uuid);
+    int mana   = mmo.getCurrentMana(uuid);
+    int maxMana = mmo.getMaxMana(uuid);
+
+    // Consume mana (returns false if not enough)
+    if (mmo.hasMana(uuid, 20) && mmo.consumeMana(uuid, 20)) {
+        // ability triggered
+    }
+
+    // Add XP to a skill tree
+    mmo.addSkillXp(player, "warrior", 100L);
+
+    // Add XP to a profession
+    mmo.addProfessionXp(player, "mining", 50L);
+
+    // Stat access
+    int strength = mmo.getStat(uuid, "STRENGTH");
+    List<String> abilities = mmo.getUnlockedAbilityIds(uuid);
+});
+```
+
+### Chat
+
+```java
+import io.github.otiger.nexusprism.api.chat.ChatRegistry;
+
+ChatRegistry.get().ifPresent(chat -> {
+    // Mute checks
+    boolean muted = chat.isMuted(uuid);
+
+    // Mute for 10 minutes
+    chat.mute(uuid, 10 * 60 * 1000L, "Spam", "Console");
+
+    // Broadcast to a channel
+    chat.broadcastToChannel("global", "[MyAddon] Server announcement!");
+
+    // Get which channel a player is currently active in
+    String activeChannel = chat.getActiveChannel(uuid);
+});
+```
+
+### Protections
+
+```java
+import io.github.otiger.nexusprism.api.protections.ProtectionsRegistry;
+
+ProtectionsRegistry.get().ifPresent(prot -> {
+    // PvP check at a location
+    boolean pvp = prot.isPvpAllowed(location);
+
+    // Duel state
+    boolean inDuel = prot.isInDuel(uuid);
+    prot.getDuelOpponent(uuid).ifPresent(opponentUuid -> { /* ... */ });
+
+    // Region info
+    List<String> regions = prot.getRegionNamesAt(location);
+    prot.getRegionOwnerAt(location).ifPresent(ownerUuid -> { /* ... */ });
+    int claimed = prot.getRegionCount(uuid);
+});
+```
+
+### Events (Blood Moon, Sacrifice Arc, Isekai Boss)
+
+```java
+import io.github.otiger.nexusprism.api.events.EventsRegistry;
+
+EventsRegistry.get().ifPresent(events -> {
+    boolean moonActive = events.isBloodMoonActive();
+    boolean inWorld    = events.isBloodMoonActive(player.getWorld());
+
+    int streak         = events.getSacrificeStreak(uuid);
+    boolean inSacrifice = events.isInSacrifice(uuid);
+    boolean hasBoss    = events.hasActiveBossFight(uuid);
+
+    // Check if player needs to sacrifice (streak milestone reached)
+    boolean mustSacrifice = events.needsSacrifice(uuid);
+});
+```
+
+### Holograms
+
+```java
+import io.github.otiger.nexusprism.api.holograms.HologramRegistry;
+
+HologramRegistry.get().ifPresent(holo -> {
+    holo.create("my_holo", location);
+    holo.addLine("my_holo", "§aHello from my addon!");
+    holo.setLine("my_holo", 0, "§eUpdated line");
+    holo.removeLine("my_holo", 0);
+    holo.moveTo("my_holo", newLocation);
+
+    // Per-player visibility
+    holo.showToPlayer("my_holo", player);
+    holo.hideFromPlayer("my_holo", player);
+
+    // Cleanup
+    holo.delete("my_holo");
+});
+```
+
+### Backpacks
+
+```java
+import io.github.otiger.nexusprism.api.backpack.BackpackRegistry;
+
+BackpackRegistry.get().ifPresent(bp -> {
+    int count   = bp.getBackpackCount(uuid);
+    int maxCount = bp.getMaxBackpacks(uuid);
+    boolean can = bp.canCreateBackpack(player);
+
+    List<UUID> ids = bp.getBackpackIds(uuid);
+
+    // Open GUIs
+    bp.openFirstBackpack(player);              // opens first backpack
+    bp.openBackpack(player, ids.get(0));       // opens specific one
+});
+```
+
+### Traits (Tarot cards)
+
+```java
+import io.github.otiger.nexusprism.api.traits.TraitsRegistry;
+
+TraitsRegistry.get().ifPresent(traits -> {
+    List<String> cards = traits.getCards(uuid);     // card names the player holds
+    boolean hasCard    = traits.hasCard(uuid, "The Tower");
+    int researchLevel  = traits.getResearchLevel(uuid);
+    traits.setResearchLevel(uuid, 5);
+
+    // All available card names
+    List<String> allCards = traits.getCardNames();
+
+    // Cooldown info (ms remaining)
+    long rerollMs = traits.fullRerollCooldownRemainingMs(uuid);
+});
+```
+
+### Discord
+
+```java
+import io.github.otiger.nexusprism.api.discord.DiscordRegistry;
+
+DiscordRegistry.get().ifPresent(discord -> {
+    // Link status
+    boolean linked = discord.isLinked(uuid);
+    discord.getDiscordId(uuid).ifPresent(discordId -> { /* ... */ });
+    discord.getMinecraftUuid("123456789").ifPresent(mcUuid -> { /* ... */ });
+
+    // Send a plain message to a configured channel
+    discord.sendMessage("server-log", "[MyAddon] Something happened!");
+
+    // Send a webhook-style message with custom display name and avatar
+    discord.sendWebhook("server-log", "MyAddon Bot", null, "Player did a thing.");
+
+    // Generate a link code for a player
+    String code = discord.generateLinkCode(uuid);
+    player.sendMessage("Your link code: " + code);
+});
+```
+
+### Jobs
+
+```java
+import io.github.otiger.nexusprism.api.economy.JobRegistry;
+
+JobRegistry.get().ifPresent(jobs -> {
+    Optional<String> jobId = jobs.getActiveJob(uuid);
+    boolean hasJob = jobs.hasJob(uuid);
+
+    if (hasJob) {
+        int level = jobs.getLevel(uuid, jobId.get());
+        long xp   = jobs.getXp(uuid, jobId.get());
+    }
+
+    List<String> allJobs = jobs.getAllJobIds(); // e.g. ["miner", "farmer", "hunter"]
+
+    // Force-join a job
+    jobs.joinJob(uuid, "miner");
+
+    // Leave current job
+    jobs.leaveJob(uuid);
+});
+```
+
+### Energy networks
+
+```java
+import io.github.otiger.nexusprism.api.energy.EnergyRegistry;
+
+EnergyRegistry.get().ifPresent(energy -> {
+    energy.getNetworkAt(location).ifPresent(net -> {
+        long stored = net.getTotalStoredEnergy();
+        long cap    = net.getTotalCapacity();
+        int  netFlow = net.getNetFlow(); // positive = surplus
+    });
+
+    // Register / unregister a custom EnergyComponent
+    energy.registerComponent(myComponent);    // call in onEnable / block-place listener
+    energy.unregisterComponent(myComponent);  // call in onDisable / block-break listener
+});
+```
+
 ---
 
 ## Step 5 — Custom items
@@ -404,6 +614,62 @@ Restart the server. You should see:
 [NexusPrism] [MyAddon] Hooked — NexusPrism 1.0.0-DEV
 ```
 
+!!! tip "Starter template"
+    A ready-to-clone Maven project is available at **[O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example)**. It includes working examples of every API surface described in this guide.
+
+---
+
+## Step 10 — Content loading from addons
+
+Native addons can register custom **items**, **machines**, **crafting recipes**, and **infinity recipes** directly from YAML files bundled in their JAR. NexusPrism merges this content into the server registry at load time.
+
+```java
+import io.github.otiger.nexusprism.api.content.ContentLoadResult;
+
+@Override
+public void onEnable() {
+    // content() returns a fluent builder scoped to this addon.
+    // Files are read from the addon's data folder first,
+    // then extracted from the JAR if not found on disk.
+    ContentLoadResult result = content()
+            .items("items.yml")               // custom item definitions
+            .machines("machines.yml")         // custom machine type definitions
+            .recipes("recipes.yml")           // standard crafting recipes
+            .infinityRecipes("infinity_recipes") // all *.yml in this directory
+            .register();
+
+    result.logTo(getLogger()); // prints counts & errors
+}
+```
+
+### Machine processing recipes (programmatic)
+
+If you want to add input→output rules to an **existing machine type** from code (rather than YAML), use `MachineProcessingRegistry`. The engine checks these alongside YAML-defined recipes.
+
+```java
+import io.github.otiger.nexusprism.api.machines.recipe.MachineProcessingRecipe;
+import io.github.otiger.nexusprism.api.machines.recipe.MachineProcessingRegistry;
+
+@Override
+public void onEnable() {
+    MachineProcessingRegistry.register(
+        MachineProcessingRecipe.builder("my_addon_recipe", "EXAMPLE_FURNACE")
+                .input("DIAMOND", 1)
+                .input("EXAMPLE_DUST", 4)
+                .output("EXAMPLE_INGOT", 3)
+                .time(120)          // ticks; 0 = machine default
+                .source(getId())    // used for cleanup on disable
+                .build()
+    );
+}
+
+@Override
+public void onDisable() {
+    // Always clean up — avoids stale entries after reload
+    MachineProcessingRegistry.unregisterBySource(getId());
+}
+```
+
 ---
 
 ## Complete integration example
@@ -455,6 +721,7 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 | API surface | Class / method |
 |---|---|
 | Get API instance | `NexusPrismAPI.get()` |
+| **Core providers** | |
 | Economy | `NexusPrismAPI.economy()` → `EconomyProvider` |
 | Auth | `NexusPrismAPI.auth()` → `AuthProvider` |
 | Clans | `NexusPrismAPI.clans()` → `ClanProvider` |
@@ -462,12 +729,27 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 | Votes | `NexusPrismAPI.votes()` → `VoteProvider` |
 | Enchantments | `NexusPrismAPI.enchants()` → `CustomEnchantProvider` |
 | Crates | `NexusPrismAPI.crates()` → `CrateProvider` |
+| **Module providers** | |
+| MMO (level, stats, mana, skills, professions) | `MmoRegistry.get()` → `MmoProvider` |
+| Chat (mute, channels, broadcast) | `ChatRegistry.get()` → `ChatProvider` |
+| Protections (PvP, regions, duels) | `ProtectionsRegistry.get()` → `ProtectionsProvider` |
+| Events (Blood Moon, Sacrifice, Isekai) | `EventsRegistry.get()` → `EventsProvider` |
+| Holograms (create, update, show/hide) | `HologramRegistry.get()` → `HologramProvider` |
+| Backpacks (count, open GUI) | `BackpackRegistry.get()` → `BackpackProvider` |
+| Traits / Tarot cards | `TraitsRegistry.get()` → `TraitsProvider` |
+| Discord (link, send message/webhook) | `DiscordRegistry.get()` → `DiscordProvider` |
+| Jobs (active job, level, XP) | `JobRegistry.get()` → `JobProvider` |
+| Energy networks | `EnergyRegistry.get()` → `EnergyProvider` |
+| **Content & extensibility** | |
+| Addon content loading | `content().items().machines().recipes().register()` |
+| Machine processing recipes | `MachineProcessingRegistry.register(MachineProcessingRecipe)` |
 | Item ID lookup | `NexusItemBuilder.getItemId(ItemStack)` |
 | Item registry | `nexus.getService(ItemRegistry.class)` |
 | Territory | `TerritoryRegistry.register(TerritoryProvider)` |
-| Event state | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
-| Structures | `StructureRegistry.register(StructureProvider)` |
+| Event state flags | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
+| Structure loot | `StructureRegistry.register(StructureProvider)` |
 | Native addon base | `AbstractNexusAddon` + `addon.yml` |
+| Starter template | [O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example) |
 
 ---
 

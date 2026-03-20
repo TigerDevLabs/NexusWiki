@@ -228,9 +228,15 @@ finalStat = baseStat × (1 + (streak - 7) × 0.2)
     | Phase | HP Range | Key Abilities |
     | --- | --- | --- |
     | 1 | 100% → 40% | Sword Skill Vorpal (straight-line 5-hit charge), Parry (20% negate incoming hit) |
-    | 2 — **Dual Blades** | 40% → 0% | SPEED III permanent, Starburst Stream (16 consecutive hits over 4s — break with 8+ dmg in one hit), Finish Move (below 15%: guaranteed crit charge) |
+    | 2 — **???** | 40% → 0% | *Something awakens at 40% HP. Figure it out.* |
 
-    **Drop:** Black coat elytra cosmetic · "§7Solo Player" title · Dual sword CMD set
+    **Drop:** Black coat elytra cosmetic · "§7Solo Player" title · *something else*
+
+    !!! quote "Lore"
+        *He who bests the Black Swordsman inherits more than a title.*
+
+    !!! note ""
+        `NjZhNzY2NjU3NTZlNzQ2YTZiNjM2YTZiNjM2YTZiNjM2YTZiNjM2YTZi`
 
 === "Gojo Satoru"
 
@@ -267,8 +273,24 @@ Bosses planned for future releases: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dr
 
 ---
 
+## Admin Commands
+
+| Command | Description | Permission |
+| --- | --- | --- |
+| `/bloodmoon` | Show Blood Moon status | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon start` | Force-activate Blood Moon | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon stop` | Force-deactivate Blood Moon | `nexusprism.events.bloodmoon.admin` |
+| `/isekai` | Show active Isekai boss fights | `nexusprism.events.isekai.admin` |
+| `/isekai force <player>` | Force-start an Isekai boss fight for a player | `nexusprism.events.isekai.admin` |
+| `/isekai force <player> <bossId>` | Force-start with a specific boss | `nexusprism.events.isekai.admin` |
+| `/isekai stop <player>` | End an active boss fight | `nexusprism.events.isekai.admin` |
+| `/isekai list` | List all available boss IDs | `nexusprism.events.isekai.admin` |
+
+---
+
 ## Permissions
 
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.events.bloodmoon.admin` | Control Blood Moon manually | OP |
+| `nexusprism.events.isekai.admin` | Control Isekai boss fights manually | OP |
