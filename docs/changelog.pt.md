@@ -9,6 +9,15 @@ PH0
 
 PH1
 
+- PH2 Use nomes corretos de métodos ChannelRegistry e ChatChannel em ChatProviderImpl
+
+---
+
+PH0
+
+
+PH1
+
 - Verificação premium baseada em PH2 UUID com cache persistente
 - Comando PH3 Admin /isekai com início forçado e seleção de chefe
 - Sistema dinâmico de custo de mana PH4 e nova capacidade de lâmina dupla

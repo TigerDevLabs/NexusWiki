@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-03-19] · `1875bb0`
+
+
+### 🐛 Fixed
+
+- **chat**: Use correct ChannelRegistry and ChatChannel method names in ChatProviderImpl
+
+---
+
 ## [2026-03-19] · `55c634e`
 
 
