@@ -5,6 +5,23 @@
 
 ---
 
+## [2026-03-19] · `bb5ecb9`
+
+
+### ✨ Added
+
+- **energy**: Expose energy API via EnergyProvider/EnergyRegistry
+- **addon-example**: Add EnergyRegistry usage example
+
+### 🐛 Fixed
+
+- **economy**: Use public field def.id instead of nonexistent getId() in JobProviderImpl
+- **protections**: Use correct Region.getFlag(RegionFlag) and DuelManager API in ProtectionsProviderImpl
+- **providers**: Correct HologramLine, BloodMoonManager.getWorldName, and EventsProviderImpl world check
+- **plugin**: Resolve BackpackProviderImpl and MachineRegistrarImpl compile errors
+
+---
+
 ## [2026-03-19] · `1875bb0`
 
 

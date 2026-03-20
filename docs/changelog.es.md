@@ -9,6 +9,23 @@ PH0
 
 PH1
 
+- PH2 Expose API de energía a través de EnergyProvider/EnergyRegistry
+- Ejemplo de uso de PH3 Add EnergyRegistry
+
+PH4
+
+- PH5 Utilice el campo público def.id en lugar del inexistente getId() en JobProviderImpl
+- PH6 Utilice la API Region.getFlag(RegionFlag) y DuelManager correcta en ProtectionsProviderImpl
+- Comprobación mundial PH7 Correct HologramLine, BloodMoonManager.getWorldName y EventsProviderImpl
+- PH8 Resolve errores de compilación de BackpackProviderImpl y MachineRegistrarImpl
+
+---
+
+PH0
+
+
+PH1
+
 - PH2 Utilice los nombres correctos de los métodos ChannelRegistry y ChatChannel en ChatProviderImpl
 
 ---
