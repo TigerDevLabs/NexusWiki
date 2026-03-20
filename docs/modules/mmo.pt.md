@@ -109,6 +109,9 @@ Seis árvores de habilidades independentes, cada uma aumentada de nível por ati
     | 25 | **Surto de Elixir** | Compartilhar todas as suas poções ativas com aliados próximos |
     | 50 | **Toque do Filósofo** | Chance passiva de duplicar qualquer poção preparada |
 
+!!! warning "Habilidades ocultas"
+    Algumas habilidades não estão listadas aqui. Elas existem — mas suas condições, custos e nomes são para você descobrir.
+
 ### Usando Habilidades
 
 ```
@@ -117,12 +120,32 @@ Seis árvores de habilidades independentes, cada uma aumentada de nível por ati
 
 Ou abra `/skill`, clique em uma árvore e depois clique no ícone da habilidade. Os tempos de recarga são rastreados por jogador por habilidade.
 
+### Vinculação de Teclas de Habilidades
+
+Jogadores podem vincular habilidades desbloqueadas a slots da hotbar para ativação rápida sem digitar comandos. Abra `/skill keybind` para configurar os vínculos via GUI — cada slot mostra o nome da habilidade, o custo de mana e o cooldown atual. Pressionar a tecla da hotbar vinculada ativa a habilidade instantaneamente.
+
 ### Comandos
 
 | Comando | Descrição | Permissão |
 | --- | --- | --- |
-| `/skill` | Abrir GUI do Navegador de Árvores de Habilidades | `nexusprism.mmo.use` |
+| `/skill` | Abrir o GUI do Navegador de Árvores de Habilidades | `nexusprism.mmo.use` |
 | `/skill use <id>` | Ativar uma habilidade desbloqueada | `nexusprism.mmo.use` |
+| `/skill keybind` | Abrir o GUI de vinculação de teclas | `nexusprism.mmo.use` |
+
+---
+
+## Mana
+
+Cada jogador possui uma **reserva de mana** que as habilidades consomem. O mana regenera passivamente com base no atributo **Sabedoria**.
+
+| Mecânica | Detalhe |
+| --- | --- |
+| Reserva base | Escala com o nível MMO |
+| Regeneração | Baseada em Sabedoria, sempre ativa |
+| Mana insuficiente | Barra de ação: `§cMana insuficiente!` — habilidade bloqueada |
+| Exibição do custo | Mostrado nos ícones de habilidade e no GUI de vinculação de teclas |
+
+O pool de mana também está acessível pela [API de Addon](../developer/api.pt.md): `MmoRegistry.get()` → `getCurrentMana()`, `hasMana()`, `consumeMana()`.
 
 ---
 

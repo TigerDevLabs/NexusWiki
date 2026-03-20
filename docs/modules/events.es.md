@@ -221,14 +221,20 @@ statFinal = statBase × (1 + (racha - 7) × 0,2)
 
 === "Kirito"
 
-    **Racha Mín.:** 14 · **Entidad Base:** Zombie
+    **Racha Mínima:** 14 · **Entidad Base:** Zombie
 
     | Fase | Rango de HP | Habilidades Clave |
     | --- | --- | --- |
-    | 1 | 100% → 40% | Skill Vorpal (carga de 5 golpes en línea recta), Parada (20% de negar golpe recibido) |
-    | 2 — **Doble Espada** | 40% → 0% | VELOCIDAD III permanente, Starburst Stream (16 golpes consecutivos en 4s — rompe con 8+ daño en un golpe), Golpe Final (por debajo del 15%: carga crit garantizada) |
+    | 1 | 100% → 40% | Habilidad de Espada Vorpal (carga de 5 golpes en línea recta), Parar (20% de probabilidad de negar un golpe) |
+    | 2 — **???** | 40% → 0% | *Algo despierta al 40% de HP. Descúbrelo tú mismo.* |
 
-    **Botín:** Cosmético de élitra abrigo negro · Título `§7Solo Player` · Set de espadas dobles CMD
+    **Botín:** Cosmético de élitra abrigo negro · Título `§7Jugador Solo` · ???
+
+    !!! quote "Lore"
+        *Aquel que derrota al Espadachín Negro hereda más que un título.*
+
+    !!! note ""
+        `NjZhNzY2NjU3NTZlNzQ2YTZiNjM2YTZiNjM2YTZiNjM2YTZiNjM2YTZi`
 
 === "Gojo Satoru"
 
@@ -265,8 +271,24 @@ Jefes planificados para lanzamientos futuros: Goku, Naruto Uzumaki, Aizen Sosuke
 
 ---
 
+## Comandos Administrativos
+
+| Comando | Descripción | Permiso |
+| --- | --- | --- |
+| `/bloodmoon` | Mostrar estado de la Luna de Sangre | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon start` | Forzar activación de la Luna de Sangre | `nexusprism.events.bloodmoon.admin` |
+| `/bloodmoon stop` | Forzar desactivación de la Luna de Sangre | `nexusprism.events.bloodmoon.admin` |
+| `/isekai` | Mostrar peleas activas del jefe Isekai | `nexusprism.events.isekai.admin` |
+| `/isekai force <jugador>` | Forzar el inicio de una pelea para un jugador | `nexusprism.events.isekai.admin` |
+| `/isekai force <jugador> <jefeId>` | Forzar con un jefe específico | `nexusprism.events.isekai.admin` |
+| `/isekai stop <jugador>` | Finalizar una pelea activa | `nexusprism.events.isekai.admin` |
+| `/isekai list` | Listar todos los IDs de jefes disponibles | `nexusprism.events.isekai.admin` |
+
+---
+
 ## Permisos
 
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
 | `nexusprism.events.bloodmoon.admin` | Controlar la Luna de Sangre manualmente | OP |
+| `nexusprism.events.isekai.admin` | Controlar peleas de jefes Isekai manualmente | OP |

@@ -190,6 +190,192 @@ NexusPrismAPI.crates().ifPresent(c ->
         c.giveKey(player, "VOTE_CRATE", 1));
 ```
 
+### MMO
+
+```java
+import io.github.otiger.nexusprism.api.mmo.MmoRegistry;
+
+UUID uuid = player.getUniqueId();
+
+MmoRegistry.get().ifPresent(mmo -> {
+    int nivel  = mmo.getLevel(uuid);
+    int mana   = mmo.getCurrentMana(uuid);
+    int maxMana = mmo.getMaxMana(uuid);
+
+    // Consome mana (retorna false se insuficiente)
+    if (mmo.hasMana(uuid, 20) && mmo.consumeMana(uuid, 20)) {
+        // habilidade ativada
+    }
+
+    // Adiciona XP a uma árvore de habilidades
+    mmo.addSkillXp(player, "warrior", 100L);
+
+    // Adiciona XP a uma profissão
+    mmo.addProfessionXp(player, "mining", 50L);
+
+    int forca = mmo.getStat(uuid, "STRENGTH");
+    List<String> habilidades = mmo.getUnlockedAbilityIds(uuid);
+});
+```
+
+### Chat
+
+```java
+import io.github.otiger.nexusprism.api.chat.ChatRegistry;
+
+ChatRegistry.get().ifPresent(chat -> {
+    boolean silenciado = chat.isMuted(uuid);
+    chat.mute(uuid, 10 * 60 * 1000L, "Spam", "Console");
+    chat.broadcastToChannel("global", "[MeuAddon] Anúncio do servidor!");
+    String canalAtivo = chat.getActiveChannel(uuid);
+});
+```
+
+### Proteções
+
+```java
+import io.github.otiger.nexusprism.api.protections.ProtectionsRegistry;
+
+ProtectionsRegistry.get().ifPresent(prot -> {
+    boolean pvp = prot.isPvpAllowed(location);
+    boolean emDuelo = prot.isInDuel(uuid);
+    prot.getDuelOpponent(uuid).ifPresent(oponente -> { /* ... */ });
+    List<String> regioes = prot.getRegionNamesAt(location);
+    int reivindicadas = prot.getRegionCount(uuid);
+});
+```
+
+### Eventos (Lua de Sangue, Arco do Sacrifício, Chefe Isekai)
+
+```java
+import io.github.otiger.nexusprism.api.events.EventsRegistry;
+
+EventsRegistry.get().ifPresent(events -> {
+    boolean luaAtiva   = events.isBloodMoonActive();
+    int sequencia      = events.getSacrificeStreak(uuid);
+    boolean emSacrificio = events.isInSacrifice(uuid);
+    boolean temChefe   = events.hasActiveBossFight(uuid);
+});
+```
+
+### Hologramas
+
+```java
+import io.github.otiger.nexusprism.api.holograms.HologramRegistry;
+
+HologramRegistry.get().ifPresent(holo -> {
+    holo.create("meu_holo", location);
+    holo.addLine("meu_holo", "§aOlá do meu addon!");
+    holo.setLine("meu_holo", 0, "§eLinha atualizada");
+    holo.showToPlayer("meu_holo", player);
+    holo.delete("meu_holo");
+});
+```
+
+### Mochilas
+
+```java
+import io.github.otiger.nexusprism.api.backpack.BackpackRegistry;
+
+BackpackRegistry.get().ifPresent(bp -> {
+    int quantidade = bp.getBackpackCount(uuid);
+    bp.openFirstBackpack(player);
+    bp.openBackpack(player, ids.get(0));
+});
+```
+
+### Traits (Cartas de Tarô)
+
+```java
+import io.github.otiger.nexusprism.api.traits.TraitsRegistry;
+
+TraitsRegistry.get().ifPresent(traits -> {
+    List<String> cartas = traits.getCards(uuid);
+    boolean temCarta    = traits.hasCard(uuid, "The Tower");
+    int nivelPesquisa   = traits.getResearchLevel(uuid);
+});
+```
+
+### Discord
+
+```java
+import io.github.otiger.nexusprism.api.discord.DiscordRegistry;
+
+DiscordRegistry.get().ifPresent(discord -> {
+    boolean vinculado = discord.isLinked(uuid);
+    discord.sendMessage("server-log", "[MeuAddon] Algo aconteceu!");
+    discord.sendWebhook("server-log", "Bot MeuAddon", null, "Jogador fez algo.");
+});
+```
+
+### Empregos
+
+```java
+import io.github.otiger.nexusprism.api.economy.JobRegistry;
+
+JobRegistry.get().ifPresent(empregos -> {
+    Optional<String> empregoId = empregos.getActiveJob(uuid);
+    boolean temEmprego = empregos.hasJob(uuid);
+    if (temEmprego) {
+        int nivel = empregos.getLevel(uuid, empregoId.get());
+    }
+    empregos.joinJob(uuid, "miner");
+    empregos.leaveJob(uuid);
+});
+```
+
+### Redes de Energia
+
+```java
+import io.github.otiger.nexusprism.api.energy.EnergyRegistry;
+
+EnergyRegistry.get().ifPresent(energia -> {
+    energia.getNetworkAt(location).ifPresent(rede -> {
+        long armazenado = rede.getTotalStoredEnergy();
+        long cap        = rede.getTotalCapacity();
+        int  fluxo      = rede.getNetFlow();
+    });
+    energia.registerComponent(meuComponente);
+    energia.unregisterComponent(meuComponente);
+});
+```
+
+---
+
+## Passo 10 — Carregamento de Conteúdo de Addons
+
+Addons nativos podem registrar **itens**, **máquinas**, **receitas de crafting** e **receitas de infinity** diretamente de arquivos YAML empacotados no JAR.
+
+```java
+ContentLoadResult result = content()
+        .items("items.yml")
+        .machines("machines.yml")
+        .recipes("recipes.yml")
+        .infinityRecipes("infinity_recipes")
+        .register();
+
+result.logTo(getLogger());
+```
+
+### Receitas de Processamento de Máquinas (programático)
+
+```java
+import io.github.otiger.nexusprism.api.machines.recipe.MachineProcessingRecipe;
+import io.github.otiger.nexusprism.api.machines.recipe.MachineProcessingRegistry;
+
+MachineProcessingRegistry.register(
+    MachineProcessingRecipe.builder("minha_receita", "EXAMPLE_FURNACE")
+            .input("DIAMOND", 1)
+            .output("EXAMPLE_INGOT", 3)
+            .time(120)
+            .source(getId())
+            .build()
+);
+
+// Em onDisable — sempre limpe:
+MachineProcessingRegistry.unregisterBySource(getId());
+```
+
 ---
 
 ## Passo 5 — Itens personalizados
@@ -414,24 +600,40 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 
 ---
 
-## Referência rápida
+## Referência Rápida
 
 | Superfície da API | Classe / método |
 |---|---|
-| Obter instância | `NexusPrismAPI.get()` |
+| Obter instância da API | `NexusPrismAPI.get()` |
+| **Provedores principais** | |
 | Economia | `NexusPrismAPI.economy()` → `EconomyProvider` |
-| Autenticação | `NexusPrismAPI.auth()` → `AuthProvider` |
+| Auth | `NexusPrismAPI.auth()` → `AuthProvider` |
 | Clãs | `NexusPrismAPI.clans()` → `ClanProvider` |
 | Essentials | `NexusPrismAPI.essentials()` → `EssentialsProvider` |
 | Votos | `NexusPrismAPI.votes()` → `VoteProvider` |
 | Encantamentos | `NexusPrismAPI.enchants()` → `CustomEnchantProvider` |
 | Caixas | `NexusPrismAPI.crates()` → `CrateProvider` |
+| **Provedores de módulos** | |
+| MMO (nível, stats, mana, skills, profissões) | `MmoRegistry.get()` → `MmoProvider` |
+| Chat (silêncio, canais, broadcast) | `ChatRegistry.get()` → `ChatProvider` |
+| Proteções (PvP, regiões, duelos) | `ProtectionsRegistry.get()` → `ProtectionsProvider` |
+| Eventos (Lua de Sangue, Sacrifício, Isekai) | `EventsRegistry.get()` → `EventsProvider` |
+| Hologramas (criar, atualizar, mostrar/ocultar) | `HologramRegistry.get()` → `HologramProvider` |
+| Mochilas (quantidade, abrir GUI) | `BackpackRegistry.get()` → `BackpackProvider` |
+| Traits / Cartas de Tarô | `TraitsRegistry.get()` → `TraitsProvider` |
+| Discord (vincular, enviar mensagem/webhook) | `DiscordRegistry.get()` → `DiscordProvider` |
+| Empregos (emprego ativo, nível, XP) | `JobRegistry.get()` → `JobProvider` |
+| Redes de energia | `EnergyRegistry.get()` → `EnergyProvider` |
+| **Conteúdo e extensibilidade** | |
+| Carregamento de conteúdo de addon | `content().items().machines().recipes().register()` |
+| Receitas de processamento de máquinas | `MachineProcessingRegistry.register(MachineProcessingRecipe)` |
 | ID de item | `NexusItemBuilder.getItemId(ItemStack)` |
 | Registro de itens | `nexus.getService(ItemRegistry.class)` |
 | Território | `TerritoryRegistry.register(TerritoryProvider)` |
 | Estado de eventos | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
 | Estruturas | `StructureRegistry.register(StructureProvider)` |
 | Base de addon nativo | `AbstractNexusAddon` + `addon.yml` |
+| Template inicial | [O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example) |
 
 ---
 

@@ -190,6 +190,157 @@ NexusPrismAPI.crates().ifPresent(c ->
         c.giveKey(player, "VOTE_CRATE", 1));
 ```
 
+### MMO
+
+```java
+MmoRegistry.get().ifPresent(mmo -> {
+    int nivel  = mmo.getLevel(uuid);
+    int mana   = mmo.getCurrentMana(uuid);
+    if (mmo.hasMana(uuid, 20) && mmo.consumeMana(uuid, 20)) {
+        // habilidad activada
+    }
+    mmo.addSkillXp(player, "warrior", 100L);
+    mmo.addProfessionXp(player, "mining", 50L);
+    int fuerza = mmo.getStat(uuid, "STRENGTH");
+});
+```
+
+### Chat
+
+```java
+ChatRegistry.get().ifPresent(chat -> {
+    boolean silenciado = chat.isMuted(uuid);
+    chat.mute(uuid, 10 * 60 * 1000L, "Spam", "Consola");
+    chat.broadcastToChannel("global", "[MiAddon] ¡Anuncio del servidor!");
+    String canalActivo = chat.getActiveChannel(uuid);
+});
+```
+
+### Protecciones
+
+```java
+ProtectionsRegistry.get().ifPresent(prot -> {
+    boolean pvp = prot.isPvpAllowed(location);
+    boolean enDuelo = prot.isInDuel(uuid);
+    prot.getDuelOpponent(uuid).ifPresent(oponente -> { /* ... */ });
+    List<String> regiones = prot.getRegionNamesAt(location);
+});
+```
+
+### Eventos (Luna de Sangre, Arco del Sacrificio, Jefe Isekai)
+
+```java
+EventsRegistry.get().ifPresent(events -> {
+    boolean lunaActiva   = events.isBloodMoonActive();
+    int racha            = events.getSacrificeStreak(uuid);
+    boolean enSacrificio = events.isInSacrifice(uuid);
+    boolean tienJefe     = events.hasActiveBossFight(uuid);
+});
+```
+
+### Hologramas
+
+```java
+HologramRegistry.get().ifPresent(holo -> {
+    holo.create("mi_holo", location);
+    holo.addLine("mi_holo", "§a¡Hola desde mi addon!");
+    holo.setLine("mi_holo", 0, "§eLínea actualizada");
+    holo.showToPlayer("mi_holo", player);
+    holo.delete("mi_holo");
+});
+```
+
+### Mochilas
+
+```java
+BackpackRegistry.get().ifPresent(bp -> {
+    int cantidad = bp.getBackpackCount(uuid);
+    bp.openFirstBackpack(player);
+    bp.openBackpack(player, ids.get(0));
+});
+```
+
+### Traits (Cartas del Tarot)
+
+```java
+TraitsRegistry.get().ifPresent(traits -> {
+    List<String> cartas = traits.getCards(uuid);
+    boolean tieneCarta  = traits.hasCard(uuid, "The Tower");
+    int nivelInvestigacion = traits.getResearchLevel(uuid);
+});
+```
+
+### Discord
+
+```java
+DiscordRegistry.get().ifPresent(discord -> {
+    boolean vinculado = discord.isLinked(uuid);
+    discord.sendMessage("server-log", "[MiAddon] ¡Algo ocurrió!");
+    discord.sendWebhook("server-log", "Bot MiAddon", null, "El jugador hizo algo.");
+});
+```
+
+### Empleos
+
+```java
+JobRegistry.get().ifPresent(empleos -> {
+    Optional<String> empleoId = empleos.getActiveJob(uuid);
+    boolean tieneEmpleo = empleos.hasJob(uuid);
+    if (tieneEmpleo) {
+        int nivel = empleos.getLevel(uuid, empleoId.get());
+    }
+    empleos.joinJob(uuid, "miner");
+    empleos.leaveJob(uuid);
+});
+```
+
+### Redes de Energía
+
+```java
+EnergyRegistry.get().ifPresent(energia -> {
+    energia.getNetworkAt(location).ifPresent(red -> {
+        long almacenado = red.getTotalStoredEnergy();
+        long cap        = red.getTotalCapacity();
+        int  flujo      = red.getNetFlow();
+    });
+    energia.registerComponent(miComponente);
+    energia.unregisterComponent(miComponente);
+});
+```
+
+---
+
+## Paso 10 — Carga de Contenido desde Addons
+
+Los addons nativos pueden registrar **ítems**, **máquinas**, **recetas de crafteo** y **recetas de infinity** directamente desde archivos YAML empaquetados en el JAR.
+
+```java
+ContentLoadResult result = content()
+        .items("items.yml")
+        .machines("machines.yml")
+        .recipes("recipes.yml")
+        .infinityRecipes("infinity_recipes")
+        .register();
+
+result.logTo(getLogger());
+```
+
+### Recetas de Procesamiento de Máquinas (programático)
+
+```java
+MachineProcessingRegistry.register(
+    MachineProcessingRecipe.builder("mi_receta", "EXAMPLE_FURNACE")
+            .input("DIAMOND", 1)
+            .output("EXAMPLE_INGOT", 3)
+            .time(120)
+            .source(getId())
+            .build()
+);
+
+// En onDisable — siempre limpia:
+MachineProcessingRegistry.unregisterBySource(getId());
+```
+
 ---
 
 ## Paso 5 — Ítems personalizados
@@ -414,24 +565,40 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 
 ---
 
-## Referencia rápida
+## Referencia Rápida
 
-| Superficie de la API | Clase / método |
+| Superficie de API | Clase / método |
 |---|---|
-| Obtener instancia | `NexusPrismAPI.get()` |
+| Obtener instancia de API | `NexusPrismAPI.get()` |
+| **Proveedores principales** | |
 | Economía | `NexusPrismAPI.economy()` → `EconomyProvider` |
-| Autenticación | `NexusPrismAPI.auth()` → `AuthProvider` |
+| Auth | `NexusPrismAPI.auth()` → `AuthProvider` |
 | Clanes | `NexusPrismAPI.clans()` → `ClanProvider` |
 | Essentials | `NexusPrismAPI.essentials()` → `EssentialsProvider` |
 | Votos | `NexusPrismAPI.votes()` → `VoteProvider` |
 | Encantamientos | `NexusPrismAPI.enchants()` → `CustomEnchantProvider` |
 | Cofres | `NexusPrismAPI.crates()` → `CrateProvider` |
+| **Proveedores de módulos** | |
+| MMO (nivel, stats, maná, skills, profesiones) | `MmoRegistry.get()` → `MmoProvider` |
+| Chat (silencio, canales, broadcast) | `ChatRegistry.get()` → `ChatProvider` |
+| Protecciones (PvP, regiones, duelos) | `ProtectionsRegistry.get()` → `ProtectionsProvider` |
+| Eventos (Luna de Sangre, Sacrificio, Isekai) | `EventsRegistry.get()` → `EventsProvider` |
+| Hologramas (crear, actualizar, mostrar/ocultar) | `HologramRegistry.get()` → `HologramProvider` |
+| Mochilas (cantidad, abrir GUI) | `BackpackRegistry.get()` → `BackpackProvider` |
+| Traits / Cartas del Tarot | `TraitsRegistry.get()` → `TraitsProvider` |
+| Discord (vincular, enviar mensaje/webhook) | `DiscordRegistry.get()` → `DiscordProvider` |
+| Empleos (empleo activo, nivel, XP) | `JobRegistry.get()` → `JobProvider` |
+| Redes de energía | `EnergyRegistry.get()` → `EnergyProvider` |
+| **Contenido y extensibilidad** | |
+| Carga de contenido de addon | `content().items().machines().recipes().register()` |
+| Recetas de procesamiento de máquinas | `MachineProcessingRegistry.register(MachineProcessingRecipe)` |
 | ID de ítem | `NexusItemBuilder.getItemId(ItemStack)` |
 | Registro de ítems | `nexus.getService(ItemRegistry.class)` |
 | Territorio | `TerritoryRegistry.register(TerritoryProvider)` |
 | Estado de eventos | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
 | Estructuras | `StructureRegistry.register(StructureProvider)` |
 | Base de addon nativo | `AbstractNexusAddon` + `addon.yml` |
+| Plantilla inicial | [O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example) |
 
 ---
 

@@ -109,6 +109,9 @@ Seis árboles de habilidades independientes, cada uno aumentado de nivel por act
     | 25 | **Oleada de Elixir** | Compartir todas tus pociones activas con aliados cercanos |
     | 50 | **Toque del Filósofo** | Probabilidad pasiva de duplicar cualquier poción elaborada |
 
+!!! warning "Habilidades ocultas"
+    Algunas habilidades no están listadas aquí. Existen — pero sus condiciones, costos y nombres son para que tú los descubras.
+
 ### Usar Habilidades
 
 ```
@@ -117,12 +120,32 @@ Seis árboles de habilidades independientes, cada uno aumentado de nivel por act
 
 O abre `/skill`, haz clic en un árbol y luego en el ícono de la habilidad. Los tiempos de recarga se rastrean por jugador por habilidad.
 
+### Vinculación de Teclas de Habilidades
+
+Los jugadores pueden vincular habilidades desbloqueadas a ranuras de la hotbar para activación rápida sin escribir comandos. Abre `/skill keybind` para configurar los vínculos mediante GUI — cada ranura muestra el nombre de la habilidad, el costo de maná y el cooldown actual. Presionar la tecla de hotbar vinculada activa la habilidad al instante.
+
 ### Comandos
 
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
-| `/skill` | Abrir GUI del Navegador de Árboles de Habilidades | `nexusprism.mmo.use` |
+| `/skill` | Abrir el GUI del Navegador de Árboles de Habilidades | `nexusprism.mmo.use` |
 | `/skill use <id>` | Activar una habilidad desbloqueada | `nexusprism.mmo.use` |
+| `/skill keybind` | Abrir el GUI de vinculación de teclas | `nexusprism.mmo.use` |
+
+---
+
+## Maná
+
+Cada jugador tiene una **reserva de maná** de la que las habilidades extraen. El maná se regenera pasivamente según el atributo **Sabiduría**.
+
+| Mecánica | Detalle |
+| --- | --- |
+| Reserva base | Escala con el nivel MMO |
+| Regeneración | Basada en Sabiduría, siempre activa |
+| Maná insuficiente | Barra de acción: `§c¡Maná insuficiente!` — habilidad bloqueada |
+| Visualización del costo | Mostrado en los iconos de habilidad y en el GUI de vinculación |
+
+El pool de maná también es accesible desde la [API de Addon](../developer/api.es.md): `MmoRegistry.get()` → `getCurrentMana()`, `hasMana()`, `consumeMana()`.
 
 ---
 
