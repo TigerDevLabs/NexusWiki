@@ -5,6 +5,261 @@
 
 ---
 
+## [2026-03-19] · `1875bb0`
+
+
+### 🐛 Fixed
+
+- **chat**: Use correct ChannelRegistry and ChatChannel method names in ChatProviderImpl
+
+---
+
+## [2026-03-19] · `55c634e`
+
+
+### ✨ Added
+
+- **security**: UUID-based premium verification with persistent cache
+- **events**: Admin /isekai command with force-start and boss selection
+- **mmo**: Dynamic mana cost system and new dual-blade ability
+- **mmo**: Ability key binding system with GUI and in-game hotkeys
+- **api**: Add 9 provider interfaces, registries, and MachineProcessingRegistry
+- **modules**: Wire providers into module constructors and shutdowns
+- **machines**: Hook MachineProcessingRegistry into MachineEngine
+- **addon-example**: Add public template project with README and publish workflow
+- **api**: Add content loader, infinity recipe registry, and machine registrar interfaces
+
+### ♻️ Changed
+
+- Rename nexusslime → nexusprism across all layers
+
+### 🔧 Maintenance
+
+- Refactoring all references from nexusslime to nexusprism
+- Fixed notify job on dependabot-discord workflow. root cause: My brain cells forget to  add the dependabot secrets
+
+## [2026-03-18] · `ca5db45`
+
+
+### ✨ Added
+
+- **security**: Leveled mobs and mob stacker enhancements
+- **economy**: Jobs, shop, auction house, and player warps
+- **events**: Blood Moon, Sacrifice Arc, and Isekai Boss system
+- **mmo**: Stats, skill trees, abilities, professions, and mana system
+
+### 🐛 Fixed
+
+- **tab**: Correct TAB config defaults
+
+### 🔧 Maintenance
+
+- Added a fallback to prevent false positives on login / register
+- Register Events and MMO modules, rename plugin to NexusPrism
+
+## [2026-03-16] · `cc4853a`
+
+
+### 🔧 Maintenance
+
+- Added scoreboards and MOTD customizations  to TAB module
+- Added forge/neoforge to the watchlist, to prevent exploiters, higher timer for clear world and a check for players. If none was found then skips world clean
+
+## [2026-03-10] · `a92e2ee`
+
+
+### 🔧 Maintenance
+
+- Added jitpack support to API
+- update the jitpack.yml to force use of maven 3.9
+- idk
+- minor fix: add yaml definition to code block
+
+## [2026-03-09] · `e5a7a7f`
+
+
+### 🔧 Maintenance
+
+- The authentication flow has been improved, now verifying the account type (premium or cracked) and the IPs associated with it. For first-time access, an administrator will need to grant trust to the IP..
+
+## [2026-03-08] · `6676d8d`
+
+
+### 🔧 Maintenance
+
+- add holograms module, mod/ore detector, configurable antilag, and spawner upgrades.
+- Removed credit references ( not a p2w server btw )
+
+## [2026-03-04] · `b9749a0`
+
+
+### 🔧 Maintenance
+
+- Improved Auth Flow to also detect IP and blocks unrecognized ones
+- Wired new fixes for auth and security flows
+
+## [2026-03-02] · `e5562d2`
+
+
+### 🔧 Maintenance
+
+- Updated documentation files
+- Added SkinsRestorer support to premium accounts, cracked ones must use commands.
+- Forgot to add the files to gitignore
+
+## [2026-03-01] · `f5f4ee5`
+
+
+### 🔧 Maintenance
+
+- Changed auth flow to map-based
+
+## [2026-02-28] · `bfc7f2f`
+
+
+### 🔧 Maintenance
+
+- Bump actions/upload-artifact from 6 to 7 in the gha-major group
+- Improved Auth flow: _ Now it's session based, default time 2 hours
+
+## [2026-02-27] · `4b773aa`
+
+
+### 🔧 Maintenance
+
+- Added:
+- added changelog
+
+## [2026-02-26] · `8d8020d`
+
+
+### 🔧 Maintenance
+
+- Updated some files
+- Updated poms.xml of each module
+- Improved Protections Module to be like RedProtection Also added some of my old projects, like Echoes boss, and dreaming experience
+- Completly remove old nuvotifier dependency and add a public image as avatar of workflow
+- Fixing sed causing the URL to be malformated
+- Added support to running actions from discord
+
+## [2026-02-25] · `9b39ccd`
+
+
+### 🔧 Maintenance
+
+- Fixed nuvotifier maven import download, by adding it locally
+- Create SECURITY.md
+- Disabled Votifier for now. Planning out on add again, but as a Internal code, not just a API call.
+- Forgot about the dependency
+- Votifier disabled on Nexus.....
+
+### 🔧 Maintenance
+
+- - Added emoji support to chat module; - Now it will be possible to mention someone between discord <-> minecraft, using their currently names on each. The mentioned user must be verified on the discord server to get notified. - Added lang keys to the new modules.
+
+## [2026-02-24] · `6b1c020`
+
+
+### 🔧 Maintenance
+
+- Bump org.postgresql:postgresql from 42.7.4 to 42.7.7
+
+## [2026-02-23] · `93ac56c`
+
+
+### 🔧 Maintenance
+
+- Added chat formatter and channel redirects
+- updated dependabot-discord workflow
+- Added multicrafting support for infinity items tiers
+- Changed to jq payloads for safier use
+- Correct indent on README and undo the changes of merge pull from dependabot ( causes incompability)
+
+## [2026-02-21] · `265156e`
+
+
+### 🔧 Maintenance
+
+- Bump com.sk89q.worldguard:worldguard-bukkit
+
+## [2026-02-11] · `7681a88`
+
+
+### 🔧 Maintenance
+
+- Linked webstore with nexusslime-web module Improve even more discord module, allowing configurations through yml files.
+
+## [2026-02-07] · `1600a94`
+
+
+### 🔧 Maintenance
+
+- Bump the maven-major group across 1 directory with 2 updates
+
+## [2026-02-04] · `7dc0811`
+
+
+### 🔧 Maintenance
+
+- Discord API implementation
+
+## [2026-01-28] · `955cfc5`
+
+
+### 🔧 Maintenance
+
+- Discord integration testings
+
+## [2026-01-20] · `fe77e92`
+
+
+### 🔧 Maintenance
+
+- Update issue templates
+- ﻿# ItemYamlLoader: support named templates
+
+### 🔧 Maintenance
+
+- Avoid ProtocolLib download during build (optional at runtime)
+
+## [2026-01-19] · `06bbb4b`
+
+
+### 🔧 Maintenance
+
+- Updated workflows and added CONTRIBUTING.md
+
+## [2026-01-18] · `7d5b8ab`
+
+
+### 🔧 Maintenance
+
+- Updated .gitignore
+- Updated release.yml workflow
+
+## [2026-01-17] · `3fcae81`
+
+
+### ✨ Added
+
+- Implement tiered processing machines and Core Systems Infrastructure
+
+### 🔧 Maintenance
+
+- Created workflows for builds and release
+- Updated release.yml
+- Bump the gha-major group with 3 updates
+- Idk, I just missed some fields on Send Discord notification
+
+## [2026-01-16] · `5771bc7`
+
+
+### 🔧 Maintenance
+
+- Initial Commit - Working Items Placeholders
+
+---
+
 ## [2.0.0-BETA] — Initial Release
 
 ### ✨ Added
