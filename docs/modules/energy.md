@@ -54,3 +54,62 @@ All energy management is via right-click — there are no player commands.
 ## Persistence
 
 Generator fuel levels and capacitor charge are saved to the `energy/` data folder and survive server restarts. Components rehydrate their state automatically on chunk load.
+
+---
+
+## Addon API
+
+The energy system exposes a full API so addons can query networks and plug in custom components without importing any internal classes.
+
+### Querying networks
+
+```java
+import io.github.otiger.nexusprism.api.energy.EnergyRegistry;
+
+EnergyRegistry.get().ifPresent(energy -> {
+    // Network at a specific block
+    energy.getNetworkAt(location).ifPresent(net -> {
+        long stored = net.getTotalStoredEnergy(); // FE stored across all capacitors
+        long cap    = net.getTotalCapacity();     // total storage capacity
+        int  gen    = net.getGenerationRate();    // FE/t produced
+        int  con    = net.getConsumptionRate();   // FE/t consumed
+        int  flow   = net.getNetFlow();           // gen - con (positive = surplus)
+    });
+
+    // All active networks on the server
+    energy.getAllNetworks().forEach(net -> { /* ... */ });
+
+    // Quick helper
+    int count = energy.getNetworkCount();
+});
+```
+
+### Registering a custom component
+
+Implement `EnergyComponent` to create custom generators, consumers, or storage blocks:
+
+```java
+import io.github.otiger.nexusprism.api.energy.EnergyComponent;
+import io.github.otiger.nexusprism.api.energy.EnergyComponentType;
+import io.github.otiger.nexusprism.api.energy.EnergyRegistry;
+
+// In onEnable or a block-place listener:
+EnergyRegistry.get().ifPresent(e -> e.registerComponent(myComponent));
+
+// In onDisable or a block-break listener — always clean up:
+EnergyRegistry.get().ifPresent(e -> e.unregisterComponent(myComponent));
+```
+
+### `EnergyNetwork` interface (selected methods)
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| `getTotalStoredEnergy()` | `long` | Total FE stored in this network |
+| `getTotalCapacity()` | `long` | Total storage capacity in FE |
+| `getGenerationRate()` | `int` | FE/t produced by generators |
+| `getConsumptionRate()` | `int` | FE/t consumed by machines |
+| `getNetFlow()` | `int` | `gen - con` (positive = surplus) |
+| `requestEnergy(amount, simulate)` | `long` | Withdraw energy; pass `true` to simulate |
+| `provideEnergy(amount, simulate)` | `long` | Inject energy; pass `true` to simulate |
+| `getComponentAt(location)` | `Optional<EnergyComponent>` | Component at a block |
+| `getComponentsByType(type)` | `Collection<EnergyComponent>` | Filter by `GENERATOR / STORAGE / CONSUMER / CABLE` |

@@ -45,3 +45,57 @@ Toda a gestão de energia é feita com clique direito — não há comandos de j
 2. Abasteca o gerador (clique direito → adicione carvão)
 3. A máquina consumirá energia da rede a cada tick
 4. Adicione capacitores para armazenar energia e suavizar picos de oferta/demanda
+
+---
+
+## API para Addons
+
+O sistema de energia expõe uma API completa para que addons possam consultar redes e conectar componentes personalizados sem importar classes internas.
+
+### Consultando redes
+
+```java
+import io.github.otiger.nexusprism.api.energy.EnergyRegistry;
+
+EnergyRegistry.get().ifPresent(energy -> {
+    // Rede em um bloco específico
+    energy.getNetworkAt(location).ifPresent(net -> {
+        long stored = net.getTotalStoredEnergy(); // FE armazenado em todos os capacitores
+        long cap    = net.getTotalCapacity();     // capacidade total de armazenamento
+        int  gen    = net.getGenerationRate();    // FE/t produzido
+        int  con    = net.getConsumptionRate();   // FE/t consumido
+        int  flow   = net.getNetFlow();           // gen - con (positivo = sobra)
+    });
+
+    // Todas as redes ativas no servidor
+    energy.getAllNetworks().forEach(net -> { /* ... */ });
+
+    int count = energy.getNetworkCount();
+});
+```
+
+### Registrando um componente personalizado
+
+Implemente `EnergyComponent` para criar geradores, consumidores ou blocos de armazenamento:
+
+```java
+// Em onEnable ou no listener de colocação de bloco:
+EnergyRegistry.get().ifPresent(e -> e.registerComponent(meuComponente));
+
+// Em onDisable ou no listener de quebra de bloco — sempre limpe:
+EnergyRegistry.get().ifPresent(e -> e.unregisterComponent(meuComponente));
+```
+
+### Métodos do `EnergyNetwork` (selecionados)
+
+| Método | Retorno | Descrição |
+| --- | --- | --- |
+| `getTotalStoredEnergy()` | `long` | FE total armazenado na rede |
+| `getTotalCapacity()` | `long` | Capacidade total de armazenamento |
+| `getGenerationRate()` | `int` | FE/t produzido pelos geradores |
+| `getConsumptionRate()` | `int` | FE/t consumido pelas máquinas |
+| `getNetFlow()` | `int` | `gen - con` (positivo = sobra) |
+| `requestEnergy(amount, simulate)` | `long` | Retira energia; `true` para simular |
+| `provideEnergy(amount, simulate)` | `long` | Injeta energia; `true` para simular |
+| `getComponentAt(location)` | `Optional<EnergyComponent>` | Componente em um bloco |
+| `getComponentsByType(type)` | `Collection<EnergyComponent>` | Filtrar por `GENERATOR / STORAGE / CONSUMER / CABLE` |
