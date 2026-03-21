@@ -5,6 +5,22 @@
 
 ---
 
+## [2026-03-21] · `83b864b`
+
+
+### 🔧 Maintenance
+
+- Added server vote option to reset the MC server. Based on gnomomuitoloco ( on discord ) work
+
+## [2026-03-20] · `e6356c5`
+
+
+### ✨ Added
+
+- **discord,integrations**: Add panel control, server vote, and PAPI providers
+
+---
+
 ## [2026-03-19] · `bb5ecb9`
 
 

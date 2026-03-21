@@ -9,6 +9,21 @@ PH0
 
 PH1
 
+- Adicionada opção de votação no servidor para redefinir o servidor MC. Baseado no trabalho do gnomomuitoloco (on discord)
+PH0
+
+
+PH1
+
+- PH2 Adicionar controle de painel, votação de servidor e provedores PAPI
+
+---
+
+PH0
+
+
+PH1
+
 - API de energia PH2 Expose via EnergyProvider/EnergyRegistry
 - Exemplo de uso do PH3 Add EnergyRegistry
 

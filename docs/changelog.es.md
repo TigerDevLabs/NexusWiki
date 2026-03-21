@@ -9,6 +9,21 @@ PH0
 
 PH1
 
+- Se agregó la opción de votación del servidor para restablecer el servidor MC. Basado en el trabajo de gnomomuitoloco (en discordia)
+PH0
+
+
+PH1
+
+- PH2 Agregar control de panel, votación de servidor y proveedores de PAPI
+
+---
+
+PH0
+
+
+PH1
+
 - PH2 Expose API de energía a través de EnergyProvider/EnergyRegistry
 - Ejemplo de uso de PH3 Add EnergyRegistry
 
