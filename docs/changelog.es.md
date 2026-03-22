@@ -4,288 +4,314 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
-PH0
+
+## [2026-03-22] · `5b49358`
 
 
-PH1
+### ✨ Añadido
 
-- PH2 GamePresence TYPE|texto, probabilidad de Blood Moon, incrustaciones de muerte/logro
+- **discord,events**: GamePresence TYPE|texto, probabilidad de Blood Moon, incrustaciones de muerte/logro
 
-PH3
+### 🐛 Corregido
 
-- PH4 Agregar departamento de nexusprism-core para LanguageManager
-- PH5 Parámetro corregido ausente en el constructor TabCommand
+- **enchantments**: Agregar dependencia nexusprism-core para LanguageManager
+- **tab**: Parámetro corregido ausente en el constructor TabCommand
 
-PH6
+### 📚 Documentación
 
 - Actualización del registro de cambios, configuraciones y marcadores de posición (22/03/2026)
 
-PH7
+### 🔧 Mantenimiento
 
 - Modificación general: LanguageManager integrado en todos los módulos
 
 ---
 
-PH0
+## [2026-03-21] · `83b864b`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Se agregó la opción de votación del servidor para restablecer el servidor MC. Basado en el trabajo de gnomomuitoloco (en discordia)
-PH0
+- Se agregó la opción de votación del servidor para restablecer el servidor MC. Basado en el trabajo de gnomomuitoloco (en Discord)
 
-
-PH1
-
-- PH2 Agregar control de panel, votación de servidor y proveedores de PAPI
-
----
-
-PH0
+## [2026-03-20] · `e6356c5`
 
 
-PH1
+### ✨ Añadido
 
-- PH2 Expose API de energía a través de EnergyProvider/EnergyRegistry
-- Ejemplo de uso de PH3 Add EnergyRegistry
-
-PH4
-
-- PH5 Utilice el campo público def.id en lugar del inexistente getId() en JobProviderImpl
-- PH6 Utilice la API Region.getFlag(RegionFlag) y DuelManager correcta en ProtectionsProviderImpl
-- Comprobación mundial PH7 Correct HologramLine, BloodMoonManager.getWorldName y EventsProviderImpl
-- PH8 Resolve errores de compilación de BackpackProviderImpl y MachineRegistrarImpl
+- **discord,integrations**: Agregar control de panel, votación de servidor y proveedores PAPI
 
 ---
 
-PH0
+## [2026-03-19] · `bb5ecb9`
 
 
-PH1
+### ✨ Añadido
 
-- PH2 Utilice los nombres correctos de los métodos ChannelRegistry y ChatChannel en ChatProviderImpl
+- **energy**: Exponer API de energía mediante EnergyProvider/EnergyRegistry
+- **addon-example**: Agregar ejemplo de uso de EnergyRegistry
+
+### 🐛 Corregido
+
+- **economy**: Usar campo público def.id en lugar del inexistente getId() en JobProviderImpl
+- **protections**: Usar Region.getFlag(RegionFlag) y API DuelManager correctos en ProtectionsProviderImpl
+- **providers**: Corregir HologramLine, BloodMoonManager.getWorldName y verificación de mundo en EventsProviderImpl
+- **plugin**: Resolver errores de compilación en BackpackProviderImpl y MachineRegistrarImpl
 
 ---
 
-PH0
+## [2026-03-19] · `1875bb0`
 
 
-PH1
+### 🐛 Corregido
 
-- Verificación premium basada en UUID PH2 con caché persistente
-- Comando PH3 Admin /isekai con inicio forzado y selección de jefe
-- Sistema dinámico de coste de maná PH4 y nueva habilidad de doble hoja
-- Sistema de enlace de teclas PH5 Ability con GUI y teclas de acceso rápido en el juego
-- PH6 Agregue 9 interfaces de proveedor, registros y MachineProcessingRegistry
-- PH7 Cablear proveedores en constructores de módulos y paradas
-- Máquina de gancho PH8 Procesamiento Registro en MachineEngine
-- PH9 Agregar proyecto de plantilla pública con README y publicar flujo de trabajo
-- PH10 Agregar cargador de contenido, registro de recetas infinitas e interfaces de registro de máquinas
+- **chat**: Usar los nombres correctos de métodos ChannelRegistry y ChatChannel en ChatProviderImpl
 
-PH11
+---
 
-- Cambiar el nombre de nexusslime → nexusprism en todas las capas
-
-PH12
-
-- Refactorización de todas las referencias desde nexusslime hasta nexusprism.
-- Se corrigió el trabajo de notificación en el flujo de trabajo dependabot-discord. Causa raíz: Mis células cerebrales se olvidan de agregar los secretos del dependabot.
-PH0
+## [2026-03-19] · `55c634e`
 
 
-PH1
+### ✨ Añadido
 
-- Mobs nivelados PH2 y mejoras en el apilador de mobs
-- Trabajos de PH3, tienda, casa de subastas y deformaciones de jugadores.
-- PH4 Blood Moon, Sacrifice Arc y sistema Isekai Boss
-- Estadísticas de PH5, árboles de habilidades, habilidades, profesiones y sistema de maná.
+- **security**: Verificación premium basada en UUID con caché persistente
+- **events**: Comando admin /isekai con inicio forzado y selección de jefe
+- **mmo**: Sistema dinámico de coste de maná y nueva habilidad de doble hoja
+- **mmo**: Sistema de asignación de teclas de habilidades con GUI y atajos en el juego
+- **api**: Agregar 9 interfaces de proveedor, registros y MachineProcessingRegistry
+- **modules**: Cablear proveedores en constructores de módulos y paradas
+- **machines**: Conectar MachineProcessingRegistry al MachineEngine
+- **addon-example**: Agregar proyecto de plantilla pública con README y flujo de publicación
+- **api**: Agregar cargador de contenido, registro de recetas infinitas e interfaces de registro de máquinas
 
-PH6
+### ♻️ Modificado
 
-- PH7 Corregir los valores predeterminados de configuración de TAB
+- Renombrar nexusslime → nexusprism en todas las capas
 
-PH8
+### 🔧 Mantenimiento
 
-- Se agregó un respaldo para evitar falsos positivos al iniciar sesión/registrarse.
-- Registre eventos y módulos MMO, cambie el nombre del complemento a NexusPrism
-PH0
+- Refactorizando todas las referencias de nexusslime a nexusprism
+- Se corrigió el job de notificación en el flujo de trabajo dependabot-discord. Causa raíz: mis células cerebrales olvidaron agregar los secretos del dependabot
 
-
-PH1
-
-- Se agregaron marcadores y personalizaciones de MOTD al módulo TAB.
-- Se agregó forge/neoforge a la lista de vigilancia, para evitar explotadores, un temporizador más alto para limpiar el mundo y un control para los jugadores. Si no se encontró ninguno, se salta la limpieza mundial.
-PH0
+## [2026-03-18] · `ca5db45`
 
 
-PH1
+### ✨ Añadido
 
-- Se agregó soporte jitpack a la API.
-- actualice jitpack.yml para forzar el uso de maven 3.9
+- **security**: Mobs nivelados y mejoras en el apilador de mobs
+- **economy**: Jobs, tienda, casa de subastas y warps de jugadores
+- **events**: Blood Moon, Arco del Sacrificio y sistema de Jefe Isekai
+- **mmo**: Estadísticas, árboles de habilidades, habilidades, profesiones y sistema de maná
+
+### 🐛 Corregido
+
+- **tab**: Corregir los valores predeterminados de configuración del TAB
+
+### 🔧 Mantenimiento
+
+- Se agregó un respaldo para evitar falsos positivos al iniciar sesión/registrarse
+- Registrar módulos Events y MMO, renombrar el plugin a NexusPrism
+
+## [2026-03-16] · `cc4853a`
+
+
+### 🔧 Mantenimiento
+
+- Se agregaron marcadores y personalizaciones de MOTD al módulo TAB
+- Se agregó forge/neoforge a la lista de vigilancia para evitar explotadores, mayor tiempo para limpiar el mundo y verificación de jugadores. Si no se encontró ninguno, se omite la limpieza
+
+## [2026-03-10] · `a92e2ee`
+
+
+### 🔧 Mantenimiento
+
+- Se agregó soporte jitpack a la API
+- Actualizado jitpack.yml para forzar el uso de maven 3.9
 - no sé
-- corrección menor: agregue la definición de yaml al bloque de código
-PH0
+- Corrección menor: agregar definición yaml al bloque de código
+
+## [2026-03-09] · `e5a7a7f`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Se ha mejorado el flujo de autenticación, verificando ahora el tipo de cuenta (premium o crackeada) y las IP asociadas a ella. Para acceder por primera vez, un administrador deberá otorgar confianza a la IP.
-PH0
+- Se ha mejorado el flujo de autenticación, verificando ahora el tipo de cuenta (premium o crackeada) y las IP asociadas. Para el primer acceso, un administrador deberá otorgar confianza a la IP.
 
-
-PH1
-
-- agregue módulo de hologramas, detector de mod/mineral, antilag configurable y actualizaciones de generador.
-- Referencias de crédito eliminadas (no es un servidor p2w por cierto)
-PH0
+## [2026-03-08] · `6676d8d`
 
 
-PH1
+### 🔧 Mantenimiento
+
+- Agregar módulo de hologramas, detector de mod/mineral, antilag configurable y mejoras de spawner.
+- Referencias de crédito eliminadas (no es un servidor p2w)
+
+## [2026-03-04] · `b9749a0`
+
+
+### 🔧 Mantenimiento
 
 - Flujo de autenticación mejorado para detectar también IP y bloquear las no reconocidas
-- Nuevas correcciones cableadas para flujos de autenticación y seguridad.
-PH0
+- Nuevas correcciones conectadas para flujos de autenticación y seguridad
+
+## [2026-03-02] · `e5562d2`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Archivos de documentación actualizados.
+- Archivos de documentación actualizados
 - Se agregó soporte para SkinsRestorer a las cuentas premium; las crackeadas deben usar comandos.
-- Olvidé agregar los archivos a gitignore
-PH0
+- Olvidé agregar los archivos al .gitignore
+
+## [2026-03-01] · `f5f4ee5`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Se cambió el flujo de autenticación a basado en mapas.
-PH0
+- Se cambió el flujo de autenticación a basado en mapas
 
-
-PH1
-
-- Aumentar acciones/cargar artefactos de 6 a 7 en el grupo gha-major
-- Flujo de autenticación mejorado: _ Ahora se basa en sesiones, tiempo predeterminado 2 horas
-PH0
+## [2026-02-28] · `bfc7f2f`
 
 
-PH1
+### 🔧 Mantenimiento
+
+- Bump actions/upload-artifact de 6 a 7 en el grupo gha-major
+- Flujo de autenticación mejorado: ahora se basa en sesiones, tiempo predeterminado 2 horas
+
+## [2026-02-27] · `4b773aa`
+
+
+### 🔧 Mantenimiento
 
 - Añadido:
 - registro de cambios agregado
-PH0
+
+## [2026-02-26] · `8d8020d`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Actualizados algunos archivos.
-- Poms.xml actualizado de cada módulo.
-- Módulo de protecciones mejorado para que sea como RedProtection. También agregué algunos de mis proyectos antiguos, como Echoes boss y experiencia de ensueño.
-- Elimine por completo la antigua dependencia del nuvotificador y agregue una imagen pública como avatar del flujo de trabajo.
-- Se corrigió sed que causaba que la URL tuviera un formato incorrecto.
-- Se agregó soporte para ejecutar acciones desde Discord.
-PH0
+- Actualizados algunos archivos
+- Poms.xml actualizado de cada módulo
+- Módulo de protecciones mejorado para ser como RedProtection. También agregué algunos de mis proyectos antiguos, como el boss Echoes y la experiencia de ensueño
+- Eliminada completamente la antigua dependencia del nuvotifier y agregada una imagen pública como avatar del flujo de trabajo
+- Se corrigió sed que causaba que la URL tuviera un formato incorrecto
+- Se agregó soporte para ejecutar acciones desde Discord
+
+## [2026-02-25] · `9b39ccd`
 
 
-PH1
+### 🔧 Mantenimiento
 
 - Se corrigió la descarga de importación de nuvotifier maven, agregándola localmente
-- Crear SEGURIDAD.md
-- Votificador deshabilitado por ahora. Planeando agregar nuevamente, pero como código interno, no solo como una llamada API.
-- Me olvidé de la dependencia.
+- Crear SECURITY.md
+- Votificador deshabilitado por ahora. Planificando agregar nuevamente, pero como código interno, no solo como una llamada API.
+- Me olvidé de la dependencia
 - Votificador desactivado en Nexus.....
 
-PH2
+### 🔧 Mantenimiento
 
-- - Se agregó compatibilidad con emoji al módulo de chat; - Ahora será posible mencionar a alguien entre discord <-> minecraft, usando sus nombres actuales en cada uno. El usuario mencionado debe ser verificado en el servidor de Discord para recibir una notificación. - Se agregaron claves de idioma a los nuevos módulos.
-PH0
+- Se agregó compatibilidad con emoji al módulo de chat; ahora será posible mencionar a alguien entre discord <-> minecraft, usando sus nombres actuales en cada plataforma. El usuario mencionado debe estar verificado en el servidor de Discord para recibir una notificación. Se agregaron claves de idioma a los nuevos módulos.
+
+## [2026-02-24] · `6b1c020`
 
 
-PH1
+### 🔧 Mantenimiento
 
 - Bump org.postgresql:postgresql de 42.7.4 a 42.7.7
-PH0
+
+## [2026-02-23] · `93ac56c`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Se agregó formateador de chat y redirecciones de canales.
-- flujo de trabajo actualizado dependabot-discord
-- Se agregó soporte de creación múltiple para niveles de elementos infinitos.
-- Cambiado a cargas útiles jq para un uso más seguro.
-- Corregir la sangría en README y deshacer los cambios de fusión del dependabot (provoca incompatibilidad)
-PH0
+- Se agregó formateador de chat y redirecciones de canales
+- Flujo de trabajo dependabot-discord actualizado
+- Se agregó soporte de crafteo múltiple para tiers de ítems infinitos
+- Cambiado a payloads jq para un uso más seguro
+- Corregir la sangría en README y deshacer los cambios de merge pull del dependabot (provoca incompatibilidad)
+
+## [2026-02-21] · `265156e`
 
 
-PH1
+### 🔧 Mantenimiento
 
 - Bump com.sk89q.worldguard:worldguard-bukkit
-PH0
+
+## [2026-02-11] · `7681a88`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Tienda web vinculada con el módulo nexusslime-web. Mejorar aún más el módulo de discordia, permitiendo configuraciones a través de archivos yml.
-PH0
+- Tienda web vinculada con el módulo nexusslime-web. Mejorado aún más el módulo discord, permitiendo configuraciones a través de archivos yml.
 
-
-PH1
-
-- Pasar el grupo maven-major a través de 1 directorio con 2 actualizaciones
-PH0
+## [2026-02-07] · `1600a94`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Implementación de la API de discordia
-PH0
+- Bump del grupo maven-major en 1 directorio con 2 actualizaciones
 
-
-PH1
-
-- Pruebas de integración de Discord.
-PH0
+## [2026-02-04] · `7dc0811`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Actualizar plantillas de problemas
-- # ItemYamlLoader: admite plantillas con nombre
+- Implementación de la API de Discord
 
-PH2
-
-- Evite la descarga de ProtocolLib durante la compilación (opcional en tiempo de ejecución)
-PH0
+## [2026-01-28] · `955cfc5`
 
 
-PH1
+### 🔧 Mantenimiento
+
+- Pruebas de integración de Discord
+
+## [2026-01-20] · `fe77e92`
+
+
+### 🔧 Mantenimiento
+
+- Actualizar plantillas de issues
+- ItemYamlLoader: admite plantillas con nombre
+
+### 🔧 Mantenimiento
+
+- Evitar la descarga de ProtocolLib durante la compilación (opcional en tiempo de ejecución)
+
+## [2026-01-19] · `06bbb4b`
+
+
+### 🔧 Mantenimiento
 
 - Flujos de trabajo actualizados y agregado CONTRIBUTING.md
-PH0
+
+## [2026-01-18] · `7d5b8ab`
 
 
-PH1
+### 🔧 Mantenimiento
 
-- Actualizado .gitignore
-- Flujo de trabajo actualizado de release.yml
-PH0
+- .gitignore actualizado
+- Flujo de trabajo release.yml actualizado
 
-
-PH1
-
-- Implementar máquinas de procesamiento escalonado e infraestructura de sistemas centrales.
-
-PH2
-
-- Creé flujos de trabajo para compilaciones y lanzamientos.
-- Lanzamiento actualizado.yml
-- Supera al grupo principal de gha con 3 actualizaciones
-- No sé, me perdí algunos campos en la notificación Enviar discordia.
-PH0
+## [2026-01-17] · `3fcae81`
 
 
-PH1
+### ✨ Añadido
 
-- Confirmación inicial - Marcadores de posición de elementos de trabajo
+- Implementar máquinas de procesamiento escalonado e infraestructura de sistemas principales
+
+### 🔧 Mantenimiento
+
+- Creados flujos de trabajo para compilaciones y lanzamientos
+- release.yml actualizado
+- Bump del grupo gha-major con 3 actualizaciones
+- No sé, me perdí algunos campos en la notificación de Discord
+
+## [2026-01-16] · `5771bc7`
+
+
+### 🔧 Mantenimiento
+
+- Confirmación inicial — Marcadores de posición de ítems funcionando
 
 ---
 

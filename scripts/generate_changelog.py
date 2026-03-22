@@ -73,6 +73,64 @@ TYPE_MAP = {
     'test':     ('🧪', 'Tests'),
 }
 
+# Per-language labels for section headings and breaking-changes header.
+# These are rendered directly — they never go through the translator.
+# lang key: 'en' | 'pt' | 'es'
+SECTION_LABELS: dict[str, dict[str, tuple[str, str]]] = {
+    # commit-type → (icon, label)  per language
+    'en': {
+        'feat':     ('✨', 'Added'),
+        'feature':  ('✨', 'Added'),
+        'fix':      ('🐛', 'Fixed'),
+        'bugfix':   ('🐛', 'Fixed'),
+        'perf':     ('⚡', 'Performance'),
+        'refactor': ('♻️', 'Changed'),
+        'docs':     ('📚', 'Documentation'),
+        'chore':    ('🔧', 'Maintenance'),
+        'build':    ('🔧', 'Maintenance'),
+        'ci':       ('🔧', 'Maintenance'),
+        'security': ('🔒', 'Security'),
+        'revert':   ('⏪', 'Reverted'),
+        'style':    ('🎨', 'Style'),
+        'test':     ('🧪', 'Tests'),
+        'breaking': ('💥', 'Breaking Changes'),
+    },
+    'pt': {
+        'feat':     ('✨', 'Adicionado'),
+        'feature':  ('✨', 'Adicionado'),
+        'fix':      ('🐛', 'Corrigido'),
+        'bugfix':   ('🐛', 'Corrigido'),
+        'perf':     ('⚡', 'Desempenho'),
+        'refactor': ('♻️', 'Alterado'),
+        'docs':     ('📚', 'Documentação'),
+        'chore':    ('🔧', 'Manutenção'),
+        'build':    ('🔧', 'Manutenção'),
+        'ci':       ('🔧', 'Manutenção'),
+        'security': ('🔒', 'Segurança'),
+        'revert':   ('⏪', 'Revertido'),
+        'style':    ('🎨', 'Estilo'),
+        'test':     ('🧪', 'Testes'),
+        'breaking': ('💥', 'Mudanças Críticas'),
+    },
+    'es': {
+        'feat':     ('✨', 'Añadido'),
+        'feature':  ('✨', 'Añadido'),
+        'fix':      ('🐛', 'Corregido'),
+        'bugfix':   ('🐛', 'Corregido'),
+        'perf':     ('⚡', 'Rendimiento'),
+        'refactor': ('♻️', 'Modificado'),
+        'docs':     ('📚', 'Documentación'),
+        'chore':    ('🔧', 'Mantenimiento'),
+        'build':    ('🔧', 'Mantenimiento'),
+        'ci':       ('🔧', 'Mantenimiento'),
+        'security': ('🔒', 'Seguridad'),
+        'revert':   ('⏪', 'Revertido'),
+        'style':    ('🎨', 'Estilo'),
+        'test':     ('🧪', 'Tests'),
+        'breaking': ('💥', 'Cambios Críticos'),
+    },
+}
+
 # Display order for section types inside a date group
 TYPE_ORDER = [
     'breaking', 'feat', 'feature', 'fix', 'bugfix',
@@ -225,17 +283,24 @@ def render_item(c: dict) -> str:
     return f'- {prefix}{c["desc"]}'
 
 
-def render_date_block(date: str, sha: str, type_groups: dict[str, list]) -> str:
+def render_date_block(date: str, sha: str, type_groups: dict[str, list],
+                      lang: str = 'en') -> str:
+    """Render one date block.
+
+    Section headings are emitted in *lang* using SECTION_LABELS so they are
+    never sent to the machine translator (which would produce unreliable results
+    and corrupt the placeholders used to protect markdown structure).
+    """
+    labels = SECTION_LABELS.get(lang, SECTION_LABELS['en'])
+    fallback_en = SECTION_LABELS['en']
+
     lines = [f'\n## [{date}] · `{sha[:7]}`\n']
 
     seen: set[str] = set()
     for key in TYPE_ORDER:
         if key in type_groups:
             seen.add(key)
-            if key == 'breaking':
-                icon, label = BREAKING_ICON, BREAKING_LABEL
-            else:
-                icon, label = TYPE_MAP.get(key, ('🔧', 'Maintenance'))
+            icon, label = labels.get(key, fallback_en.get(key, ('🔧', 'Maintenance')))
             lines.append(f'\n### {icon} {label}\n')
             for c in type_groups[key]:
                 lines.append(render_item(c))
@@ -243,7 +308,7 @@ def render_date_block(date: str, sha: str, type_groups: dict[str, list]) -> str:
     # Any type not covered by TYPE_ORDER
     for key, entries in type_groups.items():
         if key not in seen:
-            icon, label = TYPE_MAP.get(key, ('🔧', 'Maintenance'))
+            icon, label = labels.get(key, fallback_en.get(key, ('🔧', 'Maintenance')))
             lines.append(f'\n### {icon} {label}\n')
             for c in entries:
                 lines.append(render_item(c))
@@ -264,12 +329,13 @@ def render_multilang_block(date: str, sha: str, sections: dict[str, str],
 
 # ─── Translation ──────────────────────────────────────────────────────────────
 
-# Things we want to keep in English even after translation
+# Things we want to keep verbatim through the translator.
+# Note: section headings and date/sha lines are no longer included here —
+# they are rendered directly in the target language by render_date_block()
+# so they never need to pass through translation at all.
 _PROTECT_PATTERNS = [
-    r'`[^`\n]+`',                    # inline code
-    r'\*\*[^*\n]+\*\*:',             # **scope**: prefix
-    r'^(#{1,6}\s.+)$',               # markdown headers
-    r'^\[.+\] · `.+`$',             # ## [date] · `sha` lines
+    r'`[^`\n]+`',                    # inline code  e.g. `nexusprism-core`
+    r'\*\*[^*\n]+\*\*:',             # **scope**: prefix  e.g. **tab**:
     r'\[skip ci\]',
 ]
 _PROTECT_RE = re.compile(
@@ -277,13 +343,21 @@ _PROTECT_RE = re.compile(
     flags=re.MULTILINE
 )
 
+# Placeholder token format.
+# Must survive machine translation without modification.
+# We use a long, all-uppercase, underscore-separated token because
+# translation services treat such strings as untranslatable identifiers.
+# Control characters (\x02/\x03) are stripped by Google Translate — do NOT use them.
+_PH_PREFIX = 'NXWIKI__PH'
+_PH_SUFFIX = '__NXWIKIEND'
+
 
 def protect(text: str) -> tuple[str, dict]:
     holders: dict[str, str] = {}
     counter = [0]
 
     def _replace(m: re.Match) -> str:
-        key = f'\x02PH{counter[0]}\x03'
+        key = f'{_PH_PREFIX}{counter[0]}{_PH_SUFFIX}'
         holders[key] = m.group(0)
         counter[0] += 1
         return key
@@ -485,18 +559,22 @@ def main() -> None:
         # --- Conventional block for this date ---
         if date in conv_by_date:
             sha = [c for c in conv_commits if c['date'] == date][-1]['sha']
-            en_block = render_date_block(date, sha, conv_by_date[date])
+            en_block = render_date_block(date, sha, conv_by_date[date], lang='en')
+            # PT and ES blocks have section headings rendered in target language
+            # directly — only the bullet text is sent to the translator.
+            pt_block = render_date_block(date, sha, conv_by_date[date], lang='pt')
+            es_block = render_date_block(date, sha, conv_by_date[date], lang='es')
             en_parts.append(en_block)
 
             if not args.dry_run:
                 print(f'  Translating {date} → PT-BR...')
-                pt_parts.append(translate_section(en_block, 'pt'))
+                pt_parts.append(translate_section(pt_block, 'pt'))
                 print(f'  Translating {date} → ES...')
-                es_parts.append(translate_section(en_block, 'es'))
+                es_parts.append(translate_section(es_block, 'es'))
             else:
-                # Dry run: show EN for all three
-                pt_parts.append(en_block)
-                es_parts.append(en_block)
+                # Dry run: show language-specific blocks without translation
+                pt_parts.append(pt_block)
+                es_parts.append(es_block)
 
         # --- Multi-language blocks for this date ---
         for c in ml_commits:
