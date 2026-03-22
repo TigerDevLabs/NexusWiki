@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-03-22] · `7260628`
+
+
+### 🔧 Maintenance
+
+- **release**: Adicionar inputs version e changelist ao workflow_dispatch
+
+---
+
 ## [2026-03-22] · `1a79a0f`
 
 

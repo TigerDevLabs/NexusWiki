@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [22/03/2026] · `7260628`
+
+
+### 🔧Mantenimiento
+
+- **release**: Agregar versión de entradas y lista de cambios a flujo de trabajo_dispatch
+
+---
+
 ## [22/03/2026] · `1a79a0f`
 
 

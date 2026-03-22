@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-03-22] · `7260628`
+
+
+### 🔧Manutenção
+
+- **release**: Adicionar inputs version e changelist ao workflow_dispatch
+
+---
+
 ## [2026-03-22] · `1a79a0f`
 
 
