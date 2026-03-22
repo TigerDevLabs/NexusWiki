@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-03-22] · `1a79a0f`
+
+
+### ✨ Added
+
+- **tab,protections,essentials**: Animações nomeadas, ordenação por grupo, GUI de flags, homes dinâmico
+
+---
+
 ## [2026-03-22] · `5b49358`
 
 

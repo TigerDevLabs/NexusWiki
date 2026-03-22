@@ -4,6 +4,14 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [22/03/2026] · `1a79a0f`
+
+
+### ✨Añadido See More
+
+- **tab,protections,essentials**: Animações nomeadas, ordenação por grupo, GUI de banderas, casas dinámicas
+
+---
 
 ## [2026-03-22] · `5b49358`
 
