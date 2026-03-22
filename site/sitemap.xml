@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/changelog/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/changelog/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/changelog/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/getting-started/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/getting-started/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/store/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/store/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/store/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/developer/api/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/developer/api/"/>
@@ -42,7 +42,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/ae/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/ae/"/>
@@ -58,7 +58,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/chat/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/chat/"/>
@@ -66,7 +66,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/clans/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/clans/"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/core/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/core/"/>
@@ -82,7 +82,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/crates/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/crates/"/>
@@ -90,7 +90,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/crystal-defense/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/crystal-defense/"/>
@@ -98,7 +98,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/custom-mobs/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/custom-mobs/"/>
@@ -106,7 +106,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/discord/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/discord/"/>
@@ -114,7 +114,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/dreams/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/dreams/"/>
@@ -122,7 +122,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/economy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/economy/"/>
@@ -130,7 +130,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/enchantments/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/enchantments/"/>
@@ -138,7 +138,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/energy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/energy/"/>
@@ -146,7 +146,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/essentials/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/essentials/"/>
@@ -154,7 +154,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/events/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/events/"/>
@@ -162,7 +162,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/holograms/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/holograms/"/>
@@ -170,7 +170,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/"/>
@@ -178,7 +178,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/mmo/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/mmo/"/>
@@ -186,7 +186,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/protections/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/protections/"/>
@@ -194,7 +194,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/rng/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/rng/"/>
@@ -202,7 +202,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/security/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/security/"/>
@@ -210,7 +210,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/structures/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/structures/"/>
@@ -218,7 +218,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/tab/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/tab/"/>
@@ -226,7 +226,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/traits/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/traits/"/>
@@ -234,7 +234,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/twitch/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/twitch/"/>
@@ -242,7 +242,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/votifier/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/votifier/"/>
@@ -250,7 +250,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/modules/web/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/web/"/>
@@ -258,7 +258,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/reference/commands/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/commands/"/>
@@ -266,7 +266,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/reference/permissions/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/permissions/"/>
@@ -274,7 +274,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/reference/placeholders/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/placeholders/"/>
@@ -282,7 +282,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/"/>
@@ -290,7 +290,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/changelog/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/changelog/"/>
@@ -298,7 +298,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/getting-started/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/getting-started/"/>
@@ -306,7 +306,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/store/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/store/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/store/"/>
@@ -314,7 +314,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/developer/api/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/developer/api/"/>
@@ -322,7 +322,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/"/>
@@ -330,7 +330,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/ae/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/ae/"/>
@@ -338,7 +338,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/chat/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/chat/"/>
@@ -346,7 +346,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/clans/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/clans/"/>
@@ -354,7 +354,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/core/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/core/"/>
@@ -362,7 +362,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/crates/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crates/"/>
@@ -370,7 +370,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/crystal-defense/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crystal-defense/"/>
@@ -378,7 +378,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/custom-mobs/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/custom-mobs/"/>
@@ -386,7 +386,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/discord/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/discord/"/>
@@ -394,7 +394,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/dreams/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/dreams/"/>
@@ -402,7 +402,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/economy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/economy/"/>
@@ -410,7 +410,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/enchantments/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/enchantments/"/>
@@ -418,7 +418,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/energy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/energy/"/>
@@ -426,7 +426,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/essentials/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/essentials/"/>
@@ -434,7 +434,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/events/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
@@ -442,7 +442,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/holograms/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/holograms/"/>
@@ -450,7 +450,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/infinity-crafting/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
@@ -458,7 +458,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/mmo/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
@@ -466,7 +466,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/protections/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/protections/"/>
@@ -474,7 +474,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/rng/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/rng/"/>
@@ -482,7 +482,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/security/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/security/"/>
@@ -490,7 +490,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/structures/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/structures/"/>
@@ -498,7 +498,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/tab/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/tab/"/>
@@ -506,7 +506,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/traits/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/traits/"/>
@@ -514,7 +514,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/twitch/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/twitch/"/>
@@ -522,7 +522,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/votifier/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/votifier/"/>
@@ -530,7 +530,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/modules/web/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/web/"/>
@@ -538,7 +538,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/reference/commands/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/commands/"/>
@@ -546,7 +546,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/reference/permissions/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/permissions/"/>
@@ -554,7 +554,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/pt/reference/placeholders/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusWiki/pt/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/placeholders/"/>
@@ -562,7 +562,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/"/>
@@ -570,7 +570,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/changelog/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/changelog/"/>
@@ -578,7 +578,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/getting-started/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/getting-started/"/>
@@ -586,7 +586,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/store/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/store/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/store/"/>
@@ -594,7 +594,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/developer/api/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/developer/api/"/>
@@ -602,7 +602,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/"/>
@@ -610,7 +610,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/ae/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/ae/"/>
@@ -618,7 +618,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/chat/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/chat/"/>
@@ -626,7 +626,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/clans/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/clans/"/>
@@ -634,7 +634,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/core/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/core/"/>
@@ -642,7 +642,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/crates/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crates/"/>
@@ -650,7 +650,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/crystal-defense/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/crystal-defense/"/>
@@ -658,7 +658,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/custom-mobs/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/custom-mobs/"/>
@@ -666,7 +666,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/discord/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/discord/"/>
@@ -674,7 +674,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/dreams/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/dreams/"/>
@@ -682,7 +682,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/economy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/economy/"/>
@@ -690,7 +690,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/enchantments/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/enchantments/"/>
@@ -698,7 +698,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/energy/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/energy/"/>
@@ -706,7 +706,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/essentials/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/essentials/"/>
@@ -714,7 +714,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/events/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/events/"/>
@@ -722,7 +722,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/holograms/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/holograms/"/>
@@ -730,7 +730,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/infinity-crafting/"/>
@@ -738,7 +738,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/mmo/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/mmo/"/>
@@ -746,7 +746,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/protections/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/protections/"/>
@@ -754,7 +754,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/rng/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/rng/"/>
@@ -762,7 +762,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/security/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/security/"/>
@@ -770,7 +770,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/structures/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/structures/"/>
@@ -778,7 +778,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/tab/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/tab/"/>
@@ -786,7 +786,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/traits/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/traits/"/>
@@ -794,7 +794,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/twitch/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/twitch/"/>
@@ -802,7 +802,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/votifier/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/votifier/"/>
@@ -810,7 +810,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/modules/web/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/modules/web/"/>
@@ -818,7 +818,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/reference/commands/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/commands/"/>
@@ -826,7 +826,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/reference/permissions/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/permissions/"/>
@@ -834,7 +834,7 @@
     </url>
     <url>
         <loc>https://o-tiger.github.io/NexusWiki/es/reference/placeholders/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-03-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusWiki/es/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusWiki/reference/placeholders/"/>
