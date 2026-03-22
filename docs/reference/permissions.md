@@ -1,6 +1,8 @@
 # Permissions Reference
 
-Complete list of all permission nodes registered by NexusPrism. Nodes marked **OP** default to operators only; nodes marked **true** are granted to all players by default.
+*Last updated: 2026-03-22*
+
+Complete list of all permission nodes registered by NexusPrism. Nodes marked **OP** default to operators only; nodes marked **true** are granted to all players by default; nodes marked **—** must be granted manually.
 
 ---
 
@@ -16,7 +18,15 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.admin.give` | Give custom items | OP |
 | `nexusprism.admin.debug` | Toggle debug mode | OP |
 | `nexusprism.admin.cleardata` | Clear player data | OP |
+| `nexusprism.admin.bypass` | Bypass various admin checks | OP |
+| `nexusprism.admin.delivery` | Manage delivery/store orders | OP |
+| `nexusprism.admin.recipe` | Admin recipe commands | OP |
+| `nexusprism.admin.research` | Admin research commands | OP |
+| `nexusprism.admin.resourcepack` | Admin resource pack commands | OP |
+| `nexusprism.admin.waila` | Admin WAILA tooltip commands | OP |
 | `nexusprism.bypass.protection` | Bypass all region protections | OP |
+| `nexusprism.bypass.ore-heuristic` | Bypass anti X-ray ore heuristic | OP |
+| `nexusprism.db` | DB diagnostic access | OP |
 
 ---
 
@@ -26,6 +36,15 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | --- | --- | --- |
 | `nexusprism.research` | Access research system | true |
 | `nexusprism.research.all` | Instantly unlock all research | OP |
+
+---
+
+## Machines
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.machine.remove` | Remove machines with Wrench | true |
+| `nexusprism.machine.rotate` | Rotate machines with Wrench | true |
 
 ---
 
@@ -72,6 +91,7 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.essentials.back` | `/back` | true |
 | `nexusprism.essentials.tpa` | `/tpa`, `/tpaccept`, `/tpdeny` | true |
 | `nexusprism.essentials.spawn` | `/spawn` | true |
+| `nexusprism.essentials.spawn.others` | `/spawn <player>` | OP |
 | `nexusprism.essentials.setspawn` | `/setspawn` | OP |
 | `nexusprism.essentials.tphere` | `/tphere` | OP |
 | `nexusprism.essentials.tppos` | `/tppos` | OP |
@@ -102,8 +122,10 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.essentials.gamemode` | `/gamemode` | OP |
 | `nexusprism.essentials.enderchest` | `/enderchest` (self) | true |
 | `nexusprism.essentials.enderchest.others` | `/enderchest <player>` | OP |
-| `nexusprism.essentials.repair` | `/repair` | OP |
-| `nexusprism.essentials.ext` | `/ext` | OP |
+| `nexusprism.essentials.repair` | `/repair` (held item) | OP |
+| `nexusprism.essentials.repair.all` | `/repair all` (full inventory) | OP |
+| `nexusprism.essentials.ext` | `/ext` (self) | OP |
+| `nexusprism.essentials.ext.others` | `/ext <player>` | OP |
 | `nexusprism.essentials.exp` | `/exp` | OP |
 | `nexusprism.essentials.worth` | `/worth` | true |
 | `nexusprism.essentials.rules` | `/rules` | true |
@@ -120,8 +142,21 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.economy.money` | View money balance | true |
 | `nexusprism.economy.credits` | View credits | true |
 | `nexusprism.economy.baltop` | View leaderboard | true |
-| `nexusprism.economy.sell` | Use /sell | true |
+| `nexusprism.economy.sell` | Use `/sell` | true |
 | `nexusprism.economy.admin` | Admin eco commands | OP |
+| `nexusprism.economy.ah.use` | Use Auction House `/ah` | true |
+| `nexusprism.economy.shop.create` | Create chest shops | true |
+| `nexusprism.economy.shop.admin` | Admin chest shop management | OP |
+
+### Player Warps
+
+| Permission | Warps | Default |
+| --- | --- | --- |
+| `nexusprism.economy.playerwarp.use` | Browse and visit player warps | true |
+| `nexusprism.economy.playerwarp.3` | Create up to 3 player warps | — |
+| `nexusprism.economy.playerwarp.10` | Create up to 10 player warps | — |
+| `nexusprism.economy.playerwarp.unlimited` | Unlimited player warps | OP |
+| `nexusprism.economy.playerwarp.admin` | Admin player warp management | OP |
 
 ---
 
@@ -131,7 +166,8 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | --- | --- | --- |
 | `nexusprism.clan.use` | Use clan commands | true |
 | `nexusprism.clan.admin` | Admin clan management | OP |
-| `nexusprism.clan.bypass-protection` | Bypass clan territory | OP |
+| `nexusprism.clan.bypass-protection` | Bypass clan territory protection | OP |
+| `nexusprism.clans.bypass` | Bypass all clan checks | OP |
 
 ---
 
@@ -140,6 +176,7 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.security.cleanworld` | Manual world cleaner | OP |
+| `nexusprism.security.notify` | Receive security alerts (IP, auth) | OP |
 | `nexusprism.staff.vanish` | Vanish yourself | OP |
 | `nexusprism.staff.vanish.others` | Vanish another player | OP |
 | `nexusprism.staff.vanish.see` | See vanished players | OP |
@@ -166,8 +203,18 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.region.use` | Create and manage own regions | true |
+| `nexusprism.region.bypass` | Bypass region build/interact restrictions | OP |
 | `nexusprism.protect.admin` | Admin region management | OP |
 | `nexusprism.duel.use` | Send and accept duels | true |
+
+---
+
+## Events
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.events.bloodmoon.admin` | Control Blood Moon manually | OP |
+| `nexusprism.events.isekai.admin` | Control Isekai boss fights manually | OP |
 
 ---
 
@@ -177,6 +224,56 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | --- | --- | --- |
 | `nexusprism.crystaldefense.use` | Join arenas | true |
 | `nexusprism.crystaldefense.admin` | Create/manage arenas | OP |
+
+---
+
+## Crates
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.crates.use` | Open crates | true |
+| `nexusprism.crates.admin` | Admin crate management | OP |
+
+---
+
+## RNG & Daily Spin
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.rng.spin` | Use `/dailyspin` | true |
+| `nexusprism.rng.admin` | Admin RNG commands | OP |
+
+---
+
+## Enchantments
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.enchantments.admin` | Admin enchantment commands | OP |
+
+---
+
+## Holograms
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.holograms.admin` | Create/edit/delete holograms | OP |
+
+---
+
+## TAB
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.tab.admin` | Reload TAB config | OP |
+
+---
+
+## Traits
+
+| Permission | Description | Default |
+| --- | --- | --- |
+| `nexusprism.traits.admin` | Admin trait management | OP |
 
 ---
 
@@ -220,6 +317,7 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.silkspawner.use` | Mine spawners with Silk Touch | true |
+| `nexusprism.silkspawner.upgrade` | Upgrade spawner mob level | OP |
 | `nexusprism.silkspawner.admin` | Admin spawner commands | OP |
 
 ---
@@ -237,7 +335,7 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 
 ## Permission Level Nodes
 
-Used internally to map staff ranks. Configure in `config.yml`:
+Used by LuckPerms to assign staff ranks. Configure groups in your LP config and assign the appropriate node.
 
 | Permission | Rank |
 | --- | --- |
@@ -246,3 +344,84 @@ Used internally to map staff ranks. Configure in `config.yml`:
 | `nexusprism.level.moderator` | Moderator |
 | `nexusprism.level.admin` | Admin |
 | `nexusprism.level.owner` | Owner |
+
+---
+
+## Tier Nodes
+
+Used to gate store/rank features by tier. Assign in LuckPerms based on the player's purchased rank.
+
+| Permission | Tier |
+| --- | --- |
+| `nexusprism.tier.basic` | Basic tier |
+| `nexusprism.tier.1` | Tier 1 |
+| `nexusprism.tier.2` | Tier 2 |
+| `nexusprism.tier.3` | Tier 3 |
+| `nexusprism.tier.4` | Tier 4 |
+| `nexusprism.tier.5` | Tier 5 |
+| `nexusprism.tier.intermediate` | Intermediate tier |
+| `nexusprism.tier.enhanced` | Enhanced tier |
+| `nexusprism.tier.advanced` | Advanced tier |
+| `nexusprism.tier.supreme` | Supreme tier |
+
+---
+
+## LuckPerms Suggested Group Setup
+
+Minimal LP group configuration for a typical NexusPrism server:
+
+```yaml
+# groups: user → helper → moderator → admin → owner
+# Each group inherits from the one below via LP inheritance.
+
+user:
+  - nexusprism.level.user
+  - nexusprism.tier.basic
+  - nexusprism.essentials.homes.1
+  - nexusprism.essentials.waypoints.1
+
+vip:
+  - nexusprism.level.user
+  - nexusprism.tier.1
+  - nexusprism.essentials.homes.3
+  - nexusprism.essentials.waypoints.5
+  - nexusprism.essentials.fly
+  - nexusprism.essentials.hat
+  - nexusprism.essentials.nick
+
+vip_plus:
+  - nexusprism.tier.2
+  - nexusprism.essentials.homes.10
+  - nexusprism.essentials.waypoints.25
+  - nexusprism.economy.playerwarp.3
+
+premium:
+  - nexusprism.tier.3
+  - nexusprism.essentials.homes.unlimited
+  - nexusprism.essentials.waypoints.unlimited
+  - nexusprism.economy.playerwarp.10
+
+helper:
+  - nexusprism.level.helper
+  - nexusprism.chat.mute
+  - nexusprism.staff.vanish
+  - nexusprism.staff.vanish.see
+  - nexusprism.staff.invsee
+
+moderator:
+  - nexusprism.level.moderator
+  - nexusprism.staff.spy
+  - nexusprism.protect.admin
+  - nexusprism.security.notify
+
+admin:
+  - nexusprism.level.admin
+  - nexusprism.admin
+  - nexusprism.bypass.protection
+
+owner:
+  - nexusprism.level.owner
+  - nexusprism.*
+```
+
+> **Note:** Inherit groups with `/lp group <child> parent add <parent>` and assign players with `/lp user <player> group set <group>`.

@@ -1,5 +1,7 @@
 # Módulo Events
 
+*Última actualización: 2026-03-22*
+
 El módulo Events añade **eventos dinámicos a escala mundial** que afectan a todos los jugadores simultáneamente — comenzando con la **Luna de Sangre**, que transforma las noches en desafíos de supervivencia cada vez más peligrosos, vinculados a una racha por jugador y a un **Arco del Sacrificio**.
 
 ---
@@ -37,11 +39,13 @@ En cada intervalo de horda, se elige un jugador en línea aleatorio como objetiv
 ```yaml
 blood-moon:
   enabled: true
-  world: world                   # El mundo donde se monitorean los cambios de tiempo
-  kill-pay-multiplier: 1.5       # Multiplicador de pago del Cazador durante la Luna de Sangre
-  particle-interval-ticks: 60   # Con qué frecuencia (ticks) generar partículas por jugador
-  horde-interval-ticks: 6000    # Con qué frecuencia (ticks) lanzar una oleada de horda (6000 = 5 min)
-  horde-size: 30                 # Número de mobs por oleada de horda
+  world: world                     # El mundo donde se monitorean los cambios de tiempo
+  schedule: RANDOM                 # RANDOM (probabilidad por noche) o ALWAYS (siempre)
+  random-chance-per-night: 15      # Probabilidad (%) de Luna de Sangre por noche (solo RANDOM)
+  kill-pay-multiplier: 1.5         # Multiplicador de pago del Cazador durante la Luna de Sangre
+  particle-interval-ticks: 60     # Con qué frecuencia (ticks) generar partículas por jugador
+  horde-interval-ticks: 6000      # Con qué frecuencia (ticks) lanzar una oleada de horda (6000 = 5 min)
+  horde-size: 30                   # Número de mobs por oleada de horda
 ```
 
 ---

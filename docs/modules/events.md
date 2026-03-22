@@ -1,5 +1,7 @@
 # Events Module
 
+*Last updated: 2026-03-22*
+
 The Events module adds **world-scale dynamic events** that affect all players simultaneously — starting with the **Blood Moon**, which transforms nights into increasingly dangerous survival challenges tied to a per-player streak and a **Sacrifice Arc**.
 
 ---
@@ -37,11 +39,13 @@ Each horde interval, a random online player is chosen as the target. **30 mobs**
 ```yaml
 blood-moon:
   enabled: true
-  world: world                   # The world to watch for time changes
-  kill-pay-multiplier: 1.5       # Hunter job pay multiplier during Blood Moon
-  particle-interval-ticks: 60   # How often (ticks) to spawn particles per player
-  horde-interval-ticks: 6000    # How often (ticks) to fire a horde wave (6000 = 5 min)
-  horde-size: 30                 # Number of mobs per horde wave
+  world: world                     # The world to watch for time changes
+  schedule: RANDOM                 # RANDOM (chance per night) or ALWAYS
+  random-chance-per-night: 15      # Chance (%) a Blood Moon occurs each night (RANDOM only)
+  kill-pay-multiplier: 1.5         # Hunter job pay multiplier during Blood Moon
+  particle-interval-ticks: 60     # How often (ticks) to spawn particles per player
+  horde-interval-ticks: 6000      # How often (ticks) to fire a horde wave (6000 = 5 min)
+  horde-size: 30                   # Number of mobs per horde wave
 ```
 
 ---
