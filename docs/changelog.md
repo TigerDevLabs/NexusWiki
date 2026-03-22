@@ -5,6 +5,61 @@
 
 ---
 
+## [2026-03-22] · `5b49358`
+
+
+### ✨ Added
+
+- **discord,events**: GamePresence TYPE|text, Blood Moon chance, death/achievement embeds
+
+### 🐛 Fixed
+
+- **enchantments**: Add nexusprism-core dep for LanguageManager
+- **tab**: Corrigido parâmetro ausente no construtor TabCommand
+
+### 📚 Documentation
+
+- Atualização de changelog, configurações e placeholders (2026-03-22)
+
+### 🔧 Maintenance
+
+- Alteração Geral: LanguageManager integrado em todos os módulos
+
+---
+
+## [2026-03-21] · `83b864b`
+
+
+### 🔧 Maintenance
+
+- Added server vote option to reset the MC server. Based on gnomomuitoloco ( on discord ) work
+
+## [2026-03-20] · `e6356c5`
+
+
+### ✨ Added
+
+- **discord,integrations**: Add panel control, server vote, and PAPI providers
+
+---
+
+## [2026-03-19] · `bb5ecb9`
+
+
+### ✨ Added
+
+- **energy**: Expose energy API via EnergyProvider/EnergyRegistry
+- **addon-example**: Add EnergyRegistry usage example
+
+### 🐛 Fixed
+
+- **economy**: Use public field def.id instead of nonexistent getId() in JobProviderImpl
+- **protections**: Use correct Region.getFlag(RegionFlag) and DuelManager API in ProtectionsProviderImpl
+- **providers**: Correct HologramLine, BloodMoonManager.getWorldName, and EventsProviderImpl world check
+- **plugin**: Resolve BackpackProviderImpl and MachineRegistrarImpl compile errors
+
+---
+
 ## [2026-03-19] · `1875bb0`
 
 

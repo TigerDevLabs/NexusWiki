@@ -9,6 +9,60 @@ PH0
 
 PH1
 
+- PH2 GamePresence TYPE | texto, chance de Blood Moon, incorporações de morte/conquista
+
+PH3
+
+- PH4 Adicionar dependência nexusprism-core para LanguageManager
+- PH5 Corrigido parâmetro ausente no construtor TabCommand
+
+PH6
+
+- Atualização de changelog, configurações e placeholders (22/03/2026)
+
+PH7
+
+- Alteração Geral: LanguageManager integrado em todos os módulos
+
+---
+
+PH0
+
+
+PH1
+
+- Adicionada opção de votação no servidor para redefinir o servidor MC. Baseado no trabalho do gnomomuitoloco (on discord)
+PH0
+
+
+PH1
+
+- PH2 Adicionar controle de painel, votação de servidor e provedores PAPI
+
+---
+
+PH0
+
+
+PH1
+
+- API de energia PH2 Expose via EnergyProvider/EnergyRegistry
+- Exemplo de uso do PH3 Add EnergyRegistry
+
+PH4
+
+- PH5 Use o campo público def.id em vez de getId() inexistente em JobProviderImpl
+- PH6 Use Region.getFlag (RegionFlag) e API DuelManager corretos em ProtectionsProviderImpl
+- PH7 Correta HologramLine, BloodMoonManager.getWorldName e verificação mundial EventsProviderImpl
+- PH8 Resolver erros de compilação BackpackProviderImpl e MachineRegistrarImpl
+
+---
+
+PH0
+
+
+PH1
+
 - PH2 Use nomes corretos de métodos ChannelRegistry e ChatChannel em ChatProviderImpl
 
 ---
