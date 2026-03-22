@@ -115,6 +115,76 @@ Requieren que LuckPerms esté instalado.
 
 ---
 
+## MMO
+
+**Módulo requerido** (`nexusprism-mmo`).
+
+| Placeholder | Retorna | Notas |
+| --- | --- | --- |
+| `%nexusprism_mmo_level%` | Nivel de personaje MMO | entero |
+| `%nexusprism_mmo_mana%` | Maná actual | entero |
+| `%nexusprism_mmo_mana_max%` | Maná máximo | entero |
+| `%nexusprism_mmo_stat_points%` | Puntos de atributo no gastados | entero |
+| `%nexusprism_mmo_stat_strength%` | Valor de FUERZA | entero |
+| `%nexusprism_mmo_stat_dexterity%` | Valor de DESTREZA | entero |
+| `%nexusprism_mmo_stat_intelligence%` | Valor de INTELIGENCIA | entero |
+| `%nexusprism_mmo_stat_vitality%` | Valor de VITALIDAD | entero |
+| `%nexusprism_mmo_stat_endurance%` | Valor de RESISTENCIA | entero |
+| `%nexusprism_mmo_stat_luck%` | Valor de SUERTE | entero |
+| `%nexusprism_mmo_skill_<treeid>%` | Nivel en árbol de habilidades | ej: `mmo_skill_warrior` |
+| `%nexusprism_mmo_profession_<profid>%` | Nivel en profesión | ej: `mmo_profession_mining` |
+
+---
+
+## Eventos
+
+`bloodmoon_*` funciona incluso sin el módulo Events (devuelve `false` / `1.00`).
+
+| Placeholder | Retorna | Notas |
+| --- | --- | --- |
+| `%nexusprism_bloodmoon_active%` | `true` / `false` | todo el servidor |
+| `%nexusprism_bloodmoon_multiplier%` | Multiplicador de recompensa | `1.00` cuando inactivo |
+| `%nexusprism_sacrifice_streak%` | Racha de supervivencia | **Módulo requerido** |
+| `%nexusprism_in_sacrifice%` | `true` / `false` | **Módulo requerido** |
+| `%nexusprism_isekai_active%` | `true` / `false` | **Módulo requerido** |
+
+---
+
+## Traits & RNG
+
+**Módulo requerido** (`nexusprism-traits`).
+
+| Placeholder | Retorna | Notas |
+| --- | --- | --- |
+| `%nexusprism_traits_research%` | Nivel de investigación/gacha | entero |
+| `%nexusprism_traits_count%` | Número de cartas de trait asignadas | entero |
+| `%nexusprism_traits_cards%` | Lista separada por comas de cartas | `none` si vacío |
+
+---
+
+## Trabajos (Jobs)
+
+**Módulo requerido** (`nexusprism-economy`).
+
+| Placeholder | Retorna | Notas |
+| --- | --- | --- |
+| `%nexusprism_job%` | ID del trabajo activo | `none` si sin trabajo |
+| `%nexusprism_job_level%` | Nivel en el trabajo activo | `0` si sin trabajo |
+| `%nexusprism_job_xp%` | XP en el trabajo activo | `0` si sin trabajo |
+
+---
+
+## Discord
+
+**Módulo requerido** (`nexusprism-discord`).
+
+| Placeholder | Retorna | Notas |
+| --- | --- | --- |
+| `%nexusprism_discord_linked%` | `true` / `false` | — |
+| `%nexusprism_discord_id%` | ID snowflake de Discord | cadena vacía si no vinculado |
+
+---
+
 ## Guía
 
 | Placeholder | Descripción |

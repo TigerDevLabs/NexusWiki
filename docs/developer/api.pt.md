@@ -1,5 +1,7 @@
 # API para Desenvolvedores NexusPrism
 
+*Última atualização: 2026-03-22*
+
 Este guia mostra como integrar com o NexusPrism a partir de um plugin Bukkit/Paper externo ou de um addon nativo. Você compila apenas contra `nexusprism-api` — nunca contra os JARs concretos dos módulos.
 
 ---
@@ -557,6 +559,63 @@ cp target/meu-addon-1.0.0.jar plugins/NexusPrism/addons/
 
 ---
 
+## Passo 11 — Provedores de integração (permissões, placeholders, idioma)
+
+Estas três interfaces ficam em `nexusprism-api` e são usadas pelo NexusPrism internamente. Addons podem lê-las via `getService()` ou implementá-las para substituir/estender o comportamento padrão.
+
+### PermissionProvider
+
+Abstrai o sistema de permissões subjacente (LuckPerms, Vault, etc.). Obtenha o provedor ativo para consultar grupos, prefix/suffix e metadados sem dependência em tempo de compilação do LuckPerms.
+
+```java
+import io.github.otiger.nexusprism.api.integration.PermissionProvider;
+
+PermissionProvider perms = NexusPrismAPI.get().getService(PermissionProvider.class);
+if (perms == null || !perms.isAvailable()) return;
+
+boolean isAdmin = perms.hasPermission(player, "nexusprism.admin");
+String grupo    = perms.getPrimaryGroup(player).orElse("default");
+String prefix   = perms.getPrefix(player).orElse("");
+int tier        = perms.getNexusTierLevel(player); // 1–5, 0 se nenhum
+```
+
+### PlaceholderProvider
+
+SPI que o NexusPrism expõe para a ponte PAPI. Implemente e registre para adicionar novos identificadores `%nexusprism_*%` a partir do seu addon.
+
+```java
+import io.github.otiger.nexusprism.api.integration.PlaceholderProvider;
+
+public class MeusPlaceholders implements PlaceholderProvider {
+    @Override public String getIdentifier() { return "meuaddon"; }
+
+    @Override
+    public String onPlaceholderRequest(Player player, String params) {
+        if ("pontos".equals(params)) return String.valueOf(MeuAddon.getPontos(player));
+        return null;
+    }
+}
+```
+
+### LangProvider
+
+Implementado pelo `LanguageManager` do core. Obtenha-o para buscar mensagens traduzidas e coloridas para um jogador específico (respeitando o idioma escolhido).
+
+```java
+import io.github.otiger.nexusprism.api.lang.LangProvider;
+
+LangProvider lang = NexusPrismAPI.get().getService(LangProvider.class);
+if (lang == null) return;
+
+String msg = lang.getMsg(player.getUniqueId(), "chat.channel-switched", "channel", "Global");
+player.sendMessage(msg);
+
+lang.setPlayerLanguage(player.getUniqueId(), "pt_BR");
+List<String> disponiveis = lang.getAvailableLanguages(); // ["en_US", "pt_BR", ...]
+```
+
+---
+
 ## Exemplo completo de integração
 
 Plugin que recompensa jogadores com dinheiro ao matar, respeitando o multiplicador da Lua de Sangue:
@@ -624,6 +683,10 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 | Discord (vincular, enviar mensagem/webhook) | `DiscordRegistry.get()` → `DiscordProvider` |
 | Empregos (emprego ativo, nível, XP) | `JobRegistry.get()` → `JobProvider` |
 | Redes de energia | `EnergyRegistry.get()` → `EnergyProvider` |
+| **Provedores de integração** | |
+| Backend de permissões (grupos, prefix, meta) | `nexus.getService(PermissionProvider.class)` |
+| Expansão de placeholders (ponte PAPI) | `nexus.getService(PlaceholderProvider.class)` |
+| Idioma / tradução | `nexus.getService(LangProvider.class)` |
 | **Conteúdo e extensibilidade** | |
 | Carregamento de conteúdo de addon | `content().items().machines().recipes().register()` |
 | Receitas de processamento de máquinas | `MachineProcessingRegistry.register(MachineProcessingRecipe)` |

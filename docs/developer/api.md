@@ -1,5 +1,7 @@
 # NexusPrism Developer API
 
+*Last updated: 2026-03-22*
+
 This guide walks through integrating with NexusPrism from an external Bukkit/Paper plugin or a native addon JAR. You only ever compile against `nexusprism-api` — never against concrete module JARs.
 
 ---
@@ -672,6 +674,106 @@ public void onDisable() {
 
 ---
 
+## Step 11 — Integration providers (permissions, placeholders, language)
+
+These three interfaces live in `nexusprism-api` and are used by NexusPrism internally. Addons can read from them via `getService()` or implement them to override / extend the default behaviour.
+
+### PermissionProvider
+
+NexusPrism uses `PermissionProvider` to abstract away the underlying permission plugin (LuckPerms, Vault, etc.). Obtain the active provider to query groups, prefix/suffix and meta values without a hard compile-time dependency on LuckPerms.
+
+```java
+import io.github.otiger.nexusprism.api.integration.PermissionProvider;
+
+NexusPrismAPI nexus = NexusPrismAPI.get();
+if (nexus == null) return;
+
+PermissionProvider perms = nexus.getService(PermissionProvider.class);
+if (perms == null || !perms.isAvailable()) return;
+
+// Check a permission node
+boolean isAdmin = perms.hasPermission(player, "nexusprism.admin");
+
+// Get the LuckPerms group (or equivalent)
+String group = perms.getPrimaryGroup(player).orElse("default");
+
+// Get all groups
+List<String> groups = perms.getPlayerGroups(player);
+
+// Prefix and suffix (colorised, ready to prepend to chat)
+String prefix = perms.getPrefix(player).orElse("");
+String suffix = perms.getSuffix(player).orElse("");
+
+// Custom meta key
+String tier = perms.getMeta(player, "nexus-tier").orElse("0");
+
+// NexusPrism tier level derived from nexusprism.tier.* permissions (1–5, 0 = none)
+int tierLevel = perms.getNexusTierLevel(player);
+```
+
+### PlaceholderProvider
+
+`PlaceholderProvider` is the SPI NexusPrism exposes to its PAPI bridge. Implement and register it to add new `%nexusprism_*%` placeholder identifiers from your addon.
+
+```java
+import io.github.otiger.nexusprism.api.integration.PlaceholderProvider;
+
+public class MyAddonPlaceholders implements PlaceholderProvider {
+
+    @Override
+    public String getIdentifier() {
+        return "myaddon"; // resolves %myaddon_<params>%
+    }
+
+    @Override
+    public String onPlaceholderRequest(Player player, String params) {
+        if ("score".equals(params)) {
+            return String.valueOf(MyAddon.getScore(player));
+        }
+        return null; // return null to indicate the placeholder wasn't handled
+    }
+}
+```
+
+Register in `onEnable()`:
+
+```java
+NexusPrismAPI nexus = NexusPrismAPI.get();
+if (nexus != null) {
+    PlaceholderProvider existing = nexus.getService(PlaceholderProvider.class);
+    // Registration is done through the PAPI expansion — addons that depend
+    // on the NexusPrism PAPI expansion will have their providers bridged
+    // automatically when PlaceholderAPI is present on the server.
+}
+```
+
+### LangProvider
+
+`LangProvider` is implemented by NexusPrism's core `LanguageManager`. Obtain it to fetch translated, colourised messages for a specific player (respecting their chosen language).
+
+```java
+import io.github.otiger.nexusprism.api.lang.LangProvider;
+
+NexusPrismAPI nexus = NexusPrismAPI.get();
+if (nexus == null) return;
+
+LangProvider lang = nexus.getService(LangProvider.class);
+if (lang == null) return;
+
+// Fetch a message (returns the key itself if not found)
+String msg = lang.getMsg(player.getUniqueId(), "chat.channel-switched", "channel", "Global");
+player.sendMessage(msg);
+
+// Check and change a player's language preference
+String current = lang.getPlayerLanguage(player.getUniqueId()); // e.g. "en_US"
+lang.setPlayerLanguage(player.getUniqueId(), "pt_BR");         // returns false if file not found
+
+// List all available language files
+List<String> available = lang.getAvailableLanguages(); // ["en_US", "pt_BR", "es_ES"]
+```
+
+---
+
 ## Complete integration example
 
 Below is a full minimal plugin that hooks into NexusPrism, rewards players with money on kill, and respects Blood Moon multipliers.
@@ -740,6 +842,10 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 | Discord (link, send message/webhook) | `DiscordRegistry.get()` → `DiscordProvider` |
 | Jobs (active job, level, XP) | `JobRegistry.get()` → `JobProvider` |
 | Energy networks | `EnergyRegistry.get()` → `EnergyProvider` |
+| **Integration providers** | |
+| Permission backend (groups, prefix, meta) | `nexus.getService(PermissionProvider.class)` |
+| Placeholder expansion (PAPI bridge) | `nexus.getService(PlaceholderProvider.class)` |
+| Language / translation | `nexus.getService(LangProvider.class)` |
 | **Content & extensibility** | |
 | Addon content loading | `content().items().machines().recipes().register()` |
 | Machine processing recipes | `MachineProcessingRegistry.register(MachineProcessingRecipe)` |

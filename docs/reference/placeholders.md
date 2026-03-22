@@ -125,6 +125,76 @@ These are dynamic — replace `<id>` with any registered item or machine ID.
 
 ---
 
+## MMO
+
+**Module required** (`nexusprism-mmo`).
+
+| Placeholder | Returns | Notes |
+| --- | --- | --- |
+| `%nexusprism_mmo_level%` | MMO character level | integer |
+| `%nexusprism_mmo_mana%` | Current mana | integer |
+| `%nexusprism_mmo_mana_max%` | Maximum mana | integer |
+| `%nexusprism_mmo_stat_points%` | Unspent stat points | integer |
+| `%nexusprism_mmo_stat_strength%` | STRENGTH value | integer |
+| `%nexusprism_mmo_stat_dexterity%` | DEXTERITY value | integer |
+| `%nexusprism_mmo_stat_intelligence%` | INTELLIGENCE value | integer |
+| `%nexusprism_mmo_stat_vitality%` | VITALITY value | integer |
+| `%nexusprism_mmo_stat_endurance%` | ENDURANCE value | integer |
+| `%nexusprism_mmo_stat_luck%` | LUCK value | integer |
+| `%nexusprism_mmo_skill_<treeid>%` | Skill tree level | e.g. `mmo_skill_warrior` |
+| `%nexusprism_mmo_profession_<profid>%` | Profession level | e.g. `mmo_profession_mining` |
+
+---
+
+## Events
+
+`bloodmoon_*` resolve even without the Events module (returning `false` / `1.00`).
+
+| Placeholder | Returns | Notes |
+| --- | --- | --- |
+| `%nexusprism_bloodmoon_active%` | `true` / `false` | server-wide |
+| `%nexusprism_bloodmoon_multiplier%` | Kill-pay multiplier | `1.00` when inactive |
+| `%nexusprism_sacrifice_streak%` | Survival streak | **Module required** |
+| `%nexusprism_in_sacrifice%` | `true` / `false` | **Module required** |
+| `%nexusprism_isekai_active%` | `true` / `false` | **Module required** |
+
+---
+
+## Traits & RNG
+
+**Module required** (`nexusprism-traits`).
+
+| Placeholder | Returns | Notes |
+| --- | --- | --- |
+| `%nexusprism_traits_research%` | Research/gacha level | integer |
+| `%nexusprism_traits_count%` | Number of assigned trait cards | integer |
+| `%nexusprism_traits_cards%` | Comma-separated card names | `none` if empty |
+
+---
+
+## Jobs
+
+**Module required** (`nexusprism-economy`).
+
+| Placeholder | Returns | Notes |
+| --- | --- | --- |
+| `%nexusprism_job%` | Active job ID | `none` if no job |
+| `%nexusprism_job_level%` | Level in active job | `0` if no job |
+| `%nexusprism_job_xp%` | XP in active job | `0` if no job |
+
+---
+
+## Discord
+
+**Module required** (`nexusprism-discord`).
+
+| Placeholder | Returns | Notes |
+| --- | --- | --- |
+| `%nexusprism_discord_linked%` | `true` / `false` | — |
+| `%nexusprism_discord_id%` | Discord snowflake ID | empty string if not linked |
+
+---
+
 ## Core / Misc
 
 | Placeholder | Description | Example |

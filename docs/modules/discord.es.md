@@ -14,6 +14,8 @@ El módulo Discord proporciona un **bot impulsado por JDA** con puente de chat M
 | **Webhooks** | Envía eventos de jugadores (entrada, muerte, logro) a Discord |
 | **Alertas de Mención** | Notifica a los jugadores en el juego cuando son mencionados en Discord |
 | **GitHub Actions** | Monitorea y activa flujos de CI/CD desde Discord |
+| **Voto del Servidor** | Votación comunitaria para reiniciar el servidor vía slash command |
+| **Control del Panel** | Comandos admin de inicio/parada vía API de Pterodactyl |
 
 ---
 
@@ -158,6 +160,61 @@ message: "**{player}** just purchased **{package}** from the store! Thank you!"
 El módulo Discord puede monitorear flujos de trabajo de GitHub Actions y permitir que el staff los active desde Discord.
 
 Clases principales: `GitHubActionsManager`, `WorkflowPoller`, `WorkflowTriggerRecord`
+
+---
+
+## Voto del Servidor y Control del Panel
+
+### `/server vote` — Votación Comunitaria
+
+Cualquier miembro de Discord (opcionalmente restringido a roles específicos) puede iniciar una votación para reiniciar el servidor.
+
+1. El miembro ejecuta `/server vote` en Discord.
+2. El bot publica un embed con botones **✅ Sí** y **❌ No**.
+3. Cada miembro puede cambiar su voto durante la ventana de votación.
+4. Al cerrar la ventana, el bot evalúa el resultado:
+   - Requiere `min-votes` votos **y** `threshold`% de sí para aprobar.
+   - Si aprueba: RCON transmite aviso en el juego, luego Pterodactyl envía señal `restart` tras `warn-seconds`.
+   - Si falla: el embed se actualiza con el resultado, no se toma ninguna acción.
+5. Un cooldown configurable impide votaciones consecutivas.
+
+### `/server start` / `/server stop` — Comandos Admin
+
+Restringido a roles listados en `server-vote.admin-roles` (o permiso de Administrador de Discord si la lista está vacía).
+
+| Slash Command Discord | Acción |
+| --- | --- |
+| `/server vote` | Iniciar votación comunitaria de reinicio |
+| `/server start` | Enviar señal `start` a Pterodactyl |
+| `/server stop` | Transmitir aviso RCON y enviar señal `stop` |
+
+### Configuración — `discord/panel.yml`
+
+```yaml
+panel: pterodactyl
+
+pterodactyl:
+  base-url: "https://panel.example.com"
+  client-api-key: ""
+  server-uuid: ""
+
+rcon:
+  host: "127.0.0.1"
+  port: 25575
+  password: ""
+  timeout-seconds: 5
+
+server-vote:
+  enabled: true
+  voter-roles: []
+  admin-roles: []
+  min-votes: 3
+  threshold: 0.6
+  window-seconds: 120
+  cooldown-minutes: 30
+  warn-seconds: 60
+  channel: "default"
+```
 
 ---
 

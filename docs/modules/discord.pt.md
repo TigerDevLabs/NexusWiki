@@ -14,6 +14,8 @@ O módulo Discord fornece um **bot com JDA** com ponte de chat Minecraft ↔ Dis
 | **Webhooks** | Envia eventos de jogadores (entrada, morte, conquista) para o Discord |
 | **Alertas de Menção** | Notifica jogadores no jogo quando são mencionados no Discord |
 | **GitHub Actions** | Monitora e aciona fluxos de CI/CD a partir do Discord |
+| **Voto do Servidor** | Votação da comunidade para reiniciar o servidor via slash command |
+| **Controle do Painel** | Comandos admin de iniciar/parar via API do Pterodactyl |
 
 ---
 
@@ -158,6 +160,61 @@ message: "**{player}** just purchased **{package}** from the store! Thank you!"
 O módulo Discord pode monitorar fluxos de trabalho do GitHub Actions e permitir que a equipe os acione a partir do Discord.
 
 Classes principais: `GitHubActionsManager`, `WorkflowPoller`, `WorkflowTriggerRecord`
+
+---
+
+## Voto do Servidor e Controle do Painel
+
+### `/server vote` — Votação da Comunidade
+
+Qualquer membro do Discord (opcionalmente restrito a cargos específicos) pode iniciar uma votação para reiniciar o servidor.
+
+1. O membro executa `/server vote` no Discord.
+2. O bot posta um embed com botões **✅ Sim** e **❌ Não**.
+3. Cada membro pode mudar seu voto durante a janela de votação.
+4. Ao encerrar a janela, o bot avalia o resultado:
+   - Requer `min-votes` votos **e** `threshold`% de sim para aprovar.
+   - Se aprovado: RCON transmite aviso no jogo, depois o Pterodactyl envia sinal `restart` após `warn-seconds`.
+   - Se reprovado: embed é atualizado com o resultado, nenhuma ação é tomada.
+5. Um cooldown configurável impede votações consecutivas.
+
+### `/server start` / `/server stop` — Comandos Admin
+
+Restrito a cargos listados em `server-vote.admin-roles` (ou permissão de Administrador do Discord se a lista estiver vazia).
+
+| Slash Command Discord | Ação |
+| --- | --- |
+| `/server vote` | Iniciar votação comunitária de reinicialização |
+| `/server start` | Enviar sinal `start` ao Pterodactyl |
+| `/server stop` | Transmitir aviso RCON e enviar sinal `stop` |
+
+### Configuração — `discord/panel.yml`
+
+```yaml
+panel: pterodactyl
+
+pterodactyl:
+  base-url: "https://panel.example.com"
+  client-api-key: ""
+  server-uuid: ""
+
+rcon:
+  host: "127.0.0.1"
+  port: 25575
+  password: ""
+  timeout-seconds: 5
+
+server-vote:
+  enabled: true
+  voter-roles: []
+  admin-roles: []
+  min-votes: 3
+  threshold: 0.6
+  window-seconds: 120
+  cooldown-minutes: 30
+  warn-seconds: 60
+  channel: "default"
+```
 
 ---
 
