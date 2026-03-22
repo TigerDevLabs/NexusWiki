@@ -5,6 +5,28 @@
 
 ---
 
+## [2026-03-22] · `5b49358`
+
+
+### ✨ Added
+
+- **discord,events**: GamePresence TYPE|text, Blood Moon chance, death/achievement embeds
+
+### 🐛 Fixed
+
+- **enchantments**: Add nexusprism-core dep for LanguageManager
+- **tab**: Corrigido parâmetro ausente no construtor TabCommand
+
+### 📚 Documentation
+
+- Atualização de changelog, configurações e placeholders (2026-03-22)
+
+### 🔧 Maintenance
+
+- Alteração Geral: LanguageManager integrado em todos os módulos
+
+---
+
 ## [2026-03-21] · `83b864b`
 
 

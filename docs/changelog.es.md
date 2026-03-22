@@ -9,6 +9,28 @@ PH0
 
 PH1
 
+- PH2 GamePresence TYPE|texto, probabilidad de Blood Moon, incrustaciones de muerte/logro
+
+PH3
+
+- PH4 Agregar departamento de nexusprism-core para LanguageManager
+- PH5 Parámetro corregido ausente en el constructor TabCommand
+
+PH6
+
+- Actualización del registro de cambios, configuraciones y marcadores de posición (22/03/2026)
+
+PH7
+
+- Modificación general: LanguageManager integrado en todos los módulos
+
+---
+
+PH0
+
+
+PH1
+
 - Se agregó la opción de votación del servidor para restablecer el servidor MC. Basado en el trabajo de gnomomuitoloco (en discordia)
 PH0
 
