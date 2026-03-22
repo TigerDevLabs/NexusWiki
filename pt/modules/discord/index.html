@@ -971,6 +971,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#voto-do-servidor-e-controle-do-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voto do Servidor e Controle do Painel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voto do Servidor e Controle do Painel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-vote-votacao-da-comunidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /server vote — Votação da Comunidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-start-server-stop-comandos-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /server start / /server stop — Comandos Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-discordpanelyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração — discord/panel.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissoes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2022,6 +2072,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#voto-do-servidor-e-controle-do-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voto do Servidor e Controle do Painel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voto do Servidor e Controle do Painel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-vote-votacao-da-comunidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /server vote — Votação da Comunidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-start-server-stop-comandos-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /server start / /server stop — Comandos Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-discordpanelyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração — discord/panel.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#permissoes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2087,6 +2187,14 @@
 <tr>
 <td><strong>GitHub Actions</strong></td>
 <td>Monitora e aciona fluxos de CI/CD a partir do Discord</td>
+</tr>
+<tr>
+<td><strong>Voto do Servidor</strong></td>
+<td>Votação da comunidade para reiniciar o servidor via slash command</td>
+</tr>
+<tr>
+<td><strong>Controle do Painel</strong></td>
+<td>Comandos admin de iniciar/parar via API do Pterodactyl</td>
 </tr>
 </tbody>
 </table>
@@ -2229,6 +2337,69 @@
 <h2 id="integracao-com-github-actions">Integração com GitHub Actions<a class="headerlink" href="#integracao-com-github-actions" title="Permanent link">&para;</a></h2>
 <p>O módulo Discord pode monitorar fluxos de trabalho do GitHub Actions e permitir que a equipe os acione a partir do Discord.</p>
 <p>Classes principais: <code>GitHubActionsManager</code>, <code>WorkflowPoller</code>, <code>WorkflowTriggerRecord</code></p>
+<hr />
+<h2 id="voto-do-servidor-e-controle-do-painel">Voto do Servidor e Controle do Painel<a class="headerlink" href="#voto-do-servidor-e-controle-do-painel" title="Permanent link">&para;</a></h2>
+<h3 id="server-vote-votacao-da-comunidade"><code>/server vote</code> — Votação da Comunidade<a class="headerlink" href="#server-vote-votacao-da-comunidade" title="Permanent link">&para;</a></h3>
+<p>Qualquer membro do Discord (opcionalmente restrito a cargos específicos) pode iniciar uma votação para reiniciar o servidor.</p>
+<ol>
+<li>O membro executa <code>/server vote</code> no Discord.</li>
+<li>O bot posta um embed com botões <strong>✅ Sim</strong> e <strong>❌ Não</strong>.</li>
+<li>Cada membro pode mudar seu voto durante a janela de votação.</li>
+<li>Ao encerrar a janela, o bot avalia o resultado:</li>
+<li>Requer <code>min-votes</code> votos <strong>e</strong> <code>threshold</code>% de sim para aprovar.</li>
+<li>Se aprovado: RCON transmite aviso no jogo, depois o Pterodactyl envia sinal <code>restart</code> após <code>warn-seconds</code>.</li>
+<li>Se reprovado: embed é atualizado com o resultado, nenhuma ação é tomada.</li>
+<li>Um cooldown configurável impede votações consecutivas.</li>
+</ol>
+<h3 id="server-start-server-stop-comandos-admin"><code>/server start</code> / <code>/server stop</code> — Comandos Admin<a class="headerlink" href="#server-start-server-stop-comandos-admin" title="Permanent link">&para;</a></h3>
+<p>Restrito a cargos listados em <code>server-vote.admin-roles</code> (ou permissão de Administrador do Discord se a lista estiver vazia).</p>
+<table>
+<thead>
+<tr>
+<th>Slash Command Discord</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/server vote</code></td>
+<td>Iniciar votação comunitária de reinicialização</td>
+</tr>
+<tr>
+<td><code>/server start</code></td>
+<td>Enviar sinal <code>start</code> ao Pterodactyl</td>
+</tr>
+<tr>
+<td><code>/server stop</code></td>
+<td>Transmitir aviso RCON e enviar sinal <code>stop</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuracao-discordpanelyml">Configuração — <code>discord/panel.yml</code><a class="headerlink" href="#configuracao-discordpanelyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">panel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pterodactyl</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">pterodactyl</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">base-url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://panel.example.com&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">client-api-key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">server-uuid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nt">rcon</span><span class="p">:</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25575</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="nt">timeout-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nt">server-vote</span><span class="p">:</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="nt">voter-roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">  </span><span class="nt">admin-roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">  </span><span class="nt">min-votes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">  </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span><span class="nt">window-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="nt">cooldown-minutes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span><span class="nt">warn-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span><span class="nt">channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default&quot;</span>
+</code></pre></div>
 <hr />
 <h2 id="permissoes">Permissões<a class="headerlink" href="#permissoes" title="Permanent link">&para;</a></h2>
 <table>

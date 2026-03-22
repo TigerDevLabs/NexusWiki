@@ -1998,6 +1998,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step-11-integration-providers-permissions-placeholders-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 11 — Integration providers (permissions, placeholders, language)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 11 — Integration providers (permissions, placeholders, language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PermissionProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholderprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PlaceholderProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LangProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#complete-integration-example" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2486,6 +2536,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step-11-integration-providers-permissions-placeholders-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 11 — Integration providers (permissions, placeholders, language)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 11 — Integration providers (permissions, placeholders, language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PermissionProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholderprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PlaceholderProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LangProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#complete-integration-example" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2539,6 +2639,7 @@
 
 
 <h1 id="nexusprism-developer-api">NexusPrism Developer API<a class="headerlink" href="#nexusprism-developer-api" title="Permanent link">&para;</a></h1>
+<p><em>Last updated: 2026-03-22</em></p>
 <p>This guide walks through integrating with NexusPrism from an external Bukkit/Paper plugin or a native addon JAR. You only ever compile against <code>nexusprism-api</code> — never against concrete module JARs.</p>
 <hr />
 <h2 id="step-1-add-the-dependency">Step 1 — Add the dependency<a class="headerlink" href="#step-1-add-the-dependency" title="Permanent link">&para;</a></h2>
@@ -3088,43 +3189,125 @@
 <a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a><span class="p">}</span>
 </code></pre></div>
 <hr />
+<h2 id="step-11-integration-providers-permissions-placeholders-language">Step 11 — Integration providers (permissions, placeholders, language)<a class="headerlink" href="#step-11-integration-providers-permissions-placeholders-language" title="Permanent link">&para;</a></h2>
+<p>These three interfaces live in <code>nexusprism-api</code> and are used by NexusPrism internally. Addons can read from them via <code>getService()</code> or implement them to override / extend the default behaviour.</p>
+<h3 id="permissionprovider">PermissionProvider<a class="headerlink" href="#permissionprovider" title="Permanent link">&para;</a></h3>
+<p>NexusPrism uses <code>PermissionProvider</code> to abstract away the underlying permission plugin (LuckPerms, Vault, etc.). Obtain the active provider to query groups, prefix/suffix and meta values without a hard compile-time dependency on LuckPerms.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.integration.PermissionProvider</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="n">NexusPrismAPI</span><span class="w"> </span><span class="n">nexus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nexus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="n">PermissionProvider</span><span class="w"> </span><span class="n">perms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nexus</span><span class="p">.</span><span class="na">getService</span><span class="p">(</span><span class="n">PermissionProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">perms</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">perms</span><span class="p">.</span><span class="na">isAvailable</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="c1">// Check a permission node</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">isAdmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">hasPermission</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nexusprism.admin&quot;</span><span class="p">);</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="c1">// Get the LuckPerms group (or equivalent)</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="n">String</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getPrimaryGroup</span><span class="p">(</span><span class="n">player</span><span class="p">).</span><span class="na">orElse</span><span class="p">(</span><span class="s">&quot;default&quot;</span><span class="p">);</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a>
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="c1">// Get all groups</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getPlayerGroups</span><span class="p">(</span><span class="n">player</span><span class="p">);</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a>
+<a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="c1">// Prefix and suffix (colorised, ready to prepend to chat)</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a><span class="n">String</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getPrefix</span><span class="p">(</span><span class="n">player</span><span class="p">).</span><span class="na">orElse</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="n">String</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getSuffix</span><span class="p">(</span><span class="n">player</span><span class="p">).</span><span class="na">orElse</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a>
+<a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a><span class="c1">// Custom meta key</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="n">String</span><span class="w"> </span><span class="n">tier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getMeta</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nexus-tier&quot;</span><span class="p">).</span><span class="na">orElse</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">);</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a>
+<a id="__codelineno-34-25" name="__codelineno-34-25" href="#__codelineno-34-25"></a><span class="c1">// NexusPrism tier level derived from nexusprism.tier.* permissions (1–5, 0 = none)</span>
+<a id="__codelineno-34-26" name="__codelineno-34-26" href="#__codelineno-34-26"></a><span class="kt">int</span><span class="w"> </span><span class="n">tierLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">perms</span><span class="p">.</span><span class="na">getNexusTierLevel</span><span class="p">(</span><span class="n">player</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="placeholderprovider">PlaceholderProvider<a class="headerlink" href="#placeholderprovider" title="Permanent link">&para;</a></h3>
+<p><code>PlaceholderProvider</code> is the SPI NexusPrism exposes to its PAPI bridge. Implement and register it to add new <code>%nexusprism_*%</code> placeholder identifiers from your addon.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.integration.PlaceholderProvider</span><span class="p">;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyAddonPlaceholders</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">PlaceholderProvider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getIdentifier</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;myaddon&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// resolves %myaddon_&lt;params&gt;%</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">onPlaceholderRequest</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;score&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">params</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">MyAddon</span><span class="p">.</span><span class="na">getScore</span><span class="p">(</span><span class="n">player</span><span class="p">));</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// return null to indicate the placeholder wasn&#39;t handled</span>
+<a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-17" name="__codelineno-35-17" href="#__codelineno-35-17"></a><span class="p">}</span>
+</code></pre></div>
+<p>Register in <code>onEnable()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">NexusPrismAPI</span><span class="w"> </span><span class="n">nexus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nexus</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="n">PlaceholderProvider</span><span class="w"> </span><span class="n">existing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nexus</span><span class="p">.</span><span class="na">getService</span><span class="p">(</span><span class="n">PlaceholderProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="c1">// Registration is done through the PAPI expansion — addons that depend</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">    </span><span class="c1">// on the NexusPrism PAPI expansion will have their providers bridged</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">    </span><span class="c1">// automatically when PlaceholderAPI is present on the server.</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="langprovider">LangProvider<a class="headerlink" href="#langprovider" title="Permanent link">&para;</a></h3>
+<p><code>LangProvider</code> is implemented by NexusPrism's core <code>LanguageManager</code>. Obtain it to fetch translated, colourised messages for a specific player (respecting their chosen language).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.lang.LangProvider</span><span class="p">;</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="n">NexusPrismAPI</span><span class="w"> </span><span class="n">nexus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nexus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="n">LangProvider</span><span class="w"> </span><span class="n">lang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nexus</span><span class="p">.</span><span class="na">getService</span><span class="p">(</span><span class="n">LangProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lang</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a><span class="c1">// Fetch a message (returns the key itself if not found)</span>
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="n">String</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lang</span><span class="p">.</span><span class="na">getMsg</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="na">getUniqueId</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;chat.channel-switched&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Global&quot;</span><span class="p">);</span>
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a><span class="n">player</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>
+<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="c1">// Check and change a player&#39;s language preference</span>
+<a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a><span class="n">String</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lang</span><span class="p">.</span><span class="na">getPlayerLanguage</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="na">getUniqueId</span><span class="p">());</span><span class="w"> </span><span class="c1">// e.g. &quot;en_US&quot;</span>
+<a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a><span class="n">lang</span><span class="p">.</span><span class="na">setPlayerLanguage</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="na">getUniqueId</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;pt_BR&quot;</span><span class="p">);</span><span class="w">         </span><span class="c1">// returns false if file not found</span>
+<a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a>
+<a id="__codelineno-37-17" name="__codelineno-37-17" href="#__codelineno-37-17"></a><span class="c1">// List all available language files</span>
+<a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lang</span><span class="p">.</span><span class="na">getAvailableLanguages</span><span class="p">();</span><span class="w"> </span><span class="c1">// [&quot;en_US&quot;, &quot;pt_BR&quot;, &quot;es_ES&quot;]</span>
+</code></pre></div>
+<hr />
 <h2 id="complete-integration-example">Complete integration example<a class="headerlink" href="#complete-integration-example" title="Permanent link">&para;</a></h2>
 <p>Below is a full minimal plugin that hooks into NexusPrism, rewards players with money on kill, and respects Blood Moon multipliers.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.NexusPrismAPI</span><span class="p">;</span>
-<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.events.EventFlags</span><span class="p">;</span>
-<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.entity.Player</span><span class="p">;</span>
-<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.EventHandler</span><span class="p">;</span>
-<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.Listener</span><span class="p">;</span>
-<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.entity.PlayerDeathEvent</span><span class="p">;</span>
-<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.plugin.java.JavaPlugin</span><span class="p">;</span>
-<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>
-<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KillRewardPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JavaPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Listener</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>
-<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onEnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="w">            </span><span class="n">getLogger</span><span class="p">().</span><span class="na">warning</span><span class="p">(</span><span class="s">&quot;NexusPrism not found — disabling kill rewards.&quot;</span><span class="p">);</span>
-<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
-<a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a><span class="w">        </span><span class="n">getServer</span><span class="p">().</span><span class="na">getPluginManager</span><span class="p">().</span><span class="na">registerEvents</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="w">        </span><span class="n">getLogger</span><span class="p">().</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Kill rewards enabled.&quot;</span><span class="p">);</span>
-<a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a>
-<a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="w">    </span><span class="nd">@EventHandler</span>
-<a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPlayerKill</span><span class="p">(</span><span class="n">PlayerDeathEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-25" name="__codelineno-34-25" href="#__codelineno-34-25"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">getEntity</span><span class="p">().</span><span class="na">getKiller</span><span class="p">()</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="n">killer</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
-<a id="__codelineno-34-26" name="__codelineno-34-26" href="#__codelineno-34-26"></a>
-<a id="__codelineno-34-27" name="__codelineno-34-27" href="#__codelineno-34-27"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25.0</span><span class="p">;</span>
-<a id="__codelineno-34-28" name="__codelineno-34-28" href="#__codelineno-34-28"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">reward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">EventFlags</span><span class="p">.</span><span class="na">killPayMultiplier</span><span class="p">;</span><span class="w"> </span><span class="c1">// scales with Blood Moon</span>
-<a id="__codelineno-34-29" name="__codelineno-34-29" href="#__codelineno-34-29"></a>
-<a id="__codelineno-34-30" name="__codelineno-34-30" href="#__codelineno-34-30"></a><span class="w">        </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">economy</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">eco</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-31" name="__codelineno-34-31" href="#__codelineno-34-31"></a><span class="w">            </span><span class="n">eco</span><span class="p">.</span><span class="na">addMoney</span><span class="p">(</span><span class="n">killer</span><span class="p">.</span><span class="na">getUniqueId</span><span class="p">(),</span><span class="w"> </span><span class="n">reward</span><span class="p">);</span>
-<a id="__codelineno-34-32" name="__codelineno-34-32" href="#__codelineno-34-32"></a><span class="w">            </span><span class="n">killer</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="s">&quot;§a+$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%.0f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; §7for the kill!&quot;</span><span class="p">);</span>
-<a id="__codelineno-34-33" name="__codelineno-34-33" href="#__codelineno-34-33"></a><span class="w">        </span><span class="p">});</span>
-<a id="__codelineno-34-34" name="__codelineno-34-34" href="#__codelineno-34-34"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-34-35" name="__codelineno-34-35" href="#__codelineno-34-35"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.NexusPrismAPI</span><span class="p">;</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.otiger.nexusprism.api.events.EventFlags</span><span class="p">;</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.entity.Player</span><span class="p">;</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.EventHandler</span><span class="p">;</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.Listener</span><span class="p">;</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.event.entity.PlayerDeathEvent</span><span class="p">;</span>
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.bukkit.plugin.java.JavaPlugin</span><span class="p">;</span>
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KillRewardPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JavaPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Listener</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onEnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a><span class="w">            </span><span class="n">getLogger</span><span class="p">().</span><span class="na">warning</span><span class="p">(</span><span class="s">&quot;NexusPrism not found — disabling kill rewards.&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a><span class="w">        </span><span class="n">getServer</span><span class="p">().</span><span class="na">getPluginManager</span><span class="p">().</span><span class="na">registerEvents</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a><span class="w">        </span><span class="n">getLogger</span><span class="p">().</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Kill rewards enabled.&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a>
+<a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a><span class="w">    </span><span class="nd">@EventHandler</span>
+<a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPlayerKill</span><span class="p">(</span><span class="n">PlayerDeathEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">getEntity</span><span class="p">().</span><span class="na">getKiller</span><span class="p">()</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="n">killer</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a>
+<a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25.0</span><span class="p">;</span>
+<a id="__codelineno-38-28" name="__codelineno-38-28" href="#__codelineno-38-28"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">reward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">EventFlags</span><span class="p">.</span><span class="na">killPayMultiplier</span><span class="p">;</span><span class="w"> </span><span class="c1">// scales with Blood Moon</span>
+<a id="__codelineno-38-29" name="__codelineno-38-29" href="#__codelineno-38-29"></a>
+<a id="__codelineno-38-30" name="__codelineno-38-30" href="#__codelineno-38-30"></a><span class="w">        </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">economy</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">eco</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-31" name="__codelineno-38-31" href="#__codelineno-38-31"></a><span class="w">            </span><span class="n">eco</span><span class="p">.</span><span class="na">addMoney</span><span class="p">(</span><span class="n">killer</span><span class="p">.</span><span class="na">getUniqueId</span><span class="p">(),</span><span class="w"> </span><span class="n">reward</span><span class="p">);</span>
+<a id="__codelineno-38-32" name="__codelineno-38-32" href="#__codelineno-38-32"></a><span class="w">            </span><span class="n">killer</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="s">&quot;§a+$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%.0f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; §7for the kill!&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-33" name="__codelineno-38-33" href="#__codelineno-38-33"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-38-34" name="__codelineno-38-34" href="#__codelineno-38-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-38-35" name="__codelineno-38-35" href="#__codelineno-38-35"></a><span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="quick-reference">Quick-reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
@@ -3215,6 +3398,22 @@
 <tr>
 <td>Energy networks</td>
 <td><code>EnergyRegistry.get()</code> → <code>EnergyProvider</code></td>
+</tr>
+<tr>
+<td><strong>Integration providers</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Permission backend (groups, prefix, meta)</td>
+<td><code>nexus.getService(PermissionProvider.class)</code></td>
+</tr>
+<tr>
+<td>Placeholder expansion (PAPI bridge)</td>
+<td><code>nexus.getService(PlaceholderProvider.class)</code></td>
+</tr>
+<tr>
+<td>Language / translation</td>
+<td><code>nexus.getService(LangProvider.class)</code></td>
 </tr>
 <tr>
 <td><strong>Content &amp; extensibility</strong></td>

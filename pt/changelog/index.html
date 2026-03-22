@@ -1645,24 +1645,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Histórico
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1679,53 +1661,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#200-beta-lancamento-inicial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [2.0.0-BETA] — Lançamento Inicial
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[2.0.0-BETA] — Lançamento Inicial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adicionado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✨ Adicionado
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1751,42 +1686,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#200-beta-lancamento-inicial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [2.0.0-BETA] — Lançamento Inicial
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[2.0.0-BETA] — Lançamento Inicial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adicionado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✨ Adicionado
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1810,6 +1709,257 @@
 <p>Gerado automaticamente a partir dos commits do <a href="https://github.com/O-Tiger">NexusPrism</a>.
 Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.</p>
 </blockquote>
+<hr />
+<p>PH0</p>
+<p>PH1</p>
+<ul>
+<li>PH2 GamePresence TYPE | texto, chance de Blood Moon, incorporações de morte/conquista</li>
+</ul>
+<p>PH3</p>
+<ul>
+<li>PH4 Adicionar dependência nexusprism-core para LanguageManager</li>
+<li>PH5 Corrigido parâmetro ausente no construtor TabCommand</li>
+</ul>
+<p>PH6</p>
+<ul>
+<li>Atualização de changelog, configurações e placeholders (22/03/2026)</li>
+</ul>
+<p>PH7</p>
+<ul>
+<li>Alteração Geral: LanguageManager integrado em todos os módulos</li>
+</ul>
+<hr />
+<p>PH0</p>
+<p>PH1</p>
+<ul>
+<li>Adicionada opção de votação no servidor para redefinir o servidor MC. Baseado no trabalho do gnomomuitoloco (on discord)
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>PH2 Adicionar controle de painel, votação de servidor e provedores PAPI</li>
+</ul>
+<hr />
+<p>PH0</p>
+<p>PH1</p>
+<ul>
+<li>API de energia PH2 Expose via EnergyProvider/EnergyRegistry</li>
+<li>Exemplo de uso do PH3 Add EnergyRegistry</li>
+</ul>
+<p>PH4</p>
+<ul>
+<li>PH5 Use o campo público def.id em vez de getId() inexistente em JobProviderImpl</li>
+<li>PH6 Use Region.getFlag (RegionFlag) e API DuelManager corretos em ProtectionsProviderImpl</li>
+<li>PH7 Correta HologramLine, BloodMoonManager.getWorldName e verificação mundial EventsProviderImpl</li>
+<li>PH8 Resolver erros de compilação BackpackProviderImpl e MachineRegistrarImpl</li>
+</ul>
+<hr />
+<p>PH0</p>
+<p>PH1</p>
+<ul>
+<li>PH2 Use nomes corretos de métodos ChannelRegistry e ChatChannel em ChatProviderImpl</li>
+</ul>
+<hr />
+<p>PH0</p>
+<p>PH1</p>
+<ul>
+<li>Verificação premium baseada em PH2 UUID com cache persistente</li>
+<li>Comando PH3 Admin /isekai com início forçado e seleção de chefe</li>
+<li>Sistema dinâmico de custo de mana PH4 e nova capacidade de lâmina dupla</li>
+<li>Sistema de vinculação de teclas PH5 Ability com GUI e teclas de atalho no jogo</li>
+<li>PH6 Adicionar 9 interfaces de provedor, registros e MachineProcessingRegistry</li>
+<li>Provedores de fio PH7 em construtores de módulos e desligamentos</li>
+<li>PH8 Hook MachineProcessingRegistry em MachineEngine</li>
+<li>PH9 Adicionar projeto de modelo público com README e publicar fluxo de trabalho</li>
+<li>PH10 Adicionar carregador de conteúdo, registro de receita infinito e interfaces de registrador de máquina</li>
+</ul>
+<p>PH11</p>
+<ul>
+<li>Renomeie nexusslime → nexusprism em todas as camadas</li>
+</ul>
+<p>PH12</p>
+<ul>
+<li>Refatorando todas as referências de nexusslime para nexusprism</li>
+<li>Corrigido o trabalho de notificação no fluxo de trabalho do dependabot-discord. causa raiz: minhas células cerebrais se esquecem de adicionar os segredos do dependabot
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Mobs nivelados em PH2 e melhorias no empilhador de mobs</li>
+<li>PH3 Jobs, loja, casa de leilões e warps de jogadores</li>
+<li>Sistema PH4 Blood Moon, Sacrifice Arc e Isekai Boss</li>
+<li>Estatísticas do PH5, árvores de habilidades, habilidades, profissões e sistema de mana</li>
+</ul>
+<p>PH6</p>
+<ul>
+<li>PH7 Corrija os padrões de configuração do TAB</li>
+</ul>
+<p>PH8</p>
+<ul>
+<li>Adicionado um substituto para evitar falsos positivos no login/registro</li>
+<li>Registre eventos e módulos MMO, renomeie o plugin para NexusPrism
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Adicionados placares e personalizações MOTD ao módulo TAB</li>
+<li>Adicionado forge/neoforge à lista de observação, para evitar exploradores, cronômetro mais alto para mundo limpo e verificação de jogadores. Se nada for encontrado, então pula o mundo limpo
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Adicionado suporte jitpack à API</li>
+<li>atualize o jitpack.yml para forçar o uso do maven 3.9</li>
+<li>não sei</li>
+<li>pequena correção: adicione definição yaml ao bloco de código
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>O fluxo de autenticação foi melhorado, verificando agora o tipo de conta (premium ou crackeada) e os IPs associados a ela. Para o primeiro acesso, um administrador precisará conceder confiança ao IP.
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>adicionar módulo de hologramas, detector de mod/ore, antilag configurável e atualizações de spawner.</li>
+<li>Referências de crédito removidas (não um servidor p2w aliás)
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Fluxo de autenticação aprimorado para também detectar IP e bloquear IPs não reconhecidos</li>
+<li>Novas correções conectadas para fluxos de autenticação e segurança
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Arquivos de documentação atualizados</li>
+<li>Adicionado suporte SkinsRestorer para contas premium, as crackeadas devem usar comandos.</li>
+<li>Esqueci de adicionar os arquivos ao gitignore
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Fluxo de autenticação alterado para baseado em mapa
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Ações de colisão/artefato de upload de 6 para 7 no grupo gha-major</li>
+<li>Fluxo de autenticação aprimorado: _ Agora é baseado em sessão, tempo padrão de 2 horas
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Adicionado:</li>
+<li>adicionado registro de alterações
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Atualizados alguns arquivos</li>
+<li>Poms.xml atualizado de cada módulo</li>
+<li>Módulo de proteção aprimorado para ser semelhante ao RedProtection. Também adicionei alguns dos meus projetos antigos, como o chefe Echoes e a experiência de sonho</li>
+<li>Remova completamente a antiga dependência do nuvotifier e adicione uma imagem pública como avatar do fluxo de trabalho</li>
+<li>Corrigindo sed fazendo com que o URL ficasse malformado</li>
+<li>Adicionado suporte para executar ações do discord
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Corrigido download de importação do nuvotifier maven, adicionando-o localmente</li>
+<li>Crie SECURITY.md</li>
+<li>Votificador desativado por enquanto. Planejando adicionar novamente, mas como um código interno, não apenas uma chamada de API.</li>
+<li>Esqueci da dependência</li>
+<li>Votificador desativado no Nexus.....</li>
+</ul>
+<p>PH2</p>
+<ul>
+<li>
+<ul>
+<li>Adicionado suporte emoji ao módulo de chat; - Agora será possível mencionar alguém entre discord &lt;-&gt; minecraft, usando seus nomes atuais em cada um. O usuário mencionado deve ser verificado no servidor discord para ser notificado. - Adicionadas chaves lang aos novos módulos.
+PH0</li>
+</ul>
+</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Bump org.postgresql:postgresql de 42.7.4 para 42.7.7
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Adicionado formatador de bate-papo e redirecionamentos de canal</li>
+<li>fluxo de trabalho atualizado do dependabot-discord</li>
+<li>Adicionado suporte multicrafting para níveis de itens infinitos</li>
+<li>Alterado para cargas úteis jq para uso mais seguro</li>
+<li>Corrija o recuo no README e desfaça as alterações do merge pull do dependabot (causa incompatibilidade)
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Bump com.sk89q.worldguard:worldguard-bukkit
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Loja virtual vinculada ao módulo nexusslime-web Melhore ainda mais o módulo discord, permitindo configurações através de arquivos yml.
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Coloque o grupo maven-major em 1 diretório com 2 atualizações
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Implementação da API Discord
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Testes de integração do Discord
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Atualizar modelos de problemas</li>
+<li>
+<h1 id="itemyamlloader-suporte-a-modelos-nomeados">ItemYamlLoader: suporte a modelos nomeados<a class="headerlink" href="#itemyamlloader-suporte-a-modelos-nomeados" title="Permanent link">&para;</a></h1>
+</li>
+</ul>
+<p>PH2</p>
+<ul>
+<li>Evite o download do ProtocolLib durante a compilação (opcional em tempo de execução)
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Fluxos de trabalho atualizados e adicionado CONTRIBUTING.md
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>.gitignore atualizado</li>
+<li>Fluxo de trabalho release.yml atualizado
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Implementar máquinas de processamento em camadas e infraestrutura de sistemas principais</li>
+</ul>
+<p>PH2</p>
+<ul>
+<li>Criação de fluxos de trabalho para builds e releases</li>
+<li>Release.yml atualizado</li>
+<li>Supere o grupo gha-major com 3 atualizações</li>
+<li>Não sei, acabei de perder alguns campos na notificação Enviar Discord
+PH0</li>
+</ul>
+<p>PH1</p>
+<ul>
+<li>Confirmação inicial - Espaços reservados para itens de trabalho</li>
+</ul>
 <hr />
 <h2 id="200-beta-lancamento-inicial">[2.0.0-BETA] — Lançamento Inicial<a class="headerlink" href="#200-beta-lancamento-inicial" title="Permanent link">&para;</a></h2>
 <h3 id="adicionado">✨ Adicionado<a class="headerlink" href="#adicionado" title="Permanent link">&para;</a></h3>

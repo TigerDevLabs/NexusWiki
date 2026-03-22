@@ -1600,6 +1600,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MMO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits-rng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traits &amp; RNG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profissoes-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profissões (Jobs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guia" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1988,6 +2043,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MMO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits-rng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traits &amp; RNG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profissoes-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profissões (Jobs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guia" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2341,6 +2451,201 @@
 </tbody>
 </table>
 <p>Requerem que o LuckPerms esteja instalado.</p>
+<hr />
+<h2 id="mmo">MMO<a class="headerlink" href="#mmo" title="Permanent link">&para;</a></h2>
+<p><strong>Módulo obrigatório</strong> (<code>nexusprism-mmo</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Retorna</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%nexusprism_mmo_level%</code></td>
+<td>Nível de personagem MMO</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_mana%</code></td>
+<td>Mana atual</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_mana_max%</code></td>
+<td>Mana máxima</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_points%</code></td>
+<td>Pontos de atributo não gastos</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_strength%</code></td>
+<td>Valor de FORÇA</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_dexterity%</code></td>
+<td>Valor de DESTREZA</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_intelligence%</code></td>
+<td>Valor de INTELIGÊNCIA</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_vitality%</code></td>
+<td>Valor de VITALIDADE</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_endurance%</code></td>
+<td>Valor de RESISTÊNCIA</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_stat_luck%</code></td>
+<td>Valor de SORTE</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_skill_&lt;treeid&gt;%</code></td>
+<td>Nível na árvore de habilidades</td>
+<td>ex: <code>mmo_skill_warrior</code></td>
+</tr>
+<tr>
+<td><code>%nexusprism_mmo_profession_&lt;profid&gt;%</code></td>
+<td>Nível na profissão</td>
+<td>ex: <code>mmo_profession_mining</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="eventos">Eventos<a class="headerlink" href="#eventos" title="Permanent link">&para;</a></h2>
+<p><code>bloodmoon_*</code> funciona mesmo sem o módulo Events (retorna <code>false</code> / <code>1.00</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Retorna</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%nexusprism_bloodmoon_active%</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>servidor inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_bloodmoon_multiplier%</code></td>
+<td>Multiplicador de recompensa</td>
+<td><code>1.00</code> quando inativo</td>
+</tr>
+<tr>
+<td><code>%nexusprism_sacrifice_streak%</code></td>
+<td>Sequência de sobrevivência</td>
+<td><strong>Módulo obrigatório</strong></td>
+</tr>
+<tr>
+<td><code>%nexusprism_in_sacrifice%</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><strong>Módulo obrigatório</strong></td>
+</tr>
+<tr>
+<td><code>%nexusprism_isekai_active%</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><strong>Módulo obrigatório</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="traits-rng">Traits &amp; RNG<a class="headerlink" href="#traits-rng" title="Permanent link">&para;</a></h2>
+<p><strong>Módulo obrigatório</strong> (<code>nexusprism-traits</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Retorna</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%nexusprism_traits_research%</code></td>
+<td>Nível de pesquisa/gacha</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_traits_count%</code></td>
+<td>Quantidade de cartas de trait atribuídas</td>
+<td>inteiro</td>
+</tr>
+<tr>
+<td><code>%nexusprism_traits_cards%</code></td>
+<td>Lista separada por vírgula das cartas</td>
+<td><code>none</code> se vazio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="profissoes-jobs">Profissões (Jobs)<a class="headerlink" href="#profissoes-jobs" title="Permanent link">&para;</a></h2>
+<p><strong>Módulo obrigatório</strong> (<code>nexusprism-economy</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Retorna</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%nexusprism_job%</code></td>
+<td>ID do emprego ativo</td>
+<td><code>none</code> se sem emprego</td>
+</tr>
+<tr>
+<td><code>%nexusprism_job_level%</code></td>
+<td>Nível no emprego ativo</td>
+<td><code>0</code> se sem emprego</td>
+</tr>
+<tr>
+<td><code>%nexusprism_job_xp%</code></td>
+<td>XP no emprego ativo</td>
+<td><code>0</code> se sem emprego</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">&para;</a></h2>
+<p><strong>Módulo obrigatório</strong> (<code>nexusprism-discord</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Retorna</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%nexusprism_discord_linked%</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>%nexusprism_discord_id%</code></td>
+<td>ID snowflake do Discord</td>
+<td>string vazia se não vinculado</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="guia">Guia<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h2>
 <table>
