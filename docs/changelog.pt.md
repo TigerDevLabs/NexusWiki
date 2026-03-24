@@ -4,6 +4,20 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-03-24] · `94b05a7`
+
+
+### 🐛 Corrigido
+
+- **items**: Adiciona _templates.yml com item_template base para data/items/
+- **data**: Corrige erros de inicialização do servidor
+- **items**: Corrige conflitos de CMD dos itens comprimidos (30000-30002)
+
+### 🔧Manutenção
+
+- Correção de escape inválido '\$" para "$"
+
+---
 
 ## [2026-03-24] · `39476a5`
 
