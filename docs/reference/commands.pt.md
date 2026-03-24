@@ -28,6 +28,9 @@ Lista completa de todos os comandos registrados pelo NexusPrism, organizados por
 | `/research` | | Ver progresso de pesquisa | `nexusprism.research` |
 | `/research list [tier]` | | Listar pesquisas por tier | `nexusprism.research` |
 | `/research <item-id>` | | Verificar pesquisa específica | `nexusprism.research` |
+| `/nexusprism research all <player>` | | Desbloquear todas as pesquisas para um jogador | `nexusprism.research.admin` |
+| `/nexusprism research tier <player> <tier>` | | Desbloquear todas as pesquisas de um tier | `nexusprism.research.admin` |
+| `/nexusprism research entry <player> <entry-id>` | | Desbloquear uma entrada de pesquisa específica | `nexusprism.research.admin` |
 | `/recipe <item>` | | Mostrar receita(s) de crafting | `nexusprism.recipe` |
 
 ---

@@ -28,6 +28,9 @@ Complete list of all commands registered by NexusPrism, organized by module.
 | `/research` | | View your research progress | `nexusprism.research` |
 | `/research list [tier]` | | List research by tier | `nexusprism.research` |
 | `/research <item-id>` | | Check specific research | `nexusprism.research` |
+| `/nexusprism research all <player>` | | Unlock all researches for a player | `nexusprism.research.admin` |
+| `/nexusprism research tier <player> <tier>` | | Unlock all researches of a tier | `nexusprism.research.admin` |
+| `/nexusprism research entry <player> <entry-id>` | | Unlock a specific research entry | `nexusprism.research.admin` |
 | `/recipe <item>` | | Show crafting recipe(s) | `nexusprism.recipe` |
 
 ---

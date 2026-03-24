@@ -700,6 +700,65 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 
 ---
 
+## ResearchManager
+
+Acesse a árvore de pesquisa e o progresso do jogador de forma programática.
+
+```java
+NexusPrismAPI api = NexusPrismAPI.get();
+// O ResearchManager está disponível diretamente na instância do plugin
+// (não via o padrão provider/registry — é um sistema central)
+```
+
+### Verificando o status de pesquisa
+
+```java
+// Via PlayerData (disponível em qualquer evento de entrada de jogador ou em seu próprio listener)
+boolean hasUnlocked = playerData.hasCompletedResearch("copper_wire_research");
+Set<String> done = playerData.getCompletedResearches();
+```
+
+### Formato de entrada do researches.yml
+
+```yaml
+copper_wire_research:
+  name: "Copper Wire"
+  description: "Desbloqueia a receita de crafting para Copper Wire."
+  tier: BASIC                    # BASIC | ADVANCED | INFINITY
+  parchment-cost: 1              # número de pergaminhos consumidos
+  dependencies: []               # lista de IDs de entradas que devem ser concluídas antes
+  unlocks:
+    - COPPER_WIRE                # IDs de itens adicionados aos itens desbloqueados do jogador
+```
+
+### Tiers e pergaminhos
+
+| Tier | Item de pergaminho |
+|---|---|
+| BASIC | `RESEARCH_PARCHMENT_BASIC` |
+| ADVANCED | `RESEARCH_PARCHMENT_ADVANCED` |
+| INFINITY | `RESEARCH_PARCHMENT_INFINITY` |
+
+---
+
+## Ícones de Categoria do Guia (`gui_items.yml`)
+
+Desde a v2.3.0, o ícone de material para cada categoria e tier do guia é definido em `gui_items.yml` em vez de estar codificado diretamente no Java.
+
+```yaml
+# gui_items.yml
+categories:
+  MY_CATEGORY:
+    material: ENCHANTING_TABLE
+tiers:
+  MY_TIER:
+    material: DRAGON_EGG
+```
+
+O guia reconhece as entradas automaticamente no reload. Substituições em `guide.yml` têm prioridade maior do que `gui_items.yml`. Entradas em `gui_items.yml` não presentes em `guide.yml` utilizam o valor definido aqui.
+
+---
+
 ## Boas práticas
 
 - **Sempre verifique null** em `NexusPrismAPI.get()` antes de usar qualquer provedor.

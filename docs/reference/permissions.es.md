@@ -26,6 +26,7 @@ Lista completa de todos los nodos de permisos registrados por NexusPrism. Los no
 | --- | --- | --- |
 | `nexusprism.research` | Acceder al sistema de investigación | true |
 | `nexusprism.research.all` | Desbloquear toda la investigación instantáneamente | OP |
+| `nexusprism.research.admin` | Otorga acceso a los subcomandos de administración de `/nexusprism research` (all, tier, entry) | OP |
 
 ---
 

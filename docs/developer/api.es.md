@@ -665,6 +665,65 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 
 ---
 
+## ResearchManager
+
+Accede al árbol de investigación y al progreso del jugador de forma programática.
+
+```java
+NexusPrismAPI api = NexusPrismAPI.get();
+// El ResearchManager está disponible directamente en la instancia del plugin
+// (no mediante el patrón provider/registry — es un sistema central)
+```
+
+### Verificando el estado de investigación
+
+```java
+// Via PlayerData (disponible en cualquier evento de entrada de jugador o en tu propio listener)
+boolean hasUnlocked = playerData.hasCompletedResearch("copper_wire_research");
+Set<String> done = playerData.getCompletedResearches();
+```
+
+### Formato de entrada de researches.yml
+
+```yaml
+copper_wire_research:
+  name: "Copper Wire"
+  description: "Desbloquea la receta de crafteo para Copper Wire."
+  tier: BASIC                    # BASIC | ADVANCED | INFINITY
+  parchment-cost: 1              # número de pergaminos consumidos
+  dependencies: []               # lista de IDs de entradas que deben completarse antes
+  unlocks:
+    - COPPER_WIRE                # IDs de ítems añadidos a los ítems desbloqueados del jugador
+```
+
+### Tiers y pergaminos
+
+| Tier | Ítem de pergamino |
+|---|---|
+| BASIC | `RESEARCH_PARCHMENT_BASIC` |
+| ADVANCED | `RESEARCH_PARCHMENT_ADVANCED` |
+| INFINITY | `RESEARCH_PARCHMENT_INFINITY` |
+
+---
+
+## Íconos de Categoría de la Guía (`gui_items.yml`)
+
+Desde la v2.3.0, el ícono de material para cada categoría y tier de la guía se define en `gui_items.yml` en lugar de estar codificado directamente en Java.
+
+```yaml
+# gui_items.yml
+categories:
+  MY_CATEGORY:
+    material: ENCHANTING_TABLE
+tiers:
+  MY_TIER:
+    material: DRAGON_EGG
+```
+
+La guía reconoce las entradas automáticamente al recargar. Las sustituciones en `guide.yml` tienen mayor prioridad que `gui_items.yml`. Las entradas en `gui_items.yml` que no estén presentes en `guide.yml` utilizan el valor definido aquí.
+
+---
+
 ## Buenas prácticas
 
 - **Siempre verifica null** en `NexusPrismAPI.get()` antes de usar cualquier proveedor.

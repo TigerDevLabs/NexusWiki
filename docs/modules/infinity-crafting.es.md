@@ -9,7 +9,7 @@ Infinity Crafting es el **sistema de crafteo multibloques** de NexusPrism. Los j
 | Funcionalidad | Descripción |
 | --- | --- |
 | **Estructuras multibloques** | Estaciones de crafteo construidas a partir de patrones específicos de bloques |
-| **Recetas en YAML** | Sin Java necesario — define recetas en `infinity_recipes/` |
+| **Recetas en YAML** | Sin Java necesario — define recetas en `data/crafting/infinity_table/` |
 | **Interfaz GUI** | Entrada/salida de recetas con arrastrar y soltar mediante GUI de inventario |
 | **Bloqueo por investigación** | Las recetas pueden requerir investigación específica para desbloquearse |
 | **Integración con máquinas** | Algunas recetas infinity requieren energía o salida de máquinas como ingredientes |
@@ -54,12 +54,12 @@ INFINITY_TABLE:
 
 ## Formato YAML de Recetas
 
-Las recetas se colocan en `plugins/NexusPrism/infinity_recipes/` como archivos `.yml` individuales. El nombre del archivo sirve como ID de la receta.
+Las recetas se colocan en `plugins/NexusPrism/data/crafting/infinity_table/` como archivos `.yml` individuales. El nombre del archivo sirve como ID de la receta.
 
 ### Receta Shaped (Con Forma)
 
 ```yaml
-# infinity_recipes/nexus_core.yml
+# data/crafting/infinity_table/nexus_core.yml
 type: SHAPED
 station: INFINITY_TABLE
 output:
@@ -83,7 +83,7 @@ energy-cost: 500                          # Costo de energía opcional (RF/FE)
 ### Receta Shapeless (Sin Forma)
 
 ```yaml
-# infinity_recipes/star_dust.yml
+# data/crafting/infinity_table/star_dust.yml
 type: SHAPELESS
 station: INFINITY_TABLE
 output:
@@ -100,7 +100,7 @@ ingredients:
 ### Receta de Fundición (vía Máquina)
 
 ```yaml
-# infinity_recipes/copper_ingot.yml
+# data/crafting/infinity_table/copper_ingot.yml
 type: MACHINE_SMELT
 station: ELECTRIC_FURNACE
 output:

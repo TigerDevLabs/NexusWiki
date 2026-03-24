@@ -4,6 +4,38 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+
+## [2026-03-24] · `39476a5`
+
+### ✨ Adicionado
+
+- **research**: Sistema de árvore de pesquisa baseado em `researches.yml` — entradas têm tier (BASIC/ADVANCED/INFINITY), custo em pergaminhos, dependências e desbloqueios
+- **research**: Progresso de pesquisa persistido em SQLite, MySQL e YAML
+- **guide**: Receitas da Infinity Table agora são registradas automaticamente no guia do jogo
+- **machines**: VOID_COLLECTOR_BLOCK e VOID_SMELTER_BLOCK adicionados (tier Infinity)
+- **items**: SIGNALUM_INGOT e COMPRESSED_DIAMOND adicionados ao items.yml
+- **discord**: ConsoleLogHandler — encaminha a saída do console do servidor para um canal do Discord
+- **guide**: Ícones de categoria e tier do guia agora são configuráveis via `gui_items.yml`; desenvolvedores de addons podem registrar ícones de categoria personalizados sem alterar Java
+
+### 🔧 Manutenção
+
+- **config**: Todos os arquivos de dados reestruturados sob a hierarquia `data/` (`data/items/`, `data/machines/<tier>/`, `data/crafting/`, `data/smelting/`, `data/crafting/infinity_table/`)
+- **config**: Arquivos `items.yml`, `machines.yml` e `recipes.yml` na raiz removidos — substituídos pela estrutura `data/`
+- **recipes**: Receitas de máquinas agora definidas inline dentro do bloco da máquina sob a chave `recipes:`
+- **recipes**: Prefixo `nexus:ITEM_ID` agora suportado em todos os arquivos YAML de receitas para referenciar itens personalizados
+
+### 🐛 Corrigido
+
+- **storage**: Chaves de configuração renomeadas de `storage.*` para `database.*` para corresponder ao `config.yml`
+- **storage**: Migração do MySQL < 8 (`ALTER TABLE ADD COLUMN`) não usa mais `IF NOT EXISTS` — captura o código de erro 1060
+- **research**: ResearchManager agora recarrega corretamente no `/nexus reload`
+
+### ⚖️ Legal
+
+- Licença alterada de MIT para proprietária — Todos os Direitos Reservados
+
+---
+
 ## [2026-03-22] · `7260628`
 
 

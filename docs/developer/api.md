@@ -859,6 +859,65 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 
 ---
 
+## ResearchManager
+
+Access the research tree and player progress programmatically.
+
+```java
+NexusPrismAPI api = NexusPrismAPI.get();
+// ResearchManager is available directly on the plugin instance
+// (not via the provider/registry pattern — it is a core system)
+```
+
+### Checking research status
+
+```java
+// Via PlayerData (available through any player join event or your own listener)
+boolean hasUnlocked = playerData.hasCompletedResearch("copper_wire_research");
+Set<String> done = playerData.getCompletedResearches();
+```
+
+### researches.yml entry format
+
+```yaml
+copper_wire_research:
+  name: "Copper Wire"
+  description: "Unlocks the crafting recipe for Copper Wire."
+  tier: BASIC                    # BASIC | ADVANCED | INFINITY
+  parchment-cost: 1              # number of parchments consumed
+  dependencies: []               # list of entry IDs that must be completed first
+  unlocks:
+    - COPPER_WIRE                # item IDs added to the player's unlockedItems
+```
+
+### Tiers and parchments
+
+| Tier | Parchment item |
+|---|---|
+| BASIC | `RESEARCH_PARCHMENT_BASIC` |
+| ADVANCED | `RESEARCH_PARCHMENT_ADVANCED` |
+| INFINITY | `RESEARCH_PARCHMENT_INFINITY` |
+
+---
+
+## Guide Category Icons (`gui_items.yml`)
+
+Since v2.3.0, the material icon for each guide category and tier is defined in `gui_items.yml` instead of being hardcoded.
+
+```yaml
+# gui_items.yml
+categories:
+  MY_CATEGORY:
+    material: ENCHANTING_TABLE
+tiers:
+  MY_TIER:
+    material: DRAGON_EGG
+```
+
+The guide picks up entries automatically on reload. `guide.yml` overrides take higher priority than `gui_items.yml`. Entries in `gui_items.yml` not present in `guide.yml` use the value defined here.
+
+---
+
 ## Best practices
 
 - **Always null-check** `NexusPrismAPI.get()` before using any provider.

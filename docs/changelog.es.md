@@ -4,6 +4,38 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+
+## [2026-03-24] · `39476a5`
+
+### ✨ Añadido
+
+- **research**: Sistema de árbol de investigación basado en `researches.yml` — las entradas tienen tier (BASIC/ADVANCED/INFINITY), costo en pergaminos, dependencias y desbloqueos
+- **research**: Progreso de investigación persistido en SQLite, MySQL y YAML
+- **guide**: Las recetas de la Infinity Table ahora se registran automáticamente en la guía del juego
+- **machines**: VOID_COLLECTOR_BLOCK y VOID_SMELTER_BLOCK añadidos (tier Infinity)
+- **items**: SIGNALUM_INGOT y COMPRESSED_DIAMOND añadidos a items.yml
+- **discord**: ConsoleLogHandler — reenvía la salida de la consola del servidor a un canal de Discord
+- **guide**: Los íconos de categoría y tier de la guía ahora son configurables mediante `gui_items.yml`; los desarrolladores de addons pueden registrar íconos de categoría personalizados sin modificar Java
+
+### 🔧 Mantenimiento
+
+- **config**: Todos los archivos de datos reestructurados bajo la jerarquía `data/` (`data/items/`, `data/machines/<tier>/`, `data/crafting/`, `data/smelting/`, `data/crafting/infinity_table/`)
+- **config**: Archivos `items.yml`, `machines.yml` y `recipes.yml` en la raíz eliminados — reemplazados por la estructura `data/`
+- **recipes**: Las recetas de máquinas ahora se definen en línea dentro del bloque de la máquina bajo la clave `recipes:`
+- **recipes**: El prefijo `nexus:ITEM_ID` ahora está soportado en todos los archivos YAML de recetas para referenciar ítems personalizados
+
+### 🐛 Corregido
+
+- **storage**: Claves de configuración renombradas de `storage.*` a `database.*` para coincidir con `config.yml`
+- **storage**: La migración de MySQL < 8 (`ALTER TABLE ADD COLUMN`) ya no usa `IF NOT EXISTS` — captura el código de error 1060
+- **research**: ResearchManager ahora se recarga correctamente con `/nexus reload`
+
+### ⚖️ Legal
+
+- Licencia cambiada de MIT a propietaria — Todos los derechos reservados
+
+---
+
 ## [22/03/2026] · `7260628`
 
 

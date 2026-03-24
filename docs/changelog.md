@@ -5,6 +5,37 @@
 
 ---
 
+## [2026-03-24] · `39476a5`
+
+### ✨ Added
+
+- **research**: Research tree system driven by `researches.yml` — entries have tier (BASIC/ADVANCED/INFINITY), parchment cost, dependencies, and unlocks
+- **research**: Research progress persisted in SQLite, MySQL, and YAML
+- **guide**: Infinity Table recipes now auto-registered in the in-game guide
+- **machines**: VOID_COLLECTOR_BLOCK and VOID_SMELTER_BLOCK added (tier Infinity)
+- **items**: SIGNALUM_INGOT and COMPRESSED_DIAMOND added to items.yml
+- **discord**: ConsoleLogHandler — forwards server console output to a Discord channel
+- **guide**: Category and tier icons for the guide are now YAML-driven via `gui_items.yml`; addon devs can register custom category icons without touching Java
+
+### 🔧 Maintenance
+
+- **config**: All data files restructured under `data/` hierarchy (`data/items/`, `data/machines/<tier>/`, `data/crafting/`, `data/smelting/`, `data/crafting/infinity_table/`)
+- **config**: Root-level `items.yml`, `machines.yml`, `recipes.yml` removed — superseded by `data/` structure
+- **recipes**: Machine recipes now defined inline inside the machine block under a `recipes:` key
+- **recipes**: `nexus:ITEM_ID` prefix now supported in all recipe YAML files for referencing custom items
+
+### 🐛 Fixed
+
+- **storage**: Config keys renamed from `storage.*` to `database.*` to match `config.yml`
+- **storage**: MySQL < 8 migration (`ALTER TABLE ADD COLUMN`) no longer uses `IF NOT EXISTS` — catches error code 1060 instead
+- **research**: ResearchManager now reloads correctly on `/nexus reload`
+
+### ⚖️ Legal
+
+- License changed from MIT to proprietary All Rights Reserved
+
+---
+
 ## [2026-03-22] · `7260628`
 
 

@@ -26,6 +26,7 @@ Lista completa de todos os nós de permissão registrados pelo NexusPrism. Nós 
 | --- | --- | --- |
 | `nexusprism.research` | Acessar sistema de pesquisa | true |
 | `nexusprism.research.all` | Desbloquear toda pesquisa instantaneamente | OP |
+| `nexusprism.research.admin` | Concede acesso aos subcomandos administrativos de `/nexusprism research` (all, tier, entry) | OP |
 
 ---
 

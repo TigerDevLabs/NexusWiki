@@ -36,6 +36,7 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | --- | --- | --- |
 | `nexusprism.research` | Access research system | true |
 | `nexusprism.research.all` | Instantly unlock all research | OP |
+| `nexusprism.research.admin` | Grants access to `/nexusprism research` admin subcommands (all, tier, entry) | OP |
 
 ---
 

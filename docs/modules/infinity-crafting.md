@@ -9,7 +9,7 @@ Infinity Crafting is NexusPrism's **multiblock crafting system**. Players build 
 | Feature | Description |
 | --- | --- |
 | **Multiblock structures** | Crafting stations built from specific block patterns |
-| **YAML recipes** | No Java required — define recipes in `infinity_recipes/` |
+| **YAML recipes** | No Java required — define recipes in `data/crafting/infinity_table/` |
 | **GUI interface** | Drag-and-drop recipe input/output via inventory GUI |
 | **Research gate** | Recipes can require specific research to unlock |
 | **Machine integration** | Some infinity recipes require energy or machine output as ingredients |
@@ -54,12 +54,12 @@ INFINITY_TABLE:
 
 ## Recipe YAML Format
 
-Recipes are placed in `plugins/NexusPrism/infinity_recipes/` as individual `.yml` files. The filename serves as the recipe ID.
+Recipes are placed in `plugins/NexusPrism/data/crafting/infinity_table/` as individual `.yml` files. The filename serves as the recipe ID.
 
 ### Shaped Recipe
 
 ```yaml
-# infinity_recipes/nexus_core.yml
+# data/crafting/infinity_table/nexus_core.yml
 type: SHAPED
 station: INFINITY_TABLE
 output:
@@ -83,7 +83,7 @@ energy-cost: 500                          # Optional energy cost (RF/FE)
 ### Shapeless Recipe
 
 ```yaml
-# infinity_recipes/star_dust.yml
+# data/crafting/infinity_table/star_dust.yml
 type: SHAPELESS
 station: INFINITY_TABLE
 output:
@@ -100,7 +100,7 @@ ingredients:
 ### Smelting Recipe (via Machine)
 
 ```yaml
-# infinity_recipes/copper_ingot.yml
+# data/crafting/infinity_table/copper_ingot.yml
 type: MACHINE_SMELT
 station: ELECTRIC_FURNACE
 output:
