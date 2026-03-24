@@ -2070,6 +2070,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#researchmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResearchManager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ResearchManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificando-o-status-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificando o status de pesquisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-entrada-do-researchesyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato de entrada do researches.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiers-e-pergaminhos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiers e pergaminhos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icones-de-categoria-do-guia-gui_itemsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ícones de Categoria do Guia (gui_items.yml)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#boas-praticas" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2601,6 +2662,67 @@
     <span class="md-ellipsis">
       
         Referência Rápida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researchmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResearchManager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ResearchManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificando-o-status-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificando o status de pesquisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-entrada-do-researchesyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato de entrada do researches.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiers-e-pergaminhos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiers e pergaminhos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icones-de-categoria-do-guia-gui_itemsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ícones de Categoria do Guia (gui_items.yml)
       
     </span>
   </a>
@@ -3307,6 +3429,66 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="researchmanager">ResearchManager<a class="headerlink" href="#researchmanager" title="Permanent link">&para;</a></h2>
+<p>Acesse a árvore de pesquisa e o progresso do jogador de forma programática.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">ResearchManager</span><span class="w"> </span><span class="n">research</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NexusPrismAPI</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">getService</span><span class="p">(</span><span class="n">ResearchManager</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p><code>ResearchManager</code> é um sistema central, não um provider de módulo. Não é acessível via o padrão provider/registry — use <code>getService()</code>.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>
+</code></pre></div>
+<h3 id="verificando-o-status-de-pesquisa">Verificando o status de pesquisa<a class="headerlink" href="#verificando-o-status-de-pesquisa" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1">// Via PlayerData (disponível em qualquer evento de entrada de jogador ou em seu próprio listener)</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">hasUnlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">playerData</span><span class="p">.</span><span class="na">hasCompletedResearch</span><span class="p">(</span><span class="s">&quot;copper_wire_research&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">playerData</span><span class="p">.</span><span class="na">getCompletedResearches</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="formato-de-entrada-do-researchesyml">Formato de entrada do researches.yml<a class="headerlink" href="#formato-de-entrada-do-researchesyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">copper_wire_research</span><span class="p">:</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Copper</span><span class="nv"> </span><span class="s">Wire&quot;</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Desbloqueia</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">receita</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">crafting</span><span class="nv"> </span><span class="s">para</span><span class="nv"> </span><span class="s">Copper</span><span class="nv"> </span><span class="s">Wire.&quot;</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">  </span><span class="nt">tier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BASIC</span><span class="w">                    </span><span class="c1"># BASIC | ADVANCED | INFINITY</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">  </span><span class="nt">parchment-cost</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">              </span><span class="c1"># número de pergaminhos consumidos</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">               </span><span class="c1"># lista de IDs de entradas que devem ser concluídas antes</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="w">  </span><span class="nt">unlocks</span><span class="p">:</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COPPER_WIRE</span><span class="w">                </span><span class="c1"># IDs de itens adicionados aos itens desbloqueados do jogador</span>
+</code></pre></div>
+<h3 id="tiers-e-pergaminhos">Tiers e pergaminhos<a class="headerlink" href="#tiers-e-pergaminhos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Item de pergaminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BASIC</td>
+<td><code>RESEARCH_PARCHMENT_BASIC</code></td>
+</tr>
+<tr>
+<td>ADVANCED</td>
+<td><code>RESEARCH_PARCHMENT_ADVANCED</code></td>
+</tr>
+<tr>
+<td>INFINITY</td>
+<td><code>RESEARCH_PARCHMENT_INFINITY</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="icones-de-categoria-do-guia-gui_itemsyml">Ícones de Categoria do Guia (<code>gui_items.yml</code>)<a class="headerlink" href="#icones-de-categoria-do-guia-gui_itemsyml" title="Permanent link">&para;</a></h2>
+<p>Desde a v2.3.0, o ícone de material para cada categoria e tier do guia é definido em <code>gui_items.yml</code> em vez de estar codificado diretamente no Java.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># gui_items.yml</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nt">categories</span><span class="p">:</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="nt">MY_CATEGORY</span><span class="p">:</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENCHANTING_TABLE</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="nt">tiers</span><span class="p">:</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">  </span><span class="nt">MY_TIER</span><span class="p">:</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DRAGON_EGG</span>
+</code></pre></div>
+<p>O guia reconhece as entradas automaticamente no reload. Substituições em <code>guide.yml</code> têm prioridade maior do que <code>gui_items.yml</code>. Entradas em <code>gui_items.yml</code> não presentes em <code>guide.yml</code> utilizam o valor definido aqui.</p>
 <hr />
 <h2 id="boas-praticas">Boas práticas<a class="headerlink" href="#boas-praticas" title="Permanent link">&para;</a></h2>
 <ul>
