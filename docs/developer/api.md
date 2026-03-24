@@ -864,10 +864,10 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 Access the research tree and player progress programmatically.
 
 ```java
-NexusPrismAPI api = NexusPrismAPI.get();
-// ResearchManager is available directly on the plugin instance
-// (not via the provider/registry pattern — it is a core system)
+ResearchManager research = NexusPrismAPI.get().getService(ResearchManager.class);
 ```
+
+> `ResearchManager` is a core system, not a module provider. It is not accessible via the provider/registry pattern — use `getService()` instead.
 
 ### Checking research status
 

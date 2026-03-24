@@ -670,9 +670,12 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 Accede al árbol de investigación y al progreso del jugador de forma programática.
 
 ```java
-NexusPrismAPI api = NexusPrismAPI.get();
-// El ResearchManager está disponible directamente en la instancia del plugin
-// (no mediante el patrón provider/registry — es un sistema central)
+ResearchManager research = NexusPrismAPI.get().getService(ResearchManager.class);
+```
+
+> `ResearchManager` es un sistema central, no un provider de módulo. No es accesible mediante el patrón provider/registry — usa `getService()`.
+
+```java
 ```
 
 ### Verificando el estado de investigación
