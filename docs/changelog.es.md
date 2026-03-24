@@ -4,6 +4,63 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-03-24] · `3adf7e8`
+
+
+### ✨Añadido See More
+
+- **research**: Implementa ResearchManager con árvore de pesquisas por pergaminho
+- **research**: Persiste complete_researches no banco de datos
+- **guia**: Iconos de categoría y niveles configurados a través de gui_items.yml
+
+### 🐛 Corregido See More
+
+- Corrección de errores y mejoras del cargador en múltiples módulos
+- **research**: Corrija la migración a MySQL < 8 y agregue recarga a ResearchManager
+- **storage**: Corrija las teclas de configuración de almacenamiento.* para la base de datos.*
+
+### ♻️ Modificado
+
+- **plugin**: Eliminar referencias a Slimefun y migrar sistema de búsquedas para pergaminhos
+- **config**: Elimina los YML raíz huérfanos reemplazados por datos/jerarquía
+
+### 🔧Mantenimiento
+
+- Eliminar archivos huérfanos de infinity_recipes/ do caminho antigo
+- Remoçao de arquivos antigos / obsoleto.
+- Esqueci algunos campos con el nombre antiguo, refatorado para NexusPrism (creio que só haviam esses)
+
+### 🔧 Mantenimiento
+
+- Reemplace MIT con una licencia patentada Todos los derechos reservados
+## [2026-03-23] · `9e091fd`
+
+
+### ✨Añadido See More
+
+- **recipes**: Fase 0 — recetas en línea en máquinas.yml com auto-registro no guia
+- **items**: Fase 1: adición de SIGNALUM_INGOT y COMPRESSED_DIAMOND a items.yml
+- **machines**: Fase 2 — adición de VOID_COLLECTOR y VOID_SMELTER
+- **recipes**: Fase 3 — recetas de procesamiento en línea en máquinas.yml
+- **recipes**: Fase 4-A — recetas de Void Chain en máquinas.yml
+- **recipes**: Fase 4-B: recetas de elaboración de VOID_BIT en recetas.yml
+- **recipes**: Fase 5 — soporte a nexus: en recetas.yml (CRAFTING/FUNDICIÓN/MÁQUINA)
+- **guide**: Fase 6 — registro de elementos de Infinity Table sin guía en el juego
+
+### 🐛 Corregido See More
+
+- **discord**: Guarda el apagado completo de JDA antes de fechar el cargador de clases
+
+### ♻️ Modificado
+
+- **items**: Fase 1.5 — reorganiza items.yml por tipo com secoes MARK
+- **items**: Fase 1.5: eliminar duplicados e elementos GUI en items.yml
+- **recipes**: Fase 7 — tipo de migración:MÁQUINA hacer recetas.yml para máquinas.yml
+- **recipes**: Fase 8: eliminar entradas obsoletas de la guía en RecipeLoader
+- **data**: Estructura de archivos YAML en datos/con jerarquía por tipo y nivel
+
+---
+
 ## [22/03/2026] · `7260628`
 
 
