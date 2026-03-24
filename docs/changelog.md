@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-03-24] · `8de91b4`
+
+
+### 🔧 Maintenance
+
+- Remoção de métodos implicitos e subtituidos por imports:
+
+---
+
 ## [2026-03-24] · `3adf7e8`
 
 

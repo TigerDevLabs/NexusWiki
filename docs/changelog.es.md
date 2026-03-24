@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-03-24] · `8de91b4`
+
+
+### 🔧Mantenimiento
+
+- Eliminación de métodos implícitos y sustituidos por importaciones:
+
+---
+
 ## [2026-03-24] · `3adf7e8`
 
 

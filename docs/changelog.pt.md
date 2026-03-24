@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-03-24] · `8de91b4`
+
+
+### 🔧Manutenção
+
+- Remoção de métodos implícitos e subtituidos por importações:
+
+---
+
 ## [2026-03-24] · `3adf7e8`
 
 
