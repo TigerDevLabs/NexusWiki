@@ -5,6 +5,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## [2026-03-24] · `39476a5`
 
 ### ✨ Added
@@ -33,6 +34,72 @@
 ### ⚖️ Legal
 
 - License changed from MIT to proprietary All Rights Reserved
+=======
+## [2026-03-24] · `8de91b4`
+
+
+### 🔧 Maintenance
+
+- Remoção de métodos implicitos e subtituidos por imports:
+
+---
+
+## [2026-03-24] · `3adf7e8`
+
+
+### ✨ Added
+
+- **research**: Implementa ResearchManager com árvore de pesquisas por pergaminho
+- **research**: Persiste completed_researches no banco de dados
+- **guia**: Ícones de categoria e tier configuráveis via gui_items.yml
+
+### 🐛 Fixed
+
+- Bug fixes and loader improvements across multiple modules
+- **research**: Corrige migração MySQL < 8 e adiciona reload do ResearchManager
+- **storage**: Corrige chaves de config de storage.* para database.*
+
+### ♻️ Changed
+
+- **plugin**: Remove referências ao Slimefun e migra sistema de pesquisas para pergaminhos
+- **config**: Remove orphaned root YMLs superseded by data/ hierarchy
+
+### 🔧 Maintenance
+
+- Remove arquivos orphaned de infinity_recipes/ do caminho antigo
+- Remoçao de arquivos antigos / outdated.
+- Esqueci alguns campos com o nome antigo, refatorado para NexusPrism ( creio que só haviam esses)
+
+### 🔧 Maintenance
+
+- Replace MIT with proprietary All Rights Reserved license
+
+## [2026-03-23] · `9e091fd`
+
+
+### ✨ Added
+
+- **recipes**: Phase 0 — receitas inline em machines.yml com auto-registro no guia
+- **items**: Phase 1 — adiciona SIGNALUM_INGOT e COMPRESSED_DIAMOND ao items.yml
+- **machines**: Phase 2 — adiciona VOID_COLLECTOR e VOID_SMELTER
+- **recipes**: Phase 3 — receitas de processamento inline em machines.yml
+- **recipes**: Phase 4-A — receitas da Void Chain em machines.yml
+- **recipes**: Phase 4-B — receita de crafting do VOID_BIT em recipes.yml
+- **recipes**: Phase 5 — suporte a nexus: em recipes.yml (CRAFTING/SMELTING/MACHINE)
+- **guide**: Phase 6 — registro de itens da Infinity Table no guia in-game
+
+### 🐛 Fixed
+
+- **discord**: Aguarda shutdown completo do JDA antes de fechar o classloader
+
+### ♻️ Changed
+
+- **items**: Phase 1.5 — reorganiza items.yml por tipo com secoes MARK
+- **items**: Phase 1.5 — remove duplicatas e itens GUI do items.yml
+- **recipes**: Phase 7 — migra type:MACHINE do recipes.yml para machines.yml
+- **recipes**: Phase 8 — remove entradas obsoletas do guia em RecipeLoader
+- **data**: Reestrutura arquivos YAML em data/ com hierarquia por tipo e tier
+>>>>>>> 1fa6496e24859d668f0c6bf16dacf06a33433853
 
 ---
 

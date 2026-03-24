@@ -4,6 +4,7 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+<<<<<<< HEAD
 
 ## [2026-03-24] · `39476a5`
 
@@ -33,6 +34,71 @@
 ### ⚖️ Legal
 
 - Licença alterada de MIT para proprietária — Todos os Direitos Reservados
+=======
+## [2026-03-24] · `8de91b4`
+
+
+### 🔧Manutenção
+
+- Remoção de métodos implícitos e subtituidos por importações:
+
+---
+
+## [2026-03-24] · `3adf7e8`
+
+
+### ✨ Adicionado
+
+- **research**: Implementar ResearchManager com árvore de pesquisas por pergaminho
+- **research**: Persiste complete_researches no banco de dados
+- **guia**: Ícones de categoria e nível configuráveis via gui_items.yml
+
+### 🐛 Corrigido
+
+- Correções de bugs e melhorias no carregador em vários módulos
+- **research**: Corrige migração MySQL < 8 e adiciona reload do ResearchManager
+- **storage**: Corrige chaves de configuração de armazenamento.* para banco de dados.*
+
+### ♻️Alterado
+
+- **plugin**: Remove referências ao Slimefun e migra sistema de pesquisas para pergaminhos
+- **config**: Remover YMLs raiz órfãos substituídos por dados/hierarquia
+
+### 🔧Manutenção
+
+- Remover arquivos órfãos de infinity_recipes/ do caminho antigo
+- Remoção de arquivos antigos/desatualizados.
+- Esqueci alguns campos com o nome antigo, refatorado para NexusPrism (creio que só os tinha)
+
+### 🔧 Manutenção
+
+- Substitua o MIT por uma licença proprietária de Todos os Direitos Reservados
+## [2026-03-23] · `9e091fd`
+
+
+### ✨ Adicionado
+
+- **recipes**: Fase 0 — receitas inline em machines.yml com auto-registro no guia
+- **items**: Fase 1 — adição de SIGNALUM_INGOT e COMPRESSED_DIAMOND ao items.yml
+- **machines**: Fase 2 — adiciona VOID_COLLECTOR e VOID_SMELTER
+- **recipes**: Fase 3 — receitas de processamento inline em machines.yml
+- **recipes**: Fase 4-A — receitas da Void Chain em machines.yml
+- **recipes**: Fase 4-B — receita de crafting do VOID_BIT em receitas.yml
+- **recipes**: Fase 5 — suporte a nexus: em receitas.yml (CRAFTING/SMELTING/MACHINE)
+- **guide**: Fase 6 — registro de itens da Infinity Table no guia in-game
+
+### 🐛 Corrigido
+
+- **discord**: Aguarda shutdown completo do JDA antes de fechar o classloader
+
+### ♻️Alterado
+
+- **items**: Fase 1.5 — reorganiza items.yml por tipo com secoes MARK
+- **items**: Fase 1.5 — remover duplicatas e itens GUI do items.yml
+- **recipes**: Fase 7 — tipo de migração:MACHINE do receitas.yml para machines.yml
+- **recipes**: Fase 8 — remover entradas obsoletas do guia em RecipeLoader
+- **data**: Reestrutura arquivos YAML em dados/ com classificação por tipo e camada
+>>>>>>> 1fa6496e24859d668f0c6bf16dacf06a33433853
 
 ---
 
