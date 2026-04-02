@@ -1,6 +1,6 @@
 # Economy Module
 
-The Economy module provides a **dual-currency system** (money and credits), sell commands, a wealth leaderboard, and per-item sell price configuration.
+The Economy module provides a **single-currency system** (money), sell commands, a wealth leaderboard, and per-item sell price configuration.
 
 ---
 
@@ -8,8 +8,7 @@ The Economy module provides a **dual-currency system** (money and credits), sell
 
 | Currency | Description |
 | --- | --- |
-| **Money** (`$`) | Standard in-game currency earned from selling items, voting, etc. |
-| **Credits** | Premium currency typically obtained from the webstore |
+| **Money** (`$`) | In-game currency earned from selling items, voting, jobs, etc. |
 
 ---
 
@@ -19,8 +18,6 @@ The Economy module provides a **dual-currency system** (money and credits), sell
 | --- | --- | --- |
 | `/money` | Check your balance | `nexusprism.economy.money` |
 | `/money <player>` | Check another player's balance | `nexusprism.economy.money` |
-| `/credits` | Check your credits | `nexusprism.economy.credits` |
-| `/credits <player>` | Check another's credits | `nexusprism.economy.credits` |
 | `/baltop` | Top 10 richest players | `nexusprism.economy.baltop` |
 | `/sell hand` | Sell item in hand | `nexusprism.economy.sell` |
 | `/sell all` | Sell all sellable items | `nexusprism.economy.sell` |
@@ -38,7 +35,6 @@ The Economy module provides a **dual-currency system** (money and credits), sell
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.economy.money` | Check balances | true |
-| `nexusprism.economy.credits` | Check credits | true |
 | `nexusprism.economy.baltop` | View leaderboard | true |
 | `nexusprism.economy.sell` | Use /sell commands | true |
 | `nexusprism.economy.admin` | Admin eco commands | OP |
@@ -96,7 +92,7 @@ prices:
 | Placeholder | Description |
 | --- | --- |
 | `%nexusprism_money%` | Player's money balance |
-| `%nexusprism_credits%` | Player's credit balance |
+
 
 See the full [PlaceholderAPI reference](../reference/placeholders.md).
 

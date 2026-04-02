@@ -138,7 +138,7 @@ sacrifice:
 
 Cuando se acepta un Sacrificio, se invoca un **Jefe Isekai** aleatorio en la arena. El grupo disponible depende de la racha actual del jugador. Cada jefe tiene múltiples fases, mecánicas únicas y un botín único.
 
-Las definiciones de jefe están en `events/isekai_bosses/*.yml`. HP y daño escalan con la racha:
+Las definiciones de jefe están en `events/anime_bosses/*.yml`. HP y daño escalan con la racha:
 
 ```
 statFinal = statBase × (1 + (racha - 7) × 0,2)

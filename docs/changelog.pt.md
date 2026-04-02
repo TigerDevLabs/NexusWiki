@@ -373,7 +373,7 @@
 - Todos os sistemas de recursos agora são módulos independentes com ciclo de vida próprio
 - Migração de persistência YAML para **SQLite / PostgreSQL** via `nexusprism-storage`
 - `CustomItemRegistry` com marcação de itens via PDC (`nexusprism:id`)
-- 235+ itens baseados em dados definidos em `items.yml`
+- 500+ itens baseados em dados definidos em `items.yml`
 - Sistema de tier de itens: Básico → Avançado → Infinito
 - Árvore de pesquisa com desbloqueios por XP
 - Suporte a múltiplos idiomas: Inglês, Português Brasileiro, Espanhol, Chinês Simplificado

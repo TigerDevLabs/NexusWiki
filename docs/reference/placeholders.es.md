@@ -11,7 +11,6 @@ NexusPrism registra su propia expansión PlaceholderAPI bajo el identificador `n
 | Placeholder | Descripción | Ejemplo |
 | --- | --- | --- |
 | `%nexusprism_money%` | Saldo de dinero actual del jugador | `12500.00` |
-| `%nexusprism_credits%` | Saldo de créditos del jugador | `350` |
 
 ---
 
@@ -215,7 +214,6 @@ scoreboard:
   title: "&b&lTus Estadísticas"
   lines:
     - "&7Dinero: &a$%nexusprism_money%"
-    - "&7Créditos: &b%nexusprism_credits%"
     - "&7Votos: &e%nexusprism_votes_total% &7(racha: %nexusprism_vote_streak%)"
     - "&7Clan: &f%nexusprism_clan_name%"
     - "&7Tiempo de Juego: &f%nexusprism_playtime%"

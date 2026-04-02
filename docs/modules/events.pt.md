@@ -138,7 +138,7 @@ sacrifice:
 
 Quando um Sacrifício é aceito, um **Chefe Isekai** aleatório é invocado na arena. O pool disponível depende da sequência atual do jogador. Cada chefe tem múltiplas fases, mecânicas únicas e uma drop única.
 
-As definições de chefe ficam em `events/isekai_bosses/*.yml`. HP e dano escalam com a sequência:
+As definições de chefe ficam em `events/anime_bosses/*.yml`. HP e dano escalam com a sequência:
 
 ```
 statFinal = statBase × (1 + (sequência - 7) × 0,2)

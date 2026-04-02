@@ -11,9 +11,9 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 
 | Category | Highlights |
 | --- | --- |
-| **Custom Items** | 235+ data-driven items defined in YAML |
+| **Custom Items** | 500+ data-driven items defined in YAML |
 | **Machines** | Multiblock crafting, energy networks, ME storage |
-| **Economy** | Dual-currency (money + credits), /sell, /baltop |
+| **Economy** | Single currency (money), /sell, /baltop |
 | **Clans** | Territory claiming, upgrades, clan chest, clan chat |
 | **Essentials** | 40+ QoL commands — homes, warps, TPA, AFK, jail |
 | **Security** | BCrypt auth, CAPTCHA anti-bot, anti-dupe, anti-lag |
@@ -34,7 +34,7 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 NexusPrism
 ├── nexusprism-api          Public API for addon developers
 ├── nexusprism-core         Core managers, PDC registry, language
-├── nexusprism-items        Custom item storage (235+ items)
+├── nexusprism-items        Custom item storage (500+ items)
 ├── nexusprism-machines     Machine definitions, processing engine
 ├── nexusprism-systems      Energy network implementation
 ├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
@@ -50,7 +50,7 @@ NexusPrism
 ├── nexusprism-waila        WAILA/HUD integration
 ├── nexusprism-security     Auth, anti-bot, anti-lag, anti-dupe
 ├── nexusprism-clans        Clans, territory, upgrades
-├── nexusprism-economy      Money, credits, sell prices
+├── nexusprism-economy      Money, sell prices
 ├── nexusprism-essentials   40+ QoL commands
 ├── nexusprism-crystaldefense Wave-based Crystal Defense minigame
 ├── nexusprism-custommobs   YAML-defined bosses

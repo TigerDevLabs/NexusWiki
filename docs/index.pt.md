@@ -10,7 +10,7 @@ NexusPrism é um plugin Spigot modular construído sobre uma arquitetura Maven d
 
 | Categoria | Destaques |
 | --- | --- |
-| **Itens Personalizados** | +235 itens definidos em YAML |
+| **Itens Personalizados** | +500+ itens definidos em YAML |
 | **Máquinas** | Crafting multibloco, redes de energia, armazenamento ME |
 | **Economia** | Moeda dupla (dinheiro + créditos), /sell, /baltop |
 | **Clãs** | Conquista de território, melhorias, baú de clã, chat de clã |
@@ -33,7 +33,7 @@ NexusPrism é um plugin Spigot modular construído sobre uma arquitetura Maven d
 NexusPrism
 ├── nexusprism-api          API pública para desenvolvedores de addons
 ├── nexusprism-core         Gerenciadores principais, registro PDC, idioma
-├── nexusprism-items        Armazenamento de itens personalizados (+235 itens)
+├── nexusprism-items        Armazenamento de itens personalizados (+500+ itens)
 ├── nexusprism-machines     Definições de máquinas, motor de processamento
 ├── nexusprism-systems      Implementação de redes de energia
 ├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer

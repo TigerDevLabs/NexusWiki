@@ -119,7 +119,6 @@ Lista completa de todos os nós de permissão registrados pelo NexusPrism. Nós 
 | Permissão | Descrição | Padrão |
 | --- | --- | --- |
 | `nexusprism.economy.money` | Ver saldo de dinheiro | true |
-| `nexusprism.economy.credits` | Ver créditos | true |
 | `nexusprism.economy.baltop` | Ver placar | true |
 | `nexusprism.economy.sell` | Usar /sell | true |
 | `nexusprism.economy.admin` | Comandos administrativos de economia | OP |

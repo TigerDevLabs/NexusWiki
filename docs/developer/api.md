@@ -266,7 +266,7 @@ ProtectionsRegistry.get().ifPresent(prot -> {
 });
 ```
 
-### Events (Blood Moon, Sacrifice Arc, Isekai Boss)
+### Events (Blood Moon, Sacrifice Arc, Anime Boss)
 
 ```java
 import io.github.otiger.nexusprism.api.events.EventsRegistry;

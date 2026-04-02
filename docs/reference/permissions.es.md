@@ -119,7 +119,6 @@ Lista completa de todos los nodos de permisos registrados por NexusPrism. Los no
 | Permiso | Descripción | Por defecto |
 | --- | --- | --- |
 | `nexusprism.economy.money` | Ver saldo de dinero | true |
-| `nexusprism.economy.credits` | Ver créditos | true |
 | `nexusprism.economy.baltop` | Ver tabla de clasificación | true |
 | `nexusprism.economy.sell` | Usar /sell | true |
 | `nexusprism.economy.admin` | Comandos administrativos de economía | OP |

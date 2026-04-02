@@ -141,7 +141,6 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | Permission | Description | Default |
 | --- | --- | --- |
 | `nexusprism.economy.money` | View money balance | true |
-| `nexusprism.economy.credits` | View credits | true |
 | `nexusprism.economy.baltop` | View leaderboard | true |
 | `nexusprism.economy.sell` | Use `/sell` | true |
 | `nexusprism.economy.admin` | Admin eco commands | OP |

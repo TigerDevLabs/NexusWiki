@@ -1,6 +1,5 @@
 # Módulo Economía
 
-El módulo Economía proporciona un **sistema de moneda dual** (dinero y créditos), comandos de venta, clasificación de riqueza y configuración de precios de venta por ítem.
 
 ---
 
@@ -19,7 +18,6 @@ El módulo Economía proporciona un **sistema de moneda dual** (dinero y crédit
 | --- | --- | --- |
 | `/money` | Verificar tu saldo | `nexusprism.economy.money` |
 | `/money <jugador>` | Verificar saldo de otro jugador | `nexusprism.economy.money` |
-| `/credits` | Verificar tus créditos | `nexusprism.economy.credits` |
 | `/baltop` | Top 10 jugadores más ricos | `nexusprism.economy.baltop` |
 | `/sell hand` | Vender ítem en mano | `nexusprism.economy.sell` |
 | `/sell all` | Vender todos los ítems vendibles | `nexusprism.economy.sell` |
@@ -37,7 +35,6 @@ El módulo Economía proporciona un **sistema de moneda dual** (dinero y crédit
 | Permiso | Descripción | Predeterminado |
 | --- | --- | --- |
 | `nexusprism.economy.money` | Ver saldos | true |
-| `nexusprism.economy.credits` | Ver créditos | true |
 | `nexusprism.economy.baltop` | Ver clasificación | true |
 | `nexusprism.economy.sell` | Usar /sell | true |
 | `nexusprism.economy.admin` | Comandos de admin eco | OP |
@@ -80,7 +77,6 @@ prices:
 | Placeholder | Descripción |
 | --- | --- |
 | `%nexusprism_money%` | Saldo de dinero del jugador |
-| `%nexusprism_credits%` | Saldo de créditos del jugador |
 
 ---
 

@@ -141,7 +141,6 @@ Complete list of all commands registered by NexusPrism, organized by module.
 | Command | Description | Permission |
 | --- | --- | --- |
 | `/money [player]` | Check balance | `nexusprism.economy.money` |
-| `/credits [player]` | Check credits | `nexusprism.economy.credits` |
 | `/baltop` | Top 10 richest | `nexusprism.economy.baltop` |
 | `/sell hand` | Sell item in hand | `nexusprism.economy.sell` |
 | `/sell all` | Sell all sellable items | `nexusprism.economy.sell` |

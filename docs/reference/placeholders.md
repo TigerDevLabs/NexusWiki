@@ -11,7 +11,6 @@ NexusPrism registers its own PlaceholderAPI expansion under the `nexusprism` ide
 | Placeholder | Description | Example |
 | --- | --- | --- |
 | `%nexusprism_money%` | Player's current money balance | `12500.00` |
-| `%nexusprism_credits%` | Player's credit balance | `350` |
 
 ---
 
@@ -215,7 +214,6 @@ scoreboard:
   title: "&b&lYour Stats"
   lines:
     - "&7Money: &a$%nexusprism_money%"
-    - "&7Credits: &b%nexusprism_credits%"
     - "&7Votes: &e%nexusprism_votes_total% &7(streak: %nexusprism_vote_streak%)"
     - "&7Clan: &f%nexusprism_clan_name%"
     - "&7Playtime: &f%nexusprism_playtime%"

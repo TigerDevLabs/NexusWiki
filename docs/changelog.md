@@ -149,7 +149,7 @@
 
 - **security**: Leveled mobs and mob stacker enhancements
 - **economy**: Jobs, shop, auction house, and player warps
-- **events**: Blood Moon, Sacrifice Arc, and Isekai Boss system
+- **events**: Blood Moon, Sacrifice Arc, and Anime Boss system
 - **mmo**: Stats, skill trees, abilities, professions, and mana system
 
 ### 🐛 Fixed
@@ -373,7 +373,7 @@
 - All feature systems are now self-contained modules with their own lifecycle
 - Switched from YAML-only persistence to **SQLite / PostgreSQL** via `nexusprism-storage`
 - `CustomItemRegistry` with PDC-based item tagging (`nexusprism:id`)
-- 235+ data-driven items defined in `items.yml`
+- 500+ data-driven items defined in `items.yml`
 - Item tier system: Basic → Advanced → Infinity
 - Research tree with XP-gated unlocks
 - Multi-language support: English, Brazilian Portuguese, Spanish, Simplified Chinese
@@ -391,7 +391,7 @@
 - **nexusprism-ae** — ME (Applied Energistics-style) network storage
 - **nexusprism-energy** — Energy generation and cable networks
 - **nexusprism-chat** — 4-channel chat (global, local, staff, trade) with moderation
-- **nexusprism-events** — Blood Moon, Sacrifice Arc, and Isekai Boss system
+- **nexusprism-events** — Blood Moon, Sacrifice Arc, and Anime Boss system
 - **nexusprism-mmo** — Stats, skill trees, abilities, professions, and mana system
 - **nexusprism-tab** — Custom TAB list header/footer with LuckPerms prefix
 - **nexusprism-holograms** — YAML-driven floating text holograms

@@ -92,7 +92,7 @@ Closing the GUI without clicking counts as **Decline**.
 ### Arena Trial
 
 1. The player is teleported to the configured arena (or stays in their current location if unconfigured)
-2. A random **Isekai Boss** is summoned — selected from the pool eligible for the player's streak
+2. A random **Anime Boss** is summoned — selected from the pool eligible for the player's streak
 3. A **180-second countdown** begins with warnings at 60s, 30s, 10s, and 5s
 
 ### Outcomes
@@ -134,11 +134,11 @@ sacrifice:
 
 ---
 
-## Isekai Boss Codex
+## Anime Boss Codex
 
-When a Sacrifice is accepted, a random **Isekai Boss** is summoned in the arena. The boss pool available depends on the player's current streak. Each boss has multiple phases, unique mechanics, and a unique drop.
+When a Sacrifice is accepted, a random **Anime Boss** is summoned in the arena. The boss pool available depends on the player's current streak. Each boss has multiple phases, unique mechanics, and a unique drop.
 
-Boss definitions live in `events/isekai_bosses/*.yml`. Health and damage scale with streak:
+Boss definitions live in `events/anime_bosses/*.yml`. Health and damage scale with streak:
 
 ```
 finalStat = baseStat × (1 + (streak - 7) × 0.2)

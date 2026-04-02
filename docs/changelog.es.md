@@ -373,7 +373,7 @@
 - Todos los sistemas de funciones ahora son módulos independientes con su propio ciclo de vida
 - Migración de persistencia YAML a **SQLite / PostgreSQL** mediante `nexusprism-storage`
 - `CustomItemRegistry` con etiquetado de ítems via PDC (`nexusprism:id`)
-- 235+ ítems basados en datos definidos en `items.yml`
+- 500+ ítems basados en datos definidos en `items.yml`
 - Sistema de tier de ítems: Básico → Avanzado → Infinito
 - Árbol de investigación con desbloqueos por XP
 - Soporte multi-idioma: Inglés, Portugués Brasileño, Español, Chino Simplificado

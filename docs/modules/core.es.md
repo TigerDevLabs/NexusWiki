@@ -6,7 +6,7 @@ El módulo Core es la base de NexusPrism. Gestiona el registro de ítems persona
 
 ## Sistema de Ítems Personalizados
 
-Todos los ítems personalizados se definen en `plugins/NexusPrism/items.yml`. El plugin incluye **más de 235 ítems** de fábrica.
+Todos los ítems personalizados se definen en `plugins/NexusPrism/items.yml`. El plugin incluye **más de 500 ítems** de fábrica.
 
 ### Ejemplo de `items.yml`
 

@@ -141,7 +141,6 @@ Lista completa de todos los comandos registrados por NexusPrism, organizados por
 | Comando | Descripción | Permiso |
 | --- | --- | --- |
 | `/money [player]` | Verificar saldo | `nexusprism.economy.money` |
-| `/credits [player]` | Verificar créditos | `nexusprism.economy.credits` |
 | `/baltop` | Top 10 más ricos | `nexusprism.economy.baltop` |
 | `/sell hand` | Vender ítem en mano | `nexusprism.economy.sell` |
 | `/sell all` | Vender todos los ítems vendibles | `nexusprism.economy.sell` |
