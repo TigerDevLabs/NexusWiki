@@ -5,6 +5,21 @@
 
 ---
 
+## [2026-03-24] · `94b05a7`
+
+
+### 🐛 Fixed
+
+- **items**: Adiciona _templates.yml com item_template base para data/items/
+- **data**: Corrige erros de inicialização do servidor
+- **items**: Corrige conflitos de CMD dos itens comprimidos (30000-30002)
+
+### 🔧 Maintenance
+
+- Correção de escape inválido '\$" para "$"
+
+---
+
 ## [2026-03-24] · `39476a5`
 
 ### ✨ Added
