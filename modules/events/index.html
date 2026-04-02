@@ -1106,15 +1106,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#isekai-boss-codex" class="md-nav__link">
+  <a href="#anime-boss-codex" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Isekai Boss Codex
+        Anime Boss Codex
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Isekai Boss Codex">
+    <nav class="md-nav" aria-label="Anime Boss Codex">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2118,15 +2118,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#isekai-boss-codex" class="md-nav__link">
+  <a href="#anime-boss-codex" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Isekai Boss Codex
+        Anime Boss Codex
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Isekai Boss Codex">
+    <nav class="md-nav" aria-label="Anime Boss Codex">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2372,7 +2372,7 @@
 <h3 id="arena-trial">Arena Trial<a class="headerlink" href="#arena-trial" title="Permanent link">&para;</a></h3>
 <ol>
 <li>The player is teleported to the configured arena (or stays in their current location if unconfigured)</li>
-<li>A random <strong>Isekai Boss</strong> is summoned — selected from the pool eligible for the player's streak</li>
+<li>A random <strong>Anime Boss</strong> is summoned — selected from the pool eligible for the player's streak</li>
 <li>A <strong>180-second countdown</strong> begins with warnings at 60s, 30s, 10s, and 5s</li>
 </ol>
 <h3 id="outcomes">Outcomes<a class="headerlink" href="#outcomes" title="Permanent link">&para;</a></h3>
@@ -2447,9 +2447,9 @@
 <p>Build a dedicated PvE arena and set its coordinates under <code>sacrifice.arena</code>. Leave <code>world</code> blank to fight in place — useful for testing.</p>
 </div>
 <hr />
-<h2 id="isekai-boss-codex">Isekai Boss Codex<a class="headerlink" href="#isekai-boss-codex" title="Permanent link">&para;</a></h2>
-<p>When a Sacrifice is accepted, a random <strong>Isekai Boss</strong> is summoned in the arena. The boss pool available depends on the player's current streak. Each boss has multiple phases, unique mechanics, and a unique drop.</p>
-<p>Boss definitions live in <code>events/isekai_bosses/*.yml</code>. Health and damage scale with streak:</p>
+<h2 id="anime-boss-codex">Anime Boss Codex<a class="headerlink" href="#anime-boss-codex" title="Permanent link">&para;</a></h2>
+<p>When a Sacrifice is accepted, a random <strong>Anime Boss</strong> is summoned in the arena. The boss pool available depends on the player's current streak. Each boss has multiple phases, unique mechanics, and a unique drop.</p>
+<p>Boss definitions live in <code>events/anime_bosses/*.yml</code>. Health and damage scale with streak:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>finalStat = baseStat × (1 + (streak - 7) × 0.2)
 </code></pre></div>
 <h3 id="boss-pool">Boss Pool<a class="headerlink" href="#boss-pool" title="Permanent link">&para;</a></h3>

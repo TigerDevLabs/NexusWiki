@@ -2265,7 +2265,7 @@
 
 
 <h1 id="economy-module">Economy Module<a class="headerlink" href="#economy-module" title="Permanent link">&para;</a></h1>
-<p>The Economy module provides a <strong>dual-currency system</strong> (money and credits), sell commands, a wealth leaderboard, and per-item sell price configuration.</p>
+<p>The Economy module provides a <strong>single-currency system</strong> (money), sell commands, a wealth leaderboard, and per-item sell price configuration.</p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <table>
@@ -2278,11 +2278,7 @@
 <tbody>
 <tr>
 <td><strong>Money</strong> (<code>$</code>)</td>
-<td>Standard in-game currency earned from selling items, voting, etc.</td>
-</tr>
-<tr>
-<td><strong>Credits</strong></td>
-<td>Premium currency typically obtained from the webstore</td>
+<td>In-game currency earned from selling items, voting, jobs, etc.</td>
 </tr>
 </tbody>
 </table>
@@ -2306,16 +2302,6 @@
 <td><code>/money &lt;player&gt;</code></td>
 <td>Check another player's balance</td>
 <td><code>nexusprism.economy.money</code></td>
-</tr>
-<tr>
-<td><code>/credits</code></td>
-<td>Check your credits</td>
-<td><code>nexusprism.economy.credits</code></td>
-</tr>
-<tr>
-<td><code>/credits &lt;player&gt;</code></td>
-<td>Check another's credits</td>
-<td><code>nexusprism.economy.credits</code></td>
 </tr>
 <tr>
 <td><code>/baltop</code></td>
@@ -2378,11 +2364,6 @@
 <tr>
 <td><code>nexusprism.economy.money</code></td>
 <td>Check balances</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>nexusprism.economy.credits</code></td>
-<td>Check credits</td>
 <td>true</td>
 </tr>
 <tr>
@@ -2457,10 +2438,6 @@
 <tr>
 <td><code>%nexusprism_money%</code></td>
 <td>Player's money balance</td>
-</tr>
-<tr>
-<td><code>%nexusprism_credits%</code></td>
-<td>Player's credit balance</td>
 </tr>
 </tbody>
 </table>
