@@ -4,6 +4,44 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-04-12] · `f52f78d`
+
+
+### ✨Añadido See More
+
+- Manejo de eventos IRC **twitch**:, recompensas de sub/animación/incursión, puerta de rifa clave
+- Punto final **web**: TwitchEventReceiver para la integración del Stream Panel
+- Comando **essentials**: RTP con GUI de selector mundial
+
+### 🐛 Corregido See More
+
+- **security**: Confirmación premium FastLogin + refuerzo de autenticación
+
+### 🔧Mantenimiento
+
+- **data**: Actualizaciones YAML de artículo/máquina/receta + cableado de complementos
+## [2026-03-24] · `cc57494`
+
+
+### ✨Añadido See More
+
+- **fastlogin**: Scaffolda módulo nexusprism-fastlogin con autenticación premium a través de ProtocolLib
+
+### 🐛 Corregido See More
+
+- **mmo/segurança/encantamentos**: Corrige mensajes MMO, verificación premium y Auto Smelt
+- **lang**: Mover mmo para nivel raíz de YAML (estava aninhado em economía)
+- **plugin**: califica ProtectionHandler como MachineManager.ProtectionHandler
+- **fastlogin**: Sustituye el protocolo de enlace RSA/AES por búsqueda en el nombre sincronizado→UUID
+- **fastlogin**: Injeta UUID vía reflexão de campo (compatível Spigot e Paper)
+- **fastlogin**: Injeta UUID a través de PlayerProfile en Paper, reflejo de campo en Spigot
+
+### 🔧Mantenimiento
+
+- Se movió el mensaje de bloqueo mmo anidado a la raíz.
+
+---
+
 ## [2026-03-24] · `94b05a7`
 
 
