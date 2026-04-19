@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-04-18] · `7f36abc`
+
+
+### 🔒 Security
+
+- AES-CBC key persistence, receiver secret auth, player name validation, session columns
+
+---
+
 ## [2026-04-12] · `f52f78d`
 
 

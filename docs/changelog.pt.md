@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-18] · `7f36abc`
+
+
+### 🔒 Segurança
+
+- Persistência de chave AES-CBC, autenticação secreta do receptor, validação de nome de jogador, colunas de sessão
+
+---
+
 ## [2026-04-12] · `f52f78d`
 
 
