@@ -1460,6 +1460,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-panel-receiver-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Panel Receiver Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration-web-configyml" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1897,6 +1936,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-panel-receiver-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Panel Receiver Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration-web-configyml" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2037,63 +2115,109 @@
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;lp</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">{player}</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">mvp&quot;</span>
 </code></pre></div>
 <hr />
+<h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
+<h3 id="data-encryption">Data Encryption<a class="headerlink" href="#data-encryption" title="Permanent link">&para;</a></h3>
+<p>When <code>security.enable-encryption: true</code> (default), sensitive data stored by the web module is encrypted with <strong>AES-256-CBC</strong> using a random IV per entry. The key is generated once and persisted to <code>plugins/NexusPrism/web/encryption.key</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Back up encryption.key</p>
+<p>If this file is lost, previously encrypted data cannot be decrypted. Include it in your server backups. Never commit it to a git repository.</p>
+</div>
+<h3 id="stream-panel-receiver-secret">Stream Panel Receiver Secret<a class="headerlink" href="#stream-panel-receiver-secret" title="Permanent link">&para;</a></h3>
+<p>The plugin opens an HTTP port (<code>nexus-tools.receiver-port</code>, default <code>8080</code>) to receive Twitch events from the <a href="https://github.com/O-Tiger/WebServiceTwitchBot">Stream Panel</a>. Set <code>nexus-tools.receiver-secret</code> to a shared secret and configure the same value in the Stream Panel's nexus-tools integration. Requests without a matching <code>Authorization: Bearer &lt;secret&gt;</code> header are rejected with 401.</p>
+<p>Leave empty only in isolated local development environments.</p>
+<hr />
 <h2 id="configuration-web-configyml">Configuration (<code>web-config.yml</code>)<a class="headerlink" href="#configuration-web-configyml" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">gdpr</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">log-transactions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">data-retention-days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span><span class="w">         </span><span class="c1"># Days before inactive data is cleaned up</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">legal-retention-years</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w">         </span><span class="c1"># Minimum legal retention for financial records</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">allow-data-export</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">allow-data-deletion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nt">api</span><span class="p">:</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://your-website.com/api&quot;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">rate-limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span><span class="w">                   </span><span class="c1"># Requests per minute</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nt">payments</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;custom&quot;</span><span class="w">               </span><span class="c1"># stripe | paypal | mercadopago | custom</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">webhook-secret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">discord</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">webhook-url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">                  </span><span class="c1"># Webhook for delivery notifications</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">server-invite</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://discord.gg/your-invite&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">notifications-enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">api</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://your-website.com/api&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">                          </span><span class="c1"># Auto-generated 64-char hex on first run</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">rate-limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span><span class="w">                   </span><span class="c1"># Requests per minute</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nt">security</span><span class="p">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">require-api-key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nt">enable-ip-whitelist</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nt">whitelisted-ips</span><span class="p">:</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;your-server-ip&quot;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">enable-encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">          </span><span class="c1"># AES-256-CBC; key stored in web/encryption.key</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nt">vip-kits</span><span class="p">:</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nt">gdpr</span><span class="p">:</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="nt">auto-deliver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">               </span><span class="c1"># Deliver pending kits on player join</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">verify-payment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">             </span><span class="c1"># Verify payment status before delivery</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="nt">log-transactions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">data-retention-days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nt">legal-retention-years</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="nt">allow-data-export</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="nt">allow-data-deletion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="nt">payments</span><span class="p">:</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;custom&quot;</span><span class="w">               </span><span class="c1"># stripe | paypal | mercadopago | custom</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">  </span><span class="nt">webhook-secret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">               </span><span class="c1"># Auto-generated UUID on first run</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="nt">currency</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;USD&quot;</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="nt">nexus-tools</span><span class="p">:</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">  </span><span class="nt">receiver-port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w">              </span><span class="c1"># Local HTTP port for Stream Panel events</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">  </span><span class="nt">receiver-secret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">              </span><span class="c1"># Shared secret — must match Stream Panel config</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="nt">vip-kits</span><span class="p">:</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">  </span><span class="nt">auto-deliver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">  </span><span class="nt">verify-payment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h3 id="configuration-fields">Configuration Fields<a class="headerlink" href="#configuration-fields" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Field</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>gdpr.data-retention-days</code></td>
-<td>How long inactive player data is kept before automatic cleanup</td>
-</tr>
-<tr>
-<td><code>gdpr.legal-retention-years</code></td>
-<td>Minimum years financial records are retained (anonymised, not deleted)</td>
-</tr>
-<tr>
 <td><code>api.endpoint</code></td>
-<td>Your webstore's API URL for order verification</td>
+<td>—</td>
+<td>Webstore API base URL for order verification</td>
 </tr>
 <tr>
-<td><code>payments.provider</code></td>
-<td>Payment processor: <code>stripe</code>, <code>paypal</code>, <code>mercadopago</code>, or <code>custom</code></td>
+<td><code>api.key</code></td>
+<td><em>(auto-generated)</em></td>
+<td>Copy to webstore's <code>NEXUS_API_KEY</code> env var</td>
+</tr>
+<tr>
+<td><code>security.require-api-key</code></td>
+<td><code>true</code></td>
+<td>Reject requests without a valid API key — never disable in production</td>
+</tr>
+<tr>
+<td><code>security.enable-encryption</code></td>
+<td><code>true</code></td>
+<td>AES-256-CBC encryption for stored sensitive data</td>
+</tr>
+<tr>
+<td><code>payments.webhook-secret</code></td>
+<td><em>(auto-generated)</em></td>
+<td>Must match the secret set in your payment provider's webhook dashboard</td>
+</tr>
+<tr>
+<td><code>nexus-tools.receiver-secret</code></td>
+<td>``</td>
+<td>Shared secret for Stream Panel → plugin HTTP auth</td>
 </tr>
 <tr>
 <td><code>vip-kits.auto-deliver</code></td>
-<td>Automatically deliver pending kits when the player joins</td>
+<td><code>true</code></td>
+<td>Deliver pending kits automatically on player join</td>
 </tr>
 <tr>
 <td><code>vip-kits.verify-payment</code></td>
-<td>Double-check payment status via the API before delivering a kit</td>
+<td><code>true</code></td>
+<td>Verify payment status via API before delivery</td>
 </tr>
 </tbody>
 </table>
