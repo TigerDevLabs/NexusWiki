@@ -67,41 +67,78 @@ kits:
 
 ---
 
+## Security
+
+### Data Encryption
+
+When `security.enable-encryption: true` (default), sensitive data stored by the web module is encrypted with **AES-256-CBC** using a random IV per entry. The key is generated once and persisted to `plugins/NexusPrism/web/encryption.key`.
+
+!!! warning "Back up encryption.key"
+    If this file is lost, previously encrypted data cannot be decrypted. Include it in your server backups. Never commit it to a git repository.
+
+### Stream Panel Receiver Secret
+
+The plugin opens an HTTP port (`nexus-tools.receiver-port`, default `8080`) to receive Twitch events from the [Stream Panel](https://github.com/O-Tiger/WebServiceTwitchBot). Set `nexus-tools.receiver-secret` to a shared secret and configure the same value in the Stream Panel's nexus-tools integration. Requests without a matching `Authorization: Bearer <secret>` header are rejected with 401.
+
+Leave empty only in isolated local development environments.
+
+---
+
 ## Configuration (`web-config.yml`)
 
 ```yaml
-gdpr:
-  enabled: true
-  log-transactions: true
-  data-retention-days: 365         # Days before inactive data is cleaned up
-  legal-retention-years: 7         # Minimum legal retention for financial records
-  allow-data-export: true
-  allow-data-deletion: true
+discord:
+  webhook-url: ""                  # Webhook for delivery notifications
+  server-invite: "https://discord.gg/your-invite"
+  notifications-enabled: false
 
 api:
   enabled: false
   endpoint: "https://your-website.com/api"
-  key: ""
+  key: ""                          # Auto-generated 64-char hex on first run
   rate-limit: 60                   # Requests per minute
+
+security:
+  require-api-key: true
+  enable-ip-whitelist: false
+  whitelisted-ips:
+    - "127.0.0.1"
+    - "your-server-ip"
+  enable-encryption: true          # AES-256-CBC; key stored in web/encryption.key
+
+gdpr:
+  enabled: true
+  log-transactions: true
+  data-retention-days: 365
+  legal-retention-years: 7
+  allow-data-export: true
+  allow-data-deletion: true
 
 payments:
   enabled: false
   provider: "custom"               # stripe | paypal | mercadopago | custom
-  webhook-secret: ""
+  webhook-secret: ""               # Auto-generated UUID on first run
+  currency: "USD"
+
+nexus-tools:
+  receiver-port: 8080              # Local HTTP port for Stream Panel events
+  receiver-secret: ""              # Shared secret — must match Stream Panel config
 
 vip-kits:
   enabled: true
-  auto-deliver: true               # Deliver pending kits on player join
-  verify-payment: true             # Verify payment status before delivery
+  auto-deliver: true
+  verify-payment: true
 ```
 
 ### Configuration Fields
 
-| Field | Description |
-| --- | --- |
-| `gdpr.data-retention-days` | How long inactive player data is kept before automatic cleanup |
-| `gdpr.legal-retention-years` | Minimum years financial records are retained (anonymised, not deleted) |
-| `api.endpoint` | Your webstore's API URL for order verification |
-| `payments.provider` | Payment processor: `stripe`, `paypal`, `mercadopago`, or `custom` |
-| `vip-kits.auto-deliver` | Automatically deliver pending kits when the player joins |
-| `vip-kits.verify-payment` | Double-check payment status via the API before delivering a kit |
+| Field | Default | Description |
+| --- | --- | --- |
+| `api.endpoint` | — | Webstore API base URL for order verification |
+| `api.key` | *(auto-generated)* | Copy to webstore's `NEXUS_API_KEY` env var |
+| `security.require-api-key` | `true` | Reject requests without a valid API key — never disable in production |
+| `security.enable-encryption` | `true` | AES-256-CBC encryption for stored sensitive data |
+| `payments.webhook-secret` | *(auto-generated)* | Must match the secret set in your payment provider's webhook dashboard |
+| `nexus-tools.receiver-secret` | `` | Shared secret for Stream Panel → plugin HTTP auth |
+| `vip-kits.auto-deliver` | `true` | Deliver pending kits automatically on player join |
+| `vip-kits.verify-payment` | `true` | Verify payment status via API before delivery |
