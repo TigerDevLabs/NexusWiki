@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-20] · `a998d1f`
+
+
+### 📚 Documentação
+
+- Adicionar referência web/web-config.yml + changelog de reforço de segurança
+
+---
+
 ## [2026-04-18] · `7f36abc`
 
 

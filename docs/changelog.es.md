@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-04-20] · `a998d1f`
+
+
+### 📚 Documentación
+
+- Agregar referencia web/web-config.yml + registro de cambios de refuerzo de seguridad
+
+---
+
 ## [2026-04-18] · `7f36abc`
 
 

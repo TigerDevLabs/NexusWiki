@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-04-20] · `a998d1f`
+
+
+### 📚 Documentation
+
+- Add web/web-config.yml reference + security hardening changelog
+
+---
+
 ## [2026-04-18] · `7f36abc`
 
 
