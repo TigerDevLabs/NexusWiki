@@ -5,6 +5,19 @@
 
 ---
 
+## [2026-04-20] · `b322900`
+
+
+### 🐛 Fixed
+
+- **auth**: Bypass Java auth for Bedrock/Floodgate players
+
+### 🔒 Security
+
+- Bot/scanner hardening — short-session detection, IP auto-trust gate, Postgres session fix
+
+---
+
 ## [2026-04-20] · `a998d1f`
 
 

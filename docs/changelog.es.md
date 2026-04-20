@@ -4,6 +4,19 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-04-20] · `b322900`
+
+
+### 🐛 Corregido See More
+
+- **auth**: Omitir la autenticación de Java para reproductores Bedrock/Floodgate
+
+### 🔒Seguridad
+
+- Refuerzo de bot/escáner: detección de sesiones cortas, puerta de confianza automática de IP, corrección de sesión de Postgres
+
+---
+
 ## [2026-04-20] · `a998d1f`
 
 

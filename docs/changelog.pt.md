@@ -4,6 +4,19 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-20] · `b322900`
+
+
+### 🐛 Corrigido
+
+- **auth**: Ignorar autenticação Java para jogadores Bedrock/Floodgate
+
+### 🔒 Segurança
+
+- Proteção de bot/scanner — detecção de sessões curtas, porta de confiança automática de IP, correção de sessão Postgres
+
+---
+
 ## [2026-04-20] · `a998d1f`
 
 
