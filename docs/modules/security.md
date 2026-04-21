@@ -1,32 +1,37 @@
 # Security Module
 
-The Security module provides **BCrypt-based player authentication**, CAPTCHA anti-bot protection, session management, anti-duplication, and anti-lag tools — all designed for **offline/cracked servers**.
+The Security module provides **BCrypt-based player authentication**, CAPTCHA anti-bot protection, session management, anti-duplication, anti-lag tools, and network-level DDoS hardening — designed for **offline/cracked servers running Geyser+Floodgate**.
 
 ---
 
 ## Sub-systems
 
 | Sub-system | Description |
-| --- | --- |
-| **Auth** | Register/login with BCrypt passwords, persistent sessions |
-| **Anti-Bot** | IP rate-limiting, CAPTCHA map challenge, name blacklisting, VPN detection |
+|---|---|
+| **Auth** | Register/login with BCrypt passwords, persistent sessions, Postgres or SQLite storage |
+| **Anti-Bot** | IP rate-limiting, CAPTCHA map challenge, name blacklisting, VPN detection, Bedrock bypass |
+| **Short-Session Detection** | Flags players who disconnect in < 30 seconds as likely scanners/bots; sends Discord alert |
+| **Premium IP Whitelist** | Blocks premium accounts connecting from unknown IPs; optional manual first-approval |
 | **Mod Detection** | Plugin-channel scanner — kicks hacked clients, alerts staff on Forge/NeoForge |
 | **Anti-Dupe** | Detects and prevents common item duplication exploits |
-| **Anti-Lag** | Scheduled world cleaner, entity stacker |
+| **Anti-Lag** | Scheduled world cleaner, entity stacker, leveled mobs |
 
 ---
 
 ## Authentication
 
-Players on cracked servers must `/register` on first join and `/login` on subsequent joins. Premium accounts are verified via the Mojang API and bypass auth entirely.
+Players on cracked servers must `/register` on first join and `/login` on subsequent joins.
+Bedrock players (via Geyser+Floodgate) are authenticated by Xbox Live and **bypass all Java auth** entirely.
+Premium Java accounts are verified via the Mojang API and also bypass auth.
 
 ### Commands
 
 | Command | Usage | Permission |
-| --- | --- | --- |
+|---|---|---|
 | `/register <password> <confirm>` | Register an account | *(all players)* |
 | `/login <password>` | Log into your account | *(all players)* |
 | `/changepassword <old> <new>` | Change password | *(authenticated)* |
+| `/auth trustip <player> <ip>` | Manually approve a new IP for a premium player | OP |
 
 ### Auth Configuration (`security/auth.yml`)
 
@@ -38,43 +43,67 @@ postgres:
   user: nexus
   password: changeme
 
-session-timeout-minutes: 30      # Re-login required after 30min idle
-persistent-session-hours: 2      # Auto-login within 2h of last session
+# In-memory idle timeout — re-login required after N minutes of inactivity
+session-timeout-minutes: 30
 
-max-failed-attempts: 5           # Lockout after 5 wrong passwords
+# Reconnect window — players who rejoin within N hours are auto-logged in
+# 0 = always require /login on every join
+persistent-session-hours: 2
+
+max-failed-attempts: 5    # Lockout after N wrong passwords
 lockout-minutes: 10
 
 login-spawn:
-  enabled: false                 # Teleport to lobby while unauthenticated
+  enabled: false          # Teleport to safe spot while unauthenticated
   world: world
   x: 0.0
   y: 64.0
   z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+# ── Premium IP Whitelist ─────────────────────────────────────────────
+premium-ip-whitelist:
+  enabled: true           # Kick premium accounts on unknown IPs
+
+# ── First-Connection Policy (BOT scanner hardening) ──────────────────
+ip-whitelist:
+  # false (default): first IP is auto-trusted
+  # true: first connection is DENIED — admin must run /auth trustip <player> <ip>
+  # Enable this on public servers being targeted by scanners (e.g. BOT_32 pattern)
+  require-manual-first-approval: false
 ```
 
-### Premium Verification
+### Bedrock / Geyser+Floodgate
 
-When `premium-check.enabled` is `true`, NexusPrism validates premium accounts using a two-step process so cracked players cannot impersonate paid accounts:
+Bedrock players connect through Geyser. Floodgate assigns them UUIDs where
+`getMostSignificantBits() == 0` — NexusPrism detects this at `AsyncPlayerPreLoginEvent`
+and immediately marks the player as premium (Xbox-authenticated), skipping:
 
-1. **UUID version check** — offline-mode servers assign version-3 UUIDs to all players. A genuine premium player authenticated via FastLogin/JPremium receives their real Mojang UUID (version 4). Version 3 = cracked, immediately rejected.
-2. **Mojang API comparison** — even for version-4 UUIDs, the name is looked up via `api.mojang.com` and the returned UUID is compared against the player's actual UUID. Any mismatch is flagged as an impersonation attempt and the player is treated as cracked.
+- CAPTCHA
+- `/register` and `/login` requirements
+- Mojang API lookup
+- Premium IP whitelist checks
+
+This is correct: Bedrock accounts require a real Microsoft/Xbox account with Geyser's
+online-mode enforcement, so they are inherently more trusted than cracked Java clients.
+
+### Premium Verification (Java)
+
+When `premium-check.enabled` is `true`, NexusPrism validates premium Java accounts:
+
+1. **UUID version check** — FastLogin assigns real Mojang UUIDs (v4). Offline UUIDs are v3. Mismatch → cracked.
+2. **Mojang API comparison** — the player name is looked up and the returned UUID is compared against the actual UUID. Mismatch → flagged as impersonation attempt.
 
 #### Cache & Resilience
 
-Results are cached to avoid hammering the Mojang API on every join:
-
 | Layer | Detail |
-| --- | --- |
+|---|---|
 | **In-memory cache** | 24-hour TTL; cleared on restart |
-| **SQLite persistent cache** | Survives restarts — file: `security/premium-cache.db` |
+| **SQLite persistent cache** | Survives restarts — `security/premium-cache.db` |
 | **Rate limiter** | Max 50 Mojang API calls per 10-minute window |
-| **Exponential backoff** | Backs off up to 60 s on repeated API failures |
+| **Exponential backoff** | Backs off up to 60s on repeated API failures |
 | **Fallback** | Uses last cached result when the API is unreachable |
-
-If the Mojang API is down, the system falls back gracefully to cached data. If no cache exists for the player, they are treated as cracked.
-
-!!! warning "Impersonation detection"
-    If a player connects with a version-3 (offline) UUID but the cache shows that username owns a Mojang account, a warning is logged: `IMPERSONATION DETECTED`. The player is still allowed in but is treated as cracked (must `/login`).
 
 ---
 
@@ -82,24 +111,53 @@ If the Mojang API is down, the system falls back gracefully to cached data. If n
 
 ### How It Works
 
-1. **Join rate limiter** — blocks IPs that join more than `max-joins` times within the time window
-2. **Name blacklist** — regex patterns block bot-like usernames at login
-3. **CAPTCHA** — new players receive a map with a random 5-char code they must type in chat
-4. **Premium check** — premium (paid) accounts bypass CAPTCHA entirely
-5. **VPN detection** — optional proxycheck.io / iphub.info integration
-6. **Alt detection** — alerts admins when one IP has too many linked accounts
+Connection flow at `AsyncPlayerPreLoginEvent`:
+
+```
+1. Bedrock UUID check (getMostSignificantBits == 0) → auto-trust, skip all checks
+2. Join rate limiter → blocks IPs exceeding max-joins per window
+3. Name blacklist → regex patterns block scanner-like usernames
+4. VPN detection → optional proxycheck.io / iphub.info integration
+5. Premium check → Mojang UUID verification
+6. Alt detection → alerts if one IP has too many linked accounts
+```
+
+On join: CAPTCHA map challenge (skipped for premium and Bedrock players).
+
+!!! warning "What anti-bot does NOT protect against"
+    Attacks that send malformed packets (like the April 2026 `ServerboundHelloPacket +1 byte` flood)
+    are rejected by Netty **before** `AsyncPlayerPreLoginEvent` fires. All plugin-level checks above
+    are bypassed. See the **Network-Level DDoS Hardening** section below.
+
+### Short-Session Detection
+
+When a player disconnects in under **30 seconds**, the system logs a warning and sends a
+Discord alert to the `security` channel:
+
+```
+⚡ Short Session | `PlayerName` (`1.2.3.4`) disconnected after 7s — possible scanner/bot.
+```
+
+This catches bots that pass the handshake but disconnect immediately after joining,
+which evades rate-limit windows.
 
 ### Anti-Bot Configuration (`security/antibot.yml`)
 
 ```yaml
 rate-limit:
-  window-seconds: 10
-  max-joins: 3
+  window-seconds: 10      # Sliding window for IP join tracking
+  max-joins: 3            # Block if same IP joins more than N times per window
 
+# Regex patterns matched against the player's username at AsyncPlayerPreLoginEvent.
+# Supports Java regex. Use (?i) for case-insensitive matching.
 name-blacklist-patterns:
-  - "[A-Za-z]{1,3}[0-9]{5,}"
-  - "bot[0-9]+"
-  - "^[0-9]+$"
+  - "(?i)^BOT_\\d+$"       # BOT_1, BOT_32 (Mineflyer/scanner bots)
+  - "(?i)^bot\\d+$"        # bot1, bot99
+  - "(?i)^scanner.*$"      # scanner, scanner01
+  - "(?i)^crawler.*$"      # crawler, webcrawler
+  - "(?i)^test\\d*$"       # test, test1, test123
+  - "[A-Za-z]{1,3}[0-9]{5,}"  # abc12345 (short prefix + long number)
+  - "^[0-9]+$"             # purely numeric names
 
 vpn-detection:
   enabled: false
@@ -110,14 +168,56 @@ vpn-detection:
 captcha:
   enabled: true
   timeout-seconds: 60
-  session-hours: 24            # Skip CAPTCHA for 24h after first pass
+  session-hours: 24        # Skip CAPTCHA for 24h after first successful pass
 
 premium-check:
-  enabled: true
+  enabled: true            # Query Mojang API to verify premium accounts
 
 alt-detection:
-  max-accounts-per-ip: 3      # Alert admins if an IP has 3+ accounts
+  max-accounts-per-ip: 3   # Alert admins if one IP has 3+ accounts (0 = disable)
 ```
+
+---
+
+## Network-Level DDoS Hardening
+
+Attacks that operate below the plugin layer (malformed packets, connection floods) require
+OS and proxy-level defenses. NexusPrism provides operational runbooks in `ops/`.
+
+### Defense Layers (ordered by where they apply)
+
+```
+Internet → [TCPShield/Cloudflare] → [iptables/Fail2Ban] → [bukkit.yml throttle] → [Netty] → [Plugin events]
+```
+
+| Layer | Tool | Config location |
+|---|---|---|
+| Proxy filtering | TCPShield / Cloudflare Spectrum | `ops/server/tcpshield-cloudflare.md` |
+| Host firewall | iptables + script | `ops/firewall/block-attacker.sh` |
+| Auto-ban | Fail2Ban | `ops/fail2ban/` |
+| Bukkit throttle | `connection-throttle` in `bukkit.yml` | `ops/server/bukkit-connection-throttle.md` |
+| Plugin layer | NexusPrism anti-bot | `security/antibot.yml` |
+
+### Recommended quick setup
+
+```bash
+# 1. Block a known attacker IP immediately
+sudo bash ops/firewall/block-attacker.sh 15.237.177.126
+
+# 2. Deploy Fail2Ban rules (auto-blocks future offenders)
+sudo cp ops/fail2ban/filter.d/minecraft-malformed.conf /etc/fail2ban/filter.d/
+sudo cp ops/fail2ban/jail.local /etc/fail2ban/jail.d/minecraft.conf
+sudo systemctl reload fail2ban
+
+# 3. Set connection-throttle in bukkit.yml (see ops/server/bukkit-connection-throttle.md)
+# 4. Evaluate TCPShield for long-term proxy protection (see ops/server/tcpshield-cloudflare.md)
+```
+
+### April 2026 Incident
+
+On **2026-04-20**, IP `15.237.177.126` (AWS EC2) sent a malformed `ServerboundHelloPacket`
+(1 byte extra) every ~5 minutes for 17 hours. This caused a confirmed Paper Watchdog freeze
+at 19:35 UTC. Full details in `ATTACKS.md` (gitignored).
 
 ---
 
@@ -130,116 +230,107 @@ Automatically removes old ground items and excess entities on a schedule.
 ### Command
 
 | Command | Usage | Permission |
-| --- | --- | --- |
+|---|---|---|
 | `/cleanworld` | Manually trigger a world clean | `nexusprism.security.cleanworld` |
 
 ### Anti-Lag Configuration (`security/antilag.yml`)
 
 ```yaml
 cleaner:
-  interval-seconds: 300        # Auto-clean every 5 minutes
-  warn-seconds: 5              # Broadcast warning before cleaning
-  item-age-ticks: 6000         # Remove items older than 5 minutes
+  interval-seconds: 300
+  warn-seconds: 5
+  item-age-ticks: 6000
   worlds:
     - world
     - world_nether
     - world_the_end
-  entity-whitelist:
-    - ARMOR_STAND
-    - ITEM_FRAME
 
 stacker:
-  radius: 5.0                  # Merge mobs within 5 blocks
-  max-stack: 50                # Max 50 mobs per stack
+  radius: 5.0
+  max-stack: 50
   entity-types:
-    - COW
-    - PIG
-    - SHEEP
-    - ZOMBIE
-    - SKELETON
-    - CREEPER
-    - BLAZE
+    types: ["*"]
+    named: false          # Don't stack named mobs
+
+leveled-mobs:
+  enabled: true
+  max-level: 20
+  xp-multiplier-per-level: 0.20
+  damage-multiplier-per-level: 0.15
+  health-multiplier-per-level: 0.10
+
+backup:
+  enabled: true
+  interval-hours: 6
+  keep-last: 5
+  worlds:
+    - world
+    - world_nether
+    - world_the_end
 ```
+
+---
+
+## Leveled Mobs
+
+Every hostile mob that spawns is assigned a **level** based on depth, dimension, and biome.
+
+### Level Roll Table
+
+| Condition | Level Range / Bonus |
+|---|---|
+| Y > 64 (surface) | Lv. 1–4 |
+| Y ≤ 64 | Lv. 3–6 |
+| Y ≤ 30 | Lv. 5–8 |
+| Y ≤ 0 (deep underground) | Lv. 8–12 |
+| Nether dimension | +3 to roll |
+| The End dimension | +4 to roll |
+| Deep Dark biome | +5 to roll |
+| Blood Moon active | +2 to all rolls |
+
+### Stat Formulas
+
+| Stat | Formula |
+|---|---|
+| **Damage** | `baseDamage × (1 + (level-1) × damageMultiplierPerLevel) × stackCount` |
+| **XP** | `baseXP × stackCount × (1 + (level-1) × xpMultiplierPerLevel)` |
+| **Health** | Scaled by `healthMultiplierPerLevel` per level above 1 |
 
 ---
 
 ## Mod Detection
 
-The mod detection system scans the **plugin-message channels** that clients register during the login handshake. This reveals the mod loader and specific mods being used.
+Scans **plugin-message channels** registered during login to detect hacked clients.
 
-### How It Works
-
-- **Blacklisted channels** → player is kicked immediately and staff are notified (e.g. Wurst, Meteor Client, LiquidBounce)
-- **Watch-list channels** → staff are notified but the player is **never kicked** (e.g. Forge, NeoForge — may be legitimate mod users)
-- All channel registrations are stored per-player for the session; use `/modcheck <player>` to inspect them
+- **Blacklisted channels** → player is kicked immediately and staff are notified
+- **Watch-list channels** → staff are notified, player is never kicked (e.g. Forge — may be legitimate)
 
 ### Configuration (`security/mods.yml`)
 
 ```yaml
 mod-detector:
   enabled: true
-  action: KICK           # LOG | NOTIFY | KICK (applies to blacklisted channels)
-  notify-staff: true     # Always alert staff regardless of action
+  action: KICK           # LOG | NOTIFY | KICK
+  notify-staff: true
   kick-message: "§cYou are using a blacklisted modification."
-
-  # Channels that trigger the configured action (kick by default)
   blacklisted-channels:
     - "wurst:*"
     - "meteor-client:*"
-    - "impact:*"
     - "liquidbounce:*"
-    - "aristois:*"
-    - "labymod:*"
-    - "hacked:*"
-    - "cheat:*"
-
-  # Watch-list: always notifies staff, NEVER kicks
-  # Used for mod loaders that may be legitimate
   watch-channels:
     - "forge:*"
     - "fml:*"
-    - "fmlhandshake:*"
-    - "fmlnetworking:*"
     - "neoforge:*"
-    - "FML|HS"
-    - "FML|MP"
-    - "FML"
-
-  # Allowed channels (safe — logged for info only, no action)
-  allowed-channels:
-    - "minecraft:*"
-    - "fabric:*"
-    - "bungeecord:*"
-    - "velocity:*"
 ```
-
-### Pattern Syntax
-
-| Pattern | Matches |
-| --- | --- |
-| `"wurst:*"` | Any channel whose namespace starts with `wurst:` |
-| `"FML\|HS"` | Exact channel name `FML\|HS` (legacy Forge handshake) |
-
-!!! tip "Forge / NeoForge"
-    Forge and NeoForge users are put on the **watch-list**, not kicked. A `§e[ModWatch]` alert is sent to staff with the `nexusprism.security.notify` permission so they can manually verify whether the player is cheating.
-
-### Staff Permissions for Mod Detection
-
-| Permission | Description | Default |
-| --- | --- | --- |
-| `nexusprism.security.notify` | Receive mod-detection and watch-list alerts | OP |
 
 ---
 
 ## Anti-Dupe
 
-Prevents common duplication exploits. Configuration in `security/antidupe.yml`.
-
 ```yaml
 # security/antidupe.yml
-enabled: true
-log-attempts: true             # Log detected dupe attempts to console
-alert-admins: true             # Notify online admins in-game
+log-attempts: true
+punish-on-detect: false
 ```
 
 ---
@@ -247,7 +338,7 @@ alert-admins: true             # Notify online admins in-game
 ## Staff Commands
 
 | Command | Usage | Permission |
-| --- | --- | --- |
+|---|---|---|
 | `/vanish` | Toggle visibility | `nexusprism.staff.vanish` |
 | `/vanish <player>` | Vanish another player | `nexusprism.staff.vanish.others` |
 | `/invsee <player>` | Inspect a player's inventory | `nexusprism.staff.invsee` |
@@ -258,7 +349,7 @@ alert-admins: true             # Notify online admins in-game
 ## Permissions
 
 | Permission | Description | Default |
-| --- | --- | --- |
+|---|---|---|
 | `nexusprism.security.cleanworld` | Manual world clean | OP |
 | `nexusprism.staff.vanish` | Vanish yourself | OP |
 | `nexusprism.staff.vanish.others` | Vanish other players | OP |
@@ -268,62 +359,9 @@ alert-admins: true             # Notify online admins in-game
 
 ---
 
-## Leveled Mobs
-
-Every hostile mob that spawns in the world is automatically assigned a **level** that scales with how dangerous the environment is. Higher-level mobs deal more damage, have more health, and drop more XP.
-
-### Level Roll Table
-
-Levels are rolled at spawn based on Y-height, dimension, and biome. Bonuses stack.
-
-| Condition | Level Range / Bonus |
-| --- | --- |
-| Y > 64 (surface) | Lv. 1–4 |
-| Y ≤ 64 | Lv. 3–6 |
-| Y ≤ 30 | Lv. 5–8 |
-| Y ≤ 0 (deep underground) | Lv. 8–12 |
-| Nether dimension | +3 to roll |
-| The End dimension | +4 to roll |
-| Deep Dark biome | +5 to roll |
-| Blood Moon active | +2 to all rolls |
-
-All results are clamped to `[1, max-level]` from config.
-
-### Name Format
-
-| Situation | Display Name |
-| --- | --- |
-| Stacked + leveled | `3x [Lv.5] Zombie` |
-| Single + leveled | `[Lv.5] Zombie` |
-| Level 1 (any stack) | `3x Zombie` *(no level tag)* |
-
-### Stat Formulas
-
-| Stat | Formula |
-| --- | --- |
-| **Damage** | `baseDamage × (1 + (level-1) × damageMultiplierPerLevel) × stackCount` |
-| **XP** | `baseXP × stackCount × (1 + (level-1) × xpMultiplierPerLevel)` |
-| **Health** | Scaled by `healthMultiplierPerLevel` per level above 1 |
-
-### Configuration (`security/antilag.yml`)
-
-```yaml
-leveled-mobs:
-  enabled: true
-  max-level: 20
-  xp-multiplier-per-level: 0.20      # +20% XP per level above 1
-  damage-multiplier-per-level: 0.15  # +15% damage per level above 1
-  health-multiplier-per-level: 0.10  # +10% health per level above 1
-```
-
-!!! note "Blood Moon Integration"
-    When the **Blood Moon** is active (see the [Events module](events.md)), all level rolls receive a **+2 bonus**, making surface mobs significantly more dangerous at night.
-
----
-
 ## PlaceholderAPI
 
 | Placeholder | Description |
-| --- | --- |
+|---|---|
 | `%nexusprism_authenticated%` | `true` / `false` — is the player logged in? |
-| `%nexusprism_auth_status%` | Human-readable status (`Authenticated`, `Pending`) |
+| `%nexusprism_auth_status%` | Human-readable: `Authenticated`, `Pending` |
