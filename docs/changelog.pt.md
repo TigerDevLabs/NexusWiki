@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-21] · `ddb3481`
+
+
+### 🔒 Segurança
+
+- Alerta Discord de sessão curta + adição de runbooks de operações/DDoS
+
+---
+
 ## [2026-04-20] · `b322900`
 
 

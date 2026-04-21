@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-04-21] · `ddb3481`
+
+
+### 🔒 Security
+
+- Wire short-session Discord alert + add ops/ DDoS runbooks
+
+---
+
 ## [2026-04-20] · `b322900`
 
 
