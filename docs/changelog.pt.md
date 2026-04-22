@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-22] · `3782900`
+
+
+### ✨ Adicionado
+
+- **web**: Substitua o receptor HTTP de entrada por pesquisa de saída
+
+---
+
 ## [2026-04-22] · `762a968`
 
 

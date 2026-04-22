@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [22/04/2026] · `3782900`
+
+
+### ✨Añadido See More
+
+- **web**: Reemplazar el receptor HTTP entrante con sondeo saliente
+
+---
+
 ## [22/04/2026] · `762a968`
 
 

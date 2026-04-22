@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-04-22] · `3782900`
+
+
+### ✨ Added
+
+- **web**: Replace inbound HTTP receiver with outbound polling
+
+---
+
 ## [2026-04-22] · `762a968`
 
 
