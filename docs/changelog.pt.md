@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-21] · `984477f`
+
+
+### 🔧 Manutenção
+
+- Adicionar entrada de canal de segurança comentada ao canal padrão.yml
+
+---
+
 ## [2026-04-21] · `ddb3481`
 
 
