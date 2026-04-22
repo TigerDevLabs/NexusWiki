@@ -141,6 +141,17 @@ Discord alert to the `security` channel:
 This catches bots that pass the handshake but disconnect immediately after joining,
 which evades rate-limit windows.
 
+To receive these alerts, add a `security` entry to `discord/channels.yml`:
+
+```yaml
+bot:
+  security:
+    targets:
+      - id: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+        isWebhook: true
+    useEmbed: false
+```
+
 ### Anti-Bot Configuration (`security/antibot.yml`)
 
 ```yaml

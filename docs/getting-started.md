@@ -237,3 +237,79 @@ public class MyAddon extends JavaPlugin {
 
 !!! tip "Reload command"
     After changing any config file, run `/nexusprism reload` to apply changes without restarting.
+
+---
+
+## Deployment Checklist
+
+Use this checklist when setting up or migrating the server. All config files live under `plugins/NexusPrism/`.
+
+### 1. Auth — PostgreSQL (`security/auth.yml`)
+
+```yaml
+storage: postgres
+postgres:
+  url: "jdbc:postgresql://<host>:<port>/<database>"
+  user: <user>
+  password: <password>
+```
+
+Set `storage: sqlite` if you are running locally without a Postgres instance.
+
+### 2. Security Discord Alerts (`discord/channels.yml`)
+
+Enables bot/scanner short-session alerts and other security events:
+
+```yaml
+bot:
+  security:
+    targets:
+      - id: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+        isWebhook: true
+    useEmbed: false
+```
+
+Without this key the alerts are silently dropped — no error, just no Discord message.
+
+### 3. Stream Panel Integration (`web/web-config.yml`)
+
+```yaml
+nexus-tools:
+  receiver-port: 8080
+  receiver-secret: "<same value as NEXUS_TOOLS_SECRET on the Stream Panel>"
+```
+
+### 4. Connection Throttle (`bukkit.yml` — server root)
+
+```yaml
+settings:
+  connection-throttle: 4000   # 4 seconds per IP — requires server restart
+```
+
+This is a Bukkit-layer defense against repeated connection floods that bypass the plugin entirely.
+Edit via your panel's file manager.
+
+### 5. DDoS Proxy Layer — TCPShield (recommended)
+
+If your host does not provide root SSH access (e.g. Pterodactyl-managed hosting), TCPShield is
+the only layer that can filter malformed packets before they reach the JVM:
+
+1. Create a free account at `tcpshield.com`
+2. Add your domain and real server IP in the dashboard
+3. Update your DNS `A` record to the TCPShield address
+4. Install `TCPShield.jar` in `plugins/` — without it, player IPs forward as TCPShield's proxy IP, breaking ban/rate-limit systems
+
+See `ops/server/tcpshield-cloudflare.md` for full setup details.
+
+### 6. Webstore Environment Variables (Render)
+
+| Variable | Description |
+|---|---|
+| `ADMIN_URL_PREFIX` | Random slug for admin routes — e.g. `f3kx9mpa`. Never use the default `panel`. |
+| `DATABASE_URL` | PostgreSQL connection string |
+
+### 7. Stream Panel Environment Variables (Railway)
+
+| Variable | Description |
+|---|---|
+| `NEXUS_TOOLS_SECRET` | Must match `nexus-tools.receiver-secret` in `web/web-config.yml` |
