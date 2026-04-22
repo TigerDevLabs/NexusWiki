@@ -635,6 +635,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deployment-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-auth-postgresql-securityauthyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Auth — PostgreSQL (security/auth.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-security-discord-alerts-discordchannelsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Security Discord Alerts (discord/channels.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stream-panel-integration-webweb-configyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Stream Panel Integration (web/web-config.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-connection-throttle-bukkityml-server-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Connection Throttle (bukkit.yml — server root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ddos-proxy-layer-tcpshield-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. DDoS Proxy Layer — TCPShield (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-webstore-environment-variables-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Webstore Environment Variables (Render)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-stream-panel-environment-variables-railway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Stream Panel Environment Variables (Railway)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1919,6 +2013,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deployment-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-auth-postgresql-securityauthyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Auth — PostgreSQL (security/auth.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-security-discord-alerts-discordchannelsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Security Discord Alerts (discord/channels.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stream-panel-integration-webweb-configyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Stream Panel Integration (web/web-config.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-connection-throttle-bukkityml-server-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Connection Throttle (bukkit.yml — server root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ddos-proxy-layer-tcpshield-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. DDoS Proxy Layer — TCPShield (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-webstore-environment-variables-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Webstore Environment Variables (Render)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-stream-panel-environment-variables-railway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Stream Panel Environment Variables (Railway)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2286,6 +2474,82 @@ Jitpack status badge: <a href="https://jitpack.io/#O-Tiger/NexusPrism"><img alt=
 <p class="admonition-title">Reload command</p>
 <p>After changing any config file, run <code>/nexusprism reload</code> to apply changes without restarting.</p>
 </div>
+<hr />
+<h2 id="deployment-checklist">Deployment Checklist<a class="headerlink" href="#deployment-checklist" title="Permanent link">&para;</a></h2>
+<p>Use this checklist when setting up or migrating the server. All config files live under <code>plugins/NexusPrism/</code>.</p>
+<h3 id="1-auth-postgresql-securityauthyml">1. Auth — PostgreSQL (<code>security/auth.yml</code>)<a class="headerlink" href="#1-auth-postgresql-securityauthyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">postgres</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;&quot;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;user&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+</code></pre></div>
+<p>Set <code>storage: sqlite</code> if you are running locally without a Postgres instance.</p>
+<h3 id="2-security-discord-alerts-discordchannelsyml">2. Security Discord Alerts (<code>discord/channels.yml</code>)<a class="headerlink" href="#2-security-discord-alerts-discordchannelsyml" title="Permanent link">&para;</a></h3>
+<p>Enables bot/scanner short-session alerts and other security events:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">bot</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">security</span><span class="p">:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="nt">isWebhook</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">useEmbed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>Without this key the alerts are silently dropped — no error, just no Discord message.</p>
+<h3 id="3-stream-panel-integration-webweb-configyml">3. Stream Panel Integration (<code>web/web-config.yml</code>)<a class="headerlink" href="#3-stream-panel-integration-webweb-configyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">nexus-tools</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">receiver-port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">receiver-secret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;same</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">NEXUS_TOOLS_SECRET</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Stream</span><span class="nv"> </span><span class="s">Panel&gt;&quot;</span>
+</code></pre></div>
+<h3 id="4-connection-throttle-bukkityml-server-root">4. Connection Throttle (<code>bukkit.yml</code> — server root)<a class="headerlink" href="#4-connection-throttle-bukkityml-server-root" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">settings</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">connection-throttle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4000</span><span class="w">   </span><span class="c1"># 4 seconds per IP — requires server restart</span>
+</code></pre></div>
+<p>This is a Bukkit-layer defense against repeated connection floods that bypass the plugin entirely.
+Edit via your panel's file manager.</p>
+<h3 id="5-ddos-proxy-layer-tcpshield-recommended">5. DDoS Proxy Layer — TCPShield (recommended)<a class="headerlink" href="#5-ddos-proxy-layer-tcpshield-recommended" title="Permanent link">&para;</a></h3>
+<p>If your host does not provide root SSH access (e.g. Pterodactyl-managed hosting), TCPShield is
+the only layer that can filter malformed packets before they reach the JVM:</p>
+<ol>
+<li>Create a free account at <code>tcpshield.com</code></li>
+<li>Add your domain and real server IP in the dashboard</li>
+<li>Update your DNS <code>A</code> record to the TCPShield address</li>
+<li>Install <code>TCPShield.jar</code> in <code>plugins/</code> — without it, player IPs forward as TCPShield's proxy IP, breaking ban/rate-limit systems</li>
+</ol>
+<p>See <code>ops/server/tcpshield-cloudflare.md</code> for full setup details.</p>
+<h3 id="6-webstore-environment-variables-render">6. Webstore Environment Variables (Render)<a class="headerlink" href="#6-webstore-environment-variables-render" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADMIN_URL_PREFIX</code></td>
+<td>Random slug for admin routes — e.g. <code>f3kx9mpa</code>. Never use the default <code>panel</code>.</td>
+</tr>
+<tr>
+<td><code>DATABASE_URL</code></td>
+<td>PostgreSQL connection string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-stream-panel-environment-variables-railway">7. Stream Panel Environment Variables (Railway)<a class="headerlink" href="#7-stream-panel-environment-variables-railway" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NEXUS_TOOLS_SECRET</code></td>
+<td>Must match <code>nexus-tools.receiver-secret</code> in <code>web/web-config.yml</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
