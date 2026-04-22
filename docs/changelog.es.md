@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [22/04/2026] · `762a968`
+
+
+### 📚 Documentación
+
+- Corregir la ruta de configuración de autenticación, agregar la sección canales.yml, expandir la lista de verificación
+
+---
+
 ## [2026-04-21] · `984477f`
 
 

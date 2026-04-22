@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-04-22] · `762a968`
+
+
+### 📚 Documentation
+
+- Fix auth config path, add channels.yml section, expand checklist
+
+---
+
 ## [2026-04-21] · `984477f`
 
 

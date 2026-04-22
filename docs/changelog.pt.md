@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-22] · `762a968`
+
+
+### 📚 Documentação
+
+- Corrija o caminho de configuração de autenticação, adicione a seção Channels.yml, expanda a lista de verificação
+
+---
+
 ## [2026-04-21] · `984477f`
 
 
