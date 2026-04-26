@@ -5,6 +5,19 @@
 
 ---
 
+## [2026-04-26] · `792efb0`
+
+
+### ✨ Added
+
+- **discord**: Forward moderation events to nexus-bot /api/moderation via HTTP
+
+### 🔧 Maintenance
+
+- Add .rtk/ to gitignore
+
+---
+
 ## [2026-04-22] · `3782900`
 
 

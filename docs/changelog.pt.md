@@ -4,6 +4,19 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-04-26] · `792efb0`
+
+
+### ✨ Adicionado
+
+- **discord**: Encaminhar eventos de moderação para nexus-bot /api/moderation via HTTP
+
+### 🔧Manutenção
+
+- Adicione .rtk/ ao gitignore
+
+---
+
 ## [2026-04-22] · `3782900`
 
 
