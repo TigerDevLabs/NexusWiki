@@ -5,6 +5,26 @@
 
 ---
 
+## [2026-04-29] · `bbac1d1`
+
+
+### 📚 Documentation
+
+- Update CONFIGURATIONS — key_configs.yml section, blacklist section, nexus-lynx/nexus-bot keys
+
+## [2026-04-28] · `40babb7`
+
+
+### ✨ Added
+
+- **security**: Auth blacklist + KeyConfig central credentials file
+
+### 🐛 Fixed
+
+- **chat**: Extract finalReason for lambda capture in MuteCommand
+
+---
+
 ## [2026-04-26] · `792efb0`
 
 

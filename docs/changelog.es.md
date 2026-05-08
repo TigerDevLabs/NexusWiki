@@ -4,6 +4,25 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-04-29] · `bbac1d1`
+
+
+### 📚 Documentación
+
+- Actualizar CONFIGURACIONES: sección key_configs.yml, sección de lista negra, claves nexus-lynx/nexus-bot
+## [2026-04-28] · `40babb7`
+
+
+### ✨Añadido See More
+
+- **security**: Lista negra de autenticación + archivo de credenciales central KeyConfig
+
+### 🐛 Corregido See More
+
+- **chat**: Extracto finalReason para la captura lambda en MuteCommand
+
+---
+
 ## [2026-04-26] · `792efb0`
 
 
