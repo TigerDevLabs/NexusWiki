@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-11] · `bcdd189`
+
+
+### 🐛 Corregido See More
+
+- **tools**: Clasifique los 2696 elementos: expanda CMD_MODULES, agregue estilos de categoría MÁGICO/SEED/MOB; regenerar todos los lotes rápidos
+
+---
+
 ## [2026-05-11] · `7ac6735`
 
 

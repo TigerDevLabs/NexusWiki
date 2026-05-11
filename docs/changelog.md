@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-11] · `bcdd189`
+
+
+### 🐛 Fixed
+
+- **tools**: Classify all 2696 items — expand CMD_MODULES, add MAGICAL/SEED/MOB category styles; regenerate all prompt batches
+
+---
+
 ## [2026-05-11] · `7ac6735`
 
 

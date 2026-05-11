@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-11] · `bcdd189`
+
+
+### 🐛 Corrigido
+
+- **tools**: Classifique todos os 2.696 itens — expanda CMD_MODULES, adicione estilos de categoria MAGICAL/SEED/MOB; regenerar todos os lotes de prompt
+
+---
+
 ## [2026-05-11] · `7ac6735`
 
 
