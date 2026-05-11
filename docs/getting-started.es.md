@@ -110,7 +110,7 @@ NexusPrism es un **proyecto Maven multi-módulo**. Todos los módulos se empaque
 | `nexusprism-waila` | Tooltips WAILA/HUD |
 | `nexusprism-security` | Auth BCrypt, anti-bot, anti-lag, anti-dupe |
 | `nexusprism-clanes` | Clanes, conquista de territorio, mejoras |
-| `nexusprism-economy` | Dinero, créditos, /sell, /baltop |
+| `nexusprism-economy` | Dinero, /sell, /baltop, empleos, subastas |
 | `nexusprism-essentials` | +40 comandos QoL |
 | `nexusprism-crystaldefense` | Minijuego Crystal Defense por oleadas |
 | `nexusprism-custommobs` | Jefes personalizados definidos en YAML |
