@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-11] · `7ac6735`
+
+
+### ✨ Added
+
+- **events**: Add 6 anime bosses, rename isekai→anime, AddonLoader, BOM fix
+
+---
+
 ## [2026-04-29] · `bbac1d1`
 
 

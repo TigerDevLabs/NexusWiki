@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-11] · `7ac6735`
+
+
+### ✨ Adicionado
+
+- **events**: Adicionar 6 chefes de anime, renomear isekai → anime, AddonLoader, correção de BOM
+
+---
+
 ## [2026-04-29] · `bbac1d1`
 
 
