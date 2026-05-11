@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://nexusprismwiki.netlify.app/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/changelog/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/changelog/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/changelog/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/getting-started/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/getting-started/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/store/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/store/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/store/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/developer/api/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/developer/api/"/>
@@ -42,7 +42,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/ae/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/ae/"/>
@@ -58,7 +58,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/chat/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/chat/"/>
@@ -66,7 +66,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/clans/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/clans/"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/core/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/core/"/>
@@ -82,7 +82,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/crates/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/crates/"/>
@@ -90,7 +90,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/crystal-defense/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/crystal-defense/"/>
@@ -98,7 +98,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/custom-mobs/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/custom-mobs/"/>
@@ -106,7 +106,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/discord/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/discord/"/>
@@ -114,7 +114,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/dreams/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/dreams/"/>
@@ -122,7 +122,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/economy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/economy/"/>
@@ -130,7 +130,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/enchantments/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/enchantments/"/>
@@ -138,7 +138,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/energy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/energy/"/>
@@ -146,7 +146,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/essentials/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/essentials/"/>
@@ -154,7 +154,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/events/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/events/"/>
@@ -162,7 +162,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/holograms/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/holograms/"/>
@@ -170,7 +170,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/infinity-crafting/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/infinity-crafting/"/>
@@ -178,7 +178,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/mmo/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/mmo/"/>
@@ -186,7 +186,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/protections/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/protections/"/>
@@ -194,7 +194,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/rng/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/rng/"/>
@@ -202,7 +202,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/security/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/security/"/>
@@ -210,7 +210,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/structures/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/structures/"/>
@@ -218,7 +218,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/tab/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/tab/"/>
@@ -226,7 +226,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/traits/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/traits/"/>
@@ -234,7 +234,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/twitch/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/twitch/"/>
@@ -242,7 +242,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/votifier/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/votifier/"/>
@@ -250,7 +250,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/modules/web/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/web/"/>
@@ -258,7 +258,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/reference/commands/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/commands/"/>
@@ -266,7 +266,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/reference/permissions/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/permissions/"/>
@@ -274,7 +274,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/reference/placeholders/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/placeholders/"/>
@@ -282,7 +282,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/"/>
@@ -290,7 +290,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/changelog/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/changelog/"/>
@@ -298,7 +298,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/getting-started/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/getting-started/"/>
@@ -306,7 +306,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/store/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/store/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/store/"/>
@@ -314,7 +314,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/developer/api/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/developer/api/"/>
@@ -322,7 +322,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/"/>
@@ -330,7 +330,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/ae/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/ae/"/>
@@ -338,7 +338,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/chat/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/chat/"/>
@@ -346,7 +346,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/clans/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/clans/"/>
@@ -354,7 +354,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/core/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/core/"/>
@@ -362,7 +362,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/crates/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crates/"/>
@@ -370,7 +370,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/crystal-defense/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crystal-defense/"/>
@@ -378,7 +378,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/custom-mobs/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/custom-mobs/"/>
@@ -386,7 +386,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/discord/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/discord/"/>
@@ -394,7 +394,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/dreams/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/dreams/"/>
@@ -402,7 +402,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/economy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/economy/"/>
@@ -410,7 +410,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/enchantments/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/enchantments/"/>
@@ -418,7 +418,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/energy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/energy/"/>
@@ -426,7 +426,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/essentials/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/essentials/"/>
@@ -434,7 +434,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/events/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/events/"/>
@@ -442,7 +442,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/holograms/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/holograms/"/>
@@ -450,7 +450,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/infinity-crafting/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/infinity-crafting/"/>
@@ -458,7 +458,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/mmo/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/mmo/"/>
@@ -466,7 +466,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/protections/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/protections/"/>
@@ -474,7 +474,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/rng/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/rng/"/>
@@ -482,7 +482,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/security/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/security/"/>
@@ -490,7 +490,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/structures/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/structures/"/>
@@ -498,7 +498,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/tab/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/tab/"/>
@@ -506,7 +506,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/traits/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/traits/"/>
@@ -514,7 +514,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/twitch/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/twitch/"/>
@@ -522,7 +522,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/votifier/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/votifier/"/>
@@ -530,7 +530,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/modules/web/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/web/"/>
@@ -538,7 +538,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/reference/commands/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/commands/"/>
@@ -546,7 +546,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/reference/permissions/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/permissions/"/>
@@ -554,7 +554,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/pt/reference/placeholders/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt" href="https://nexusprismwiki.netlify.app/pt/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/placeholders/"/>
@@ -562,7 +562,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/"/>
@@ -570,7 +570,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/changelog/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/changelog/"/>
@@ -578,7 +578,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/getting-started/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/getting-started/"/>
@@ -586,7 +586,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/store/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/store/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/store/"/>
@@ -594,7 +594,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/developer/api/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/developer/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/developer/api/"/>
@@ -602,7 +602,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/"/>
@@ -610,7 +610,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/ae/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/ae/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/ae/"/>
@@ -618,7 +618,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/chat/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/chat/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/chat/"/>
@@ -626,7 +626,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/clans/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/clans/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/clans/"/>
@@ -634,7 +634,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/core/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/core/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/core/"/>
@@ -642,7 +642,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/crates/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/crates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crates/"/>
@@ -650,7 +650,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/crystal-defense/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/crystal-defense/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/crystal-defense/"/>
@@ -658,7 +658,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/custom-mobs/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/custom-mobs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/custom-mobs/"/>
@@ -666,7 +666,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/discord/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/discord/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/discord/"/>
@@ -674,7 +674,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/dreams/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/dreams/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/dreams/"/>
@@ -682,7 +682,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/economy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/economy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/economy/"/>
@@ -690,7 +690,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/enchantments/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/enchantments/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/enchantments/"/>
@@ -698,7 +698,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/energy/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/energy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/energy/"/>
@@ -706,7 +706,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/essentials/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/essentials/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/essentials/"/>
@@ -714,7 +714,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/events/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/events/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/events/"/>
@@ -722,7 +722,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/holograms/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/holograms/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/holograms/"/>
@@ -730,7 +730,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/infinity-crafting/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/infinity-crafting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/infinity-crafting/"/>
@@ -738,7 +738,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/mmo/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/mmo/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/mmo/"/>
@@ -746,7 +746,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/protections/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/protections/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/protections/"/>
@@ -754,7 +754,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/rng/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/rng/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/rng/"/>
@@ -762,7 +762,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/security/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/security/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/security/"/>
@@ -770,7 +770,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/structures/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/structures/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/structures/"/>
@@ -778,7 +778,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/tab/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/tab/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/tab/"/>
@@ -786,7 +786,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/traits/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/traits/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/traits/"/>
@@ -794,7 +794,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/twitch/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/twitch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/twitch/"/>
@@ -802,7 +802,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/votifier/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/votifier/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/votifier/"/>
@@ -810,7 +810,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/modules/web/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/modules/web/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/modules/web/"/>
@@ -818,7 +818,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/reference/commands/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/commands/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/commands/"/>
@@ -826,7 +826,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/reference/permissions/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/permissions/"/>
@@ -834,7 +834,7 @@
     </url>
     <url>
         <loc>https://nexusprismwiki.netlify.app/es/reference/placeholders/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://nexusprismwiki.netlify.app/es/reference/placeholders/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://nexusprismwiki.netlify.app/reference/placeholders/"/>
