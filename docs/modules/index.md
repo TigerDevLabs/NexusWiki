@@ -8,7 +8,7 @@ NexusPrism is organized into **feature modules**, each handling a distinct gamep
 | --- | --- |
 | [Core](core.md) | Custom items, PDC system, item registry, backpacks, waypoints |
 | [Essentials](essentials.md) | Homes, warps, TPA, AFK, jail, 40+ QoL commands |
-| [Economy](economy.md) | Money, credits, /sell, /worth, /baltop |
+| [Economy](economy.md) | Money, /sell, /worth, /baltop |
 | [Clans](clans.md) | Clan creation, territory, upgrades, clan chest, clan chat |
 | [Security](security.md) | BCrypt auth, anti-bot CAPTCHA, mod detection, anti-lag, anti-dupe |
 | [Discord](discord.md) | JDA bot, account linking, role sync, live announcements |

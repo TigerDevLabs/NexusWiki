@@ -112,7 +112,7 @@ All modules are bundled into the final plugin JAR automatically.
 | `nexusprism-waila` | WAILA/HUD tooltips |
 | `nexusprism-security` | BCrypt auth, anti-bot, mod detection, anti-lag, anti-dupe |
 | `nexusprism-clans` | Clans, territory claiming, upgrades, alliance system |
-| `nexusprism-economy` | Money, credits, /sell, /baltop |
+| `nexusprism-economy` | Money, /sell, /baltop |
 | `nexusprism-essentials` | 40+ QoL commands |
 | `nexusprism-crystaldefense` | Wave-based Crystal Defense minigame |
 | `nexusprism-custommobs` | YAML-defined custom bosses |

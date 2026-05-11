@@ -271,9 +271,85 @@ finalStat = baseStat × (1 + (streak - 7) × 0.2)
 
 ---
 
-### Future Boss Pool (Streak 28+)
+=== "Goku"
 
-Bosses planned for future releases: Goku, Naruto Uzumaki, Aizen Sosuke, Natsu Dragneel, Sung Jin-Woo, Giorno Giovanna.
+    **Min Streak:** 28 · **Base Entity:** Zombie
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 70% | Ki Blast (long-range projectile), Kaio-Ken (SPEED III + STRENGTH II burst) |
+    | 2 | 70% → 40% | Super Saiyan (strength surge, speed surge, glowing aura), Ki Barrage (5 rapid projectiles) |
+    | 3 — **Ultra Instinct** | 40% → 0% | Ultra Instinct Dodge (dodge chance), Ultra Instinct Strike (teleport behind player + heavy hit) |
+
+    **Drop:** "§fSaiyan" title · Power Aura cosmetic
+
+=== "Naruto Uzumaki"
+
+    **Min Streak:** 28 · **Base Entity:** Zombie
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 70% | Shadow Clone (2 decoy zombies summoned), Rasengan (direct melee burst + knockback) |
+    | 2 | 70% → 40% | Nine-Tails Cloak (SPEED II + STRENGTH I, orange aura), Rasenshuriken (wide AoE projectile) |
+    | 3 — **Baryon Mode** | 40% → 0% | Baryon Mode (STRENGTH III + SPEED III, each hit costs player XP) |
+
+    **Drop:** "§eKage" title · Sage eye cosmetic
+
+=== "Aizen Sosuke"
+
+    **Min Streak:** 28 · **Base Entity:** Wither Skeleton
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Kyoka Suigetsu (random blindness on hit), Spiritual Pressure (Slowness + Weakness aura) |
+    | 2 | 60% → 30% | Transcendence (15s immunity shield), Illusion Step (teleport behind player with no tell) |
+    | 3 — **Hogyoku** | 30% → 0% | Hogyoku Ascension (all stats maxed), Reiatsu Burst (AoE wither + Darkness + 10 true dmg) |
+
+    !!! warning "Transcendence is immunity — not a dodge. All damage is absorbed for 15 seconds."
+
+    **Drop:** "§8Hogyoku" title · Soul Reaper cloak cosmetic
+
+=== "Natsu Dragneel"
+
+    **Min Streak:** 28 · **Base Entity:** Blaze
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 70% | Fire Dragon Roar (fireball cone), Eat Fire (heals when hit by fire damage) |
+    | 2 | 70% → 40% | Fire Dragon Iron Fist (charged melee + FIRE II), Flame Cloak (contact damage) |
+    | 3 — **Dragon Force** | 40% → 0% | Dragon Force (STRENGTH II + RESISTANCE I — power doubles), Fire Nova (AoE explosion at feet) |
+
+    !!! tip "Fire damage heals Natsu — use physical attacks only."
+
+    **Drop:** "§cDragon Slayer" title · Fairy Tail guild cosmetic
+
+=== "Sung Jin-Woo"
+
+    **Min Streak:** 28 · **Base Entity:** Warden
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Shadow Soldier (summons 2 zombie soldiers), Tenacity (50% chance to ignore stagger) |
+    | 2 | 60% → 30% | Ruler's Authority (pulls player toward boss), Stealth (brief vanish + ambush strike) |
+    | 3 — **Shadow Monarch** | 30% → 0% | Shadow Monarch Form (RESISTANCE I + SPEED II), Arise (killed player summons shadow soldier for 30s) |
+
+    !!! danger "Shadow soldiers persist until killed. Clear them before focusing the boss."
+
+    **Drop:** "§8Shadow Monarch" title · Monarch's aura cosmetic
+
+=== "Giorno Giovanna"
+
+    **Min Streak:** 28 · **Base Entity:** Zombie
+
+    | Phase | HP Range | Key Abilities |
+    | --- | --- | --- |
+    | 1 | 100% → 60% | Life Shot (projectile applies Poison + Wither), Golden Experience (converts player hits into nature damage) |
+    | 2 | 60% → 30% | Infinite Death Loop (SLOW IV + Weakness until dispelled by retreat), Restoration (heals 5 HP on melee kill) |
+    | 3 — **Requiem** | 30% → 0% | Requiem Loop (all player attacks heal Giorno for 5s), Gold Experience Requiem (resets hit to zero — one-time negation) |
+
+    !!! warning "During Requiem Loop, dealing damage heals the boss. Stop attacking and wait it out."
+
+    **Drop:** "§6Golden Wind" title · GER aura cosmetic
 
 ---
 

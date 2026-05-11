@@ -76,11 +76,15 @@ When `security.enable-encryption: true` (default), sensitive data stored by the 
 !!! warning "Back up encryption.key"
     If this file is lost, previously encrypted data cannot be decrypted. Include it in your server backups. Never commit it to a git repository.
 
-### Stream Panel Receiver Secret
+### Stream Panel Integration (polling model)
 
-The plugin opens an HTTP port (`nexus-tools.receiver-port`, default `8080`) to receive Twitch events from the [Stream Panel](https://github.com/O-Tiger/WebServiceTwitchBot). Set `nexus-tools.receiver-secret` to a shared secret and configure the same value in the Stream Panel's nexus-tools integration. Requests without a matching `Authorization: Bearer <secret>` header are rejected with 401.
+The plugin polls the Stream Panel outbound — **no open port on the Minecraft server is needed**.
 
-Leave empty only in isolated local development environments.
+Every `nexus-tools.poll-interval-seconds` (default: `5`) the plugin sends a `GET` to the Stream Panel's `/api/nexus/events/pending` endpoint, consumes any queued Twitch events (raid, sub, cheer), then `POST`s the consumed IDs to `/api/nexus/events/ack`.
+
+Set `nexus-tools.panel-url` to your Stream Panel Railway URL and `nexus-tools.receiver-secret` to match the `NEXUS_TOOLS_SECRET` env var on Railway. Requests without a matching `Authorization: Bearer <secret>` header are rejected with 401.
+
+Leave `receiver-secret` empty only in isolated local development environments.
 
 ---
 
@@ -121,8 +125,9 @@ payments:
   currency: "USD"
 
 nexus-tools:
-  receiver-port: 8080              # Local HTTP port for Stream Panel events
-  receiver-secret: ""              # Shared secret — must match Stream Panel config
+  panel-url: ""                    # Stream Panel Railway URL (e.g. https://your-panel.up.railway.app)
+  receiver-secret: ""              # Shared secret — must match NEXUS_TOOLS_SECRET on Railway
+  poll-interval-seconds: 5        # How often the plugin fetches events
 
 vip-kits:
   enabled: true
@@ -139,6 +144,8 @@ vip-kits:
 | `security.require-api-key` | `true` | Reject requests without a valid API key — never disable in production |
 | `security.enable-encryption` | `true` | AES-256-CBC encryption for stored sensitive data |
 | `payments.webhook-secret` | *(auto-generated)* | Must match the secret set in your payment provider's webhook dashboard |
-| `nexus-tools.receiver-secret` | `` | Shared secret for Stream Panel → plugin HTTP auth |
+| `nexus-tools.panel-url` | `` | Stream Panel Railway URL the plugin polls for events |
+| `nexus-tools.receiver-secret` | `` | Shared bearer secret; must match `NEXUS_TOOLS_SECRET` on Railway |
+| `nexus-tools.poll-interval-seconds` | `5` | Polling frequency in seconds |
 | `vip-kits.auto-deliver` | `true` | Deliver pending kits automatically on player join |
 | `vip-kits.verify-payment` | `true` | Verify payment status via API before delivery |

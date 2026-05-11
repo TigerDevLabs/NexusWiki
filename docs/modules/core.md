@@ -6,7 +6,7 @@ The Core module is the foundation of NexusPrism. It manages the custom item regi
 
 ## Custom Item System
 
-All custom items are defined in `plugins/NexusPrism/items.yml`. The plugin ships with **500+ items** out of the box.
+All custom items are defined in `plugins/NexusPrism/items.yml`. The plugin ships with **2,700+ items** out of the box.
 
 ### `items.yml` Example
 

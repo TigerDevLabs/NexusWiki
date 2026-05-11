@@ -11,7 +11,7 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 
 | Category | Highlights |
 | --- | --- |
-| **Custom Items** | 500+ data-driven items defined in YAML |
+| **Custom Items** | 2,700+ data-driven items defined in YAML |
 | **Machines** | Multiblock crafting, energy networks, ME storage |
 | **Economy** | Single currency (money), /sell, /baltop |
 | **Clans** | Territory claiming, upgrades, clan chest, clan chat |
@@ -34,7 +34,7 @@ It brings custom items, machines, energy networks, clans, economy, minigames, an
 NexusPrism
 ├── nexusprism-api          Public API for addon developers
 ├── nexusprism-core         Core managers, PDC registry, language
-├── nexusprism-items        Custom item storage (500+ items)
+├── nexusprism-items        Custom item storage (2,700+ items)
 ├── nexusprism-machines     Machine definitions, processing engine
 ├── nexusprism-systems      Energy network implementation
 ├── nexusprism-integrations PlaceholderAPI, LuckPerms, SkinsRestorer
