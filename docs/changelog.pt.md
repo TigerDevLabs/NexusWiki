@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-12] · `13f15da`
+
+
+### 🔧Manutenção
+
+- Caractere BOM despojado
+
+---
+
 ## [2026-05-11] · `bcdd189`
 
 

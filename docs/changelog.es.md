@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-12] · `13f15da`
+
+
+### 🔧Mantenimiento
+
+- Carácter BOM despojado
+
+---
+
 ## [2026-05-11] · `bcdd189`
 
 

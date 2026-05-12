@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-12] · `13f15da`
+
+
+### 🔧 Maintenance
+
+- Stripped BOM character
+
+---
+
 ## [2026-05-11] · `bcdd189`
 
 
