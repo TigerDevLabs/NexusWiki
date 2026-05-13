@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `9479dbc`
+
+
+### 🔧Manutenção
+
+- **dependabot**: Classificação de risco + fechamento automático de PRs de baixo risco
+
+---
+
 ## [2026-05-13] · `f22c9c1`
 
 

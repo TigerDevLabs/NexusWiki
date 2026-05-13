@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `9479dbc`
+
+
+### 🔧Mantenimiento
+
+- **dependabot**: Clasificación de riesgo + cierre automático de relaciones públicas de bajo riesgo
+
+---
+
 ## [2026-05-13] · `f22c9c1`
 
 

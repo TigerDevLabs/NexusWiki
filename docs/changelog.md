@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `9479dbc`
+
+
+### 🔧 Maintenance
+
+- **dependabot**: Risk classification + auto-close low-risk PRs
+
+---
+
 ## [2026-05-13] · `f22c9c1`
 
 
