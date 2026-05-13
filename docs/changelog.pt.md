@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `c5966c3`
+
+
+### 🐛 Corrigido
+
+- **deps**: ProtocolLib de atualização 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+
+---
+
 ## [2026-05-13] · `74b3432`
 
 

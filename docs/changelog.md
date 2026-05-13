@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `c5966c3`
+
+
+### 🐛 Fixed
+
+- **deps**: Upgrade ProtocolLib 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+
+---
+
 ## [2026-05-13] · `74b3432`
 
 

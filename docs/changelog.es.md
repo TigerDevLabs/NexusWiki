@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `c5966c3`
+
+
+### 🐛 Corregido See More
+
+- Protocolo de actualización **deps**:Lib 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+
+---
+
 ## [2026-05-13] · `74b3432`
 
 
