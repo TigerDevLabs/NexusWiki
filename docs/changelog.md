@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `f22c9c1`
+
+
+### 📚 Documentation
+
+- Add ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+---
+
 ## [2026-05-13] · `f5aa66a`
 
 

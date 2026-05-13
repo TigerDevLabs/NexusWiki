@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `f22c9c1`
+
+
+### 📚 Documentação
+
+- Adicionar ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+---
+
 ## [2026-05-13] · `f5aa66a`
 
 
