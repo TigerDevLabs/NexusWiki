@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `820739c`
+
+
+### 🔧 Maintenance
+
+- Added Staff warning on medium risk Pr's
+
+---
+
 ## [2026-05-13] · `9479dbc`
 
 

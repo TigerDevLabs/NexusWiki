@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `820739c`
+
+
+### 🔧Manutenção
+
+- Adicionado aviso da equipe sobre PRs de risco médio
+
+---
+
 ## [2026-05-13] · `9479dbc`
 
 

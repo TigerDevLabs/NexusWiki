@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `820739c`
+
+
+### 🔧Mantenimiento
+
+- Se agregó una advertencia al personal sobre Pr de riesgo medio.
+
+---
+
 ## [2026-05-13] · `9479dbc`
 
 
