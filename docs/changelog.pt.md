@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `74b3432`
+
+
+### 🔧Manutenção
+
+- Simplifique o log de inicialização, remova o ProGuard, reduza o ruído do Dependabot
+
+---
+
 ## [2026-05-12] · `13f15da`
 
 

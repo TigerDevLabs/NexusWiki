@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `74b3432`
+
+
+### 🔧Mantenimiento
+
+- Simplifique el registro de inicio, elimine ProGuard, reduzca el ruido del Dependabot
+
+---
+
 ## [2026-05-12] · `13f15da`
 
 

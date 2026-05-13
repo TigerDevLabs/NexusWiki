@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `74b3432`
+
+
+### 🔧 Maintenance
+
+- Simplify startup log, remove ProGuard, reduce Dependabot noise
+
+---
+
 ## [2026-05-12] · `13f15da`
 
 
