@@ -5,6 +5,21 @@
 
 ---
 
+## [2026-05-13] · `f5aa66a`
+
+
+### 🐛 Fixed
+
+- **config**: Wire all key_configs.yml fields to module configs
+- **machines**: Implement MachineEngine stale TODOs
+- **integrations**: Remove unused Plugin field, log LuckPerms errors
+
+### 📚 Documentation
+
+- Update README, CONTRIBUTING, CREDITS, ECOSYSTEM
+
+---
+
 ## [2026-05-13] · `552aa62`
 
 

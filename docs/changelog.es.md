@@ -4,6 +4,21 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `f5aa66a`
+
+
+### 🐛 Corregido See More
+
+- **config**: Conecte todos los campos key_configs.yml a las configuraciones del módulo
+- **machines**: Implementar TODOs obsoletos de MachineEngine
+- **integrations**: Elimina el campo de complemento no utilizado y registra errores de LuckPerms
+
+### 📚 Documentación
+
+- Actualización README, CONTRIBUCIONES, CRÉDITOS, ECOSISTEMA
+
+---
+
 ## [2026-05-13] · `552aa62`
 
 
