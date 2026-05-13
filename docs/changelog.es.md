@@ -4,6 +4,57 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `f22c9c1`
+
+
+### 📚 Documentación
+
+- Agregue ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+---
+
+## [2026-05-13] · `f5aa66a`
+
+
+### 🐛 Corregido See More
+
+- **config**: Conecte todos los campos key_configs.yml a las configuraciones del módulo
+- **machines**: Implementar TODOs obsoletos de MachineEngine
+- **integrations**: Elimina el campo de complemento no utilizado y registra errores de LuckPerms
+
+### 📚 Documentación
+
+- Actualización README, CONTRIBUCIONES, CRÉDITOS, ECOSISTEMA
+
+---
+
+## [2026-05-13] · `552aa62`
+
+
+### ✨Añadido See More
+
+- **logger**: Colorea las etiquetas del módulo por prefijo
+
+---
+
+## [2026-05-13] · `c5966c3`
+
+
+### 🐛 Corregido See More
+
+- Protocolo de actualización **deps**:Lib 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+
+---
+
+## [2026-05-13] · `74b3432`
+
+
+### 🔧Mantenimiento
+
+- Simplifique el registro de inicio, elimine ProGuard, reduzca el ruido del Dependabot
+
+---
+
 ## [2026-05-12] · `13f15da`
 
 

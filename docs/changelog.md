@@ -5,6 +5,57 @@
 
 ---
 
+## [2026-05-13] · `f22c9c1`
+
+
+### 📚 Documentation
+
+- Add ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+---
+
+## [2026-05-13] · `f5aa66a`
+
+
+### 🐛 Fixed
+
+- **config**: Wire all key_configs.yml fields to module configs
+- **machines**: Implement MachineEngine stale TODOs
+- **integrations**: Remove unused Plugin field, log LuckPerms errors
+
+### 📚 Documentation
+
+- Update README, CONTRIBUTING, CREDITS, ECOSYSTEM
+
+---
+
+## [2026-05-13] · `552aa62`
+
+
+### ✨ Added
+
+- **logger**: Colorize module tags by prefix
+
+---
+
+## [2026-05-13] · `c5966c3`
+
+
+### 🐛 Fixed
+
+- **deps**: Upgrade ProtocolLib 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+
+---
+
+## [2026-05-13] · `74b3432`
+
+
+### 🔧 Maintenance
+
+- Simplify startup log, remove ProGuard, reduce Dependabot noise
+
+---
+
 ## [2026-05-12] · `13f15da`
 
 
