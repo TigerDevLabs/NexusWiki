@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `552aa62`
+
+
+### ✨ Added
+
+- **logger**: Colorize module tags by prefix
+
+---
+
 ## [2026-05-13] · `c5966c3`
 
 

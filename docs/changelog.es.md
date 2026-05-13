@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `552aa62`
+
+
+### ✨Añadido See More
+
+- **logger**: Colorea las etiquetas del módulo por prefijo
+
+---
+
 ## [2026-05-13] · `c5966c3`
 
 

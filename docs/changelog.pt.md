@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `552aa62`
+
+
+### ✨ Adicionado
+
+- **logger**: Colorir tags do módulo por prefixo
+
+---
+
 ## [2026-05-13] · `c5966c3`
 
 
