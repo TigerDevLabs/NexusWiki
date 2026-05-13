@@ -4,6 +4,22 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `191f461`
+
+
+### 🔧Mantenimiento
+
+- **deps**: Mejora de acciones/carga de artefacto de 4 a 7
+- Migrar referencias de organizaciones de O-Tiger a TigerDevLabs
+## [2026-05-02] · `ba0ebd5`
+
+
+### 🔧Mantenimiento
+
+- **deps**: Bump org.postgresql:postgresql
+
+---
+
 ## [2026-05-13] · `820739c`
 
 

@@ -4,6 +4,22 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `191f461`
+
+
+### 🔧Manutenção
+
+- **deps**: Ações de colisão/artefato de upload de 4 a 7
+- Migrar referências organizacionais do O-Tiger para TigerDevLabs
+## [2026-05-02] · `ba0ebd5`
+
+
+### 🔧Manutenção
+
+- **deps**: Bump org.postgresql:postgresql
+
+---
+
 ## [2026-05-13] · `820739c`
 
 
