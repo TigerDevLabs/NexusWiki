@@ -1,6 +1,6 @@
 # Changelog
 
-> Auto-generated from [NexusPrism](https://github.com/O-Tiger) commits.
+> Auto-generated from [NexusPrism](https://github.com/TigerDevLabs/NexusPrism) commits.
 > Translated automatically — minor phrasing differences are expected.
 
 ---

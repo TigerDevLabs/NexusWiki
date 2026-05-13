@@ -20,7 +20,7 @@ NexusPrism se publica a través de **JitPack**. Agrega el repositorio y el artef
 
 <dependencies>
     <dependency>
-        <groupId>com.github.O-Tiger.NexusPrismModularizado</groupId>
+        <groupId>com.github.TigerDevLabs.NexusPrismModularizado</groupId>
         <artifactId>nexusprism-api</artifactId>
         <version>master-SNAPSHOT</version>
         <scope>provided</scope>
@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.O-Tiger.NexusPrismModularizado:nexusprism-api:master-SNAPSHOT")
+    compileOnly("com.github.TigerDevLabs.NexusPrismModularizado:nexusprism-api:master-SNAPSHOT")
 }
 ```
 
@@ -661,7 +661,7 @@ public class RecompensaKillPlugin extends JavaPlugin implements Listener {
 | Estado de eventos | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
 | Estructuras | `StructureRegistry.register(StructureProvider)` |
 | Base de addon nativo | `AbstractNexusAddon` + `addon.yml` |
-| Plantilla inicial | [O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example) |
+| Plantilla inicial | [O-Tiger/NexusPrism-Addon-Example](https://github.com/TigerDevLabs/NexusPrism-Addon-Example) |
 
 ---
 

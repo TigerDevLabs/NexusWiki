@@ -1,6 +1,6 @@
 # Historial de Cambios
 
-> Generado automáticamente desde los commits de [NexusPrism](https://github.com/O-Tiger).
+> Generado automáticamente desde los commits de [NexusPrism](https://github.com/TigerDevLabs/NexusPrism).
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---

@@ -1,6 +1,6 @@
 # NexusPrism Wiki
 
-Official documentation for the [NexusPrism](https://github.com/O-Tiger/NexusPrism) Minecraft plugin — a modular Paper 1.21.4 plugin with 36 modules covering economy, clans, MMO, custom mobs, crates, Discord integration, Twitch integration, and more.
+Official documentation for the [NexusPrism](https://github.com/TigerDevLabs/NexusPrism) Minecraft plugin — a modular Paper 1.21.4 plugin with 36 modules covering economy, clans, MMO, custom mobs, crates, Discord integration, Twitch integration, and more.
 
 **Live site:** https://nexusprismwiki.netlify.app/
 
@@ -31,7 +31,7 @@ Docs live in `docs/`. Each page has three variants:
 | `page.pt.md` | Português (BR) |
 | `page.es.md` | Español |
 
-Edit all three when adding or updating content. See [CONTRIBUTING](https://github.com/O-Tiger/NexusPrism/blob/main/CONTRIBUTING.md) for guidelines.
+Edit all three when adding or updating content. See [CONTRIBUTING](https://github.com/TigerDevLabs/NexusPrism/blob/main/CONTRIBUTING.md) for guidelines.
 
 ## License
 

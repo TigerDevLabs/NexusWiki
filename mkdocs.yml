@@ -2,8 +2,8 @@ site_name: NexusPrism Wiki
 site_description: Comprehensive documentation for the NexusPrism Minecraft plugin
 site_author: O-Tiger
 site_url: https://nexusprismwiki.netlify.app/
-repo_url: https://github.com/O-Tiger/NexusWiki
-repo_name: O-Tiger/NexusWiki
+repo_url: https://github.com/TigerDevLabs/NexusWiki
+repo_name: TigerDevLabs/NexusWiki
 edit_uri: edit/main/docs/
 
 theme:
@@ -151,7 +151,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/O-Tiger/NexusWiki
+      link: https://github.com/TigerDevLabs/NexusWiki
     - icon: fontawesome/brands/discord
       link: https://discord.gg/invite/WgmfqwPcnS
 

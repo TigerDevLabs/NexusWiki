@@ -20,7 +20,7 @@ NexusPrism is published through **JitPack**. Add the repository and the API arti
 
 <dependencies>
     <dependency>
-        <groupId>com.github.O-Tiger.NexusPrismModularizado</groupId>
+        <groupId>com.github.TigerDevLabs.NexusPrismModularizado</groupId>
         <artifactId>nexusprism-api</artifactId>
         <version>master-SNAPSHOT</version> <!-- or a specific commit hash -->
         <scope>provided</scope>
@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.O-Tiger.NexusPrismModularizado:nexusprism-api:master-SNAPSHOT")
+    compileOnly("com.github.TigerDevLabs.NexusPrismModularizado:nexusprism-api:master-SNAPSHOT")
 }
 ```
 
@@ -617,7 +617,7 @@ Restart the server. You should see:
 ```
 
 !!! tip "Starter template"
-    A ready-to-clone Maven project is available at **[O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example)**. It includes working examples of every API surface described in this guide.
+    A ready-to-clone Maven project is available at **[O-Tiger/NexusPrism-Addon-Example](https://github.com/TigerDevLabs/NexusPrism-Addon-Example)**. It includes working examples of every API surface described in this guide.
 
 ---
 
@@ -855,7 +855,7 @@ public class KillRewardPlugin extends JavaPlugin implements Listener {
 | Event state flags | `EventFlags.bloodMoonActive`, `EventFlags.killPayMultiplier` |
 | Structure loot | `StructureRegistry.register(StructureProvider)` |
 | Native addon base | `AbstractNexusAddon` + `addon.yml` |
-| Starter template | [O-Tiger/NexusPrism-Addon-Example](https://github.com/O-Tiger/NexusPrism-Addon-Example) |
+| Starter template | [O-Tiger/NexusPrism-Addon-Example](https://github.com/TigerDevLabs/NexusPrism-Addon-Example) |
 
 ---
 
