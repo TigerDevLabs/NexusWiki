@@ -5,6 +5,73 @@
 
 ---
 
+## [2026-05-13] · `820739c`
+
+
+### ✨ Added
+
+- **logger**: Colorize module tags by prefix
+
+### 🐛 Fixed
+
+- **deps**: Upgrade ProtocolLib 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+- **config**: Wire all key_configs.yml fields to module configs
+- **machines**: Implement MachineEngine stale TODOs
+- **integrations**: Remove unused Plugin field, log LuckPerms errors
+
+### 📚 Documentation
+
+- Update README, CONTRIBUTING, CREDITS, ECOSYSTEM
+- Add ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+### 🔧 Maintenance
+
+- Simplify startup log, remove ProGuard, reduce Dependabot noise
+- **deps**: Bump actions/upload-artifact from 4 to 7
+- Added Staff warning on medium risk Pr's
+
+### 🔧 Maintenance
+
+- **dependabot**: Risk classification + auto-close low-risk PRs
+
+## [2026-05-12] · `13f15da`
+
+
+### 🔧 Maintenance
+
+- Stripped BOM character
+
+## [2026-05-11] · `bcdd189`
+
+
+### ✨ Added
+
+- **events**: Add 6 anime bosses, rename isekai→anime, AddonLoader, BOM fix
+
+### 🐛 Fixed
+
+- **tools**: Classify all 2696 items — expand CMD_MODULES, add MAGICAL/SEED/MOB category styles; regenerate all prompt batches
+
+## [2026-04-29] · `bbac1d1`
+
+
+### 📚 Documentation
+
+- Update CONFIGURATIONS — key_configs.yml section, blacklist section, nexus-lynx/nexus-bot keys
+
+## [2026-04-28] · `40babb7`
+
+
+### ✨ Added
+
+- **security**: Auth blacklist + KeyConfig central credentials file
+
+### 🐛 Fixed
+
+- **chat**: Extract finalReason for lambda capture in MuteCommand
+
+---
+
 ## [2026-05-02] · `ba0ebd5`
 
 

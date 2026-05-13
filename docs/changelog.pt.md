@@ -4,6 +4,69 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `820739c`
+
+
+### ✨ Adicionado
+
+- **logger**: Colorir tags do módulo por prefixo
+
+### 🐛 Corrigido
+
+- **deps**: ProtocolLib de atualização 5.1.0 → 5.4.0 (net.dmulloy2 Maven Central)
+- **config**: Conecte todos os campos key_configs.yml às configurações do módulo
+- **machines**: Implementar TODOs obsoletos do MachineEngine
+- **integrations**: Remover campo de plug-in não utilizado, registrar erros do LuckPerms
+
+### 📚 Documentação
+
+- Atualizar README, CONTRIBUINDO, CRÉDITOS, ECOSSISTEMA
+- Adicionar ATTACKS.md, NEXUSPRISM_REFERENCE.md, system-wiring.html
+
+### 🔧Manutenção
+
+- Simplifique o log de inicialização, remova o ProGuard, reduza o ruído do Dependabot
+- **deps**: Ações de colisão/artefato de upload de 4 a 7
+- Adicionado aviso da equipe sobre PRs de risco médio
+
+### 🔧Manutenção
+
+- **dependabot**: Classificação de risco + fechamento automático de PRs de baixo risco
+## [2026-05-12] · `13f15da`
+
+
+### 🔧Manutenção
+
+- Caractere BOM despojado
+## [2026-05-11] · `bcdd189`
+
+
+### ✨ Adicionado
+
+- **events**: Adicionar 6 chefes de anime, renomear isekai → anime, AddonLoader, correção de BOM
+
+### 🐛 Corrigido
+
+- **tools**: Classifique todos os 2.696 itens - expanda CMD_MODULES, adicione estilos de categoria MAGICAL/SEED/MOB; regenerar todos os lotes de prompt
+## [2026-04-29] · `bbac1d1`
+
+
+### 📚 Documentação
+
+- Atualizar CONFIGURAÇÕES - seção key_configs.yml, seção lista negra, chaves nexus-lynx/nexus-bot
+## [2026-04-28] · `40babb7`
+
+
+### ✨ Adicionado
+
+- **security**: Lista negra de autenticação + arquivo de credenciais central KeyConfig
+
+### 🐛 Corrigido
+
+- **chat**: Extrair finalReason para captura lambda em MuteCommand
+
+---
+
 ## [2026-05-02] · `ba0ebd5`
 
 
