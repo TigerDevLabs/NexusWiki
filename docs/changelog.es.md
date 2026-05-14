@@ -4,6 +4,23 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-14] · `bab3917`
+
+
+### ✨Añadido See More
+
+- **i18n**: Conecte LanguageManager a módulos de seguridad, protecciones y clanes
+- **i18n**: Conecte LanguageManager a MachineManager, SilkSpawners, Twitch; agregue todas las claves de idioma nuevas a 4 configuraciones regionales
+- **i18n**: Migrar gui/mmo/web/ae/energy/essentials/protections a LanguageManager
+## [2026-05-13] · `3cfce4c`
+
+
+### ✨Añadido See More
+
+- **i18n**: Conecte TagGUI/RtpWorldGUI a LanguageManager + agregue LanguageSelectGUI
+
+---
+
 ## [2026-05-13] · `2201b42`
 
 

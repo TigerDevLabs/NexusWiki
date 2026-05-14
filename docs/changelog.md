@@ -5,6 +5,24 @@
 
 ---
 
+## [2026-05-14] · `bab3917`
+
+
+### ✨ Added
+
+- **i18n**: Wire LanguageManager into security, protections, clans modules
+- **i18n**: Wire LanguageManager into MachineManager, SilkSpawners, Twitch; add all new lang keys to 4 locales
+- **i18n**: Migrate gui/mmo/web/ae/energy/essentials/protections to LanguageManager
+
+## [2026-05-13] · `3cfce4c`
+
+
+### ✨ Added
+
+- **i18n**: Wire TagGUI/RtpWorldGUI to LanguageManager + add LanguageSelectGUI
+
+---
+
 ## [2026-05-13] · `2201b42`
 
 
