@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-13] · `2201b42`
+
+
+### 📚 Documentação
+
+- **config**: Anote key_configs.yml com source env var para cada chave
+
+---
+
 ## [2026-05-13] · `191f461`
 
 

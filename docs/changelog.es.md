@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-13] · `2201b42`
+
+
+### 📚 Documentación
+
+- **config**: Anota key_configs.yml con la var env fuente para cada clave
+
+---
+
 ## [2026-05-13] · `191f461`
 
 

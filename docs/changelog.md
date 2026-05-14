@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-13] · `2201b42`
+
+
+### 📚 Documentation
+
+- **config**: Annotate key_configs.yml with source env var for each key
+
+---
+
 ## [2026-05-13] · `191f461`
 
 
