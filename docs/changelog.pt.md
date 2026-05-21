@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-21] · `e488545`
+
+
+### 🔧Manutenção
+
+- BOM removido no início do arquivo
+
+---
+
 ## [2026-05-21] · `2f25103`
 
 

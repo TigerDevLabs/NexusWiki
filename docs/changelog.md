@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-21] · `e488545`
+
+
+### 🔧 Maintenance
+
+- Removed BOM on the start of file
+
+---
+
 ## [2026-05-21] · `2f25103`
 
 

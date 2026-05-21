@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-21] · `e488545`
+
+
+### 🔧Mantenimiento
+
+- Se eliminó la lista de materiales al inicio del archivo.
+
+---
+
 ## [2026-05-21] · `2f25103`
 
 
