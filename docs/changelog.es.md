@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-21] · `cf363dd`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Corrige 403 push, versiones de acción incorrecta y activadores de rama incorrectos
+
+---
+
 ## [2026-05-21] · `e488545`
 
 

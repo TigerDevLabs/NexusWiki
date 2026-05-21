@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-21] · `cf363dd`
+
+
+### 🐛 Corrigido
+
+- **ci**: Corrigir push 403, versões de ações incorretas e gatilhos de ramificação errados
+
+---
+
 ## [2026-05-21] · `e488545`
 
 
