@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-21] · `69ac4f3`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Pase el registro de cambios a través de env var para evitar errores de sintaxis de bash
+
+---
+
 ## [2026-05-21] · `cf363dd`
 
 

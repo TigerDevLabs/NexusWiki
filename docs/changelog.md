@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-21] · `69ac4f3`
+
+
+### 🐛 Fixed
+
+- **ci**: Pass changelog through env var to avoid bash syntax errors
+
+---
+
 ## [2026-05-21] · `cf363dd`
 
 
