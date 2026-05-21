@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-21] · `a43cc50`
+
+
+### 🐛 Fixed
+
+- **ci**: Use GH_PAT for release creation (GITHUB_TOKEN has no org write access)
+
+---
+
 ## [2026-05-21] · `69ac4f3`
 
 

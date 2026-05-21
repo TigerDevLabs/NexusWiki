@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-21] · `a43cc50`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Utilice GH_PAT para la creación de versiones (GITHUB_TOKEN no tiene acceso de escritura de organización)
+
+---
+
 ## [2026-05-21] · `69ac4f3`
 
 

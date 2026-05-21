@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-21] · `a43cc50`
+
+
+### 🐛 Corrigido
+
+- **ci**: Use GH_PAT para criação de versão (GITHUB_TOKEN não tem acesso de gravação organizacional)
+
+---
+
 ## [2026-05-21] · `69ac4f3`
 
 
