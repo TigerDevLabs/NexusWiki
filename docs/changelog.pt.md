@@ -4,6 +4,28 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-21] · `2f25103`
+
+
+### ✨ Adicionado
+
+- **plugin**: Fase 2 NexusLynxReporter - enviar heartbeat/logs/config para Railway
+- Filtro **reporter**: REDACT + níveis de log/alerta configuráveis
+- **anti-dupe**: Prevenção de bloqueio de quebra de blocos em rng/mmo/traits
+
+### 🐛 Corrigido
+
+- **reporter**: Estende o filtro REDACT para cobrir URLs de conexão JDBC
+- **discord**: Traduzir mensagens de status do servidor para português
+
+### ♻️Alterado
+
+- **config**: Centralize todos os segredos em key_configs.yml
+- **reporter**: Remova o filtro por chave do pushConfig — key_configs.yml é o único arquivo ignorado
+- **config**: Key_configs.yml contém apenas segredos - chaves não confidenciais movidas para arquivos de módulo
+
+---
+
 ## [2026-05-14] · `bab3917`
 
 
