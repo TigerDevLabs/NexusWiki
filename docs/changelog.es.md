@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-21] · `208b215`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Pasa GH_PAT como entrada de token a action-gh-release
+
+---
+
 ## [2026-05-21] · `a43cc50`
 
 

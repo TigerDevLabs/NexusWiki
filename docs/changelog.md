@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-21] · `208b215`
+
+
+### 🐛 Fixed
+
+- **ci**: Pass GH_PAT as token input to action-gh-release
+
+---
+
 ## [2026-05-21] · `a43cc50`
 
 
