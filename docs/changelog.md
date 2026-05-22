@@ -5,6 +5,29 @@
 
 ---
 
+## [2026-05-22] · `3ceeabf`
+
+
+### ✨ Added
+
+- **gui**: Add type-specific machine GUIs and wire dispatch
+
+### 🐛 Fixed
+
+- **gui**: Prevent item theft from skill/trait GUIs via open→register order
+
+### ♻️ Changed
+
+- **items**: Rename wrench + infinity_crafting_* IDs to uppercase
+- **items**: Propagate nexus_crafting_node → NEXUS_CRAFTING_NODE rename
+
+### 🔧 Maintenance
+
+- **items**: Delete 85 legacy/duplicate YAML items (Phase 1)
+- **items**: Rename nexus_crafting_node_block → NEXUS_CRAFTING_NODE_BLOCK
+
+---
+
 ## [2026-05-22] · `4172dec`
 
 

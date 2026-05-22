@@ -4,6 +4,29 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-22] · `3ceeabf`
+
+
+### ✨Añadido See More
+
+- **gui**: Agregue GUI de máquina de tipo específico y envío de cables
+
+### 🐛 Corregido See More
+
+- **gui**: Evite el robo de elementos de las GUI de habilidades/rasgos mediante orden de apertura → registro
+
+### ♻️ Modificado
+
+- **items**: Cambiar el nombre de la llave inglesa + infinity_crafting_* ID a mayúsculas
+- **items**: Propagar nexus_crafting_node → NEXUS_CRAFTING_NODE cambiar nombre
+
+### 🔧Mantenimiento
+
+- **items**: Eliminar 85 elementos YAML heredados/duplicados (Fase 1)
+- **items**: Cambiar el nombre de nexus_crafting_node_block → NEXUS_CRAFTING_NODE_BLOCK
+
+---
+
 ## [2026-05-22] · `4172dec`
 
 
