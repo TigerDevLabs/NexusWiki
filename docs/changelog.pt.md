@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-22] · `4172dec`
+
+
+### ✨ Adicionado
+
+- **modules**: Alterna entre ativar/desativar por módulo via config.yml e GUI
+
+---
+
 ## [2026-05-21] · `208b215`
 
 

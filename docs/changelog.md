@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-22] · `4172dec`
+
+
+### ✨ Added
+
+- **modules**: Per-module enable/disable toggles via config.yml and GUI
+
+---
+
 ## [2026-05-21] · `208b215`
 
 
