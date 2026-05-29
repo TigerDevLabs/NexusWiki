@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-28] · `329fd92`
+
+
+### 🐛 Corregido See More
+
+- **gui**: Guía de navegación, diseño de recetas, rango de paginación
+
+---
+
 ## [2026-05-28] · `ec4b039`
 
 

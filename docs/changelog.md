@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-28] · `329fd92`
+
+
+### 🐛 Fixed
+
+- **gui**: Guide navigation, recipe layout, pagination range
+
+---
+
 ## [2026-05-28] · `ec4b039`
 
 

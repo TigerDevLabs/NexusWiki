@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-28] · `329fd92`
+
+
+### 🐛 Corrigido
+
+- **gui**: Guia de navegação, layout de receita, intervalo de paginação
+
+---
+
 ## [2026-05-28] · `ec4b039`
 
 
