@@ -5,6 +5,53 @@
 
 ---
 
+## [2026-05-28] · `ec4b039`
+
+
+### ✨ Added
+
+- **api**: Expose placeable/multiblock fields, add VariantDefinition, fix machine type ref
+- **machines**: Add tiers auto-expansion and processing-subtype to machine loader
+- **plugin**: Phase 7 — multiblock bridge, DataDriven loader updates, recipe ID renames
+
+### 🐛 Fixed
+
+- **plugin**: Give command shows display names, break-message toggle, API impl logging
+
+### 🔧 Maintenance
+
+- **items**: Phase 6 — mass _BLOCK rename, native machine cleanup, variant-defaults
+- **plugin**: Lang/config updates — multiblock messages, break-message toggle, economy defaults
+- **modules**: Updates across economy, mmo, security, events, gui, traits, discord, web, ss, tab
+- **ops**: Fail2ban filters and firewall rules for malformed packet and attacker blocking
+
+## [2026-05-23] · `5cc6c1c`
+
+
+### ✨ Added
+
+- **tab**: Add /nexus scoreboard toggle per-player command
+
+## [2026-05-22] · `70a3df5`
+
+
+### ✨ Added
+
+- **guide**: Phase 4 complete — bulk recategorize 404 items + delete 10 corrupted IDs
+- **machines**: Add processing-subtype field to MachineDefinition
+
+### 🐛 Fixed
+
+- **gui**: Recipe layout disorder + raw color code in title
+- **guide**: Expand category slots to 28 and add pagination
+
+### 🔧 Maintenance
+
+- **items**: Delete 31 legacy SV_* and camelCase slime duplicates
+- **guide**: Delete 4 legacy Slimefun stub items + add 15 missing category icons
+
+---
+
 ## [2026-05-22] · `3ceeabf`
 
 

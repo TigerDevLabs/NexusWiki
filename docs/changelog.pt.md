@@ -4,6 +4,51 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-28] · `ec4b039`
+
+
+### ✨ Adicionado
+
+- **api**: Expor campos posicionáveis/multibloco, adicionar VariantDefinition, corrigir referência de tipo de máquina
+- **machines**: Adicionar expansão automática de camadas e subtipo de processamento ao carregador de máquina
+- **plugin**: Fase 7 — ponte multibloco, atualizações do carregador DataDriven, renomeações de ID de receita
+
+### 🐛 Corrigido
+
+- **plugin**: Fornecer comando mostra nomes de exibição, alternância de mensagem de interrupção, registro de implementação de API
+
+### 🔧Manutenção
+
+- **items**: Fase 6 — renomeação _BLOCK em massa, limpeza nativa da máquina, padrões de variantes
+- **plugin**: Atualizações de Lang/config — mensagens multibloco, alternância de mensagem de interrupção, padrões de economia
+- **modules**: Atualizações em economia, mmo, segurança, eventos, gui, características, discórdia, web, ss, guia
+- **ops**: Filtros Fail2ban e regras de firewall para pacotes malformados e bloqueio de invasores
+## [2026-05-23] · `5cc6c1c`
+
+
+### ✨ Adicionado
+
+- **tab**: Adicionar comando /nexus scoreboard toggle por jogador
+## [2026-05-22] · `70a3df5`
+
+
+### ✨ Adicionado
+
+- **guide**: Fase 4 concluída – recategorização em massa de 404 itens + exclusão de 10 IDs corrompidos
+- **machines**: Adicionar campo de subtipo de processamento a MachineDefinition
+
+### 🐛 Corrigido
+
+- **gui**: Desordem de layout da receita + código de cores bruto no título
+- **guide**: Expanda os slots da categoria para 28 e adicione paginação
+
+### 🔧Manutenção
+
+- **items**: Exclua 31 duplicatas legadas de SV_* e camelCase slime
+- **guide**: Exclua 4 itens de stub legados do Slimefun + adicione 15 ícones de categoria ausentes
+
+---
+
 ## [2026-05-22] · `3ceeabf`
 
 

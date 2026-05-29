@@ -4,6 +4,51 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-28] · `ec4b039`
+
+
+### ✨Añadido See More
+
+- **api**: Expone campos colocables/multibloque, agrega VariantDefinition, corrige la referencia del tipo de máquina
+- **machines**: Agregar niveles de expansión automática y subtipo de procesamiento al cargador de la máquina
+- **plugin**: Fase 7: puente multibloque, actualizaciones del cargador DataDriven, cambios de nombre de ID de receta
+
+### 🐛 Corregido See More
+
+- **plugin**: El comando Give muestra nombres para mostrar, alternancia de mensajes de interrupción, registro de implementación de API
+
+### 🔧Mantenimiento
+
+- **items**: Fase 6: cambio de nombre masivo de _BLOCK, limpieza nativa de la máquina, variantes predeterminadas
+- **plugin**: Actualizaciones de idioma/configuración: mensajes multibloque, alternancia de mensajes de interrupción, valores predeterminados económicos
+- **modules**: Actualizaciones en economía, mmo, seguridad, eventos, interfaz gráfica de usuario, rasgos, discordia, web, ss, pestañas
+- **ops**: Filtros Fail2ban y reglas de firewall para el bloqueo de atacantes y paquetes mal formados
+## [2026-05-23] · `5cc6c1c`
+
+
+### ✨Añadido See More
+
+- **tab**: Agregar /nexus marcador alternar comando por jugador
+## [2026-05-22] · `70a3df5`
+
+
+### ✨Añadido See More
+
+- **guide**: Fase 4 completa: recategorización masiva de 404 elementos + eliminación de 10 ID corruptos
+- **machines**: Agregar campo de subtipo de procesamiento a MachineDefinition
+
+### 🐛 Corregido See More
+
+- **gui**: Desorden del diseño de la receta + código de color sin formato en el título
+- **guide**: Ampliar los espacios de categoría a 28 y agregar paginación
+
+### 🔧Mantenimiento
+
+- **items**: Eliminar 31 SV_* heredados y duplicados de limo camelCase
+- **guide**: Elimina 4 elementos auxiliares heredados de Slimefun + agrega 15 íconos de categorías faltantes
+
+---
+
 ## [2026-05-22] · `3ceeabf`
 
 
