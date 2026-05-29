@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-29] · `3d42824`
+
+
+### 🐛 Corrigido
+
+- **discord**: Messages.yml salvo no caminho errado, fazendo com que todas as chaves retornem [Mensagem ausente]
+
+---
+
 ## [2026-05-29] · `8709b16`
 
 

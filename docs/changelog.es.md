@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-29] · `3d42824`
+
+
+### 🐛 Corregido See More
+
+- **discord**: Messages.yml se guardó en una ruta incorrecta, lo que provocó que todas las claves regresaran [Mensaje faltante]
+
+---
+
 ## [2026-05-29] · `8709b16`
 
 

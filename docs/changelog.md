@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-29] · `3d42824`
+
+
+### 🐛 Fixed
+
+- **discord**: Messages.yml saved to wrong path, causing all keys to return [Missing message]
+
+---
+
 ## [2026-05-29] · `8709b16`
 
 
