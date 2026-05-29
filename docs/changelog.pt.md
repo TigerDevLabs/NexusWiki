@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-29] · `6b528c3`
+
+
+### 🐛 Corrigido
+
+- **ci**: Execute testes em CI, remova fluxo de trabalho de construção redundante, agrupe changelog por tipo de commit
+
+---
+
 ## [2026-05-28] · `b3be732`
 
 

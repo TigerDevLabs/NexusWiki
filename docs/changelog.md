@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-29] · `6b528c3`
+
+
+### 🐛 Fixed
+
+- **ci**: Run tests in CI, remove redundant build workflow, group changelog by commit type
+
+---
+
 ## [2026-05-28] · `b3be732`
 
 

@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-29] · `6b528c3`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Ejecute pruebas en CI, elimine el flujo de trabajo de compilación redundante, agrupe el registro de cambios por tipo de confirmación
+
+---
+
 ## [2026-05-28] · `b3be732`
 
 
