@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-28] · `b3be732`
+
+
+### 🐛 Fixed
+
+- **machines-gui**: Extract machines-gui.yml to data folder on startup
+
+---
+
 ## [2026-05-28] · `329fd92`
 
 

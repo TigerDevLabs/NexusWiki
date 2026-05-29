@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-28] · `b3be732`
+
+
+### 🐛 Corrigido
+
+- **machines-gui**: Extraia machines-gui.yml para a pasta de dados na inicialização
+
+---
+
 ## [2026-05-28] · `329fd92`
 
 
