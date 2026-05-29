@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-29] · `7fcaa1d`
+
+
+### 🐛 Fixed
+
+- **ci**: AI message in Portuguese, move to content above embed with Discord heading format
+
+---
+
 ## [2026-05-29] · `3d42824`
 
 

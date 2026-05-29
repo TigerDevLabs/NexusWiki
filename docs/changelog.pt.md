@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-29] · `7fcaa1d`
+
+
+### 🐛 Corrigido
+
+- Mensagem **ci**: AI em português, vá para o conteúdo acima incorporado com formato de cabeçalho Discord
+
+---
+
 ## [2026-05-29] · `3d42824`
 
 
