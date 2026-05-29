@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-05-29] · `1985014`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Fuerza PT-BR en el mensaje Groq, elimina las comillas circundantes de la respuesta
+
+---
+
 ## [2026-05-29] · `7fcaa1d`
 
 

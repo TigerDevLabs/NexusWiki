@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-05-29] · `1985014`
+
+
+### 🐛 Corrigido
+
+- **ci**: Força PT-BR no prompt Groq, retira aspas circundantes da resposta
+
+---
+
 ## [2026-05-29] · `7fcaa1d`
 
 

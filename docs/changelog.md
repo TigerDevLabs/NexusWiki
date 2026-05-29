@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-05-29] · `1985014`
+
+
+### 🐛 Fixed
+
+- **ci**: Force PT-BR in Groq prompt, strip surrounding quotes from response
+
+---
+
 ## [2026-05-29] · `7fcaa1d`
 
 
