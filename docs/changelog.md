@@ -5,6 +5,26 @@
 
 ---
 
+## [2026-06-01] · `b86702c`
+
+
+### ✨ Added
+
+- **quests**: Add quest system, NPC givers, command center GUI, and keybind expansion
+- **discord**: Discord bot and integration updates
+- **energy**: Add creative generator component
+
+### ♻️ Changed
+
+- **core**: Migrate plugin resources to data/ subfolder
+
+### 🔧 Maintenance
+
+- Module-wide GUI, MMO, economy, and misc improvements
+- Remove stale junk files, update gitignore, and update CHANGELOG
+
+---
+
 ## [2026-05-29] · `1985014`
 
 

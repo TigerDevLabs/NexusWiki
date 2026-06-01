@@ -4,6 +4,26 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-01] · `b86702c`
+
+
+### ✨ Adicionado
+
+- **quests**: Adicionar sistema de missões, doadores de NPC, GUI do centro de comando e expansão de atalhos de teclado
+- **discord**: Bot Discord e atualizações de integração
+- **energy**: Adicionar componente gerador de criativo
+
+### ♻️Alterado
+
+- **core**: Migrar recursos do plugin para dados/subpasta
+
+### 🔧Manutenção
+
+- GUI, MMO, economia e melhorias diversas em todo o módulo
+- Remova arquivos inúteis obsoletos, atualize o gitignore e atualize o CHANGELOG
+
+---
+
 ## [2026-05-29] · `1985014`
 
 

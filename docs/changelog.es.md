@@ -4,6 +4,26 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-01] · `b86702c`
+
+
+### ✨Añadido See More
+
+- **quests**: Agregue sistema de misiones, otorgadores de NPC, GUI del centro de comando y expansión de combinación de teclas
+- **discord**: Bot de Discord y actualizaciones de integración
+- **energy**: Agregar componente generador creativo
+
+### ♻️ Modificado
+
+- **core**: Migrar recursos del complemento a datos/subcarpeta
+
+### 🔧Mantenimiento
+
+- Mejoras en la GUI, MMO, economía y otras mejoras en todo el módulo
+- Eliminar archivos basura obsoletos, actualizar gitignore y actualizar CHANGELOG
+
+---
+
 ## [2026-05-29] · `1985014`
 
 
