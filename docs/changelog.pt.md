@@ -4,6 +4,22 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-02] · `19ac7e8`
+
+
+### 🐛 Corrigido
+
+- Jobs NPE + deixar UX, itens ME, comando keybind, argumentos do centro de comando
+## [2026-06-01] · `f0cc6ca`
+
+
+### ✨ Adicionado
+
+- **mmo**: Sistema de dano de arma por item com rastreamento de projéteis
+- **advancements**: Sistema de avanço personalizado via datapack + gatilhos de plugin
+
+---
+
 ## [2026-06-01] · `b86702c`
 
 

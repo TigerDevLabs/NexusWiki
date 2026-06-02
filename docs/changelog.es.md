@@ -4,6 +4,22 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-02] · `19ac7e8`
+
+
+### 🐛 Corregido See More
+
+- Trabajos NPE + dejar UX, elementos ME, comando de combinación de teclas, argumentos del centro de comando
+## [2026-06-01] · `f0cc6ca`
+
+
+### ✨Añadido See More
+
+- **mmo**: Sistema de daño de arma por elemento con seguimiento de proyectiles
+- **advancements**: Sistema de avance personalizado mediante paquete de datos + activadores de complementos
+
+---
+
 ## [2026-06-01] · `b86702c`
 
 

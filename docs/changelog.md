@@ -5,6 +5,23 @@
 
 ---
 
+## [2026-06-02] · `19ac7e8`
+
+
+### 🐛 Fixed
+
+- Jobs NPE + leave UX, ME items, keybind command, command center args
+
+## [2026-06-01] · `f0cc6ca`
+
+
+### ✨ Added
+
+- **mmo**: Per-item weapon damage system with projectile tracking
+- **advancements**: Custom advancement system via datapack + plugin triggers
+
+---
+
 ## [2026-06-01] · `b86702c`
 
 
