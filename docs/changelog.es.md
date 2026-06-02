@@ -4,6 +4,26 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-02] · `d2ba3e7`
+
+
+### ✨Añadido See More
+
+- **discord**: Sistema de combate de bonificación de roles
+- ConfigMigrator auto-merge + comando de migración MySQL (Fase 3)
+- **mmo**: Rediseño de GUI inspirado en AuraSkills + HUD de enfriamiento de ataque
+- **essentials**: El personal desaparece + recompensas por hitos del tiempo de juego
+
+### 🐛 Corregido See More
+
+- Conflictos de ME CMD, elementos faltantes de NETWORK_CAPACITOR, ID de recetas, ejecutor de combinación de teclas, circuitos.yml
+
+### ♻️ Modificado
+
+- **ae**: Rediseño de GUI de unidad/terminal ME + corrección de errores críticos
+
+---
+
 ## [2026-06-02] · `19ac7e8`
 
 

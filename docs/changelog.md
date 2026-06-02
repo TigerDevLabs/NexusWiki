@@ -5,6 +5,26 @@
 
 ---
 
+## [2026-06-02] · `d2ba3e7`
+
+
+### ✨ Added
+
+- **discord**: Role bonus combat system
+- ConfigMigrator auto-merge + MySQL migration command (Phase 3)
+- **mmo**: AuraSkills-inspired GUI redesign + attack cooldown HUD
+- **essentials**: Staff vanish + playtime milestone rewards
+
+### 🐛 Fixed
+
+- ME CMD conflicts, missing NETWORK_CAPACITOR items, recipe IDs, keybind executor, circuits.yml
+
+### ♻️ Changed
+
+- **ae**: Redesign ME Terminal/Drive GUIs + fix critical bugs
+
+---
+
 ## [2026-06-02] · `19ac7e8`
 
 

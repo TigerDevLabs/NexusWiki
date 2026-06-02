@@ -4,6 +4,26 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-02] · `d2ba3e7`
+
+
+### ✨ Adicionado
+
+- **discord**: Sistema de combate de bônus de função
+- Mesclagem automática do ConfigMigrator + comando de migração do MySQL (Fase 3)
+- **mmo**: Redesenho da GUI inspirada no AuraSkills + HUD de resfriamento do ataque
+- **essentials**: Equipe desaparece + recompensas por marcos de tempo de jogo
+
+### 🐛 Corrigido
+
+- Conflitos ME CMD, itens NETWORK_CAPACITOR ausentes, IDs de receita, executor de atalho de teclado, circuits.yml
+
+### ♻️Alterado
+
+- **ae**: Reprojetar GUIs do Terminal/Drive ME + corrigir bugs críticos
+
+---
+
 ## [2026-06-02] · `19ac7e8`
 
 
