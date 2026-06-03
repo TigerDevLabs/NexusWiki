@@ -4,6 +4,49 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-03] · `6d5654a`
+
+
+### ✨Añadido See More
+
+- **events**: Título de Groq por retador al aparecer el jefe
+- **vip**: Alinee los kits VIP del juego con los niveles de la tienda web + entrega por cable
+- Las redes **ae**: ME ahora realmente requieren energía
+- **items**: Agregar categoría de elemento HERRAMIENTAS + actualizaciones de SubCategoryMatcher
+
+### 🐛 Corregido See More
+
+- Sistema **ae**: ME no funcional: ID de bloque en mayúsculas + materiales no funcionales
+- **data**: Consolidar QUANTUM_STORAGE_CELL id + arreglar TOME_OF_ENLIGHTENMENT + mensaje de jefe
+
+### 🔧Mantenimiento
+
+- **lang**: Renombrar Arco de Sacrificio -> Arco de Desafío, Jefe de Anime -> Retador del Más Allá
+## [2026-06-02] · `3ac9c37`
+
+
+### ✨Añadido See More
+
+- **twitch**: Comentarios visuales en el juego para eventos de sub/animación/incursión
+- Registro **machines**: MachineComponent para anular el comportamiento de ID por máquina
+- Sistema de impulso de XP global estilo SimpleXPBoosts
+- Comportamiento de acción/disparador estilo ExecutableItems de **items**:
+- **items**: /itemedit editor de elementos en vivo (inspirado en ItemEdit)
+- **mmo**: Combinación de teclas en modo captura: presione una tecla para vincular una habilidad
+- **events**: Realmente otorga bonificaciones MMO en recompensa de sacrificio
+
+### 🐛 Corregido See More
+
+- **items**: Eliminar definición ME_NETWORK_ACCESS_TERMINAL duplicada
+- Cambio de nombre de carpeta de paquete de datos **advancements**: 1.21 + extracción con reconocimiento de versión
+- **gui**: StatsGUI/KeyBindGUI se bloquea, questnpc UX, prefijo de guía del centro de comandos
+
+### 🔧Mantenimiento
+
+- Carpeta del complemento de referencia de Gitignore/inspirations
+
+---
+
 ## [2026-06-02] · `d2ba3e7`
 
 

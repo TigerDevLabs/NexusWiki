@@ -4,6 +4,49 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-03] · `6d5654a`
+
+
+### ✨ Adicionado
+
+- **events**: Título Groq por Desafiador no spawn do chefe
+- **vip**: Alinhe kits VIP no jogo com níveis de loja virtual + entrega eletrônica
+- As redes **ae**: ME agora realmente requerem energia
+- **items**: Adicionar categoria de item TOOLS + atualizações de SubCategoryMatcher
+
+### 🐛 Corrigido
+
+- Sistema **ae**: ME não funcional — IDs de bloco maiúsculos + materiais não funcionais
+- **data**: Consolidar ID de QUANTUM_STORAGE_CELL + corrigir TOME_OF_ENLIGHTENMENT + mensagem do chefe
+
+### 🔧Manutenção
+
+- **lang**: Renomear Arco de Sacrifício -> Arco de Desafio, Chefe de Anime -> Desafiador do Além
+## [2026-06-02] · `3ac9c37`
+
+
+### ✨ Adicionado
+
+- **twitch**: Feedback visual no jogo para eventos de sub/cheer/raid
+- Registro **machines**: MachineComponent para substituição de comportamento por ID de máquina
+- Sistema global de aumento de XP estilo SimpleXPBoosts
+- **items**: Comportamento de gatilho/ação no estilo ExecutableItems
+- **items**: /itemedit editor de itens ao vivo (inspirado no ItemEdit)
+- **mmo**: Atalho de teclas no modo de captura — pressione uma tecla para vincular uma habilidade
+- **events**: Conceda bônus MMO na recompensa do Sacrifício
+
+### 🐛 Corrigido
+
+- **items**: Remover definição duplicada de ME_NETWORK_ACCESS_TERMINAL
+- **advancements**: 1.21 renomeação da pasta datapack + extração com reconhecimento de versão
+- **gui**: Falhas de StatsGUI/KeyBindGUI, questnpc UX, prefixo do guia do centro de comando
+
+### 🔧Manutenção
+
+- Pasta do plugin de referência Gitignore /inspirations
+
+---
+
 ## [2026-06-02] · `d2ba3e7`
 
 

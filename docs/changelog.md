@@ -5,6 +5,50 @@
 
 ---
 
+## [2026-06-03] · `6d5654a`
+
+
+### ✨ Added
+
+- **events**: Per-Challenger Groq title on boss spawn
+- **vip**: Align in-game VIP kits with webstore tiers + wire delivery
+- **ae**: ME networks now actually require energy
+- **items**: Add TOOLS item category + SubCategoryMatcher updates
+
+### 🐛 Fixed
+
+- **ae**: ME system non-functional — uppercase block IDs + non-functional materials
+- **data**: Consolidate QUANTUM_STORAGE_CELL id + fix TOME_OF_ENLIGHTENMENT + boss msg
+
+### 🔧 Maintenance
+
+- **lang**: Rename Sacrifice Arc -> Challenge Arc, Anime Boss -> Challenger from Beyond
+
+## [2026-06-02] · `3ac9c37`
+
+
+### ✨ Added
+
+- **twitch**: In-game visual feedback for sub/cheer/raid events
+- **machines**: MachineComponent registry for per-machine-ID behavior override
+- SimpleXPBoosts-style global XP boost system
+- **items**: ExecutableItems-style trigger/action behavior
+- **items**: /itemedit live item editor (ItemEdit-inspired)
+- **mmo**: Capture-mode keybinding — press a key to bind an ability
+- **events**: Actually grant MMO bonuses on Sacrifice reward
+
+### 🐛 Fixed
+
+- **items**: Remove duplicate ME_NETWORK_ACCESS_TERMINAL definition
+- **advancements**: 1.21 datapack folder rename + version-aware extraction
+- **gui**: StatsGUI/KeyBindGUI crashes, questnpc UX, command-center guide prefix
+
+### 🔧 Maintenance
+
+- Gitignore /inspirations reference plugin folder
+
+---
+
 ## [2026-06-02] · `d2ba3e7`
 
 
