@@ -5,6 +5,144 @@
 
 ---
 
+## [2026-06-14] · `8b862fc`
+
+
+### ✨ Added
+
+- **items/tinkers**: Add TINKERS category, migrate 137 CAST items, fix INGOT_FORMER to MACHINE
+- **tools,ci**: Add validate_items.py (CMD conflicts + category rules) and wire into CI
+
+### 🐛 Fixed
+
+- **mmo**: Guard null customName() before ConcurrentHashMap.putIfAbsent in MobHealthDisplay
+
+### ♻️ Changed
+
+- **lang**: Rename security.world-cleaner lang keys and sync lang files
+- **events/challenge**: Add display CMDs to boss YAMLs, update ChallengeBoss classes
+- **items/cobblestone**: Replace 5-tier COMPRESSED_COBBLESTONE with 8 explicit items (x9..x43M), remove COBBLE_1-5 duplicates and stale machine GUIs
+
+### 🔧 Maintenance
+
+- **tools**: Remove stale rp_prompts artifacts, allow tools/*.py in gitignore
+- **items**: Assign missing CMDs to ITEM_BAND and NETWORK_POWER_DISPLAY variants in gear.yml
+
+## [2026-06-09] · `ca942b3`
+
+
+### 🐛 Fixed
+
+- **events**: Rename challenge_bosses JAR resource dir (was anime_bosses)
+- **energy,ae**: Consumer bridge + ME terminal insert feedback
+
+### ♻️ Changed
+
+- **lang**: Migrate hardcoded messages to lang keys (batch 1)
+- **lang**: Migrate nexusprism-plugin hardcoded strings to lang keys
+- **lang**: Replace all § literals with & in lang files
+- **lang**: Migrate remaining nexusprism-plugin strings to lang keys
+- **lang**: Migrate strings in events/mmo/rng/security/discord/quests to lang keys
+- **lang**: Migrate remaining § strings in chat/core/crates/mmo/machines/enchants to lang keys and ChatColor
+
+## [2026-06-08] · `d1b12d2`
+
+
+### ✨ Added
+
+- **items,ae**: Hammer tiers, AE2 byte capacity, ME persistence fix
+- **vfx,mmo,crates**: VFXUtil, mob health nameplates, ability VFX, crate VFX
+
+### 🐛 Fixed
+
+- **machines**: Exempt energy infrastructure from catalog GUI-layer check
+- **ae,gui,energy**: AE status lang keys, colorize GUI lore, creative gen buffer
+- **ae,gui,commands**: Glass cable channels, creative GUIs, give tab-completion
+- **ae**: Controller provides 8 base channels so cable-less networks work
+- **mmo**: Fix action bar conflict between HUD and XP notification
+
+### ♻️ Changed
+
+- **display**: Centralize action bar through ActionBarManager
+- **events**: Rename anime package and classes to challenge
+- **events**: Finish anime→challenge rename across docs, lang, and resources
+
+### 🔧 Maintenance
+
+- **cleanup**: Delete archived copies and remove stale CUT banners
+- **cleanup**: Remove remaining stale CUT banners and update example/crates
+
+## [2026-06-07] · `c2888ce`
+
+
+### 🐛 Fixed
+
+- **machines**: Skip template/fields keys in loader; drop obsolete generated items file
+- **items**: Propagate placeable via templates + prune duplicate generated machine items
+- **machines**: Add CREATIVE_CAPACITOR STORAGE behavior def
+- **machines**: Add ADVANCED generators + ELECTRIC_BLAST_FURNACE, align FAL/MOB ids
+
+## [2026-06-06] · `e7a40f7`
+
+
+### ✨ Added
+
+- **api**: Rebuild item/machine/recipe API surface
+- **core**: PDC-backed MachineManager + item registry/resolvers
+- **machines**: Typed engine, registry, definitions, loader + catalog validator
+- **ae**: Rebuild ME network as MachineContext-driven machines
+- **storage**: Persist machine placements via DataManager (SQLite/MySQL/YAML)
+- **machines**: Plugin glue, split listeners, GUI handler, loaders, wiring
+- **recipes**: Migrate ME network, storage cell + backpack crafting to YAML
+- **machines**: Make every machine obtainable + give type-based GUIs
+- **energy**: Infinite CREATIVE_CAPACITOR + only tick engine-handled blocks
+- **energy**: Bridge engine generators into cable network + export-mode toggle
+
+### 🐛 Fixed
+
+- **machines**: Rename CRUSHER gui key to ORE_CRUSHER; dedup CREATIVE_CAPACITOR
+- **items**: Merge stray CREATIVE_GENERATOR_BLOCK into CREATIVE_GENERATOR
+
+### ♻️ Changed
+
+- **energy,mmo,systems,items**: Rewire consumers to new item/machine API
+- **machines**: Merge generated items into machine_blocks + subtype-aware GUIs
+
+### 📚 Documentation
+
+- **recipes**: Document hardcoded RecipeLoader to YAML migration gaps
+- **recipes**: Mark ME/storage-cell/backpack recipes as migrated
+
+### 🔧 Maintenance
+
+- Updated gitignore
+
+## [2026-06-04] · `6256f98`
+
+
+### 🔧 Maintenance
+
+- **machines,items**: Archive item/machine/ME Java (no delete) + stub consumers
+
+## [2026-06-03] · `7213cc6`
+
+
+### ✨ Added
+
+- **waila**: Live machine stats in HUD via shared engine (Bug 5)
+
+### 🐛 Fixed
+
+- **machines**: Break drops custom machine item, not the vanilla block
+- **machines**: Persist placements so machines survive restart (Bug 3)
+- **machines**: Single shared engine ticks all machines (Bug 4)
+
+### ♻️ Changed
+
+- **machines**: Typed MachineContext + split listeners (Section 10 rewrite)
+
+---
+
 ## [2026-06-03] · `6d5654a`
 
 

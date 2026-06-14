@@ -4,6 +4,138 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-14] · `8b862fc`
+
+
+### ✨Añadido See More
+
+- **items/tinkers**: Agregue la categoría TINKERS, migre 137 elementos CAST, corrija INGOT_FORMER a MACHINE
+- **tools,ci**: Agregue validar_items.py (conflictos CMD + reglas de categoría) y conéctelo a CI
+
+### 🐛 Corregido See More
+
+- **mmo**: Guard null customName() antes de ConcurrentHashMap.putIfAbsent en MobHealthDisplay
+
+### ♻️ Modificado
+
+- **lang**: Cambie el nombre de las claves de idioma de security.world-cleaner y sincronice los archivos de idioma
+- **events/challenge**: Agregue CMD de visualización a los YAML del jefe, actualice las clases de ChallengeBoss
+- **items/cobblestone**: Reemplace COMPRESSED_COBBLESTONE de 5 niveles con 8 elementos explícitos (x9..x43M), elimine COBBLE_1-5 duplicados y GUI de máquinas obsoletas
+
+### 🔧Mantenimiento
+
+- **tools**: Elimina artefactos rp_prompts obsoletos, permite herramientas/*.py en gitignore
+- **items**: Asignar CMD faltantes a las variantes ITEM_BAND y NETWORK_POWER_DISPLAY en gear.yml
+## [2026-06-09] · `ca942b3`
+
+
+### 🐛 Corregido See More
+
+- **events**: Cambiar el nombre del directorio de recursos JAR de Challenge_bosses (era anime_bosses)
+- **energy,ae**: Puente del consumidor + retroalimentación de inserción del terminal ME
+
+### ♻️ Modificado
+
+- **lang**: Migrar mensajes codificados a claves de idioma (lote 1)
+- **lang**: Migrar cadenas codificadas del complemento nexusprism a claves de idioma
+- **lang**: Reemplace todos los § literales con & en archivos lang
+- **lang**: Migrar las cadenas restantes del complemento nexusprism a claves de idioma
+- **lang**: Migrar cadenas en eventos/mmo/rng/security/discord/quests a claves de idioma
+- **lang**: Migrar las cadenas § restantes en chat/core/crates/mmo/machines/enchants a las claves de idioma y ChatColor
+## [2026-06-08] · `d1b12d2`
+
+
+### ✨Añadido See More
+
+- **items,ae**: Niveles de martillo, capacidad de bytes AE2, corrección de persistencia ME
+- **vfx,mmo,crates**: VFXUtil, placas de identificación de salud de la mafia, VFX de habilidad, VFX de caja
+
+### 🐛 Corregido See More
+
+- **machines**: Infraestructura energética exenta del catálogo Verificación de capa GUI
+- Teclas de idioma de estado de **ae,gui,energy**: AE, colorear la historia de la GUI, búfer de generación creativa
+- **ae,gui,commands**: Canales de cable de vidrio, GUI creativas, finalización de pestañas
+- El controlador **ae**: proporciona 8 canales base para que funcionen las redes sin cables
+- **mmo**: Soluciona el conflicto de la barra de acciones entre las notificaciones de HUD y XP
+
+### ♻️ Modificado
+
+- **display**: Centraliza la barra de acciones a través de ActionBarManager
+- **events**: Cambiar el nombre del paquete de anime y las clases para desafiar
+- **events**: Termina el anime → cambia el nombre del desafío en documentos, idiomas y recursos
+
+### 🔧Mantenimiento
+
+- **cleanup**: Eliminar copias archivadas y eliminar banners CUT obsoletos
+- **cleanup**: Elimina los banners CUT obsoletos restantes y actualiza los ejemplos/cajas
+## [2026-06-07] · `c2888ce`
+
+
+### 🐛 Corregido See More
+
+- **machines**: Omitir claves de plantilla/campos en el cargador; soltar el archivo de elementos generados obsoletos
+- **items**: Propagar colocables a través de plantillas + podar elementos de máquina generados duplicados
+- **machines**: Agregar definición de comportamiento de ALMACENAMIENTO CREATIVE_CAPACITOR
+- **machines**: Agregue generadores AVANZADOS + ELECTRIC_BLAST_FURNACE, alinee los identificadores FAL/MOB
+## [2026-06-06] · `e7a40f7`
+
+
+### ✨Añadido See More
+
+- **api**: Reconstruir la superficie API de artículo/máquina/receta
+- **core**: MachineManager respaldado por PDC + registro/resolvedores de elementos
+- **machines**: Motor tipificado, registro, definiciones, cargador + validador de catálogo
+- **ae**: Reconstruir la red ME como máquinas controladas por MachineContext
+- **storage**: Persiste las ubicaciones de las máquinas a través de DataManager (SQLite/MySQL/YAML)
+- **machines**: Pegamento de complemento, oyentes divididos, controlador GUI, cargadores, cableado
+- **recipes**: Migrar red ME, celda de almacenamiento + elaboración de mochila a YAML
+- **machines**: Hacer que todas las máquinas estén disponibles + proporcionar GUI basadas en tipos
+- **energy**: Infinite CREATIVE_CAPACITOR + solo marca los bloques controlados por el motor
+- **energy**: Conectar los generadores del motor a la red de cable + alternar el modo de exportación
+
+### 🐛 Corregido See More
+
+- **machines**: Cambie el nombre de la clave GUI de CRUSHER a ORE_CRUSHER; dedup CREATIVE_CAPACITOR
+- **items**: Fusionar CREATIVE_GENERATOR_BLOCK perdido en CREATIVE_GENERATOR
+
+### ♻️ Modificado
+
+- **energy,mmo,systems,items**: Vuelva a conectar a los consumidores a la nueva API de artículo/máquina
+- **machines**: Fusionar elementos generados en machine_blocks + GUI con reconocimiento de subtipos
+
+### 📚 Documentación
+
+- **recipes**: Documento codificado de RecipeLoader a las brechas de migración de YAML
+- **recipes**: Marcar recetas ME/celdas de almacenamiento/mochila como migradas
+
+### 🔧Mantenimiento
+
+- Gitignore actualizado
+## [2026-06-04] · `6256f98`
+
+
+### 🔧Mantenimiento
+
+- **machines,items**: Archivar elemento/máquina/ME Java (sin eliminar) + consumidores de código auxiliar
+## [2026-06-03] · `7213cc6`
+
+
+### ✨Añadido See More
+
+- **waila**: Estadísticas de la máquina en vivo en HUD a través del motor compartido (Error 5)
+
+### 🐛 Corregido See More
+
+- **machines**: Break arroja un elemento de máquina personalizado, no el bloque básico
+- **machines**: Persiste las ubicaciones para que las máquinas sobrevivan al reinicio (Error 3)
+- **machines**: Un único motor compartido activa todas las máquinas (Error 4)
+
+### ♻️ Modificado
+
+- **machines**: Typed MachineContext + oyentes divididos (reescritura de la Sección 10)
+
+---
+
 ## [2026-06-03] · `6d5654a`
 
 
