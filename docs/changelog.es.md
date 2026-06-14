@@ -4,6 +4,19 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-14] · `a434364`
+
+
+### ✨Añadido See More
+
+- **crafting**: Agrega recetas para 37 elementos que antes no se podían crear
+
+### 🐛 Corregido See More
+
+- **items**: Mover SINGULARITY_CONSTRUCTOR a nexus_machines.yml; agregar definición de máquina + recetas de singularidad
+
+---
+
 ## [2026-06-14] · `76b04ab`
 
 

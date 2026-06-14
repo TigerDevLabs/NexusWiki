@@ -5,6 +5,19 @@
 
 ---
 
+## [2026-06-14] · `a434364`
+
+
+### ✨ Added
+
+- **crafting**: Add recipes for 37 previously uncraftable items
+
+### 🐛 Fixed
+
+- **items**: Move SINGULARITY_CONSTRUCTOR to nexus_machines.yml; add machine def + singularity recipes
+
+---
+
 ## [2026-06-14] · `76b04ab`
 
 

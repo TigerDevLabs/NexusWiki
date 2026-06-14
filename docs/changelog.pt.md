@@ -4,6 +4,19 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-14] · `a434364`
+
+
+### ✨ Adicionado
+
+- **crafting**: Adicione receitas para 37 itens anteriormente não fabricados
+
+### 🐛 Corrigido
+
+- **items**: Mova SINGULARITY_CONSTRUCTOR para nexus_machines.yml; adicionar definição de máquina + receitas de singularidade
+
+---
+
 ## [2026-06-14] · `76b04ab`
 
 
