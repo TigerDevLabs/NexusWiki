@@ -4,6 +4,23 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-14] · `76b04ab`
+
+
+### ✨Añadido See More
+
+- **crafting**: Agregar cadena de recetas infinita en Infinity Table
+
+### 🐛 Corregido See More
+
+- **events**: Registra los 6 jefes de desafío que faltan en DEFAULT_BOSS_FILES
+
+### ♻️ Modificado
+
+- **crafting**: Migrar equipo infinito a Infinity Table; arreglar INFINITY_APPLE
+
+---
+
 ## [2026-06-14] · `8b862fc`
 
 

@@ -5,6 +5,23 @@
 
 ---
 
+## [2026-06-14] · `76b04ab`
+
+
+### ✨ Added
+
+- **crafting**: Add infinity recipe chain in Infinity Table
+
+### 🐛 Fixed
+
+- **events**: Register missing 6 challenge bosses in DEFAULT_BOSS_FILES
+
+### ♻️ Changed
+
+- **crafting**: Migrate infinity gear to Infinity Table; fix INFINITY_APPLE
+
+---
+
 ## [2026-06-14] · `8b862fc`
 
 

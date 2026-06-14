@@ -4,6 +4,23 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-14] · `76b04ab`
+
+
+### ✨ Adicionado
+
+- **crafting**: Adicionar cadeia de receitas infinita na Tabela Infinity
+
+### 🐛 Corrigido
+
+- **events**: Registre 6 chefes de desafio ausentes em DEFAULT_BOSS_FILES
+
+### ♻️Alterado
+
+- **crafting**: Migrar equipamentos infinitos para Infinity Table; corrigir INFINITY_APPLE
+
+---
+
 ## [2026-06-14] · `8b862fc`
 
 
