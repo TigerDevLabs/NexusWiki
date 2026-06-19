@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-06-19] · `d04c992`
+
+
+### ✨ Added
+
+- **integration**: Add NexusATS hook surface for machine block and Waila wiring
+
+---
+
 ## [2026-06-19] · `06bfe20`
 
 

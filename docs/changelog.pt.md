@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-19] · `d04c992`
+
+
+### ✨ Adicionado
+
+- **integration**: Adicionar superfície de gancho NexusATS para bloco de máquina e fiação Waila
+
+---
+
 ## [2026-06-19] · `06bfe20`
 
 
