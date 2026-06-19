@@ -4,6 +4,73 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-06-19] · `06bfe20`
+
+
+### ✨Añadido See More
+
+- **waila**: Agregar reconocimiento de bloque básico
+
+### 🐛 Corregido See More
+
+- **startup**: Reduce la verbosidad del registro y corrige prefijos duplicados y fugas de color.
+- **twitch**: Deja de reconectarse después de 3 fallas de IRC consecutivas
+
+### ♻️ Modificado
+
+- **slimefun**: Extraiga máquinas, energía, elementos y elementos para el futuro complemento NexusItems.
+## [2026-06-17] · `ce58736`
+
+
+### ✨Añadido See More
+
+- **machines**: Agregar sistema de máquina multibloque impulsado por YAML
+
+### 🐛 Corregido See More
+
+- **items**: Cambie el nombre de los elementos de aleación simple al sufijo _INGOT y elimine los marcadores de posición de PAPEL
+## [2026-06-16] · `cfd4b44`
+
+
+### 🐛 Corregido See More
+
+- **recipes**: Ingredientes ENHANCED_CRAFTING sin forma analizados como sección, no como lista de cadenas
+
+### ♻️ Modificado
+
+- **machines**: Reemplace el bloque de máquina de la Mesa de elaboración mejorada con un multibloque estilo Slimefun
+- **machines**: Reescribe la mesa de elaboración mejorada en un verdadero multibloque estilo Slimefun
+
+### 🔧Mantenimiento
+
+- **items**: Reemplazar nexo:COPPER_INGOT con vainilla COPPER_INGOT
+- **items**: Arreglar la categorización: cambiar el nombre de los minerales en bruto, eliminar duplicados de vainilla, arreglar la coincidencia de aleación/placa
+- **items**: Cambie el nombre de DUST_AMETHYST/DUST_NETHERITE a una convención *_DUST consistente
+## [2026-06-15] · `dd8cee0`
+
+
+### ✨Añadido See More
+
+- **machines**: Agregar máquina de mesa de elaboración y sistema de recetas mejorados
+
+### 🐛 Corregido See More
+
+- **machines**: Resolve MachineCatalog ENHANCED_CRAFTING_TABLE advertencia de entrada de elemento
+- **machines**: Corrige la advertencia ENHANCED_CRAFTING_TABLE MachineCatalog
+
+### ♻️ Modificado
+
+- **recipes**: Migre todas las recetas de creación de complementos a la tabla de creación mejorada
+## [2026-06-14] · `f52e15d`
+
+
+### 🐛 Corregido See More
+
+- **machines**: Resolve 3 advertencias entre capas de MachineCatalog
+- **machines**: Elimina el código auxiliar HOLOGRAM_PROJECTOR duplicado de basic_machines.yml
+
+---
+
 ## [2026-06-14] · `a434364`
 
 

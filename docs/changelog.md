@@ -5,6 +5,77 @@
 
 ---
 
+## [2026-06-19] · `06bfe20`
+
+
+### ✨ Added
+
+- **waila**: Add vanilla block recognition
+
+### 🐛 Fixed
+
+- **startup**: Reduce log verbosity and fix duplicate prefix and color leaks
+- **twitch**: Stop reconnecting after 3 consecutive IRC failures
+
+### ♻️ Changed
+
+- **slimefun**: Extract machines, energy, items, ae to future NexusItems plugin
+
+## [2026-06-17] · `ce58736`
+
+
+### ✨ Added
+
+- **machines**: Add YAML-driven multiblock machine system
+
+### 🐛 Fixed
+
+- **items**: Rename bare alloy items to _INGOT suffix and remove PAPER placeholders
+
+## [2026-06-16] · `cfd4b44`
+
+
+### 🐛 Fixed
+
+- **recipes**: Shapeless ENHANCED_CRAFTING ingredients parsed as section not string list
+
+### ♻️ Changed
+
+- **machines**: Replace Enhanced Crafting Table machine block with Slimefun-style multiblock
+- **machines**: Rewrite Enhanced Crafting Table to true Slimefun-style multiblock
+
+### 🔧 Maintenance
+
+- **items**: Replace nexus:COPPER_INGOT with vanilla COPPER_INGOT
+- **items**: Fix categorization — rename raw ores, remove vanilla duplicates, fix alloy/plate matching
+- **items**: Rename DUST_AMETHYST/DUST_NETHERITE to consistent *_DUST convention
+
+## [2026-06-15] · `dd8cee0`
+
+
+### ✨ Added
+
+- **machines**: Add Enhanced Crafting Table machine and recipe system
+
+### 🐛 Fixed
+
+- **machines**: Resolve MachineCatalog ENHANCED_CRAFTING_TABLE item-entry warning
+- **machines**: Fix ENHANCED_CRAFTING_TABLE MachineCatalog warning
+
+### ♻️ Changed
+
+- **recipes**: Migrate all plugin crafting recipes to Enhanced Crafting Table
+
+## [2026-06-14] · `f52e15d`
+
+
+### 🐛 Fixed
+
+- **machines**: Resolve 3 MachineCatalog cross-layer warnings
+- **machines**: Remove duplicate HOLOGRAM_PROJECTOR stub from basic_machines.yml
+
+---
+
 ## [2026-06-14] · `a434364`
 
 

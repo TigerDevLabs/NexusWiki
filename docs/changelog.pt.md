@@ -4,6 +4,73 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-06-19] · `06bfe20`
+
+
+### ✨ Adicionado
+
+- **waila**: Adicionar reconhecimento de bloco vanilla
+
+### 🐛 Corrigido
+
+- **startup**: Reduza o detalhamento do log e corrija prefixos duplicados e vazamentos de cores
+- **twitch**: Para de reconectar após 3 falhas consecutivas de IRC
+
+### ♻️Alterado
+
+- **slimefun**: Extraia máquinas, energia, itens, ae para o futuro plugin NexusItems
+## [2026-06-17] · `ce58736`
+
+
+### ✨ Adicionado
+
+- **machines**: Adicionar sistema de máquina multibloco acionado por YAML
+
+### 🐛 Corrigido
+
+- **items**: Renomeie itens de liga simples para o sufixo _INGOT e remova os espaços reservados de PAPEL
+## [2026-06-16] · `cfd4b44`
+
+
+### 🐛 Corrigido
+
+- **recipes**: Ingredientes ENHANCED_CRAFTING sem forma analisados como seção e não como lista de strings
+
+### ♻️Alterado
+
+- **machines**: Substitua o bloco de máquina da mesa de artesanato aprimorada por multibloco estilo Slimefun
+- **machines**: Reescreva a tabela de artesanato aprimorada para um verdadeiro multibloco estilo Slimefun
+
+### 🔧Manutenção
+
+- **items**: Substitua nexus:COPPER_INGOT por COPPER_INGOT vanilla
+- **items**: Corrigir categorização – renomear minérios brutos, remover duplicatas vanilla, corrigir correspondência de liga/placa
+- **items**: Renomeie DUST_AMETHYST/DUST_NETHERITE para convenção *_DUST consistente
+## [2026-06-15] · `dd8cee0`
+
+
+### ✨ Adicionado
+
+- **machines**: Adicionar máquina de mesa de artesanato aprimorada e sistema de receitas
+
+### 🐛 Corrigido
+
+- **machines**: Resolve MachineCatalog ENHANCED_CRAFTING_TABLE aviso de entrada de item
+- **machines**: Correção do aviso ENHANCED_CRAFTING_TABLE MachineCatalog
+
+### ♻️Alterado
+
+- **recipes**: Migrar todas as receitas de criação de plugins para a Tabela de Criação Aprimorada
+## [2026-06-14] · `f52e15d`
+
+
+### 🐛 Corrigido
+
+- **machines**: Resolver 3 avisos de camada cruzada do MachineCatalog
+- **machines**: Remova o stub HOLOGRAM_PROJECTOR duplicado de basic_machines.yml
+
+---
+
 ## [2026-06-14] · `a434364`
 
 
