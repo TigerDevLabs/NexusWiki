@@ -4,6 +4,16 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+
+## [2026-09-23] · `17c3478`
+
+
+### ✨ Añadido
+
+- **economy**: Publish vanilla sell-prices to shared DB for nexus-bot's /market
+
+---
+
 ## [2026-08-09] · `632d673`
 
 
