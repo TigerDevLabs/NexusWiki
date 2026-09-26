@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-26] · `4b18be4`
+
+
+### 🐛 Fixed
+
+- **events,quests**: Replace deprecated Groq model in BossTitle/DailyQuests
+
+---
+
 ## [2026-09-23] · `17c3478`
 
 
