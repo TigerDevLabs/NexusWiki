@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-27] · `037e895`
+
+
+### 🐛 Fixed
+
+- **events,quests**: Groq/compound-mini was also removed from Groq's catalog
+
+---
+
 ## [2026-09-26] · `4b18be4`
 
 
