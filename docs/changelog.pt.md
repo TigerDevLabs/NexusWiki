@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-27] · `18cd012`
+
+
+### 🐛 Corrigido
+
+- **events,quests**: Raise Groq max_tokens for gpt-oss-120b's reasoning overhead
+
+---
+
 ## [2026-09-27] · `037e895`
 
 
