@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-28] · `c392ae4`
+
+
+### 🐛 Corrigido
+
+- **ci**: Drop dev branch trigger, NexusPrism doesn't use one
+
+---
+
 ## [2026-09-28] · `3b2579e`
 
 
