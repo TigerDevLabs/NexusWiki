@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-28] · `3b2579e`
+
+
+### 🐛 Corrigido
+
+- **ci**: Don't fail the whole build when artifact upload hits storage quota
+
+---
+
 ## [2026-09-28] · `60616b0`
 
 
