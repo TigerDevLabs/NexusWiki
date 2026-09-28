@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-28] · `60616b0`
+
+
+### 📚 Documentación
+
+- **changelog**: Note the link/linkstreamer split
+
+---
+
 ## [2026-09-28] · `2d9c95d`
 
 
