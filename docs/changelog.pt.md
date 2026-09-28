@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-09-28] · `2d9c95d`
+
+
+### ✨ Adicionado
+
+- **twitch**: Split /twitch link into /twitch link and /twitch linkstreamer
+
+---
+
 ## [2026-09-27] · `18cd012`
 
 
