@@ -307,7 +307,7 @@ the only layer that can filter malformed packets before they reach the JVM:
 
 See `ops/server/tcpshield-cloudflare.md` for full setup details.
 
-### 6. Webstore Environment Variables (Render)
+### 6. Webstore Environment Variables (Railway)
 
 | Variable | Description |
 |---|---|
